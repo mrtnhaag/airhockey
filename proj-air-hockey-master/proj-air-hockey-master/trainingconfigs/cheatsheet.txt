@@ -1,0 +1,11 @@
+C:\Users\mhaag\OneDrive\Dokumente\master\rl_projekt\proj-air-hockey-master\proj-air-hockey-master\trainingconfigs\
+
+cd C:\Users\mhaag\OneDrive\Dokumente\master\rl_projekt\proj-air-hockey-master\proj-air-hockey-master\
+
+mlagents-learn  trainingconfigs\rollerball_config.yaml --run-id="parallelrun_1"
+mlagents-learn  trainingconfigs\ppo_basic.yaml --run-id="datum_info" 
+
+mlagents-learn  trainingconfigs\ppo_basic.yaml --run-id="17_11_noon" --resume
+
+tensorboard --logdir results --port 6006
+
