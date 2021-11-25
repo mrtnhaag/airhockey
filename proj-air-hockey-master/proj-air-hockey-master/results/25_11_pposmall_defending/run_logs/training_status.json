@@ -1,0 +1,29 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 2032,
+                "file_path": "results\\25_11_pposmall_defending\\FullGame\\FullGame-2032.onnx",
+                "reward": -0.08250001072883606,
+                "creation_time": 1637878551.3572598,
+                "auxillary_file_paths": [
+                    "results\\25_11_pposmall_defending\\FullGame\\FullGame-2032.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2032,
+            "file_path": "results\\25_11_pposmall_defending\\FullGame.onnx",
+            "reward": -0.08250001072883606,
+            "creation_time": 1637878551.3572598,
+            "auxillary_file_paths": [
+                "results\\25_11_pposmall_defending\\FullGame\\FullGame-2032.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

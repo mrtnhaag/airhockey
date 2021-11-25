@@ -87,9 +87,10 @@ public class PuckScript : MonoBehaviour
             var currentPoint = new Vector2(Random.Range((puckBoundary.Left +puckBoundary.Right)*0.5f-.35f, (puckBoundary.Left +puckBoundary.Right)*0.5f+.35f), puckBoundary.Up);
             //Instantiate(marker, new Vector3(currentPoint.x, currentPoint.y, 0), Quaternion.identity, markerContainer);
             var angle = Random.Range(-70f, 70f);
-            var spawnLine = Random.Range(puckBoundary.Down, -puckBoundary.Up);
+            var spawnLine = Random.Range(puckBoundary.Down, puckBoundary.Down-3.08f);
 
             Vector2 nextPoint = Vector2.zero;
+            //Vector2 nextPoint = new Vector2((puckBoundary.Left +puckBoundary.Right)*0.5f,(puckBoundary.Up +puckBoundary.Down)*0.5f);
             Vector2 startingVelocity = Vector2.zero;
             while (true)
             {
