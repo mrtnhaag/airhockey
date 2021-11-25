@@ -30,7 +30,7 @@ public class AirHockeyAgent : Agent
 {
     public ActionType actionType;
     //public TrainingPart trainingPart;
-    public float maxMovementSpeed;
+    
     private Boundary agentBoundary;
     private Boundary humanBoudary;
 
@@ -47,15 +47,16 @@ public class AirHockeyAgent : Agent
     private AgentResetState agentResetState;
     private TaskType taskType = TaskType.Defending;
     private float V_max_puck = 25;
+    private float maxMovementSpeed = 6f;
     private float V_max_human = 0.3f;
-     private float humanGoalReward = 0f;
-    private float agentGoalReward = 1f;
+     private float neghumanGoalReward = -1f;
+    private float agentGoalReward = 0f;
     private float avoidBoundaries = 0.00f;
     private float avoidDirectionChanges = 0.00f;
     private float encouragePuckMovement = 0f;
     private float encouragePuckContact = 0.5f;
-    private float negStepReward = -0.001f;
-    private float negMaxStepReward = -1f;
+    private float negStepReward = -0.005f;
+    private float negMaxStepReward = 0f;
     private float behindPuckReward = 0.001f;
     private float defenceReward = 1f;
     private float backwallReward = 1f;
@@ -272,7 +273,7 @@ public class AirHockeyAgent : Agent
             }
             else if (puck.playState == PlayState.playerScored)
             {
-                SetReward(humanGoalReward);
+                SetReward(neghumanGoalReward);
                 EndEpisode();
                 return;
             }
@@ -300,7 +301,7 @@ public class AirHockeyAgent : Agent
             }
             else if (puck.playState == PlayState.playerScored)
             {
-                SetReward(humanGoalReward);
+                SetReward(neghumanGoalReward);
                 EndEpisode();
                 return;
             }
@@ -332,7 +333,7 @@ public class AirHockeyAgent : Agent
             }
             else if (puck.playState == PlayState.playerScored)
             {
-                SetReward(humanGoalReward);
+                SetReward(neghumanGoalReward);
                 EndEpisode();
                 if (false){
                 Debug.Log("score. -0.4");
