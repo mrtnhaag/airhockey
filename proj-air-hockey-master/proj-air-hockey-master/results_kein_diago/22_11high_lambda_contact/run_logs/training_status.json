@@ -1,0 +1,65 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 37499949,
+                "file_path": "results\\22_11high_lambda_contact\\FullGame\\FullGame-37499949.onnx",
+                "reward": 2.4999998807907104,
+                "creation_time": 1637750974.08522,
+                "auxillary_file_paths": [
+                    "results\\22_11high_lambda_contact\\FullGame\\FullGame-37499949.pt"
+                ]
+            },
+            {
+                "steps": 37999909,
+                "file_path": "results\\22_11high_lambda_contact\\FullGame\\FullGame-37999909.onnx",
+                "reward": null,
+                "creation_time": 1637752620.6398165,
+                "auxillary_file_paths": [
+                    "results\\22_11high_lambda_contact\\FullGame\\FullGame-37999909.pt"
+                ]
+            },
+            {
+                "steps": 38499938,
+                "file_path": "results\\22_11high_lambda_contact\\FullGame\\FullGame-38499938.onnx",
+                "reward": null,
+                "creation_time": 1637754366.936588,
+                "auxillary_file_paths": [
+                    "results\\22_11high_lambda_contact\\FullGame\\FullGame-38499938.pt"
+                ]
+            },
+            {
+                "steps": 38999890,
+                "file_path": "results\\22_11high_lambda_contact\\FullGame\\FullGame-38999890.onnx",
+                "reward": null,
+                "creation_time": 1637756263.283021,
+                "auxillary_file_paths": [
+                    "results\\22_11high_lambda_contact\\FullGame\\FullGame-38999890.pt"
+                ]
+            },
+            {
+                "steps": 39198419,
+                "file_path": "results\\22_11high_lambda_contact\\FullGame\\FullGame-39198419.onnx",
+                "reward": null,
+                "creation_time": 1637757107.6752176,
+                "auxillary_file_paths": [
+                    "results\\22_11high_lambda_contact\\FullGame\\FullGame-39198419.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 39198419,
+            "file_path": "results\\22_11high_lambda_contact\\FullGame.onnx",
+            "reward": null,
+            "creation_time": 1637757107.6752176,
+            "auxillary_file_paths": [
+                "results\\22_11high_lambda_contact\\FullGame\\FullGame-39198419.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

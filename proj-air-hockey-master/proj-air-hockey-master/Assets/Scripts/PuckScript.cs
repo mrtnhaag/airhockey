@@ -5,11 +5,9 @@ using UnityEngine;
 public enum ResetPuckState
 {
     normalPosition,
-    randomPosition,
+    randomPositionAgentSide,
     randomPositionGlobal,
-    shotOnGoal,
-    randomVelocity,
-    randomMiddlePosition
+    shotOnGoal
 }
 
 public enum PlayState
@@ -57,24 +55,20 @@ public class PuckScript : MonoBehaviour
         {
             if (playState == PlayState.agentScored)
             {
-                puckRB.position = new Vector2(0, -1);
+                puckRB.position = new Vector2(0, -2);
             }
             else if(playState == PlayState.playerScored)
             {
-                puckRB.position = new Vector2(0, 1);
+                puckRB.position = new Vector2(0, 2);
             }
         }
-        else if(resetPuckState == ResetPuckState.randomPosition)
+        else if(resetPuckState == ResetPuckState.randomPositionAgentSide)
         {
             puckRB.position = new Vector2(Random.Range(agentBoundary.Left, agentBoundary.Right) * 0.9f, Random.Range(agentBoundary.Down, agentBoundary.Up) * 0.9f);
         }
         else if(resetPuckState == ResetPuckState.randomPositionGlobal)
         {
-            puckRB.position = new Vector2(Random.Range(agentBoundary.Left, agentBoundary.Right) * 0.9f, Random.Range(-agentBoundary.Up, agentBoundary.Up) * 0.9f);
-        }
-        else if(resetPuckState == ResetPuckState.randomMiddlePosition)
-        {
-            puckRB.position = new Vector2(Random.Range(agentBoundary.Left, agentBoundary.Right) * 0.9f, agentBoundary.Down + Random.Range(0, agentBoundary.Up) * 0.3f);
+            puckRB.position = new Vector2(Random.Range(puckBoundary.Left, puckBoundary.Right) * 0.9f, Random.Range(puckBoundary.Down, puckBoundary.Up) * 0.9f);
         }
 
         else if(resetPuckState == ResetPuckState.shotOnGoal)
