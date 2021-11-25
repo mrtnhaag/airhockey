@@ -31,6 +31,7 @@ public class PuckScript : MonoBehaviour
     private bool agentContact;
     public GameObject marker;
     public GameObject markerContainerObject;
+    public GameObject puckBoundaryGameObject;
     private Transform markerContainer;
     Boundary puckBoundary;
 
@@ -38,7 +39,8 @@ public class PuckScript : MonoBehaviour
     {
         puckRB = GetComponent<Rigidbody2D>();
         markerContainer = markerContainerObject.transform;
-        var puckBoundaryHolder = GameObject.Find("AgentPuckBoundaryHolder").GetComponent<Transform>();
+        var puckBoundaryHolder = puckBoundaryGameObject.GetComponent<Transform>();
+        //var puckBoundaryHolder = GameObject.Find("AgentPuckBoundaryHolder").GetComponent<Transform>();
         float offset = 0.21f;
         puckBoundary = new Boundary(puckBoundaryHolder.GetChild(0).position.y - offset/2,
                       puckBoundaryHolder.GetChild(1).position.y + offset,
@@ -55,11 +57,15 @@ public class PuckScript : MonoBehaviour
         {
             if (playState == PlayState.agentScored)
             {
-                puckRB.position = new Vector2(0, -2);
+                puckRB.position = new Vector2((agentBoundary.Left+agentBoundary.Right)*0.5f, (puckBoundary.Down+puckBoundary.Up)*0.5f-4.5f);
             }
             else if(playState == PlayState.playerScored)
             {
-                puckRB.position = new Vector2(0, 2);
+                puckRB.position = new Vector2((agentBoundary.Left+agentBoundary.Right)*0.5f, (puckBoundary.Down+puckBoundary.Up)*0.5f+0.1f);
+            }
+            else
+            {
+                puckRB.position = new Vector2((agentBoundary.Left+agentBoundary.Right)*0.5f, (puckBoundary.Down+puckBoundary.Up)*0.5f+0.1f);//agent anstoß
             }
         }
         else if(resetPuckState == ResetPuckState.randomPositionAgentSide)
@@ -78,7 +84,7 @@ public class PuckScript : MonoBehaviour
                 Destroy(m.gameObject);
             }
 
-            var currentPoint = new Vector2(Random.Range(-.35f, .35f), puckBoundary.Up);
+            var currentPoint = new Vector2(Random.Range((puckBoundary.Left +puckBoundary.Right)*0.5f-.35f, (puckBoundary.Left +puckBoundary.Right)*0.5f+.35f), puckBoundary.Up);
             //Instantiate(marker, new Vector3(currentPoint.x, currentPoint.y, 0), Quaternion.identity, markerContainer);
             var angle = Random.Range(-70f, 70f);
             var spawnLine = Random.Range(puckBoundary.Down, -puckBoundary.Up);

@@ -113,7 +113,7 @@ public class AirHockeyAgent : Agent
                 break;
 
                 case TaskType.FullGame:
-                resetPuckState = ResetPuckState.randomPositionGlobal;
+                resetPuckState = ResetPuckState.normalPosition;
                 agentResetState = AgentResetState.random;
                 break;
 
