@@ -45,21 +45,23 @@ public class AirHockeyAgent : Agent
     private Vector2 position;
     private ResetPuckState resetPuckState;
     private AgentResetState agentResetState;
-    private TaskType taskType = TaskType.Defending;
+    private TaskType taskType = TaskType.FullGame;
+    private float currContactReward;
     private float V_max_puck = 25;
     private float maxMovementSpeed = 6f;
     private float V_max_human = 0.3f;
-     private float neghumanGoalReward = -1f;
-    private float agentGoalReward = 0f;
+     private float neghumanGoalReward = -0.5f;
+    private float agentGoalReward = 1f;
     private float avoidBoundaries = 0.00f;
     private float avoidDirectionChanges = 0.00f;
     private float encouragePuckMovement = 0f;
-    private float encouragePuckContact = 0.5f;
+    private float encouragePuckContact = 0.8f;
+    private float playForwardReward = 0.3f;
     private float negStepReward = -0.005f;
-    private float negMaxStepReward = 0f;
-    private float behindPuckReward = 0.001f;
-    private float defenceReward = 1f;
-    private float backwallReward = 1f;
+    private float negMaxStepReward = -0f;
+    private float behindPuckReward = 0f;
+    private float defenceReward = 0f;
+    private float backwallReward = 0f;
     public bool puckStopPenalty;
     public bool backWallReward;
     public bool deflectOnly;
@@ -113,8 +115,9 @@ public class AirHockeyAgent : Agent
                 break;
 
                 case TaskType.FullGame:
-                resetPuckState = ResetPuckState.normalPosition;
+                resetPuckState = ResetPuckState.randomPositionGlobal;
                 agentResetState = AgentResetState.random;
+                V_max_human = 0.3f;
                 break;
 
                 case TaskType.Scoring:
@@ -129,6 +132,7 @@ public class AirHockeyAgent : Agent
 
     public override void OnEpisodeBegin()
     {
+        currContactReward = encouragePuckContact;
         while (true)
         {
             puck.Reset(resetPuckState, agentBoundary);
@@ -250,7 +254,8 @@ public class AirHockeyAgent : Agent
         {
             if (puck.AgentContact)
             {
-                SetReward(encouragePuckContact);
+                SetReward(currContactReward);
+                currContactReward =currContactReward*0.5f;
                 EndEpisode();
                 return;
             }
@@ -347,8 +352,13 @@ public class AirHockeyAgent : Agent
             }
             if (puck.AgentContact)
             {
-                episodeReward["ContactReward"] += encouragePuckContact;
-                SetReward(encouragePuckContact);
+                episodeReward["ContactReward"] += currContactReward;
+                SetReward(currContactReward);
+                currContactReward =currContactReward*0.5f;
+                if (puckRB.position.y < agentRB.position.x)
+                {
+                    SetReward(playForwardReward);
+                }
 
             }
             if (puckRB.position.x < agentBoundary.Left-0.2 || puckRB.position.x > agentBoundary.Right+0.2 || puckRB.position.y > agentBoundary.Up+1 || puckRB.position.y < humanBoudary.Down -0.2)
@@ -357,8 +367,8 @@ public class AirHockeyAgent : Agent
             }
             SetReward(negStepReward); // Negative Step Reward
 
-            if (puckRB.position.y > agentRB.position.x){
-                SetReward(behindPuckReward);
+            if (puckRB.position.y < agentRB.position.x){
+                SetReward(behindPuckReward);                
             }
         
         }

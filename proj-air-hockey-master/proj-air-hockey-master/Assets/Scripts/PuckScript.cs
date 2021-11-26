@@ -70,11 +70,13 @@ public class PuckScript : MonoBehaviour
         }
         else if(resetPuckState == ResetPuckState.randomPositionAgentSide)
         {
-            puckRB.position = new Vector2(Random.Range(agentBoundary.Left, agentBoundary.Right) * 0.9f, Random.Range(agentBoundary.Down, agentBoundary.Up) * 0.9f);
+            puckRB.position = new Vector2(Random.Range(agentBoundary.Left+0.1f*(agentBoundary.Right-agentBoundary.Left), agentBoundary.Right-+0.1f*(agentBoundary.Right-agentBoundary.Left)), Random.Range(agentBoundary.Down+0.1f*(agentBoundary.Up-agentBoundary.Down), agentBoundary.Up-0.1f*(agentBoundary.Up-agentBoundary.Down)) );
         }
         else if(resetPuckState == ResetPuckState.randomPositionGlobal)
         {
-            puckRB.position = new Vector2(Random.Range(puckBoundary.Left, puckBoundary.Right) * 0.9f, Random.Range(puckBoundary.Down, puckBoundary.Up) * 0.9f);
+           // puckRB.position = new Vector2(Random.Range(puckBoundary.Left, puckBoundary.Right) * 0.9f, Random.Range(puckBoundary.Down, puckBoundary.Up) * 0.9f);
+            puckRB.position = new Vector2(Random.Range(puckBoundary.Left+0.1f*(puckBoundary.Right-puckBoundary.Left), puckBoundary.Right-+0.1f*(puckBoundary.Right-puckBoundary.Left)), Random.Range(puckBoundary.Down-3.08f+0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f), puckBoundary.Up-0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f)) );
+
         }
 
         else if(resetPuckState == ResetPuckState.shotOnGoal)
