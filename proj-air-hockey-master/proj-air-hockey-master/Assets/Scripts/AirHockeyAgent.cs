@@ -23,7 +23,15 @@ public enum TrainingPart
 public enum AgentResetState
 {
     centered,
-    random
+    random,
+    shotOnGoal
+}
+
+public enum HumanResetState
+{
+    centered,
+    random,
+    shotOnGoal
 }
 
 public class AirHockeyAgent : Agent
@@ -32,7 +40,7 @@ public class AirHockeyAgent : Agent
     //public TrainingPart trainingPart;
     
     private Boundary agentBoundary;
-    private Boundary humanBoudary;
+    private Boundary humanBoundary;
 
     private Rigidbody2D agentRB;
     private Rigidbody2D handRB;
@@ -45,20 +53,22 @@ public class AirHockeyAgent : Agent
     private Vector2 position;
     private ResetPuckState resetPuckState;
     private AgentResetState agentResetState;
-    private TaskType taskType = TaskType.FullGame;
+    private HumanResetState humanResetState;
+    private TaskType taskType = TaskType.Reaching;
     private float currContactReward;
     private float V_max_puck = 25;
     private float maxMovementSpeed = 6f;
-    private float V_max_human = 0.3f;
-     private float neghumanGoalReward = -0.5f;
-    private float agentGoalReward = 1f;
-    private float avoidBoundaries = 0.00f;
-    private float avoidDirectionChanges = 0.00f;
+    private float V_max_human = 0f;
+     private float neghumanGoalReward = 0f;
+    private float agentGoalReward = 0f;
+    private float avoidBoundaries = 0f;
+    private float avoidDirectionChanges = 0f;
     private float encouragePuckMovement = 0f;
-    private float encouragePuckContact = 0.8f;
-    private float playForwardReward = 0.3f;
-    private float negStepReward = -0.005f;
-    private float negMaxStepReward = -0f;
+    private float encouragePuckContact = 0.5f;
+    private float playForwardReward = 0.5f;
+    private float negplaybackReward = 0f;
+    private float negStepReward = -0.001f;
+    private float negMaxStepReward = 0f;
     private float behindPuckReward = 0f;
     private float defenceReward = 0f;
     private float backwallReward = 0f;
@@ -94,7 +104,7 @@ public class AirHockeyAgent : Agent
                       agentBoundaryHolder.GetChild(3).position.x);
 
         var humanBoundaryHolder = humanBoundaryHolderObject.GetComponent<Transform>();
-        humanBoudary = new Boundary(humanBoundaryHolder.GetChild(0).position.y,
+        humanBoundary = new Boundary(humanBoundaryHolder.GetChild(0).position.y,
                       humanBoundaryHolder.GetChild(1).position.y,
                       humanBoundaryHolder.GetChild(2).position.x,
                       humanBoundaryHolder.GetChild(3).position.x);
@@ -106,17 +116,20 @@ public class AirHockeyAgent : Agent
                 resetPuckState = ResetPuckState.randomPositionAgentSide;
                 V_max_human = 0f;
                 agentResetState = AgentResetState.random;
+                humanResetState = HumanResetState.random;
                 break;
 
                 case TaskType.Defending:
                 resetPuckState = ResetPuckState.shotOnGoal;
                 V_max_human = 0f;
-                agentResetState = AgentResetState.random;
+                agentResetState = AgentResetState.shotOnGoal;
+                humanResetState = HumanResetState.shotOnGoal;
                 break;
 
                 case TaskType.FullGame:
-                resetPuckState = ResetPuckState.randomPositionGlobal;
+                resetPuckState = ResetPuckState.randomPositionAgentSide;
                 agentResetState = AgentResetState.random;
+                humanResetState = HumanResetState.random;
                 V_max_human = 0.3f;
                 break;
 
@@ -124,6 +137,7 @@ public class AirHockeyAgent : Agent
                 resetPuckState = ResetPuckState.randomPositionAgentSide;
                 V_max_human = 0f;
                 agentResetState = AgentResetState.random;
+                humanResetState = HumanResetState.random;
                 break;
             }
         puck.MaxSpeed = V_max_puck;
@@ -141,16 +155,35 @@ public class AirHockeyAgent : Agent
             if (agentResetState == AgentResetState.random)
             {
                 agentRB.position = new Vector2(Random.Range(agentBoundary.Left, agentBoundary.Right) * 0.8f, Random.Range(agentBoundary.Down, agentBoundary.Up) * 0.8f);
-                handRB.position = new Vector2(Random.Range(humanBoudary.Left, humanBoudary.Right) * 0.8f, Random.Range(humanBoudary.Down, humanBoudary.Up) * 0.8f);
-
             }
             else if (agentResetState == AgentResetState.centered)
             {
                 agentRB.position = new Vector2((agentBoundary.Left + agentBoundary.Right) * 0.5f, (agentBoundary.Down + agentBoundary.Up) * 0.5f);
             }
+            else if (agentResetState == AgentResetState.shotOnGoal)
+            {
+                agentRB.position = new Vector2(Random.Range(agentBoundary.Left, agentBoundary.Right) * 0.8f, Random.Range(agentBoundary.Down, agentBoundary.Up) * 0.8f);
+            }
             else
             {
-                agentRB.position = new Vector2(humanBoudary.Left + 0.2f, humanBoudary.Down + 0.2f);
+                agentRB.position = new Vector2(humanBoundary.Left + 0.2f, humanBoundary.Down + 0.2f);
+            }
+
+            if (humanResetState == HumanResetState.random)
+            {
+                handRB.position = new Vector2(Random.Range(humanBoundary.Left, humanBoundary.Right) * 0.8f, Random.Range(humanBoundary.Down, humanBoundary.Up) * 0.8f);
+            }
+            else if (humanResetState == HumanResetState.centered)
+            {
+                handRB.position = new Vector2((humanBoundary.Left + humanBoundary.Right) * 0.5f, (humanBoundary.Down + humanBoundary.Up) * 0.5f);
+            }
+            else if (humanResetState == HumanResetState.shotOnGoal)
+            {
+                handRB.position = new Vector2(humanBoundary.Left + 0.8f,humanBoundary.Down +0.8f);
+            }
+            else
+            {
+                handRB.position = new Vector2(humanBoundary.Left + 0.2f, humanBoundary.Down + 0.2f);
             }
             // Player Position Reset
           //  humanPlayer.ResetPosition();
@@ -254,14 +287,23 @@ public class AirHockeyAgent : Agent
         {
             if (puck.AgentContact)
             {
+                episodeReward["ContactReward"] += currContactReward;
                 SetReward(currContactReward);
                 currContactReward =currContactReward*0.5f;
+                if (puckRB.position.y < agentRB.position.x)
+                {
+                    SetReward(playForwardReward);
+                }
+                else
+                {
+                    SetReward(negplaybackReward);
+                }
                 EndEpisode();
-                return;
+
             }
             else if (StepCount == MaxStep)
             {
-                SetReward(1f - Vector2.Distance(agentRB.position, puck.PuckRB.position)*0.2f);
+                SetReward(negMaxStepReward);
                 EndEpisode();
                 return;
             }
@@ -359,9 +401,13 @@ public class AirHockeyAgent : Agent
                 {
                     SetReward(playForwardReward);
                 }
+                else
+                {
+                    SetReward(negplaybackReward);
+                }
 
             }
-            if (puckRB.position.x < agentBoundary.Left-0.2 || puckRB.position.x > agentBoundary.Right+0.2 || puckRB.position.y > agentBoundary.Up+1 || puckRB.position.y < humanBoudary.Down -0.2)
+            if (puckRB.position.x < agentBoundary.Left-0.2 || puckRB.position.x > agentBoundary.Right+0.2 || puckRB.position.y > agentBoundary.Up+1 || puckRB.position.y < humanBoundary.Down -0.2)
             {
                 EndEpisode();
             }

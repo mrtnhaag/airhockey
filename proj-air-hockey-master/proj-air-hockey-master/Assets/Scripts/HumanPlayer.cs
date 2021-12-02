@@ -1,5 +1,12 @@
 ﻿using UnityEngine;
 
+public enum ResetHumanState
+{
+    normalPosition,
+    random,
+    shotOnGoal
+}
+
 public class HumanPlayer : MonoBehaviour
 {
     public bool automaticMovement;
@@ -59,6 +66,7 @@ public class HumanPlayer : MonoBehaviour
     public void ResetPosition()
     {
         humanPlayerRB.position = startingPosition;
+        
     }
 
     private void Update(){
