@@ -54,7 +54,7 @@ public class AirHockeyAgent : Agent
     private ResetPuckState resetPuckState;
     private AgentResetState agentResetState;
     private HumanResetState humanResetState;
-    private TaskType taskType = TaskType.Reaching;
+    private TaskType taskType = TaskType.FullGame;
     private float currContactReward;
     private float V_max_puck = 25;
     private float maxMovementSpeed = 6f;
@@ -63,11 +63,12 @@ public class AirHockeyAgent : Agent
     private float agentGoalReward = 0f;
     private float avoidBoundaries = 0f;
     private float avoidDirectionChanges = 0f;
+    private float stayCenteredReward = 0.02f;
     private float encouragePuckMovement = 0f;
-    private float encouragePuckContact = 0f;
+    private float encouragePuckContact = 0.5f;
     private float playForwardReward = 0.5f;
-    private float negplaybackReward = 0f;
-    private float negStepReward = -0.001f;
+    private float negplaybackReward = -0.2f;
+    private float negStepReward = -0.02f;
     private float negMaxStepReward = 0f;
     private float behindPuckReward = 0f;
     private float defenceReward = 0f;
@@ -86,6 +87,7 @@ public class AirHockeyAgent : Agent
     void Start()
     {
         agentRB = GetComponent<Rigidbody2D>();
+        Application.targetFrameRate = 100;
 
         //var puckGameObject = GameObject.Find("Puck");
         puck = puckGameObject.GetComponent<PuckScript>();
@@ -130,7 +132,7 @@ public class AirHockeyAgent : Agent
                 resetPuckState = ResetPuckState.randomPositionAgentSide;
                 agentResetState = AgentResetState.random;
                 humanResetState = HumanResetState.random;
-                V_max_human = 0.3f;
+                V_max_human = 6f;
                 break;
 
                 case TaskType.Scoring:
@@ -360,7 +362,7 @@ public class AirHockeyAgent : Agent
         }
         else if(taskType == TaskType.FullGame)                       //full game
         {
-
+            Debug.Log("fullgame");
             if (puck.playState == PlayState.agentScored)
             {
                 AddReward(agentGoalReward);
@@ -415,7 +417,10 @@ public class AirHockeyAgent : Agent
             if (puckRB.position.y < agentRB.position.x){
                 AddReward(behindPuckReward);                
             }
-        
+
+            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*stayCenteredReward*0.5f);
+            //Debug.Log((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*stayCenteredReward*0.5f);
+            //Debug.Log(agentBoundary.Right);
         }
                 
 
