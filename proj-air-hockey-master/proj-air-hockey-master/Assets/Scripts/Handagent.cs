@@ -65,7 +65,6 @@ public class Handagent : Agent
     {
         while (true)
         {
-            puck.Reset(resetPuckState, handBoundary);
             handRB.velocity = Vector2.zero;
 
             if (randomHandPosition)
@@ -96,9 +95,9 @@ public class Handagent : Agent
 
         public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(puck.transform.localPosition);
-        sensor.AddObservation(puckRB.velocity);
+        sensor.AddObservation(-transform.localPosition);
+        sensor.AddObservation(-puck.transform.localPosition);
+        sensor.AddObservation(-puckRB.velocity);
     }
 
         public override void Heuristic(in ActionBuffers actionsOut)
@@ -106,22 +105,34 @@ public class Handagent : Agent
         
         if (actionType == ActionType.Discrete)
         {
-            
+
             var discreteActionsOut = actionsOut.DiscreteActions;
             discreteActionsOut[0] = 0 ;
-            if (Input.GetKey(KeyCode.A)){       
+            if (Input.GetKey(KeyCode.Q)){       
                 discreteActionsOut[0] = 1 ;
             }
-            else if (Input.GetKey(KeyCode.D)){
+            else if (Input.GetKey(KeyCode.W)){
                 discreteActionsOut[0] = 2 ;
             }
-            else if (Input.GetKey(KeyCode.W)){
+            else if (Input.GetKey(KeyCode.E)){
                 discreteActionsOut[0] = 3 ;
             }
-            else if (Input.GetKey(KeyCode.S)){
+            else if (Input.GetKey(KeyCode.A)){
                 discreteActionsOut[0] = 4 ;
             } 
-        }// 0: nix, 1:left, 2:right, 3:up, 4:down
+            else if (Input.GetKey(KeyCode.D)){
+                discreteActionsOut[0] = 5 ;
+            }
+            else if (Input.GetKey(KeyCode.Y)){
+                discreteActionsOut[0] = 6 ;
+            }
+            else if (Input.GetKey(KeyCode.X)){
+                discreteActionsOut[0] = 7 ;
+            }
+            else if (Input.GetKey(KeyCode.C)){
+                discreteActionsOut[0] = 8 ;
+            }
+        }// 0: nix, 1:left_ up, 2:up, 3:right_up, 4:left, 5:right, 6:left_down, 7:down, 8:right_down 
         else
         {
             var continuousActionsOut = actionsOut.ContinuousActions;
@@ -274,23 +285,35 @@ public class Handagent : Agent
         Vector2 discretedirection =new Vector2(0, 0);
         if (actionType == ActionType.Discrete)
         {
-
             switch(discreteActions[0]){
                 case 0:
                 discretedirection =new Vector2(0, 0);
                 break;
                 case 1:
-                discretedirection =new Vector2(-1, 0);
+                discretedirection =new Vector2(1, -1);
                 break;
                 case 2:
-                discretedirection =new Vector2(1, 0);
-                break;
-                case 3:
-                discretedirection =new Vector2(0, 1);
-                break;
-                case 4:
                 discretedirection =new Vector2(0, -1);
                 break;
+                case 3:
+                discretedirection =new Vector2(-1, -1);
+                break;
+                case 4:
+                discretedirection =new Vector2(1, 0);
+                break;
+                case 5:
+                discretedirection =new Vector2(-1, 0);
+                break;
+                case 6:
+                discretedirection =new Vector2(1, 1);
+                break;
+                case 7:
+                discretedirection =new Vector2(0, 1);
+                break;
+                case 8:
+                discretedirection =new Vector2(-1, 1);
+                break;
+                
             }
         }
 

@@ -124,11 +124,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &214989570 stripped
+--- !u!1 &399076700 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 554238520117829669, guid: 6d39ec1df37749c45b10a5243b20ff87,
+  m_CorrespondingSourceObject: {fileID: 554238518841952651, guid: 6d39ec1df37749c45b10a5243b20ff87,
     type: 3}
-  m_PrefabInstance: {fileID: 554238518989936952}
+  m_PrefabInstance: {fileID: 1660101528}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
@@ -213,7 +213,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &554238518989936952
+--- !u!1001 &1660101528
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -222,20 +222,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 554238518648600408, guid: 6d39ec1df37749c45b10a5243b20ff87,
         type: 3}
-      propertyPath: m_BehaviorName
-      value: FullGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600408, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: m_BehaviorType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600408, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
       propertyPath: m_Model
       value: 
       objectReference: {fileID: 5022602860645237092, guid: f9efacd0b10fe7e4da5b3e5bfe8e7b84,
         type: 3}
+    - target: {fileID: 554238518648600408, guid: 6d39ec1df37749c45b10a5243b20ff87,
+        type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 554238518648600408, guid: 6d39ec1df37749c45b10a5243b20ff87,
         type: 3}
       propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.data[0]
@@ -246,51 +241,11 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600409, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: MaxStep
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600409, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: encouragePuckContact
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600409, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: avoidBoundaries
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600409, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: avoidDirectionChanges
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518648600409, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: encouragePuckMovement
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518735280685, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: handsteering
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 554238518735280685, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: maxMovementSpeed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 554238518788443479, guid: 6d39ec1df37749c45b10a5243b20ff87,
         type: 3}
       propertyPath: puckBoundaryGameObject
       value: 
-      objectReference: {fileID: 214989570}
-    - target: {fileID: 554238519664494798, guid: 6d39ec1df37749c45b10a5243b20ff87,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
+      objectReference: {fileID: 399076700}
     - target: {fileID: 925194961959876524, guid: 6d39ec1df37749c45b10a5243b20ff87,
         type: 3}
       propertyPath: m_Name

@@ -58,17 +58,19 @@ public class AirHockeyAgent : Agent
     private float currContactReward;
     private float V_max_puck = 25;
     private float maxMovementSpeed = 6f;
-    private float V_max_human = 0f;
+    private float V_max_human = 3f;
      private float neghumanGoalReward = 0f;
     private float agentGoalReward = 0f;
     private float avoidBoundaries = 0f;
     private float avoidDirectionChanges = 0f;
-    private float stayCenteredReward = 0.02f;
+    private float stayCenteredReward = 0f;
+    private float negoffCenterReward = -0.05f;
     private float encouragePuckMovement = 0f;
-    private float encouragePuckContact = 0.5f;
-    private float playForwardReward = 0.5f;
-    private float negplaybackReward = -0.2f;
-    private float negStepReward = -0.02f;
+    private float encouragePuckContact = 0.8f;
+    private bool contacthalf = false;
+    private float playForwardReward = 2.5f;
+    private float negplaybackReward = -0.50f;
+    private float negStepReward = -0.01f;
     private float negMaxStepReward = 0f;
     private float behindPuckReward = 0f;
     private float defenceReward = 0f;
@@ -132,7 +134,7 @@ public class AirHockeyAgent : Agent
                 resetPuckState = ResetPuckState.randomPositionAgentSide;
                 agentResetState = AgentResetState.random;
                 humanResetState = HumanResetState.random;
-                V_max_human = 6f;
+                //V_max_human = 3f;
                 break;
 
                 case TaskType.Scoring:
@@ -219,7 +221,7 @@ public class AirHockeyAgent : Agent
         if (actionType == ActionType.Discrete)
         {
 
-             var discreteActionsOut = actionsOut.DiscreteActions;
+            var discreteActionsOut = actionsOut.DiscreteActions;
             discreteActionsOut[0] = 0 ;
             if (Input.GetKey(KeyCode.Q)){       
                 discreteActionsOut[0] = 1 ;
@@ -291,7 +293,9 @@ public class AirHockeyAgent : Agent
             {
                 episodeReward["ContactReward"] += currContactReward;
                 AddReward(currContactReward);
-                currContactReward = currContactReward * 0.5f;
+                if (contacthalf){
+                    currContactReward = currContactReward * 0.5f;
+                }
                 if (puckRB.position.y < agentRB.position.x)
                 {
                     AddReward(playForwardReward);
@@ -362,7 +366,6 @@ public class AirHockeyAgent : Agent
         }
         else if(taskType == TaskType.FullGame)                       //full game
         {
-            Debug.Log("fullgame");
             if (puck.playState == PlayState.agentScored)
             {
                 AddReward(agentGoalReward);
@@ -397,7 +400,9 @@ public class AirHockeyAgent : Agent
             {
                 episodeReward["ContactReward"] += currContactReward;
                 AddReward(currContactReward);
-                currContactReward =currContactReward*0.5f;
+                if (contacthalf){
+                    currContactReward = currContactReward * 0.5f;
+                }
                 if (puckRB.position.y < agentRB.position.x)
                 {
                     AddReward(playForwardReward);
@@ -418,9 +423,9 @@ public class AirHockeyAgent : Agent
                 AddReward(behindPuckReward);                
             }
 
-            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*stayCenteredReward*0.5f);
-            //Debug.Log((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*stayCenteredReward*0.5f);
-            //Debug.Log(agentBoundary.Right);
+            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+1.8f))))*stayCenteredReward*0.5f);
+            AddReward(((Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*negoffCenterReward*0.5f);
+
         }
                 
 
