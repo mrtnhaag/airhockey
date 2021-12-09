@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f75bb48-570c-433e-b4f0-f0c0756929db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/NN_models/FullGame.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/NN_models/FullGame.onnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_training_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_training_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/AirHockeyAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/AirHockeyAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame.onnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/checkpoint.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/events.out.tfevents.1638833781.DESKTOP-9EMCU2O.40480.0" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/events.out.tfevents.1638833781.DESKTOP-9EMCU2O.40480.0" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="21xCBlsyQ6tMvALDUSbHhKKV1kC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f75bb48-570c-433e-b4f0-f0c0756929db" name="Default Changelist" comment="" />
+      <created>1638873218550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638873218550</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
