@@ -141,8 +141,8 @@ MonoBehaviour:
   humanResetState: 0
   taskType: 3
   currContactReward: 0
-  V_max_puck: 25
-  maxMovementSpeed: 6
+  V_max_puck: 5
+  V_max_robo: 3
   V_max_human: 3
   neghumanGoalReward: 0
   agentGoalReward: 0
@@ -268,8 +268,6 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1000
   actionType: 0
-  maxMovementSpeed: 0
-  randomHandPosition: 0
   resetPuckState: 0
   avoidBoundaries: 0
   avoidDirectionChanges: 0
@@ -301,9 +299,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: f9efacd0b10fe7e4da5b3e5bfe8e7b84, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 7f713d3cc727ffe4b9f97417c198b96f, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 1
+  m_BehaviorType: 2
   m_BehaviorName: HumanBehavior
   TeamId: 0
   m_UseChildSensors: 1
@@ -1709,9 +1707,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: f9efacd0b10fe7e4da5b3e5bfe8e7b84, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 7f713d3cc727ffe4b9f97417c198b96f, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 1
+  m_BehaviorType: 0
   m_BehaviorName: RoboBehavior
   TeamId: 0
   m_UseChildSensors: 1
@@ -2247,11 +2245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreScriptInstance: {fileID: 554238519981555625}
-  MaxSpeed: 20
   playState: 0
   marker: {fileID: 723058135145224372, guid: ca336c8ee313faa4c87ed51676b6c552, type: 3}
   markerContainerObject: {fileID: 554238519267207803}
   puckBoundaryGameObject: {fileID: 554238520489339411}
+  envGameObject: {fileID: 925194960312620084}
 --- !u!1 &554238520489339411
 GameObject:
   m_ObjectHideFlags: 0

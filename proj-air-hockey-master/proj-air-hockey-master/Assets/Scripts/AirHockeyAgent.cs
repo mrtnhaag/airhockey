@@ -10,8 +10,7 @@ public enum ActionType { Discrete, Continuous };
 public class AirHockeyAgent : Agent
 {
     public ActionType actionType;
-    //public TrainingPart trainingPart;
-    
+    private float currContactReward;
     private Boundary agentBoundary;
     private Rigidbody2D agentRB;
     private Rigidbody2D handRB;
@@ -22,29 +21,6 @@ public class AirHockeyAgent : Agent
     private Vector2 startingPosition;
     private Vector2 lastDirection;
     private Vector2 position;
-    private float currContactReward;
-    private float V_max_puck = 25;
-    private float maxMovementSpeed = 6f;
-    private float V_max_human = 3f;
-    private float neghumanGoalReward = 0f;
-    private float agentGoalReward = 0f;
-    private float avoidBoundaries = 0f;
-    private float avoidDirectionChanges = 0f;
-    private float stayCenteredReward = 0f;
-    private float negoffCenterReward = -0.05f;
-    private float encouragePuckMovement = 0f;
-    private float encouragePuckContact = 0.8f;
-    private bool contacthalf = false;
-    private float playForwardReward = 2.5f;
-    private float negplaybackReward = -0.50f;
-    private float negStepReward = -0.01f;
-    private float negMaxStepReward = 0f;
-    private float behindPuckReward = 0f;
-    private float defenceReward = 0f;
-    private float backwallReward = 0f;
-    public bool puckStopPenalty;
-    public bool backWallReward;
-    public bool deflectOnly;
     public GameObject puckGameObject;
     public GameObject humanPlayerGameObject;
     public GameObject envGameObject;
@@ -82,7 +58,7 @@ public class AirHockeyAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        currContactReward = encouragePuckContact;
+        currContactReward = env.encouragePuckContact;
         while (true)
         {
             puck.Reset(env.resetPuckState, agentBoundary);
@@ -200,67 +176,67 @@ public class AirHockeyAgent : Agent
             {
                 episodeReward["ContactReward"] += currContactReward;
                 AddReward(currContactReward);
-                if (contacthalf){
+                if (env.contacthalf){
                     currContactReward = currContactReward * 0.5f;
                 }
                 if (puckRB.position.y < agentRB.position.x)
                 {
-                    AddReward(playForwardReward);
+                    AddReward(env.playForwardReward);
                 }
                 else
                 {
-                    AddReward(negplaybackReward);
+                    AddReward(env.negplaybackReward);
                 }
                 EndEpisode();
 
             }
             else if (StepCount == MaxStep)
             {
-                AddReward(negMaxStepReward);
+                AddReward(env.negMaxStepReward);
                 EndEpisode();
                 return;
             }
-            AddReward(negStepReward);
+            AddReward(env.negStepReward);
         }
         else if(env.taskType == envScript.TaskType.Defending)
         {
             if (puck.playState == PlayState.agentScored)
             {
-                AddReward(agentGoalReward); //no extra, its about blocking
+                AddReward(env.agentGoalReward); //no extra, its about blocking
                 EndEpisode();
                 return;
             }
             else if (puck.playState == PlayState.playerScored)
             {
-                AddReward(neghumanGoalReward); // no penalty, just blocking
+                AddReward(env.neghumanGoalReward); // no penalty, just blocking
                 EndEpisode();
                 return;
             }
            
             else if (StepCount == MaxStep)
             {
-                AddReward(negMaxStepReward);
+                AddReward(env.negMaxStepReward);
                 EndEpisode();
                 return;
             }
             else if (puckRB.velocity.y < 0f)
             {
-                AddReward(defenceReward);
+                AddReward(env.defenceReward);
                 EndEpisode();
             }
-            AddReward(negStepReward); 
+            AddReward(env.negStepReward); 
         }
         else if(env.taskType == envScript.TaskType.Scoring)
         {
             if (puck.playState == PlayState.agentScored)
             {
-                AddReward(agentGoalReward);
+                AddReward(env.agentGoalReward);
                 EndEpisode();
                 return;
             }
             else if (puck.playState == PlayState.playerScored)
             {
-                AddReward(neghumanGoalReward);
+                AddReward(env.neghumanGoalReward);
                 EndEpisode();
                 return;
             }
@@ -269,34 +245,34 @@ public class AirHockeyAgent : Agent
                 EndEpisode();
                 return;
             }
-            AddReward(negStepReward);
+            AddReward(env.negStepReward);
         }
         else if(env.taskType == envScript.TaskType.FullGame)                       //full game
         {
             if (puck.playState == PlayState.agentScored)
             {
-                AddReward(agentGoalReward);
+                AddReward(env.agentGoalReward);
                 EndEpisode();
                 return;
             }
             else if (puck.playState == PlayState.playerScored)
             {
-                AddReward(neghumanGoalReward);
+                AddReward(env.neghumanGoalReward);
                 EndEpisode();
             }
             if (puck.AgentContact)
             {
                 AddReward(currContactReward);
-                if (contacthalf){
+                if (env.contacthalf){
                     currContactReward = currContactReward * 0.5f;
                 }
                 if (puckRB.position.y < agentRB.position.x)
                 {
-                    AddReward(playForwardReward);
+                    AddReward(env.playForwardReward);
                 }
                 else
                 {
-                    AddReward(negplaybackReward);
+                    AddReward(env.negplaybackReward);
                 }
 
             }
@@ -304,14 +280,14 @@ public class AirHockeyAgent : Agent
             {
                 EndEpisode();
             }
-            AddReward(negStepReward); // Negative Step Reward
+            AddReward(env.negStepReward); // Negative Step Reward
 
             if (puckRB.position.y < agentRB.position.x){
-                AddReward(behindPuckReward);                
+                AddReward(env.behindPuckReward);                
             }
 
-            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+1.8f))))*stayCenteredReward*0.5f);
-            AddReward(((Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*negoffCenterReward*0.5f);
+            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+1.8f))))*env.stayCenteredReward*0.5f);
+            AddReward(((Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*env.negoffCenterReward*0.5f);
 
         }
                 
@@ -376,28 +352,28 @@ public class AirHockeyAgent : Agent
         }
 
         
-        if(avoidDirectionChanges > 0f) // Punish changing direction too much.
+        if(env.avoidDirectionChanges > 0f) // Punish changing direction too much.
         {
-            AddReward(-((lastDirection - direction).magnitude) * avoidDirectionChanges);
-            episodeReward["DirectionReward"] -= (lastDirection - direction).magnitude * avoidDirectionChanges;
+            AddReward(-((lastDirection - direction).magnitude) * env.avoidDirectionChanges);
+            episodeReward["DirectionReward"] -= (lastDirection - direction).magnitude * env.avoidDirectionChanges;
         }
         lastDirection = direction;
 
-        if (avoidBoundaries > 0f) // Punish running into boundaries.
+        if (env.avoidBoundaries > 0f) // Punish running into boundaries.
         {
             if (agentRB.position.x < agentBoundary.Left || agentRB.position.x > agentBoundary.Right || agentRB.position.y > agentBoundary.Up || agentRB.position.y < agentBoundary.Down)
             {
-                AddReward(-1f*avoidBoundaries);
-                episodeReward["BoundaryReward"] -= 1f * avoidBoundaries;
+                AddReward(-1f*env.avoidBoundaries);
+                episodeReward["BoundaryReward"] -= 1f * env.avoidBoundaries;
             }
         }
 
         
 
-        if (encouragePuckMovement > 0f) // Reward high puck velocities
+        if (env.encouragePuckMovement > 0f) // Reward high puck velocities
         {
-            AddReward(puckRB.velocity.magnitude * encouragePuckMovement);
-            episodeReward["PuckVelocityReward"] += puckRB.velocity.magnitude * encouragePuckMovement;
+            AddReward(puckRB.velocity.magnitude * env.encouragePuckMovement);
+            episodeReward["PuckVelocityReward"] += puckRB.velocity.magnitude * env.encouragePuckMovement;
         }
         if (actionType == ActionType.Discrete){
             direction = discretedirection;
@@ -407,7 +383,7 @@ public class AirHockeyAgent : Agent
                             agentBoundary.Right),
                             Mathf.Clamp(agentRB.position.y, agentBoundary.Down,
                             agentBoundary.Up));
-        
-        agentRB.MovePosition(position + direction * maxMovementSpeed * Time.fixedDeltaTime);
+        Debug.Log(env.V_max_robo);
+        agentRB.MovePosition(position + direction * env.V_max_robo * Time.fixedDeltaTime);
     }
 }

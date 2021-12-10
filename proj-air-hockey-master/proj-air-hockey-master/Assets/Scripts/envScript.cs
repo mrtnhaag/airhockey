@@ -38,27 +38,27 @@ public enum HumanResetState
     public ResetPuckState resetPuckState;
     public RoboResetState roboResetState;
     public HumanResetState humanResetState;
-    public TaskType taskType = TaskType.FullGame;
+    public TaskType taskType = TaskType.Reaching;
     public float currContactReward;
-    public float V_max_puck = 25;
-    public float maxMovementSpeed = 6f;
-    public float V_max_human = 3f;
-    public float neghumanGoalReward = 0f;
-    public float agentGoalReward = 0f;
-    public float avoidBoundaries = 0f;
-    public float avoidDirectionChanges = 0f;
-    public float stayCenteredReward = 0f;
-    public float negoffCenterReward = -0.05f;
-    public float encouragePuckMovement = 0f;
-    public float encouragePuckContact = 0.8f;
-    public bool contacthalf = false;
-    public float playForwardReward = 2.5f;
-    public float negplaybackReward = -0.50f;
-    public float negStepReward = -0.01f;
-    public float negMaxStepReward = 0f;
-    public float behindPuckReward = 0f;
-    public float defenceReward = 0f;
-    public float backwallReward = 0f;
+    public float V_max_puck;
+    public float V_max_robo;
+    public float V_max_human;
+    public float neghumanGoalReward ;
+    public float agentGoalReward;
+    public float avoidBoundaries;
+    public float avoidDirectionChanges;
+    public float stayCenteredReward;
+    public float negoffCenterReward;
+    public float encouragePuckMovement;
+    public float encouragePuckContact;
+    public bool contacthalf;
+    public float playForwardReward;
+    public float negplaybackReward;
+    public float negStepReward;
+    public float negMaxStepReward;
+    public float behindPuckReward;
+    public float defenceReward;
+    public float backwallReward;
     public bool puckStopPenalty;
     public bool backWallReward;
     public bool deflectOnly;
@@ -82,7 +82,7 @@ public enum HumanResetState
 
         switch(taskType){
                 case TaskType.Reaching:
-                resetPuckState = ResetPuckState.randomPositionAgentSide;
+                resetPuckState = ResetPuckState.randomPositionRoboSide;
                 V_max_human = 0f;
                 roboResetState = RoboResetState.random;
                 humanResetState = HumanResetState.random;
@@ -96,21 +96,19 @@ public enum HumanResetState
                 break;
 
                 case TaskType.FullGame:
-                resetPuckState = ResetPuckState.randomPositionAgentSide;
+                resetPuckState = ResetPuckState.randomPositionGlobal;
                 roboResetState = RoboResetState.random;
                 humanResetState = HumanResetState.random;
-                //V_max_human = 3f;
                 break;
 
                 case TaskType.Scoring:
-                resetPuckState = ResetPuckState.randomPositionAgentSide;
+                resetPuckState = ResetPuckState.randomPositionRoboSide;
                 V_max_human = 0f;
                 roboResetState = RoboResetState.random;
                 humanResetState = HumanResetState.random;
                 break;
             }
-        human.maxMovementSpeed = V_max_human;
-        //puck.MaxSpeed = V_max_puck;
+
     }
 
     // Update is called once per frame

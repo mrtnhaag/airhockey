@@ -5,7 +5,8 @@ using UnityEngine;
 public enum ResetPuckState
 {
     normalPosition,
-    randomPositionAgentSide,
+    randomPositionRoboSide,
+    randomPositionHumanSide,
     randomPositionGlobal,
     shotOnGoal
 }
@@ -22,21 +23,24 @@ public enum PlayState
 public class PuckScript : MonoBehaviour
 {
     public ScoreScript ScoreScriptInstance;
-    public float MaxSpeed;
     public bool AgentContact { get { return agentContact; } }
     public Rigidbody2D PuckRB { get { return puckRB; } }
 
     private Rigidbody2D puckRB;
     public PlayState playState;
     private bool agentContact;
+    private envScript env;
     public GameObject marker;
     public GameObject markerContainerObject;
     public GameObject puckBoundaryGameObject;
+    public GameObject envGameObject;
     private Transform markerContainer;
     Boundary puckBoundary;
 
     void Start()
     {
+        env = envGameObject.GetComponent<envScript>();
+
         puckRB = GetComponent<Rigidbody2D>();
         markerContainer = markerContainerObject.transform;
         var puckBoundaryHolder = puckBoundaryGameObject.GetComponent<Transform>();
@@ -68,9 +72,13 @@ public class PuckScript : MonoBehaviour
                 puckRB.position = new Vector2((agentBoundary.Left+agentBoundary.Right)*0.5f, (puckBoundary.Down+puckBoundary.Up)*0.5f+0.1f);//agent anstoß
             }
         }
-        else if(resetPuckState == ResetPuckState.randomPositionAgentSide)
+        else if(resetPuckState == ResetPuckState.randomPositionRoboSide)
         {
             puckRB.position = new Vector2(Random.Range(agentBoundary.Left+0.1f*(agentBoundary.Right-agentBoundary.Left), agentBoundary.Right-+0.1f*(agentBoundary.Right-agentBoundary.Left)), Random.Range(agentBoundary.Down+0.1f*(agentBoundary.Up-agentBoundary.Down), agentBoundary.Up-0.1f*(agentBoundary.Up-agentBoundary.Down)) );
+        }
+        else if(resetPuckState == ResetPuckState.randomPositionHumanSide)
+        {
+            puckRB.position = new Vector2(Random.Range(agentBoundary.Left+0.1f*(agentBoundary.Right-agentBoundary.Left), agentBoundary.Right-+0.1f*(agentBoundary.Right-agentBoundary.Left)), Random.Range(puckBoundary.Down-3.08f+0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f), puckBoundary.Up-0.1f*(puckBoundary.Up-puckBoundary.Down)) );
         }
         else if(resetPuckState == ResetPuckState.randomPositionGlobal)
         {
@@ -164,7 +172,7 @@ public class PuckScript : MonoBehaviour
     private void FixedUpdate()
     {
     
-        puckRB.velocity = Vector2.ClampMagnitude(puckRB.velocity, MaxSpeed);
+        puckRB.velocity = Vector2.ClampMagnitude(puckRB.velocity, env.V_max_puck);
         if(puckRB.velocity.magnitude == 0)
         {
             playState = PlayState.puckStopped;

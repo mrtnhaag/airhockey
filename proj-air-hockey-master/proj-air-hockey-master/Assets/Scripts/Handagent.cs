@@ -9,9 +9,6 @@ using Unity.MLAgents.Sensors;
 public class Handagent : Agent
 {
     public ActionType actionType;
-    public float maxMovementSpeed;
-    public bool randomHandPosition;
-    
     private Boundary humanBoundary;
 
     private Rigidbody2D handRB;
@@ -49,17 +46,7 @@ public class Handagent : Agent
         var roboGameObject = GameObject.Find("Agent");
         robo = roboGameObject.GetComponent<AirHockeyAgent>();
         roboRB = roboGameObject.GetComponent<Rigidbody2D>();
-
-       // var humanPlayerGameObject = GameObject.Find("Agent");
-       // humanPlayer = humanPlayerGameObject.GetComponent<HumanPlayer>();
-
-    //    var handBoundaryHolder = GameObject.Find("PlayerBoundaryHolder").GetComponent<Transform>();
-     //   handBoundary = new Boundary(handBoundaryHolder.GetChild(0).localPosition.y,
-       //               handBoundaryHolder.GetChild(1).localPosition.y,
-         //             handBoundaryHolder.GetChild(2).localPosition.x,
-           //           handBoundaryHolder.GetChild(3).localPosition.x);
         
-
         var humanBoundaryHolder = humanBoundaryHolderObject.GetComponent<Transform>();
         humanBoundary = new Boundary(humanBoundaryHolder.GetChild(0).position.y,
                       humanBoundaryHolder.GetChild(1).position.y,
@@ -256,14 +243,12 @@ public class Handagent : Agent
         if (actionType == ActionType.Discrete){
             direction = discretedirection;
         }
- 
-        Debug.Log(discretedirection);
         // Movement
         position = new Vector2(Mathf.Clamp(handRB.position.x, humanBoundary.Left,
                             humanBoundary.Right),
                             Mathf.Clamp(handRB.position.y, humanBoundary.Down,
                             humanBoundary.Up));
-        handRB.MovePosition(position + direction * maxMovementSpeed * Time.fixedDeltaTime);
+        handRB.MovePosition(position + direction * env.V_max_human * Time.fixedDeltaTime);
     }
 
 
