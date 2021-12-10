@@ -21,13 +21,6 @@ public class Handagent : Agent
     private Vector2 startingPosition;
     private Vector2 lastDirection;
     private Vector2 position;
-    public ResetPuckState resetPuckState;
-    public float avoidBoundaries;
-    public float avoidDirectionChanges;
-    public float encouragePuckMovement;
-    public bool puckStopPenalty;
-    public bool backWallReward;
-    public bool deflectOnly;
     public GameObject humanBoundaryHolderObject;
     public GameObject envGameObject;
 

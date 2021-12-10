@@ -1,5 +1,5 @@
 behaviors:
-  FullGame:
+  RoboBehavior:
     trainer_type: ppo
     hyperparameters:
       batch_size: 32

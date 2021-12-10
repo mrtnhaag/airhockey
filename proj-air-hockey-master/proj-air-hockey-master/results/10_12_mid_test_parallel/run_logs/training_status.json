@@ -1,0 +1,29 @@
+{
+    "RoboBehavior": {
+        "checkpoints": [
+            {
+                "steps": 30210,
+                "file_path": "results\\10_12_mid_test_parallel\\RoboBehavior\\RoboBehavior-30210.onnx",
+                "reward": null,
+                "creation_time": 1639146763.006718,
+                "auxillary_file_paths": [
+                    "results\\10_12_mid_test_parallel\\RoboBehavior\\RoboBehavior-30210.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 30210,
+            "file_path": "results\\10_12_mid_test_parallel\\RoboBehavior.onnx",
+            "reward": null,
+            "creation_time": 1639146763.006718,
+            "auxillary_file_paths": [
+                "results\\10_12_mid_test_parallel\\RoboBehavior\\RoboBehavior-30210.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

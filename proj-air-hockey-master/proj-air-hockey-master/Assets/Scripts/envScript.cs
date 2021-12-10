@@ -52,9 +52,9 @@ public enum HumanResetState
     [System.NonSerialized]
     public float V_max_human = 6f;
     [System.NonSerialized]
-    public float neghumanGoalReward = 0f;
+    public float neghumanGoalReward = -1f;
     [System.NonSerialized]
-    public float agentGoalReward = 0f;
+    public float agentGoalReward = 1f;
     [System.NonSerialized]
     public float avoidBoundaries = 0f;
     [System.NonSerialized]
@@ -62,21 +62,21 @@ public enum HumanResetState
     [System.NonSerialized]
     public float stayCenteredReward = 0f;
     [System.NonSerialized]
-    public float negoffCenterReward = -0.05f;
+    public float negoffCenterReward = 0f;
     [System.NonSerialized]
-    public float encouragePuckMovement = 0f;
+    public float encouragePuckMovement = 0.1f;
     [System.NonSerialized]
-    public float encouragePuckContact = 0.8f;
+    public float encouragePuckContact = 0.1f;
     [System.NonSerialized]
     public bool contacthalf = false;
     [System.NonSerialized]
-    public float playForwardReward = 2.5f;
+    public float playForwardReward = 0.5f;
     [System.NonSerialized]
-    public float negplaybackReward = -0.50f;
+    public float negplaybackReward = 0f;
     [System.NonSerialized]
-    public float negStepReward = -0.01f;
+    public float negStepReward = 0f;
     [System.NonSerialized]
-    public float negMaxStepReward = 0f;
+    public float negMaxStepReward = -1f;
     [System.NonSerialized]
     public float behindPuckReward = 0f;
     [System.NonSerialized]
@@ -89,7 +89,6 @@ public enum HumanResetState
     public bool backWallReward;
     [System.NonSerialized]
     public bool deflectOnly;
-    
     public GameObject puckGameObject;
     public GameObject humanPlayerGameObject;
     public GameObject roboPlayerGameObject;

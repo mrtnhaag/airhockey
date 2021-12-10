@@ -191,6 +191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
 --- !u!1001 &495200315
@@ -259,6 +264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: training_env_2agents (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
@@ -412,6 +422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
 --- !u!1001 &1106602189
@@ -480,6 +495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: training_env_2agents (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
@@ -550,6 +570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents
       objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
 --- !u!1001 &1364001812
@@ -618,6 +643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: training_env_2agents (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
@@ -688,6 +718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}
 --- !u!1001 &1750514144
@@ -756,6 +791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: training_env_2agents (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_BehaviorName
+      value: FullGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f118ba2ef75a9046aacd28ab09fc856, type: 3}

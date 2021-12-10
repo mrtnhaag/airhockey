@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1639147411",
+        "python_version": "3.7.11 (default, Jul 27 2021, 09:42:29) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\mhaag\\anaconda3\\envs\\dl\\Scripts\\mlagents-learn trainingconfigs\\ppo_basic.yaml --run-id=09_12_21_03 --resume",
+        "mlagents_version": "0.27.0",
+        "mlagents_envs_version": "0.27.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.0+cu110",
+        "numpy_version": "1.19.5",
+        "end_time_seconds": "1639147426"
+    },
+    "total": 14.896855299999999,
+    "count": 1,
+    "self": 0.01048189999999849,
+    "children": {
+        "run_training.setup": {
+            "total": 0.19714260000000006,
+            "count": 1,
+            "self": 0.19714260000000006
+        },
+        "TrainerController.start_learning": {
+            "total": 14.6892308,
+            "count": 1,
+            "self": 0.00014069999999932747,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 13.7381127,
+                    "count": 1,
+                    "self": 13.7381127
+                },
+                "TrainerController._save_models": {
+                    "total": 0.9509774000000011,
+                    "count": 1,
+                    "self": 0.010429100000001412,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.9405482999999997,
+                            "count": 1,
+                            "self": 0.9405482999999997
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

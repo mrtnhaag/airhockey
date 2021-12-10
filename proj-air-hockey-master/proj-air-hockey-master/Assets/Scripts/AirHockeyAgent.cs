@@ -372,7 +372,7 @@ public class AirHockeyAgent : Agent
         if (env.encouragePuckMovement > 0f) // Reward high puck velocities
         {
             AddReward(puckRB.velocity.magnitude * env.encouragePuckMovement);
-            episodeReward["PuckVelocityReward"] += puckRB.velocity.magnitude * env.encouragePuckMovement;
+
         }
         if (actionType == ActionType.Discrete){
             direction = discretedirection;
