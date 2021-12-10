@@ -35,33 +35,61 @@ public enum HumanResetState
     private PuckScript puck;
     private Handagent human;
     private AirHockeyAgent robo;
+    [System.NonSerialized]
     public ResetPuckState resetPuckState;
+    [System.NonSerialized]
     public RoboResetState roboResetState;
+    [System.NonSerialized]
     public HumanResetState humanResetState;
-    public TaskType taskType = TaskType.Reaching;
+    [System.NonSerialized]
+    public TaskType taskType = TaskType.FullGame;
+    [System.NonSerialized]
     public float currContactReward;
-    public float V_max_puck;
-    public float V_max_robo;
-    public float V_max_human;
-    public float neghumanGoalReward ;
-    public float agentGoalReward;
-    public float avoidBoundaries;
-    public float avoidDirectionChanges;
-    public float stayCenteredReward;
-    public float negoffCenterReward;
-    public float encouragePuckMovement;
-    public float encouragePuckContact;
-    public bool contacthalf;
-    public float playForwardReward;
-    public float negplaybackReward;
-    public float negStepReward;
-    public float negMaxStepReward;
-    public float behindPuckReward;
-    public float defenceReward;
-    public float backwallReward;
+    [System.NonSerialized]
+    public float V_max_puck = 25;
+    [System.NonSerialized]
+    public float V_max_robo = 6f;
+    [System.NonSerialized]
+    public float V_max_human = 6f;
+    [System.NonSerialized]
+    public float neghumanGoalReward = 0f;
+    [System.NonSerialized]
+    public float agentGoalReward = 0f;
+    [System.NonSerialized]
+    public float avoidBoundaries = 0f;
+    [System.NonSerialized]
+    public float avoidDirectionChanges = 0f;
+    [System.NonSerialized]
+    public float stayCenteredReward = 0f;
+    [System.NonSerialized]
+    public float negoffCenterReward = -0.05f;
+    [System.NonSerialized]
+    public float encouragePuckMovement = 0f;
+    [System.NonSerialized]
+    public float encouragePuckContact = 0.8f;
+    [System.NonSerialized]
+    public bool contacthalf = false;
+    [System.NonSerialized]
+    public float playForwardReward = 2.5f;
+    [System.NonSerialized]
+    public float negplaybackReward = -0.50f;
+    [System.NonSerialized]
+    public float negStepReward = -0.01f;
+    [System.NonSerialized]
+    public float negMaxStepReward = 0f;
+    [System.NonSerialized]
+    public float behindPuckReward = 0f;
+    [System.NonSerialized]
+    public float defenceReward = 0f;
+    [System.NonSerialized]
+    public float backwallReward = 0f;
+    [System.NonSerialized]
     public bool puckStopPenalty;
+    [System.NonSerialized]
     public bool backWallReward;
+    [System.NonSerialized]
     public bool deflectOnly;
+    
     public GameObject puckGameObject;
     public GameObject humanPlayerGameObject;
     public GameObject roboPlayerGameObject;

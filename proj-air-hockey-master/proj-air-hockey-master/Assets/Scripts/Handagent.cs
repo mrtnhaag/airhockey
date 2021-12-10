@@ -36,7 +36,6 @@ public class Handagent : Agent
     void Start()
     {
         handRB = GetComponent<Rigidbody2D>();
-        Debug.Log("start");
         env = envGameObject.GetComponent<envScript>();
 
         var puckGameObject = GameObject.Find("Puck");
@@ -59,8 +58,6 @@ public class Handagent : Agent
 
     public override void OnEpisodeBegin()
     {
-        Debug.Log("episode");
-
         while (true)
         {
             handRB.velocity = Vector2.zero;
@@ -106,12 +103,10 @@ public class Handagent : Agent
 
         if (actionType == ActionType.Discrete)
         {
-            Debug.Log("heuristik");
             var discreteActionsOut = actionsOut.DiscreteActions;
             discreteActionsOut[0] = 0 ;
             if (Input.GetKey(KeyCode.Q)){       
                 discreteActionsOut[0] = 1 ;
-                //Debug.Log("q");
             }
             else if (Input.GetKey(KeyCode.W)){
                 discreteActionsOut[0] = 2 ;
@@ -134,7 +129,6 @@ public class Handagent : Agent
             else if (Input.GetKey(KeyCode.C)){
                 discreteActionsOut[0] = 8 ;
             }
-            //Debug.Log(discreteActionsOut[0]);
         }// 0: nix, 1:left_ up, 2:up, 3:right_up, 4:left, 5:right, 6:left_down, 7:down, 8:right_down 
         else
         {
@@ -173,10 +167,8 @@ public class Handagent : Agent
     {
         var continouosActions = actionsIn.ContinuousActions;
         var discreteActions = actionsIn.DiscreteActions;
-        Debug.Log("action");
 
         int dx = discreteActions[0]; 
-        //Debug.Log(dx);
 
         Vector2 direction = new Vector2(0, 0);
 

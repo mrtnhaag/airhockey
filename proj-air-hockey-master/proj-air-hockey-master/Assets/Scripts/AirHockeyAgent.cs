@@ -174,7 +174,6 @@ public class AirHockeyAgent : Agent
         {
             if (puck.AgentContact)
             {
-                episodeReward["ContactReward"] += currContactReward;
                 AddReward(currContactReward);
                 if (env.contacthalf){
                     currContactReward = currContactReward * 0.5f;
@@ -383,7 +382,6 @@ public class AirHockeyAgent : Agent
                             agentBoundary.Right),
                             Mathf.Clamp(agentRB.position.y, agentBoundary.Down,
                             agentBoundary.Up));
-        Debug.Log(env.V_max_robo);
         agentRB.MovePosition(position + direction * env.V_max_robo * Time.fixedDeltaTime);
     }
 }
