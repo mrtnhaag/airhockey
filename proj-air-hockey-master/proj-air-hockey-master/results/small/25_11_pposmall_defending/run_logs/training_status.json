@@ -1,0 +1,65 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 1499997,
+                "file_path": "results\\25_11_pposmall_defending\\FullGame\\FullGame-1499997.onnx",
+                "reward": 0.7946000027656556,
+                "creation_time": 1637884466.6596825,
+                "auxillary_file_paths": [
+                    "results\\25_11_pposmall_defending\\FullGame\\FullGame-1499997.pt"
+                ]
+            },
+            {
+                "steps": 1999988,
+                "file_path": "results\\25_11_pposmall_defending\\FullGame\\FullGame-1999988.onnx",
+                "reward": 0.2841666837533315,
+                "creation_time": 1637886119.2075477,
+                "auxillary_file_paths": [
+                    "results\\25_11_pposmall_defending\\FullGame\\FullGame-1999988.pt"
+                ]
+            },
+            {
+                "steps": 2499999,
+                "file_path": "results\\25_11_pposmall_defending\\FullGame\\FullGame-2499999.onnx",
+                "reward": 0.7686363567005504,
+                "creation_time": 1637887859.5064616,
+                "auxillary_file_paths": [
+                    "results\\25_11_pposmall_defending\\FullGame\\FullGame-2499999.pt"
+                ]
+            },
+            {
+                "steps": 2999972,
+                "file_path": "results\\25_11_pposmall_defending\\FullGame\\FullGame-2999972.onnx",
+                "reward": 0.36400001049041747,
+                "creation_time": 1637889699.982174,
+                "auxillary_file_paths": [
+                    "results\\25_11_pposmall_defending\\FullGame\\FullGame-2999972.pt"
+                ]
+            },
+            {
+                "steps": 3077682,
+                "file_path": "results\\25_11_pposmall_defending\\FullGame\\FullGame-3077682.onnx",
+                "reward": 0.9480000019073487,
+                "creation_time": 1637889997.6743467,
+                "auxillary_file_paths": [
+                    "results\\25_11_pposmall_defending\\FullGame\\FullGame-3077682.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3077682,
+            "file_path": "results\\25_11_pposmall_defending\\FullGame.onnx",
+            "reward": 0.9480000019073487,
+            "creation_time": 1637889997.6743467,
+            "auxillary_file_paths": [
+                "results\\25_11_pposmall_defending\\FullGame\\FullGame-3077682.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}
