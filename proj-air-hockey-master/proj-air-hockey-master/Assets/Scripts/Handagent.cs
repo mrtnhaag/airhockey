@@ -4,41 +4,52 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using UnityEngine.InputSystem;
 
 
 public class Handagent : Agent
 {
     public ActionType actionType;
-    public float maxMovementSpeed;
-    public bool randomHandPosition;
-    
-    private Boundary handBoundary;
-
+    private Controller controlls;
+    private Boundary humanBoundary;
+    private float horiMove;
+    private float vertiMove;
+    private Vector2 move;
     private Rigidbody2D handRB;
     private Rigidbody2D puckRB;
     private Rigidbody2D roboRB;
     private PuckScript puck;
+    private envScript env;
     private AirHockeyAgent robo;
     private HumanPlayer humanPlayer;
-
     private Vector2 startingPosition;
     private Vector2 lastDirection;
     private Vector2 position;
-    public TaskType taskType;
-    public TrainingPart trainingPart;
-    public ResetPuckState resetPuckState;
+    public GameObject humanBoundaryHolderObject;
+    public GameObject envGameObject;
+    public bool controllerinput;
 
-    public float avoidBoundaries;
-    public float avoidDirectionChanges;
-    public float encouragePuckMovement;
-    public bool puckStopPenalty;
-    public bool backWallReward;
-    public bool deflectOnly;
 
-    public Dictionary<string, float> episodeReward;
+
+
+    //void OnEnable()
+    //{
+    //    Debug.Log("enable");
+    //    controlls = new Controller();
+    //    controlls.Controlleractions.move.performed += ctx => move = ctx.ReadValue<Vector2>();
+    //    controlls.Controlleractions.move.canceled += ctx => move = Vector2.zero;
+    //    controlls.Controlleractions.Enable();
+    //}
+    //void OnDisable()
+    //{
+    //    controlls.Controlleractions.Disable();
+    //}
+        
     void Start()
     {
+        Debug.Log("start");
         handRB = GetComponent<Rigidbody2D>();
+        env = envGameObject.GetComponent<envScript>();
 
         var puckGameObject = GameObject.Find("Puck");
         puck = puckGameObject.GetComponent<PuckScript>();
@@ -47,15 +58,12 @@ public class Handagent : Agent
         var roboGameObject = GameObject.Find("Agent");
         robo = roboGameObject.GetComponent<AirHockeyAgent>();
         roboRB = roboGameObject.GetComponent<Rigidbody2D>();
-
-       // var humanPlayerGameObject = GameObject.Find("Agent");
-       // humanPlayer = humanPlayerGameObject.GetComponent<HumanPlayer>();
-
-        var handBoundaryHolder = GameObject.Find("PlayerBoundaryHolder").GetComponent<Transform>();
-        handBoundary = new Boundary(handBoundaryHolder.GetChild(0).localPosition.y,
-                      handBoundaryHolder.GetChild(1).localPosition.y,
-                      handBoundaryHolder.GetChild(2).localPosition.x,
-                      handBoundaryHolder.GetChild(3).localPosition.x);
+        
+        var humanBoundaryHolder = humanBoundaryHolderObject.GetComponent<Transform>();
+        humanBoundary = new Boundary(humanBoundaryHolder.GetChild(0).position.y,
+                      humanBoundaryHolder.GetChild(1).position.y,
+                      humanBoundaryHolder.GetChild(2).position.x,
+                      humanBoundaryHolder.GetChild(3).position.x);
 
         //startingPosition = new Vector2(0, -2.3f);
         startingPosition = handRB.position;
@@ -67,32 +75,37 @@ public class Handagent : Agent
         {
             handRB.velocity = Vector2.zero;
 
-            if (randomHandPosition)
+            if (env.humanResetState == envScript.HumanResetState.random)
+            //if(true)
             {
-                handRB.position = new Vector2(Random.Range(handBoundary.Left, handBoundary.Right) * 0.8f, Random.Range(handBoundary.Up, handBoundary.Down) * 0.8f);
+                handRB.position = new Vector2(Random.Range(humanBoundary.Left, humanBoundary.Right) * 0.8f, Random.Range(humanBoundary.Down, humanBoundary.Up) * 0.8f);
+            }
+            else if (env.humanResetState == envScript.HumanResetState.centered)
+            {
+                handRB.position = new Vector2((humanBoundary.Left + humanBoundary.Right) * 0.5f, (humanBoundary.Down + humanBoundary.Up) * 0.5f);
+            }
+            else if (env.humanResetState == envScript.HumanResetState.shotOnGoal)
+            {
+                handRB.position = new Vector2(humanBoundary.Left + 0.8f,humanBoundary.Down +0.8f);
             }
             else
             {
-                handRB.position = startingPosition;
+                handRB.position = new Vector2(humanBoundary.Left + 0.2f, humanBoundary.Down + 0.2f);
             }
-            // Player Position Reset
-          //  humanPlayer.ResetPosition();
 
             if (Mathf.Abs(puck.PuckRB.position.y - handRB.position.y) >= 1.0 || Mathf.Abs(puck.PuckRB.position.x - handRB.position.x) >= 1.0)
             {
                 break;
             }
         }
-        episodeReward = new Dictionary<string, float>();
-        episodeReward["StepReward"] = 0f;
-        episodeReward["DirectionReward"] = 0f;
-        episodeReward["BoundaryReward"] = 0f;
-        episodeReward["PuckVelocityReward"] = 0f;
-        //Debug.Log("-------------------------------------");
+
 
 
     }
-
+        private void FixedUpdate(){
+        horiMove = Input.GetAxis("Horizontal");
+        vertiMove = Input.GetAxis("Vertical");
+    }
         public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(-transform.localPosition);
@@ -103,10 +116,69 @@ public class Handagent : Agent
         public override void Heuristic(in ActionBuffers actionsOut)
     {
         
+
         if (actionType == ActionType.Discrete)
         {
-
             var discreteActionsOut = actionsOut.DiscreteActions;
+
+            if (controllerinput){
+                //horiMove = Input.GetAxis("Horizontal");
+                //vertiMove = Input.GetAxis("Vertical");
+                Debug.Log(new Vector2(horiMove,vertiMove));
+
+                Debug.Log("contr");
+                if(Mathf.Abs(horiMove)<0.2f) //weder links noch rechts
+                {
+                    if(Mathf.Abs(vertiMove)<0.2f)// weder hoch noch runter
+                    {
+                        discreteActionsOut[0] = 0 ;
+                    }
+                    else if(vertiMove<-0.2f){//runter
+                        discreteActionsOut[0] = 2 ;
+
+                    }
+                    else if(vertiMove>0.2f){//hoch
+                        discreteActionsOut[0] = 7 ;
+
+                    }
+                }
+                else if(horiMove<=-0.2f) 
+                {//links
+                Debug.Log("links");
+                    if(Mathf.Abs(vertiMove)<0.2f)// weder hoch noch runter
+                    {
+                        discreteActionsOut[0] = 5 ;
+                    }
+                    else if(vertiMove<-0.2f){//runter
+                        discreteActionsOut[0] = 3 ;
+
+                    }
+                    else if(vertiMove>0.2f){//hoch
+                        discreteActionsOut[0] = 8 ;
+
+                    }
+                }
+                else if(horiMove>=0.2f)
+                {//rechts
+                Debug.Log("rechts");
+                    if(Mathf.Abs(vertiMove)<0.2f)// weder hoch noch runterqas
+                    {
+                        discreteActionsOut[0] = 4 ;
+                    }
+                    else if(vertiMove<-0.2f){//runter
+                        discreteActionsOut[0] = 1 ;
+
+                    }
+                    else if(vertiMove>0.2f){//hoch
+                        discreteActionsOut[0] = 6 ;
+
+                    }
+                }
+
+            }
+            
+            else{
+                Debug.Log("keybaord");
             discreteActionsOut[0] = 0 ;
             if (Input.GetKey(KeyCode.Q)){       
                 discreteActionsOut[0] = 1 ;
@@ -132,7 +204,10 @@ public class Handagent : Agent
             else if (Input.GetKey(KeyCode.C)){
                 discreteActionsOut[0] = 8 ;
             }
+        }
+        Debug.Log(discreteActionsOut);
         }// 0: nix, 1:left_ up, 2:up, 3:right_up, 4:left, 5:right, 6:left_down, 7:down, 8:right_down 
+        
         else
         {
             var continuousActionsOut = actionsOut.ContinuousActions;
@@ -170,99 +245,9 @@ public class Handagent : Agent
     {
         var continouosActions = actionsIn.ContinuousActions;
         var discreteActions = actionsIn.DiscreteActions;
-
-        if(taskType == TaskType.Reaching)
-        {
-            if (puck.AgentContact)
-            {
-                SetReward(1f);
-                EndEpisode();
-                return;
-            }
-            else if (StepCount == MaxStep)
-            {
-                SetReward(1f - Vector2.Distance(handRB.position, puck.PuckRB.position));
-                EndEpisode();
-                return;
-            }
-            SetReward(-0.01f);
-        }
-        else if(taskType == TaskType.Defending)
-        {
-            if (puck.playState == PlayState.agentScored)
-            {
-                SetReward(1.5f);
-                EndEpisode();
-                return;
-            }
-            else if (puck.playState == PlayState.playerScored)
-            {
-                SetReward(-1f);
-                EndEpisode();
-                return;
-            }
-            else if (puck.playState == PlayState.backWallReached && backWallReward == true)
-            {
-                SetReward(1f);
-                EndEpisode();
-                return;
-            }
-            else if (puck.playState == PlayState.puckStopped && puckStopPenalty == true){
-                SetReward(-.3f);
-                EndEpisode();
-                return;
-            }
-            else if(puck.transform.position.y < 0 && puck.AgentContact == true && deflectOnly == true)
-            {
-                //SetReward(1f);
-                EndEpisode();
-                return;
-            }
-            else if (StepCount == MaxStep)
-            {
-                SetReward(-1f);
-                EndEpisode();
-                return;
-            }
-            SetReward(-0.003f); // Negative Step Reward
-        }
-        else if(taskType == TaskType.Scoring)
-        {
-            if (puck.playState == PlayState.agentScored)
-            {
-                SetReward(1f);
-                EndEpisode();
-                return;
-            }
-            else if (puck.playState == PlayState.playerScored)
-            {
-                SetReward(-.1f);
-                EndEpisode();
-                return;
-            }
-            else if (StepCount == MaxStep)
-            {
-                EndEpisode();
-                return;
-            }
-            SetReward(-0.001f);
-        }
-        else if(taskType == TaskType.FullGame)                                              //full game
-        {
-            if (puck.playState == PlayState.agentScored)
-            {
-                SetReward(1f);
-                EndEpisode();
-                return;
-            }
-            else if (puck.playState == PlayState.playerScored)
-            {
-                SetReward(-1f);
-                EndEpisode();
-                return;
-            }
-        }
+        Debug.Log(discreteActions[0]);
         int dx = discreteActions[0]; 
+
         Vector2 direction = new Vector2(0, 0);
 
         if (actionType == ActionType.Continuous)
@@ -285,7 +270,7 @@ public class Handagent : Agent
         Vector2 discretedirection =new Vector2(0, 0);
         if (actionType == ActionType.Discrete)
         {
-            switch(discreteActions[0]){
+            switch(dx){
                 case 0:
                 discretedirection =new Vector2(0, 0);
                 break;
@@ -316,81 +301,25 @@ public class Handagent : Agent
                 
             }
         }
+        
+
 
         
-        if(direction.magnitude > 1f)
+        if(discretedirection.magnitude > 1f)
         {
-            direction.Normalize();
+            discretedirection.Normalize();
         }
 
-        
-        if(avoidDirectionChanges > 0f) // Punish changing direction too much.
-        {
-            SetReward(-(lastDirection - direction).magnitude * avoidDirectionChanges);
-            episodeReward["DirectionReward"] -= (lastDirection - direction).magnitude * avoidDirectionChanges;
-        }
-        lastDirection = direction;
-
-        if (avoidBoundaries > 0f) // Punish running into boundaries.
-        {
-            if (handRB.position.x < handBoundary.Left || handRB.position.x > handBoundary.Right || handRB.position.y > handBoundary.Up || handRB.position.y < handBoundary.Down)
-            {
-                SetReward(-1f*avoidBoundaries);
-                episodeReward["BoundaryReward"] -= 1f * avoidBoundaries;
-            }
-        }
-
-        if (encouragePuckMovement > 0f) // Reward high puck velocities
-        {
-            SetReward(puckRB.velocity.magnitude * encouragePuckMovement);
-            episodeReward["PuckVelocityReward"] += puckRB.velocity.magnitude * encouragePuckMovement;
-        }
-
-        if (actionType == ActionType.Discrete)
-        {
+        if (actionType == ActionType.Discrete){
             direction = discretedirection;
         }
         // Movement
-        position = new Vector2(Mathf.Clamp(handRB.position.x, handBoundary.Left,
-                            handBoundary.Right),
-                            Mathf.Clamp(handRB.position.y, handBoundary.Down,
-                            handBoundary.Up));
-        handRB.MovePosition(position + direction * maxMovementSpeed * Time.fixedDeltaTime);
+        position = new Vector2(Mathf.Clamp(handRB.position.x, humanBoundary.Left,
+                            humanBoundary.Right),
+                            Mathf.Clamp(handRB.position.y, humanBoundary.Down,
+                            humanBoundary.Up));
+        handRB.MovePosition(position + direction * env.V_max_human * Time.fixedDeltaTime);
     }
 
-//müllgrenze
-
-/* 
-    [SerializeField] private Transform targetTransform;
-
-    public override void Heuristic(in ActionBuffers actionsOut){
-        ActionSegment<float> continousActions = actionsOut.ContinuousActions;
-        continousActions[0]=Input.GetAxisRaw("Horizontal");
-        continousActions[1]=Input.GetAxisRaw("Vertical");
-    }
-    public override void OnEpisodeBegin(){
-        transform.position = new Vector3(0, -3.3f ,0); 
-    }
-    public override void CollectObservations(VectorSensor sensor){
-        sensor.AddObservation(transform.position);
-        sensor.AddObservation(targetTransform.position);
-
-    }
-    public override void OnActionReceived(ActionBuffers actions)
-    {
-        float moveX = actions.DiscreteActions[0];
-        float moveY = actions.DiscreteActions[1];
-
-        float moveSpeed = 10f;
-        transform.position += new Vector3(moveX,moveY,0) * Time.deltaTime *moveSpeed;
-        
-    }
-/*     private void OnTriggerEnter(Collider other) {
-        
-        if (other.TryGetComponent<Goal>(out Goal goal))
-        SetReward(1f);
-        EndEpisode();
-
-    } */
 
 } 

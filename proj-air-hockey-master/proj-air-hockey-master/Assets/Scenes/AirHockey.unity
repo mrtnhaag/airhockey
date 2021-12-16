@@ -241,11 +241,31 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 554238518648600409, guid: 6d39ec1df37749c45b10a5243b20ff87,
+        type: 3}
+      propertyPath: envGameObject
+      value: 
+      objectReference: {fileID: 1660101533}
+    - target: {fileID: 554238518735280685, guid: 6d39ec1df37749c45b10a5243b20ff87,
+        type: 3}
+      propertyPath: automaticMovement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 554238518735280685, guid: 6d39ec1df37749c45b10a5243b20ff87,
+        type: 3}
+      propertyPath: controllerinput
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 554238518788443479, guid: 6d39ec1df37749c45b10a5243b20ff87,
         type: 3}
       propertyPath: puckBoundaryGameObject
       value: 
       objectReference: {fileID: 399076700}
+    - target: {fileID: 554238518788443479, guid: 6d39ec1df37749c45b10a5243b20ff87,
+        type: 3}
+      propertyPath: envGameObject
+      value: 
+      objectReference: {fileID: 1660101533}
     - target: {fileID: 925194961959876524, guid: 6d39ec1df37749c45b10a5243b20ff87,
         type: 3}
       propertyPath: m_Name
@@ -306,5 +326,117 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 554238518735280685, guid: 6d39ec1df37749c45b10a5243b20ff87, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d39ec1df37749c45b10a5243b20ff87, type: 3}
+--- !u!1 &1660101529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 554238518735280684, guid: 6d39ec1df37749c45b10a5243b20ff87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1660101528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1660101530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660101529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 2
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1660101531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660101529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93aa2406181bd0147893be13fa67ee9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  actionType: 0
+  humanBoundaryHolderObject: {fileID: 399076700}
+  envGameObject: {fileID: 1660101533}
+  controllerinput: 1
+--- !u!114 &1660101532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660101529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 8
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 09000000
+    VectorActionSize: 09000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: f9efacd0b10fe7e4da5b3e5bfe8e7b84, type: 3}
+  m_InferenceDevice: 1
+  m_BehaviorType: 1
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
+--- !u!1 &1660101533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925194961959876524, guid: 6d39ec1df37749c45b10a5243b20ff87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1660101528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1660101534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660101533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff7a3e99b0c9334986d58b187f9df6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puckGameObject: {fileID: 1660101537}
+  humanPlayerGameObject: {fileID: 1660101529}
+  roboPlayerGameObject: {fileID: 1660101536}
+  agentBoundaryHolderObject: {fileID: 1660101535}
+  humanBoundaryHolderObject: {fileID: 399076700}
+--- !u!1 &1660101535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 554238520365451488, guid: 6d39ec1df37749c45b10a5243b20ff87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1660101528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1660101536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 554238518648600418, guid: 6d39ec1df37749c45b10a5243b20ff87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1660101528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1660101537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 554238518788443474, guid: 6d39ec1df37749c45b10a5243b20ff87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1660101528}
+  m_PrefabAsset: {fileID: 0}
