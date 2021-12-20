@@ -1,25 +1,31 @@
-# import the opencv library
+# Import required Libraries
+import tkinter as tk
+from PIL import Image, ImageTk
 import cv2
 
-# define a video capture object
-vid = cv2.VideoCapture(0)
+# Create an instance of TKinter Window or frame
+win = tk.Tk()
 
-while (True):
 
-    # Capture the video frame
-    # by frame
-    ret, frame = vid.read()
+# Set the size of the window
+win.geometry("700x350")
 
-    # Display the resulting frame
-    cv2.imshow('frame', frame)
+# Create a Label to capture the Video frames
+label = tk.Label(win)
+label.grid(row=0, column=0)
+cap = cv2.VideoCapture(0)
 
-    # the 'q' button is set as the
-    # quitting button you may use any
-    # desired button of your choice
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+# Define function to show frame
+def show_frames():
+   # Get the latest frame and convert into Image
+   cv2image= cv2.cvtColor(cap.read()[1], cv2.COLOR_BGR2RGB)
+   img = Image.fromarray(cv2image)
+   # Convert image to PhotoImage
+   imgtk = ImageTk.PhotoImage(image=img)
+   label.imgtk = imgtk
+   label.configure(image=imgtk)
+   # Repeat after an interval to capture continiously
+   label.after(2000, show_frames)
 
-# After the loop release the cap object
-vid.release()
-# Destroy all the windows
-cv2.destroyAllWindows()
+show_frames()
+win.mainloop()
