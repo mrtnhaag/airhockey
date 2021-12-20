@@ -1,0 +1,29 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 22293,
+                "file_path": "results\\10_12_mid_test\\FullGame\\FullGame-22293.onnx",
+                "reward": null,
+                "creation_time": 1639146224.002915,
+                "auxillary_file_paths": [
+                    "results\\10_12_mid_test\\FullGame\\FullGame-22293.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 22293,
+            "file_path": "results\\10_12_mid_test\\FullGame.onnx",
+            "reward": null,
+            "creation_time": 1639146224.002915,
+            "auxillary_file_paths": [
+                "results\\10_12_mid_test\\FullGame\\FullGame-22293.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

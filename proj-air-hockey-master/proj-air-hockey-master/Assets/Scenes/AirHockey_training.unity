@@ -191,6 +191,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -265,6 +271,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -422,6 +434,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -496,6 +514,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -570,6 +594,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -644,6 +674,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -718,6 +754,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName
@@ -792,6 +834,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: training_env_2agents (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7556270191892680985, guid: 7f118ba2ef75a9046aacd28ab09fc856,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 1e9ace05ff22996408b59e8e171b1968,
+        type: 3}
     - target: {fileID: 8028879420028054788, guid: 7f118ba2ef75a9046aacd28ab09fc856,
         type: 3}
       propertyPath: m_BehaviorName

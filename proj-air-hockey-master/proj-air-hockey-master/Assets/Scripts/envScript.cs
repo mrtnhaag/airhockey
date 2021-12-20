@@ -46,15 +46,15 @@ public enum HumanResetState
     [System.NonSerialized]
     public float currContactReward;
     [System.NonSerialized]
-    public float V_max_puck = 25;
+    public float V_max_puck = 15;
     [System.NonSerialized]
-    public float V_max_robo = 6f;
+    public float V_max_robo = 3f;
     [System.NonSerialized]
-    public float V_max_human = 6f;
+    public float V_max_human = 3f;
     [System.NonSerialized]
-    public float neghumanGoalReward = -1f;
+    public float neghumanGoalReward = -5f;
     [System.NonSerialized]
-    public float agentGoalReward = 1f;
+    public float agentGoalReward = 10f;
     [System.NonSerialized]
     public float avoidBoundaries = 0f;
     [System.NonSerialized]
@@ -64,21 +64,21 @@ public enum HumanResetState
     [System.NonSerialized]
     public float negoffCenterReward = 0f;
     [System.NonSerialized]
-    public float encouragePuckMovement = 0.1f;
+    public float encouragePuckMovement = 0f;
     [System.NonSerialized]
-    public float encouragePuckContact = 0.1f;
+    public float encouragePuckContact = 0.5f;
     [System.NonSerialized]
     public bool contacthalf = false;
     [System.NonSerialized]
-    public float playForwardReward = 0.5f;
+    public float playForwardReward = 0f;
     [System.NonSerialized]
     public float negplaybackReward = 0f;
     [System.NonSerialized]
-    public float negStepReward = 0f;
+    public float negStepReward = -0.01f;
     [System.NonSerialized]
-    public float negMaxStepReward = -1f;
+    public float negMaxStepReward = 0f;
     [System.NonSerialized]
-    public float behindPuckReward = 0f;
+    public float behindPuckReward = 0.05f;
     [System.NonSerialized]
     public float defenceReward = 0f;
     [System.NonSerialized]

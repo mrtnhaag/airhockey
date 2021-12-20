@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f75bb48-570c-433e-b4f0-f0c0756929db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/NN_models/FullGame.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/NN_models/FullGame.onnx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_timers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_training_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_training_timers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/AirHockeyAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/AirHockeyAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame.onnx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/checkpoint.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/events.out.tfevents.1638833781.DESKTOP-9EMCU2O.40480.0" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/6_12_small_centered/FullGame/events.out.tfevents.1638833781.DESKTOP-9EMCU2O.40480.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/envScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/envScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/09_12_21_03.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-5999998.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-5999998.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6499980.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6499980.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6999989.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6999989.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7499911.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7499911.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7991477.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7991477.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/checkpoint.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/events.out.tfevents.1639043929.DESKTOP-TRB0I2O.7972.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/configuration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/run_logs/timers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/run_logs/training_status.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,31 +127,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

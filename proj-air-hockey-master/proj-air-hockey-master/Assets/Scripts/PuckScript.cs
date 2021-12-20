@@ -61,7 +61,7 @@ public class PuckScript : MonoBehaviour
         {
             if (playState == PlayState.agentScored)
             {
-                puckRB.position = new Vector2((agentBoundary.Left+agentBoundary.Right)*0.5f, (puckBoundary.Down+puckBoundary.Up)*0.5f-4.5f);
+                puckRB.position = new Vector2((agentBoundary.Left+agentBoundary.Right)*0.5f, (puckBoundary.Down+puckBoundary.Up)*0.5f-4f);
             }
             else if(playState == PlayState.playerScored)
             {
