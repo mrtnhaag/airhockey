@@ -46,11 +46,11 @@ public enum HumanResetState
     [System.NonSerialized]
     public float currContactReward;
     [System.NonSerialized]
-    public float V_max_puck = 15;
+    public float V_max_puck = 25;
     [System.NonSerialized]
-    public float V_max_robo = 3f;
+    public float V_max_robo = 6f;
     [System.NonSerialized]
-    public float V_max_human = 3f;
+    public float V_max_human = 6f;
     [System.NonSerialized]
     public float neghumanGoalReward = -1f;
     [System.NonSerialized]
