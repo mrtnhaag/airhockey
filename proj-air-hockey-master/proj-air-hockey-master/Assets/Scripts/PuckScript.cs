@@ -83,8 +83,8 @@ public class PuckScript : MonoBehaviour
         else if(resetPuckState == ResetPuckState.randomPositionGlobal)
         {
            // puckRB.position = new Vector2(Random.Range(puckBoundary.Left, puckBoundary.Right) * 0.9f, Random.Range(puckBoundary.Down, puckBoundary.Up) * 0.9f);
-            puckRB.position = new Vector2(Random.Range(puckBoundary.Left+0.1f*(puckBoundary.Right-puckBoundary.Left), puckBoundary.Right-+0.1f*(puckBoundary.Right-puckBoundary.Left)), Random.Range(puckBoundary.Down-3.08f+0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f), puckBoundary.Up-0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f)) );
-
+            //puckRB.position = new Vector2(Random.Range(puckBoundary.Left+0.1f*(puckBoundary.Right-puckBoundary.Left), puckBoundary.Right-+0.1f*(puckBoundary.Right-puckBoundary.Left)), Random.Range(puckBoundary.Down-1.08f+0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f), puckBoundary.Up-0.1f*(puckBoundary.Up-puckBoundary.Down+3.08f)) );
+            puckRB.position = new Vector2(Random.Range(puckBoundary.Left+0.3f, puckBoundary.Right-0.3f), Random.Range(puckBoundary.Down+0.3f, puckBoundary.Up+3f) );
         }
 
         else if(resetPuckState == ResetPuckState.shotOnGoal)
