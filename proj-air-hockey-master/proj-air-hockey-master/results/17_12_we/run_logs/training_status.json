@@ -2,15 +2,6 @@
     "FullGame": {
         "checkpoints": [
             {
-                "steps": 16499954,
-                "file_path": "results\\17_12_we\\FullGame\\FullGame-16499954.onnx",
-                "reward": 0.0,
-                "creation_time": 1639930210.447493,
-                "auxillary_file_paths": [
-                    "results\\17_12_we\\FullGame\\FullGame-16499954.pt"
-                ]
-            },
-            {
                 "steps": 16999999,
                 "file_path": "results\\17_12_we\\FullGame\\FullGame-16999999.onnx",
                 "reward": null,
@@ -45,15 +36,24 @@
                 "auxillary_file_paths": [
                     "results\\17_12_we\\FullGame\\FullGame-18224590.pt"
                 ]
+            },
+            {
+                "steps": 18252003,
+                "file_path": "results\\17_12_we\\FullGame\\FullGame-18252003.onnx",
+                "reward": null,
+                "creation_time": 1640173478.1606617,
+                "auxillary_file_paths": [
+                    "results\\17_12_we\\FullGame\\FullGame-18252003.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 18224590,
+            "steps": 18252003,
             "file_path": "results\\17_12_we\\FullGame.onnx",
             "reward": null,
-            "creation_time": 1639998124.438481,
+            "creation_time": 1640173478.1606617,
             "auxillary_file_paths": [
-                "results\\17_12_we\\FullGame\\FullGame-18224590.pt"
+                "results\\17_12_we\\FullGame\\FullGame-18252003.pt"
             ]
         }
     },
