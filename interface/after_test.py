@@ -6,7 +6,8 @@ import cv2
 import numpy as np
 from PIL import Image, ImageTk
 import time
-
+import onnx
+import onnxruntime
 
 class Window(tk.Tk):
     def __init__(self, master=None):
@@ -25,6 +26,8 @@ class Window(tk.Tk):
         self.pusher_position_pixels = None
         self.pusher_position_sim = None
         self.pusher_rectangle = None
+        #variables nn
+        self.agent = onnxruntime.InferenceSession("opponent.onnx")
         #variables transform
         self.scale = None
         self.angle_deg = None
@@ -32,6 +35,7 @@ class Window(tk.Tk):
         self.offset = None
         #rest variables
         self.puck_rectangle = None
+        self.puck_found_time_step = 0
         self.videosource = None
         self.current_frame = None
         self.draw_frame = None
@@ -84,6 +88,9 @@ class Window(tk.Tk):
         self.Checkcalibration.place(x=10, y=320)
 
 
+
+
+
         #self.LabelVideo.after(100, self.show_frames)
         self.show_frames()
 
@@ -99,6 +106,13 @@ class Window(tk.Tk):
                 self.caliVar.set(False)
         else:
             self.StatusVar.set("calibration circles not fond")
+
+    def play_agent(self):
+
+        #outputs = self.agent.run(None, {'input': np.array([0,0,0,0,0,0,0,0])})
+        #print(outputs)
+        pass
+
 
     def calibrate_coordinate_transformation(self, show_images=False):
         # Match circles with table corners
@@ -245,10 +259,15 @@ class Window(tk.Tk):
                 self.pusher_position_sim = self.transform_real2sim(self.pusher_position_pixels)
                 self.pusher_rectangle = (x, y, w, h)
 
+                cv2.rectangle(self.draw_frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+
                 if show_images:
                     current_frame_copy = self.current_frame.copy()
                     cv2.rectangle(current_frame_copy, (x, y), (x + w, y + h), (255, 0, 0), 2)
+
                     cv2.imshow("Pusher Detection Image", current_frame_copy)
+            else:
+                cv2.putText(self.draw_frame, "no pusher found", (200, 50), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 3)
 
         return
     def transform_real2sim(self, coordinates):
@@ -294,9 +313,11 @@ class Window(tk.Tk):
             self.puck_not_found = False
 
             #cv2.rectangle(self.draw_frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            current_frame_copy = self.current_frame.copy()
-            cv2.rectangle(current_frame_copy, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            self.draw_frame = current_frame_copy
+            #current_frame_copy = self.current_frame.copy()
+            cv2.rectangle(self.draw_frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            #self.draw_frame = current_frame_copy
+
+
 
             if show_images:
 
@@ -307,7 +328,8 @@ class Window(tk.Tk):
                 self.puck_found_time_step = time.time()
                 self.puck_position_sim = np.array([0, -2])
                 self.puck_not_found = True
-        return current_frame_copy
+            cv2.putText(self.draw_frame, "no puck found", (10, 50), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 3)
+        return
 
 
     def find_calibration_circles(self, show_images=False):
@@ -369,21 +391,24 @@ class Window(tk.Tk):
 
                         print("not calibrated")
                     else:
-                        print("playloop")
-                        self.draw_frame = self.get_pusher_coordinates(show_images=True)
+                        #print("playloop")
+                        self.get_puck_coordinates(show_images=False)
+                        self.get_pusher_coordinates(show_images=False)
                         #cv2.imshow("drawf",self.draw_frame)
-                        # self.get_puck_coordinates(show_images=False)
-                        pass
+                        if True:
+                            self.play_agent()
+                            pass
 
 
                 # hier nur noch anzeige
                 try:
                     img = Image.fromarray(cv2.cvtColor(self.draw_frame, cv2.COLOR_BGR2RGB))
                     print("drawimg")
-                    cv2.imshow("drawing", img)
+                    #cv2.imshow("drawing", img)
                 except:
                     img = Image.fromarray(cv2.cvtColor(self.current_frame, cv2.COLOR_BGR2RGB))
                 imgtk = ImageTk.PhotoImage(image=img)
+                #cv2.imshow("curr view", self.draw_frame)
                 self.LabelVideo.imgtk = imgtk
                 self.LabelVideo.configure(image=imgtk)
 
@@ -392,6 +417,7 @@ class Window(tk.Tk):
                 self.LabelVideo.after(100, self.show_frames)
                 #print("vid")
             except AttributeError:
+            #except TypeError:
                 print("video over?")
                 self.LabelVideo.after(100, self.show_frames)
 

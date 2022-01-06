@@ -1,31 +1,30 @@
-# Import required Libraries
 import tkinter as tk
-from PIL import Image, ImageTk
 import cv2
+import serial
+from serial.serialutil import SerialException
+import cv2
+import numpy as np
+from PIL import Image, ImageTk
+import time
+import onnx
+import onnxruntime
+import torch
 
-# Create an instance of TKinter Window or frame
-win = tk.Tk()
+agent = onnxruntime.InferenceSession("opponent.onnx")
+print(agent.get_inputs()[0])
+print(agent.get_inputs()[1])
+print(agent.get_outputs()[0])
+
+#print(type(torch.tensor([[1., -1.], [1., -1.]])))
+arr_obs = np.array([[1,2,3,4,5,6,7,8]],dtype=np.float32)
+arr_am = np.array([[1,2,3,4,5,6,7,8,9]],dtype=np.float32)
+ortvalue = onnxruntime.OrtValue.ortvalue_from_numpy(arr_obs, 'cpu', 0)
+ortvalue_am = onnxruntime.OrtValue.ortvalue_from_numpy(arr_am, 'cpu', 0)
 
 
-# Set the size of the window
-win.geometry("700x350")
-
-# Create a Label to capture the Video frames
-label = tk.Label(win)
-label.grid(row=0, column=0)
-cap = cv2.VideoCapture(0)
-
-# Define function to show frame
-def show_frames():
-   # Get the latest frame and convert into Image
-   cv2image= cv2.cvtColor(cap.read()[1], cv2.COLOR_BGR2RGB)
-   img = Image.fromarray(cv2image)
-   # Convert image to PhotoImage
-   imgtk = ImageTk.PhotoImage(image=img)
-   label.imgtk = imgtk
-   label.configure(image=imgtk)
-   # Repeat after an interval to capture continiously
-   label.after(2000, show_frames)
-
-show_frames()
-win.mainloop()
+print(ortvalue.device_name())
+print(ortvalue.data_type())
+print(ortvalue_am.shape())
+print(ortvalue.is_tensor())
+outputs = agent.run(['version_number'], {'obs_0': ortvalue, 'action_masks': ortvalue_am})
+print(outputs[0][0])
