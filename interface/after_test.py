@@ -24,58 +24,103 @@ class Window(tk.Tk):
 
         self.sim2real_rotation_matrix = None
         self.pusher_position_pixels = None
-        self.pusher_position_sim = None
+
         self.pusher_rectangle = None
+
+
         #variables nn
         self.agent = onnxruntime.InferenceSession("opponent.onnx")
+        self.action_last = 0
         #variables transform
         self.scale = None
         self.angle_deg = None
         self.angle_rad = None
         self.offset = None
         #rest variables
+        self.rate_gui = 20 #ms pro durchlauf
+        self.fieldwidth = 1.8
+        self.fieldlength = 4
         self.puck_rectangle = None
         self.puck_found_time_step = 0
+        self.pusher_found_time_step = 0
         self.videosource = None
         self.current_frame = None
         self.draw_frame = None
         self.serial_connection = None
-        self.livedemo = tk.BooleanVar()
+        self.pusher_position_sim = [0, 0]
+        self.pusher_position_sim_last = [0, 0]
+        self.puck_position_sim = [0, 0]
+        self.puck_position_sim_last = [0, 0]
+        self.puck_vel_sim = [0, 0]
+        self.pusher_vel_sim = [0, 0]
+        self.puck_not_found = True
+        self.pusher_not_found = True
+        self.VideomodeVar = tk.IntVar()
+        self.VideomodeVar.set(1)
+
+        #serial vars
+        self.serial_connected = False
         self.caliVar = tk.BooleanVar()
         self.MoveVar = tk.IntVar()
         self.MoveVar.set(2)
         self.BaudChoice = [
-            "3",
-            "4",
-            "8"
+            "4800",
+            "9600",
+            "57600",
+            "74880",
+            "115200",
+            "230400"
         ]
         self.BaudVar = tk.StringVar()
         self.StatusVar = tk.StringVar()
-        self.StatusVar.set("start")
+        self.StatusVar.set("calib not started")
+        self.StatusVarObs = tk.StringVar()
+        self.StatusVarObs.set("Observations")
+        self.StatusPlayVar = tk.StringVar()
+        self.StatusPlayVar.set("init playstate")
+        self.StatusSerialVar = tk.StringVar()
+        self.StatusSerialVar.set("serial not set")
         self.BaudVar.set(self.BaudChoice[0])
 
         #gui elements
-        self.CheckLive = tk.Checkbutton(self, text="live", variable=self.livedemo, command=self.change_vid_mode)
         self.Checkcalibration = tk.Checkbutton(self, text="calibration", variable=self.caliVar)
         self.Radiomove = tk.Radiobutton(self, text="Auto-Move", variable=self.MoveVar, value=1)
         self.RadioNOmove = tk.Radiobutton(self, text="Manual Move", variable=self.MoveVar, value=2)
+        self.Radiolive = tk.Radiobutton(self, text="live ", variable=self.VideomodeVar, value=1, command=self.change_vid_mode)
+        self.Radiooldvideo = tk.Radiobutton(self, text="video playback", variable=self.VideomodeVar, value=2, command=self.change_vid_mode)
         self.Menubau = tk.OptionMenu(self, self.BaudVar, *self.BaudChoice)
         self.EntryCOM = tk.Entry(self, text="port")
         self.LabelVideo = tk.Label(self)
-        self.LabelStatus = tk.Label(self, textvariable=self.StatusVar)
 
-        self.ButtonMoveleft = tk.Button(self, text="left", command=lambda: self.manualmove(1))
-        self.ButtonMoveright = tk.Button(self, text="right", command=lambda: self.manualmove(2))
-        self.ButtonMoveup = tk.Button(self, text="up", command=lambda: self.manualmove(3))
-        self.ButtonMovedown = tk.Button(self, text="down", command=lambda: self.manualmove(4))
+        self.LabelDirNN = tk.Label(self)
+        imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_nix.png")
+        self.LabelDirNN.imgtk = imgtk
+        self.LabelDirNN.configure(image=imgtk)
+
+        self.LabelStatus = tk.Label(self, textvariable=self.StatusVar)
+        self.LabelStatusObs = tk.Label(self, textvariable=self.StatusVarObs)
+        self.LabelStatusPlay = tk.Label(self, textvariable=self.StatusPlayVar)
+        self.LabelStatusSerial = tk.Label(self, textvariable=self.StatusSerialVar)
+
+        self.ButtonMoveleft = tk.Button(self, text="left", command=lambda: self.manualmove(4))
+        self.ButtonMoveright = tk.Button(self, text="right", command=lambda: self.manualmove(5))
+        self.ButtonMoveup = tk.Button(self, text="up", command=lambda: self.manualmove(2))
+        self.ButtonMovedown = tk.Button(self, text="down", command=lambda: self.manualmove(7))
         self.ButtonMovestop = tk.Button(self, text="stop", command=lambda: self.manualmove(0))
         self.ButtonSerialStart = tk.Button(self, text="serial start", command=self.connect_via_serial)
 
 
         self.LabelVideo.place(x=200, y=10)
+        self.LabelDirNN.place(x=200, y=550)
+
         self.LabelStatus.place(x=10, y=400)
+        self.LabelStatusObs.place(x=400, y=570)
+        self.LabelStatusSerial.place(x=10, y=420)
+        self.LabelStatusPlay.place(x=10, y=440)
         self.Radiomove.place(x=20, y=20)
         self.RadioNOmove.place(x=20, y=40)
+        self.Radiooldvideo.place(x=70, y=300)
+        self.Radiolive.place(x=20, y=300)
         self.ButtonMoveleft.place(x=10, y=100)
         self.ButtonMoveright.place(x=90, y=100)
         self.ButtonMoveup.place(x=50, y=70)
@@ -84,11 +129,7 @@ class Window(tk.Tk):
         self.EntryCOM.place(x=10, y=200)
         self.Menubau.place(x=10, y=220)
         self.ButtonSerialStart.place(x=10, y=250)
-        self.CheckLive.place(x=10, y=300)
         self.Checkcalibration.place(x=10, y=320)
-
-
-
 
 
         #self.LabelVideo.after(100, self.show_frames)
@@ -108,11 +149,112 @@ class Window(tk.Tk):
             self.StatusVar.set("calibration circles not fond")
 
     def play_agent(self):
+        # observations as following:
+        #0,1,2. agent x,y,z
+        #3,4,5 puck x,y,z
+        #6,7 puck vx, vy
+        arr_obs = [self.pusher_position_sim[0], self.pusher_position_sim[1], 0, self.puck_position_sim[0], self.puck_position_sim[1], 0, self.puck_vel_sim[0], self.puck_vel_sim[1]]
+        self.StatusVarObs.set(str(np.round(arr_obs,2)))
+        arr_obs_np = np.array([arr_obs], dtype=np.float32)
+        arr_am_np = np.array([[1, 2, 3, 4, 5, 6, 7, 8, 9]], dtype=np.float32) # actionmask, was das?
+        ortvalue_obs = onnxruntime.OrtValue.ortvalue_from_numpy(arr_obs_np, 'cpu', 0)
+        ortvalue_am = onnxruntime.OrtValue.ortvalue_from_numpy(arr_am_np, 'cpu', 0)
+        #print(ortvalue_am.shape())
 
-        #outputs = self.agent.run(None, {'input': np.array([0,0,0,0,0,0,0,0])})
-        #print(outputs)
+        outputs = self.agent.run(['version_number'], {'obs_0': ortvalue_obs, 'action_masks': ortvalue_am})
+
+        self.action_last = outputs[0][0]
+        self.act_serial(outputs[0][0])
+        #print(outputs[0][0])
+
         pass
 
+    def act_serial(self, move):
+        if self.pusher_position_sim[0] > self.fieldwidth: #zu weit rechts
+            if move == 3:
+                move = 2
+            if move == 5:
+                move = 0
+            if move == 8:
+                move = 7
+        if self.pusher_position_sim[0] < -self.fieldwidth:# zu links
+            if move == 1:
+                move = 2
+            if move == 4:
+                move = 0
+            if move == 6:
+                move = 7
+            pass
+        if self.pusher_position_sim[1] > -0.3:# zu weit vorne
+            if move == 1:
+                move = 4
+            if move == 2:
+                move = 0
+            if move == 3:
+                move = 5
+            pass
+        if self.pusher_position_sim[1] < -self.fieldlength: #zu weit hinten
+            if move == 6:
+                move = 4
+            if move == 7:
+                move = 0
+            if move == 8:
+                move = 5
+            pass
+        if move == 0:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_nix.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 1:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up_left.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 2:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 3:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up_right.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 4:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_left.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 5:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_right.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 6:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down_left.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 7:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 8:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down_right.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        self.write_serial(move, False)
+        #print(move)
+
+    def movehome(self):
+        homegoal = [0, -2]
+        toleranz = 0.2
+        dir = np.array(homegoal)-self.pusher_position_sim
+        move = 0
+        if np.sqrt(dir.dot(dir))> toleranz:
+            if dir[0] > 0:
+                move = 4
+            elif dir[0] < 0:
+                move = 5
+            if dir[1] > 0:
+                move = 4
+            elif dir[1] < 0:
+                move = 5
+        self.act_serial(move)
 
     def calibrate_coordinate_transformation(self, show_images=False):
         # Match circles with table corners
@@ -227,14 +369,19 @@ class Window(tk.Tk):
 
         # Convert image from BGR2HSV and filter for color range
         hsv_image = cv2.cvtColor(self.current_frame, cv2.COLOR_BGR2HSV)
-        color_segmented_image = cv2.inRange(hsv_image, (7, 57, 35), (43, 168, 172))
+        #color_segmented_image = cv2.inRange(hsv_image, (7, 57, 35), (43, 168, 172))
+        color_segmented_image = cv2.inRange(hsv_image, (9, 57, 35), (50, 106, 172))
+
 
 
         # Erode the image
-        kernel = np.ones((3, 3), np.uint8)
-        eroded_image = cv2.erode(color_segmented_image, kernel)
+        kernel3 = np.ones((3, 3), np.uint8)
+        kernel5 = np.ones((5, 5), np.uint8)
+        kernel7 = np.ones((7, 7), np.uint8)
+        color_segmented_image = cv2.dilate(color_segmented_image, kernel3)
+        eroded_image = cv2.erode(color_segmented_image, kernel7)
         kernel = np.ones((5, 5), np.uint8)
-        dilated_image = cv2.dilate(eroded_image, kernel)
+        dilated_image = cv2.dilate(eroded_image, kernel5)
 
         if show_images:
             cv2.imshow("Color Segmented Image 2", dilated_image)
@@ -247,7 +394,7 @@ class Window(tk.Tk):
         if contours:
             for c in contours:
                 area = cv2.contourArea(c)
-                if 250 < area < 900:
+                if 80 < area < 700:
                     (x, y, w, h) = cv2.boundingRect(c)
                     center = self.transform_real2sim(np.array((x + w / 2, y + h / 2)))
                     if -2.1 < center[0] < 2.1:
@@ -261,15 +408,25 @@ class Window(tk.Tk):
 
                 cv2.rectangle(self.draw_frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
+                delta_time = time.time() - self.pusher_found_time_step
+                delta_pos = self.pusher_position_sim - self.pusher_position_sim_last
+                self.pusher_vel_sim = delta_pos / delta_time
+
+                self.pusher_found_time_step = time.time()
+                self.pusher_position_sim_last = self.pusher_position_sim
+                self.pusher_not_found = False
+
                 if show_images:
                     current_frame_copy = self.current_frame.copy()
                     cv2.rectangle(current_frame_copy, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
                     cv2.imshow("Pusher Detection Image", current_frame_copy)
             else:
+                self.pusher_not_found = True
                 cv2.putText(self.draw_frame, "no pusher found", (200, 50), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 3)
 
         return
+
     def transform_real2sim(self, coordinates):
         return np.matmul(np.linalg.inv(self.sim2real_rotation_matrix), (coordinates - self.offset)) / self.scale
 
@@ -292,8 +449,8 @@ class Window(tk.Tk):
         kernel = np.ones((3, 3), np.uint8)
         eroded_image = cv2.erode(color_segmented_image, kernel)
 
-        #if show_images:
-         #   cv2.imshow("Color Segmented Image 3", eroded_image)
+        if show_images:
+            cv2.imshow("Color Segmented Image 3", eroded_image)
 
         contours, hierarchy = cv2.findContours(eroded_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -309,14 +466,17 @@ class Window(tk.Tk):
             self.puck_position_sim = self.transform_real2sim(self.puck_position_pixels)
             self.puck_rectangle = (x, y, w, h)
 
-            self.puck_found_time_step = time.time()
+
             self.puck_not_found = False
 
-            #cv2.rectangle(self.draw_frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            #current_frame_copy = self.current_frame.copy()
             cv2.rectangle(self.draw_frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            #self.draw_frame = current_frame_copy
 
+            delta_time = time.time()-self.puck_found_time_step
+            delta_pos = self.puck_position_sim-self.puck_position_sim_last
+            self.puck_vel_sim = delta_pos/delta_time
+
+            self.puck_found_time_step = time.time()
+            self.puck_position_sim_last = self.puck_position_sim
 
 
             if show_images:
@@ -325,12 +485,13 @@ class Window(tk.Tk):
 
         else:
             if time.time() - self.puck_found_time_step > 3:
-                self.puck_found_time_step = time.time()
-                self.puck_position_sim = np.array([0, -2])
-                self.puck_not_found = True
+                pass
+                #self.puck_found_time_step = time.time()
+                #self.puck_position_sim = np.array([0, -2])
+            self.puck_not_found = True
             cv2.putText(self.draw_frame, "no puck found", (10, 50), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 3)
-        return
 
+        return
 
     def find_calibration_circles(self, show_images=False):
         # Convert image from BGR2HSV and filter for color range
@@ -359,21 +520,29 @@ class Window(tk.Tk):
             return True
 
     def change_vid_mode(self):
-        self.livedemo.get()
-        if (self.livedemo.get()):
+
+        if (self.VideomodeVar.get()==1):
+            if self.videosource is None:
+                pass
+            else:
+                self.videosource.release()
             #self.setVideocap(cv2.VideoCapture(0))
             self.videosource = cv2.VideoCapture(0)
             print("live")
             #self.framerate = self.videosource.get(cv2.cv.CV_CAP_PROPS_FPS)
         else:
             #self.set_video_source(cv2.VideoCapture('pusher_and_puck.mp4'))
+            if self.videosource is None:
+                pass
+            else:
+                self.videosource.release()
             self.videosource = cv2.VideoCapture('pusher_and_puck.mp4')
             print("old video")
             #self.framerate = self.videosource.get(cv2.cv.CV_CAP_PROPS_FPS)
 
         #print("fps:"+str(self.framerate))
+        print("next frames")
         self.show_frames()
-
 
     def show_frames(self):
         if (self.videosource is None):
@@ -388,23 +557,39 @@ class Window(tk.Tk):
                 else:
                     pass
                     if self.calibration_circles is None:
+                        pass
 
-                        print("not calibrated")
+                        #print("not calibrated")
                     else:
                         #print("playloop")
                         self.get_puck_coordinates(show_images=False)
                         self.get_pusher_coordinates(show_images=False)
                         #cv2.imshow("drawf",self.draw_frame)
-                        if True:
+                        if self.pusher_not_found or self.puck_not_found: #nicht beide gefunden
+                            #print("pusher or puck not found")
+                            if time.time()-self.puck_found_time_step < 0.1 and time.time()-self.pusher_found_time_step < 0.1:#aber noch nicht lange her
+                                self.StatusPlayVar.set("last action replay")
+                                self.act_serial(self.action_last)
+                                pass
+
+                            else:
+                                if time.time()-self.pusher_found_time_step > 0.5: #pusher zu lange nicht gefunden, crash
+                                    self.StatusPlayVar.set("pusher missing, danger")
+                                    self.act_serial(0)
+                                else:                   #sieht nach pause aus, home
+                                    self.StatusPlayVar.set("homing..")
+                                    self.movehome()
+                        else:           #alles gut, spielen
+                            self.StatusPlayVar.set("playing..")
                             self.play_agent()
+
+
                             pass
 
 
                 # hier nur noch anzeige
                 try:
                     img = Image.fromarray(cv2.cvtColor(self.draw_frame, cv2.COLOR_BGR2RGB))
-                    print("drawimg")
-                    #cv2.imshow("drawing", img)
                 except:
                     img = Image.fromarray(cv2.cvtColor(self.current_frame, cv2.COLOR_BGR2RGB))
                 imgtk = ImageTk.PhotoImage(image=img)
@@ -414,15 +599,18 @@ class Window(tk.Tk):
 
 
 
-                self.LabelVideo.after(100, self.show_frames)
+                self.LabelVideo.after(self.rate_gui, self.show_frames)
                 #print("vid")
             except AttributeError:
             #except TypeError:
                 print("video over?")
-                self.LabelVideo.after(100, self.show_frames)
+                self.LabelVideo.after(self.rate_gui, self.show_frames)
 
     def manualmove(self, args):
-        print(args)
+        if self.MoveVar.get() == 2:
+            self.write_serial(args, True)
+        if self.MoveVar.get() == 1:
+            print("automove")
 
     def set_video_source(self, vid):
         self.videosource = vid
@@ -430,8 +618,12 @@ class Window(tk.Tk):
     def connect_via_serial(self):
         try:
             self.serial_connection.close()
+            self.serial_connected = False
+            self.StatusSerialVar.set("serial not set!!!")
+
         except:
             print("first serial con")
+
 
         print("baudrate:" + self.BaudVar.get())
         print("port:" + self.EntryCOM.get())
@@ -441,10 +633,33 @@ class Window(tk.Tk):
                 baudrate=self.BaudVar.get()
             )
             print("INFO: Serial connection established.")
-            #return serial_connection
+            self.serial_connected = True
+            self.StatusSerialVar.set("serial connection set")
+
         except SerialException:
             print("WARNING: Serial connection could not be established.")
+            self.serial_connected = False
+            self.StatusSerialVar.set("serial not set!!!")
+
             #return None
+
+    def write_serial(self, move, handmove):
+        #if self.serial_connected:
+        handmode = True
+        if self.MoveVar.get() == 1:
+            handmode = False
+        if handmove == handmode:
+            #self.serial_connection.write(bytes(str(move), 'utf-8'))
+            #self.serial_connection.flush()
+            pass
+
+        else:
+            pass
+            self.StatusSerialVar.set("serial not set!!!")
+
+
+
+
 
 
 root = Window()
