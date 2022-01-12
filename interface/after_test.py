@@ -153,19 +153,21 @@ class Window(tk.Tk):
         #0,1,2. agent x,y,z
         #3,4,5 puck x,y,z
         #6,7 puck vx, vy
-        arr_obs = [self.pusher_position_sim[0], self.pusher_position_sim[1], 0, self.puck_position_sim[0], self.puck_position_sim[1], 0, self.puck_vel_sim[0], self.puck_vel_sim[1]]
-        self.StatusVarObs.set(str(np.round(arr_obs,2)))
+        arr_obs = [-self.pusher_position_sim[0], self.pusher_position_sim[1], 0, -self.puck_position_sim[0], self.puck_position_sim[1], 0, -self.puck_vel_sim[0], self.puck_vel_sim[1]]
+        #arr_obs = np.random.rand(8,)
+        self.StatusVarObs.set(str(np.round(arr_obs, 2)))
         arr_obs_np = np.array([arr_obs], dtype=np.float32)
-        arr_am_np = np.array([[1, 2, 3, 4, 5, 6, 7, 8, 9]], dtype=np.float32) # actionmask, was das?
+        #arr_am_np = np.array([[1, 2, 3, 4, 5, 6, 7, 8, 9]], dtype=np.float32) # actionmask, was das?
+        arr_am_np = np.zeros((1, 9), dtype=np.float32)
         ortvalue_obs = onnxruntime.OrtValue.ortvalue_from_numpy(arr_obs_np, 'cpu', 0)
         ortvalue_am = onnxruntime.OrtValue.ortvalue_from_numpy(arr_am_np, 'cpu', 0)
         #print(ortvalue_am.shape())
 
-        outputs = self.agent.run(['version_number'], {'obs_0': ortvalue_obs, 'action_masks': ortvalue_am})
+        outputs = self.agent.run(['discrete_actions'], {'obs_0': ortvalue_obs, 'action_masks': ortvalue_am})
 
-        self.action_last = outputs[0][0]
-        self.act_serial(outputs[0][0])
-        #print(outputs[0][0])
+        self.action_last = outputs[0][0][0]
+        self.act_serial(outputs[0][0][0])
+        print(outputs[0][0][0])
 
         pass
 
@@ -531,7 +533,6 @@ class Window(tk.Tk):
             print("live")
             #self.framerate = self.videosource.get(cv2.cv.CV_CAP_PROPS_FPS)
         else:
-            #self.set_video_source(cv2.VideoCapture('pusher_and_puck.mp4'))
             if self.videosource is None:
                 pass
             else:
@@ -610,7 +611,7 @@ class Window(tk.Tk):
         if self.MoveVar.get() == 2:
             self.write_serial(args, True)
         if self.MoveVar.get() == 1:
-            print("automove")
+            print("automove,not manuell")
 
     def set_video_source(self, vid):
         self.videosource = vid
@@ -644,14 +645,14 @@ class Window(tk.Tk):
             #return None
 
     def write_serial(self, move, handmove):
-        #if self.serial_connected:
-        handmode = True
-        if self.MoveVar.get() == 1:
-            handmode = False
-        if handmove == handmode:
-            #self.serial_connection.write(bytes(str(move), 'utf-8'))
-            #self.serial_connection.flush()
-            pass
+        if self.serial_connected:
+            handmode = True
+            if self.MoveVar.get() == 1:
+                handmode = False
+            if handmove == handmode:
+                #self.serial_connection.write(bytes(str(move), 'utf-8'))
+                #self.serial_connection.flush()
+                pass
 
         else:
             pass
