@@ -29,7 +29,7 @@ class Window(tk.Tk):
 
 
         #variables nn
-        self.agent = onnxruntime.InferenceSession("opponent.onnx")
+        self.agent = onnxruntime.InferenceSession("13_1_stop_change.onnx")
         self.action_last = 0
         #variables transform
         self.scale = None
@@ -37,9 +37,12 @@ class Window(tk.Tk):
         self.angle_rad = None
         self.offset = None
         #rest variables
-        self.rate_gui = 20 #ms pro durchlauf
-        self.fieldwidth = 1.8
-        self.fieldlength = 4
+        self.frametime = 0
+        self.rate_gui = 2 #ms pro durchlauf
+        self.fieldwidth = 1.7   #1.9 max
+        self.fieldlength = 3.7    #4.1 max
+        self.middistance = 0.3    #0.2 min
+        self.homepos = [0,2]
         self.puck_rectangle = None
         self.puck_found_time_step = 0
         self.pusher_found_time_step = 0
@@ -56,7 +59,7 @@ class Window(tk.Tk):
         self.puck_not_found = True
         self.pusher_not_found = True
         self.VideomodeVar = tk.IntVar()
-        self.VideomodeVar.set(1)
+        self.VideomodeVar.set(2)
 
         #serial vars
         self.serial_connected = False
@@ -64,15 +67,16 @@ class Window(tk.Tk):
         self.MoveVar = tk.IntVar()
         self.MoveVar.set(2)
         self.BaudChoice = [
+            "115200",
             "4800",
             "9600",
             "57600",
             "74880",
-            "115200",
             "230400"
         ]
         self.BaudVar = tk.StringVar()
         self.StatusVar = tk.StringVar()
+        self.StatusVarfps = tk.StringVar()
         self.StatusVar.set("calib not started")
         self.StatusVarObs = tk.StringVar()
         self.StatusVarObs.set("Observations")
@@ -98,14 +102,15 @@ class Window(tk.Tk):
         self.LabelDirNN.configure(image=imgtk)
 
         self.LabelStatus = tk.Label(self, textvariable=self.StatusVar)
+        self.LabelStatusfps = tk.Label(self, textvariable=self.StatusVarfps)
         self.LabelStatusObs = tk.Label(self, textvariable=self.StatusVarObs)
         self.LabelStatusPlay = tk.Label(self, textvariable=self.StatusPlayVar)
         self.LabelStatusSerial = tk.Label(self, textvariable=self.StatusSerialVar)
 
-        self.ButtonMoveleft = tk.Button(self, text="left", command=lambda: self.manualmove(4))
-        self.ButtonMoveright = tk.Button(self, text="right", command=lambda: self.manualmove(5))
-        self.ButtonMoveup = tk.Button(self, text="up", command=lambda: self.manualmove(2))
-        self.ButtonMovedown = tk.Button(self, text="down", command=lambda: self.manualmove(7))
+        self.ButtonMoveleft = tk.Button(self, text="left", command=lambda: self.manualmove(2))
+        self.ButtonMoveright = tk.Button(self, text="right", command=lambda: self.manualmove(1))
+        self.ButtonMoveup = tk.Button(self, text="up", command=lambda: self.manualmove(4))
+        self.ButtonMovedown = tk.Button(self, text="down", command=lambda: self.manualmove(3))
         self.ButtonMovestop = tk.Button(self, text="stop", command=lambda: self.manualmove(0))
         self.ButtonSerialStart = tk.Button(self, text="serial start", command=self.connect_via_serial)
 
@@ -114,6 +119,7 @@ class Window(tk.Tk):
         self.LabelDirNN.place(x=200, y=550)
 
         self.LabelStatus.place(x=10, y=400)
+        self.LabelStatusfps.place(x=10, y=460)
         self.LabelStatusObs.place(x=400, y=570)
         self.LabelStatusSerial.place(x=10, y=420)
         self.LabelStatusPlay.place(x=10, y=440)
@@ -154,108 +160,143 @@ class Window(tk.Tk):
         #3,4,5 puck x,y,z
         #6,7 puck vx, vy
         arr_obs = [-self.pusher_position_sim[0], self.pusher_position_sim[1], 0, -self.puck_position_sim[0], self.puck_position_sim[1], 0, -self.puck_vel_sim[0], self.puck_vel_sim[1]]
+        #arr_obs = [-self.pusher_position_sim[0], self.pusher_position_sim[1], 0, -self.puck_position_sim[0], self.puck_position_sim[1], 0, 0, 0]
+
         #arr_obs = np.random.rand(8,)
         self.StatusVarObs.set(str(np.round(arr_obs, 2)))
         arr_obs_np = np.array([arr_obs], dtype=np.float32)
         #arr_am_np = np.array([[1, 2, 3, 4, 5, 6, 7, 8, 9]], dtype=np.float32) # actionmask, was das?
-        arr_am_np = np.zeros((1, 9), dtype=np.float32)
+        arr_am_np = np.ones((1, 9), dtype=np.float32)
         ortvalue_obs = onnxruntime.OrtValue.ortvalue_from_numpy(arr_obs_np, 'cpu', 0)
         ortvalue_am = onnxruntime.OrtValue.ortvalue_from_numpy(arr_am_np, 'cpu', 0)
         #print(ortvalue_am.shape())
 
         outputs = self.agent.run(['discrete_actions'], {'obs_0': ortvalue_obs, 'action_masks': ortvalue_am})
 
+        #1->5
+        #2->3
+        #3->6
+        #4->1
+        #5->2
+        #6-7
+        #7-4
+        #8-8
+        out = outputs[0][0][0]
+
+
+
         self.action_last = outputs[0][0][0]
         self.act_serial(outputs[0][0][0])
-        print(outputs[0][0][0])
+        #print(outputs[0][0][0])
 
         pass
 
     def act_serial(self, move):
-        if self.pusher_position_sim[0] > self.fieldwidth: #zu weit rechts
+        if -self.pusher_position_sim[0] > self.fieldwidth: #zu rechts
+            print("zu rechts")
             if move == 3:
-                move = 2
+                move = 4
             if move == 5:
-                move = 0
+                move = 4
             if move == 8:
-                move = 7
-        if self.pusher_position_sim[0] < -self.fieldwidth:# zu links
+                move = 4
+        if -self.pusher_position_sim[0] < -self.fieldwidth:# zu links
+            print("zu links")
             if move == 1:
-                move = 2
+                move = 5
             if move == 4:
-                move = 0
+                move = 5
             if move == 6:
+                move = 5
+            pass
+        if self.pusher_position_sim[1] < self.middistance:# zu unten
+            print("zu unten")
+            if move == 6:
+                move = 2
+            if move == 7:
+                move = 2
+            if move == 8:
+                move = 2
+            pass
+        if self.pusher_position_sim[1] > self.fieldlength: #zu weit hinten
+            print("zu oben")
+            if move == 1:
+                move = 7
+            if move == 2:
+                move = 7
+            if move == 3:
                 move = 7
             pass
-        if self.pusher_position_sim[1] > -0.3:# zu weit vorne
-            if move == 1:
-                move = 4
-            if move == 2:
-                move = 0
-            if move == 3:
-                move = 5
-            pass
-        if self.pusher_position_sim[1] < -self.fieldlength: #zu weit hinten
-            if move == 6:
-                move = 4
-            if move == 7:
-                move = 0
-            if move == 8:
-                move = 5
-            pass
+
         if move == 0:
             imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_nix.png")
             self.LabelDirNN.imgtk = imgtk
             self.LabelDirNN.configure(image=imgtk)
         elif move == 1:
-            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up_left.png")
-            self.LabelDirNN.imgtk = imgtk
-            self.LabelDirNN.configure(image=imgtk)
-        elif move == 2:
-            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up.png")
-            self.LabelDirNN.imgtk = imgtk
-            self.LabelDirNN.configure(image=imgtk)
-        elif move == 3:
             imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up_right.png")
             self.LabelDirNN.imgtk = imgtk
             self.LabelDirNN.configure(image=imgtk)
-        elif move == 4:
-            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_left.png")
-            self.LabelDirNN.imgtk = imgtk
-            self.LabelDirNN.configure(image=imgtk)
-        elif move == 5:
+        elif move == 2:
             imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_right.png")
             self.LabelDirNN.imgtk = imgtk
             self.LabelDirNN.configure(image=imgtk)
-        elif move == 6:
-            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down_left.png")
-            self.LabelDirNN.imgtk = imgtk
-            self.LabelDirNN.configure(image=imgtk)
-        elif move == 7:
-            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down.png")
-            self.LabelDirNN.imgtk = imgtk
-            self.LabelDirNN.configure(image=imgtk)
-        elif move == 8:
+        elif move == 3:
             imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down_right.png")
             self.LabelDirNN.imgtk = imgtk
             self.LabelDirNN.configure(image=imgtk)
+        elif move == 4:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 5:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 6:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_up_left.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 7:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_left.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        elif move == 8:
+            imgtk = ImageTk.PhotoImage(file="arrow_pics/arrow_down_left.png")
+            self.LabelDirNN.imgtk = imgtk
+            self.LabelDirNN.configure(image=imgtk)
+        out = move
+        if out == 1:
+            out = 8
+        elif out == 2:
+            out = 4
+        elif out == 3:
+            out = 7
+        elif out == 4:
+            out = 2
+        elif out == 5:
+            out = 1
+        elif out == 7:
+            out = 3
+        elif out == 8:
+            out = 5
+        move = out
         self.write_serial(move, False)
         #print(move)
 
     def movehome(self):
-        homegoal = [0, -2]
+        homegoal = [0, 2]
         toleranz = 0.2
         dir = np.array(homegoal)-self.pusher_position_sim
         move = 0
-        if np.sqrt(dir.dot(dir))> toleranz:
-            if dir[0] > 0:
-                move = 4
-            elif dir[0] < 0:
-                move = 5
-            if dir[1] > 0:
-                move = 4
-            elif dir[1] < 0:
-                move = 5
+        #if np.sqrt(dir.dot(dir))> toleranz:
+        if dir[0] > toleranz:
+            move = 4
+        elif dir[0] < -toleranz:
+            move = 5
+        if dir[1] > toleranz:
+            move = 2
+        elif dir[1] < -toleranz:
+            move = 7
         self.act_serial(move)
 
     def calibrate_coordinate_transformation(self, show_images=False):
@@ -266,9 +307,11 @@ class Window(tk.Tk):
                 self.detected_circles_positions["TopLeftCircle"] = np.array([c[0], c[1]], dtype=int)
             elif 130 < c[0] < 180 and 300 < c[1] < 390:
                 self.detected_circles_positions["BottomLeftCircle"] = np.array([c[0], c[1]], dtype=int)
-            elif 530 < c[0] < 600 and 150 < c[1] < 240:
+            #elif 530 < c[0] < 600 and 150 < c[1] < 240:
+            elif 490 < c[0] < 550 and 150 < c[1] < 240:
                 self.detected_circles_positions["TopRightCircle"] = np.array([c[0], c[1]], dtype=int)
-            elif 530 < c[0] < 600 and 300 < c[1] < 390:
+            #elif 530 < c[0] < 600 and 300 < c[1] < 390:
+            elif 490 < c[0] < 550 and 300 < c[1] < 390:
                 self.detected_circles_positions["BottomRightCircle"] = np.array([c[0], c[1]], dtype=int)
             else:
                 print("INFO: Circle with Center at: ({}, {}) could not be matched".format(c[0], c[1]))
@@ -372,7 +415,8 @@ class Window(tk.Tk):
         # Convert image from BGR2HSV and filter for color range
         hsv_image = cv2.cvtColor(self.current_frame, cv2.COLOR_BGR2HSV)
         #color_segmented_image = cv2.inRange(hsv_image, (7, 57, 35), (43, 168, 172))
-        color_segmented_image = cv2.inRange(hsv_image, (9, 57, 35), (50, 106, 172))
+        #color_segmented_image = cv2.inRange(hsv_image, (9, 57, 35), (50, 106, 172))
+        color_segmented_image = cv2.inRange(hsv_image, (12, 99, 0), (15, 255, 255))
 
 
 
@@ -508,7 +552,7 @@ class Window(tk.Tk):
             # param1: The higher threshold of the two passed to the Canny edge detector.
             # param2: Accumulator threshold for the circle centers at the detection stage.
             #         The smaller it is, the more false circles may be detected.
-        circles = cv2.HoughCircles(color_segmented_image, cv2.HOUGH_GRADIENT, 3, 10, minRadius=40, maxRadius=55)
+        circles = cv2.HoughCircles(color_segmented_image, cv2.HOUGH_GRADIENT, 3, 10, minRadius=40, maxRadius=50)
         if circles is None:
             return False
         else:
@@ -546,6 +590,8 @@ class Window(tk.Tk):
         self.show_frames()
 
     def show_frames(self):
+
+
         if (self.videosource is None):
             print("no vid source jet")
         else:
@@ -593,6 +639,7 @@ class Window(tk.Tk):
                     img = Image.fromarray(cv2.cvtColor(self.draw_frame, cv2.COLOR_BGR2RGB))
                 except:
                     img = Image.fromarray(cv2.cvtColor(self.current_frame, cv2.COLOR_BGR2RGB))
+                #img = cv2.rotated(img,cv2.ROTATE_90_CLOCKWISE)
                 imgtk = ImageTk.PhotoImage(image=img)
                 #cv2.imshow("curr view", self.draw_frame)
                 self.LabelVideo.imgtk = imgtk
@@ -645,20 +692,32 @@ class Window(tk.Tk):
             #return None
 
     def write_serial(self, move, handmove):
+        self.StatusVarfps.set(1 / (time.time() - self.frametime))
+        self.frametime = time.time()
         if self.serial_connected:
             handmode = True
             if self.MoveVar.get() == 1:
                 handmode = False
             if handmove == handmode:
-                #self.serial_connection.write(bytes(str(move), 'utf-8'))
-                #self.serial_connection.flush()
+                self.serial_connection.write(bytes(str(move), 'utf-8'))
+                time.sleep(0.1)
+                self.serial_connection.write(bytes(str(0), 'utf-8'))
+                self.serial_connection.flush()
+                print("sent "+ str(move))
                 pass
 
         else:
             pass
             self.StatusSerialVar.set("serial not set!!!")
 
-
+#1 links
+#2 rechts
+#3 vorne
+#4 hinten
+#5 vorne links
+#6 vorne rechts
+#7 hinten links
+#8 hinten rechts
 
 
 
@@ -682,4 +741,3 @@ min_action_pause = 0.001
 
 print("ml")
 root.mainloop()
-
