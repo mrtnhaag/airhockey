@@ -1,0 +1,501 @@
+\chapter{Theoretical Foundations}  
+\label{ch:TheoreticalFoundations}
+This chapter serves as starting point for readers who are eager to understand the approaches and proceedings of this work but are not familiar with recent advances in feature extraction, mobile neural network architectures, dimensionality reduction methods or clustering algorithms. However, some basic knowledge with respect to deep learning is required.\\
+\\
+This chapter is organized as follows. First, feature extraction utilizing deep convolutional networks is illustrated. Then, two different dimensionality reduction methods, namely \textit{Principle Component Analysis} and \textit{t-SNE} are explained in Section \ref{sec:DimensionalityReductionMethods}. Subsequently, a variety of clustering algorithms and one-class classifiers are investigated. As the training of a low latency model is one point of focus in this work, a CNN architecture that is explicitly designed for embedded devices is described in section \ref{sec:MobileNetworkArchitectures}. Finally, different performance measures are introduced to compare the approaches in this work with other anomaly detection methods.\\
+\\
+State of the art anomaly detection approaches based on these foundations are subject to chapter \ref{ch:RelatedWork}. 
+
+
+\section{Deep Feature Extraction}
+\label{sec:DeepFeatureExtraction}
+A phenomena that arises when analyzing very high-dimensional data that does not occur in low-dimensional settings is the so called \textit{curse of dimensionality}, originally introduced by Richard E. Bellman in 1957 \cite{CurseOfDimensionality}. The main theme of this problem is the fact that when the dimensionality increases, the volume of the feature space increases exponentially, thus making the available data sparse in comparison. This sparsity prevents common pattern recognition, feature extraction and clustering algorithms that depend on statistical significance from working properly \cite{DataClustering}. Image data is an intuitively accessible example for this problem. The task of understanding images with dimensions $224 \times 224 \times 3$ for example can be described as problem of finding patterns in an $150.528$ dimensional space. \\
+\\
+As the accuracy of algorithmic image processing languished, the first \textit{Convolutional Neural Network} (\textit{CNNs}), AlexNet \cite{Alexnet}, introduced in 2012, massively outperformed the state of the art methods with respect to image classification. Since then, more sophisticated architectures steadily push the limits of CNNs. This development can easily be seen by comparing the classification errors on the ImageNet \cite{ILSVRC} dataset over recent years in figure \ref{fig:ImageNetClassificationOverYears}. In 2015 neural networks surpassed the ability of the average human in that task. The question remains how CNNs achieve this extraordinary accuracy. 
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{../img/ImageNetClassificationOverYears}
+\caption{Comparison of the classification errors for different algorithms and neural networks over the past years with respect to the ImageNet \cite{ILSVRC} dataset. A prediction is considered incorrect, if the correct class is not under the top five predictions. \cite{CNNComparison}}
+\label{fig:ImageNetClassificationOverYears}
+\end{figure}
+\begin{quote}
+\glqq Neural Networks are biologically-inspired programming paradigms which enable computers to learn from observations.\grqq\; - Michael Nielsen \cite{nielsenneural}
+\end{quote}
+The smallest components of these networks are so called \textit{neurons} which basically just weight their respective inputs with different weights $w$ and add a bias $b$. By putting multiple neurons in parallel a \textit{layer} is formed. This simple construction is capable of extracting and assessing features from its previous layer. Multiple layers attached to each other can be considered an \textit{Artificial Neural Network} (\textit{ANN}). To put it in an oversimplified way, the count of neurons in one layer determines the number of features that can be recognized while the number of layers limits the complexity of features extractable from the input. The first layer of a network is called \textit{input layer}. This layer can be feed with any kind of data, e.g. image pixels or other sensor readings. The \textit{output layer} at the very end of a network performs the actual classification, regression or other task based on the features extracted from the input. All layers in between are considered \textit{hidden layers}. Figure \ref{fig:BasicNeuralNetwork} illustrates a very basic neural network with this kind of architecture. \\
+\\
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{../img/TheoreticalFoundations/BasicNeuralNetwork}
+\caption{Basic illustration of a feed forward artificial neural network with input, output and hidden layers \cite{nielsenneural}.}
+\label{fig:BasicNeuralNetwork}
+\end{figure}
+\noindent The actual learning process of a neural network is performed by inputting batches of labeled samples from the training data into the first layer. Calculating the prediction for these samples is called \textit{inference} or \textit{forward pass}. As the actual label for these samples is available, the error of the network's output can be evaluated. The influence of each weight in the ANN is calculated using a method called \textit{backpropagation}. After that, each weight is updated a small step in the opposing direction of its gradient with respect to the error. This operation is called \textit{stochastic gradient descent}. The underlying assumption is that by minimizing the error of the prediction on a large amount of training samples the neural network learns about the inherent structure of the data and can generalize this knowledge to assess unseen samples.\\
+\\
+In the naive formulation of a neural network, namely \textit{Fully Connected Networks} (\textit{FCNs}), the input is depicted as vertical line of neurons. This means the spatial structure of the images is not taken into account giving away all underlying information, i.e. pixels close to each other are treated the same as pixels far away from each other. One specific type of network architecture, \textit{Convolutional Neural Networks} (\textit{CNNs}), has shown to be especially suitable for image processing, as it preserves the spatial information of the input. The most important and unique properties for CNNs are the following:
+\begin{itemize}
+\item \textbf{Local receptive fields}: In FCNs, as described before, each neuron of one layer is connected to each neuron of the next as well as the previous layer. In a \textit{convolutional layer}, in contrast, each neuron is only weighting the features of a small region from its input, which is called the \textit{local receptive field}. The size of that field or window is called \textit{kernel size}. Figuratively, this window is moved over the whole input with a specific step size, often called \textit{stride}. The output of the window at each position corresponds to a neuron in the following layer. 
+\item \textbf{Shared weights}: To further decrease the number of weights and biases for each layer, all neurons of one layer share their weights to analyze their input region. This can be illustrated as scanning the whole input for a specific pattern and assess how much this pattern occurs in the respective field. To detect different features in the input, multiple \textit{filters}, i.e. sets of weights, are used in one layer.  
+\item \textbf{Pooling}: In addition to the convolution layers, convolutional neural networks also contain \textit{pooling layers}. These simplify the information in the output from the convolutional layer. In detail, a pooling layer takes the mean or maximum of a specific region, for example $3\times 3$ neurons, from its input and creates a condensed feature map with reduced dimensionality. The idea is that the exact position of a feature is not as important as the fact if that feature is present in a region. 
+\end{itemize}
+Putting all those ideas together a complete CNN can be formed. It usually consists of multiple alternations between convolutional and pooling layers followed by one or two fully connected layers. The first part of the network is called \textit{feature extractor}, while the last layers serve as \textit{classifier}. Due to the nature of convolutional and pooling layers the spatial dimensions of the input image are reduced subsequently while the number of layers increases. The classification then only has to be performed on a processed and condensed version of the original image information \cite{nielsenneural}. Figure \ref{fig:BasicCNN} shows the illustration of a typical basic CNN architecture for image classification tasks. One tangible example of a CNN architecture will be investigated in section \ref{sec:MobileNetworkArchitectures}.\\
+\\
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{../img/TheoreticalFoundations/BasicCNN}
+\caption{Basic illustration of a convolutional neural network with convolutional, pooling and fully connected layers \cite{https://engmrk.com/convolutional-neural-network-3/}.}
+\label{fig:BasicCNN}
+\end{figure}
+\noindent By removing the classifying layers from the end of the network that has extensively been trained on classifying images, a \textit{deep feature extractor} can be obtained. Because of its training, this CNN is assumed to provide distinctive features for a wide variety of image classes. Otherwise, a classification based on these features would not be possible. For the task of novelty and outlier detection, the existing features can be further refined as later described in chapter \ref{ch:RelatedWork}.
+
+
+
+\section{Dimensionality Reduction Methods}
+\label{sec:DimensionalityReductionMethods}
+Recent approaches, and so does this work, rely on deep neural networks to jointly extract features and reduce dimensionality as they have proven to be resistant towards the \textit{curse of dimensionality}. However, compared to the capability of humans to immediately identify correlations, which is restricted to three dimensions, the latent space of a neural network still appears to be high dimensional (usually about 1000 dimensions).\\
+\\
+The two dimensionality redcution algorithms presented in this section, namely \textit{Principle Component Analysis} \cite{PCA} and \textit{t-SNE} \cite{tSNE}, primarily serve the purpose of projecting high dimensional data into two or three dimensional space for human observation and evaluation, while attempting to preserve the most important correlations. 
+
+\subsection{Principle Component Analysis}
+\label{subsec:PCA}
+Principle component analysis (PCA) is a non-parametric method of information extraction and dimensionality reduction that has already been introduced in 1901 by Karl Pearson \cite{PCA}. To date, PCA is described as one of the most valuable results from applied linear algebra \cite{PCATutorial}. The goal of this algorithm is to reveal which dimensions in a high dimensional problem are important, which are redundant and which are just noise.\\
+\\
+Imagine are data set $X$ with dimensions $m \times n$, where each column $n$ is a single data sample and each row $m$ stands for one feature. PCA asks the question:
+\begin{quote}
+Is there another coordinate system, which is a linear combination of the original basis, that better re-expresses the data set?
+\end{quote}
+In mathematical terms this means: 
+\begin{quote}
+Is there a transformation matrix $P$ that transforms $X$ into its representation $Y$ (see equation \ref{eq:PXY})?
+\end{quote}
+\begin{align}
+\label{eq:PXY}
+PX = \begin{bmatrix} p_1\\ \vdots\\ p_m \end{bmatrix} \begin{bmatrix} x_1 & ... & x_3 \end{bmatrix} = \begin{bmatrix} p_1*x_1 & ... & p_1*x_n\\ \vdots & \ddots & \vdots\\ p_m*x_1 & ... & p_m*x_n \end{bmatrix} = Y
+\end{align}
+Geometrically $P$ rotates and stretches the original data, i.e., PCA is constrained to linear transformations. The question remains what the best way to re-express $X$ as $Y$ is in order to reduce the noise in the data and get rid of dimensions that aren't statistically independent, thus redundant.
+
+\subparagraph{Noise:}\mbox{}\\
+A natural choice for measuring the noise in data is the \textit{signal-to-noise ratio} (\textit{SNR}) calculated as shown in equation \ref{eq:SNR}. High SNR indicates high precision data, whereas low SNR indicates noise contaminated data.
+\begin{align}
+\label{eq:SNR}
+SNR=\frac{\sigma^2_{signal}}{\sigma^2_{noise}}
+\end{align}
+The underlying assumption to PCA is that the dynamics of interest exist along the directions with the largest variance and presumably the highest SNR. Maximizing the variance corresponds to finding the appropriate rotation of the new basis. 
+
+\subparagraph{Redundancy:}\mbox{}\\
+Often features, also called measurement types, in high dimensional space are redundant to some extend. Ideally you want to discard all dimensions that are not statistically independent. The covariance serves as measure for the degree of the linear relationship between two variables. A large value indicates high redundancy. In the covariance matrix $C_X$, defined in equation \ref{eq:CX}, with dimensions $m \times m$ the $ij^{th}$ element is the dot product between the vector of the $i^{th}$ feature with the vector of the $j^{th}$ feature. Hence, the covariance matrix captures the correlations between all possible pairs of measurements.
+
+\begin{align}
+\label{eq:CX}
+C_X=\frac{1}{n-1}XX^T
+\end{align}
+The diagonal terms of $C_X$ are the variances of particular features while the off-diagonal terms are the covariances between measurement types. In the diagonal terms, large values correspond to interesting dynamics, whereas large values in the off-diagonal terms correspond to high redundancy.\\
+\\
+As a consequence of the two illustrated properties noise and redundancy, PCA aims to find a representation $Y$ of the data $X$ such that the covariance in $C_Y$ is minimized and the variance is maximized. To put it another way, the covariance matrix $C_Y$ shall be diagonalized. 
+
+\subparagraph{Diagonalization:}\mbox{}\\
+PCA arguably selects the easiest method of diagonalizing $C_Y$ by first assuming that $P$ is an orthonormal matrix. Secondly, PCA assumes the directions with the largest variances the signal and the most important, i.e., they are the most \textit{principal}. Similar equation \ref{eq:CX}, $C_Y$ is defined as weighted product of the transformed data matrix $Y$ multiplied with its transform $Y^T$. Considering the condition from equation \ref{eq:PXY}, the transformed covariance matrix $C_Y$ can be rewritten as follows:
+\begin{align*}
+C_Y &= \frac{1}{n-1}YY^T\\
+&=\frac{1}{n-1}(PX)(PX)^T\\
+&=\frac{1}{n-1}P(XX^T)P^T
+\end{align*}
+It can be shown that the symmetric matrix $XX^T$ is diagonalized by an orthogonal matrix of its eigenvectors \cite{PCATutorial}. The trick is now to select the matrix $P$ such that each row $p_i$ is an eigenvector of $XX^T$ such that the condition in equation \ref{eq:XXEDE} is met.
+\begin{align}
+\label{eq:XXEDE}
+XX^T=EDE^T=P^TDP
+\end{align}
+\begin{tabular}{lll}
+where:&&\cr
+&$D$& diagonal matrix\cr
+&$E$& matrix of eigenvectors of $XX^T$\cr
+\end{tabular}\\\\\\
+With this relation and the knowledge that $P^{-1}=P^T$ for orthogonal matrices $C_Y$ can be evaluated as follows:
+\begin{align*}
+C_Y&=\frac{1}{n-1}PAP^T\\
+&=\frac{1}{n-1}P(P^TDP)P^T\\
+&=\frac{1}{n-1}(PP^{-1})D(PP^{-1})\\
+&=\frac{1}{n-1}D
+\end{align*}
+It is evident that the choice of $P$ diagonalizes $C_Y$. In practice computing PCA comes down to (1) substracting off the mean of each feature for a data set $X$ and (2) computing the eigenvectors of $XX^T$. Figuring out the eigenvectors is done by \textit{singular value decomposition} \cite{SVD}. The first two or three dimensions of the transformed data $Y$, which are allegedly most important, can then be used for visualization of the data.\\
+\\
+\subparagraph{Example:}\mbox{}\\
+Figure \ref{fig:PCA_Example_SwissRoll_3D} shows an example of a three dimensional toy data set that forms a noisy \textit{Swiss roll}. $X$, in this case, is a matrix with dimensions $3 \times 3000$ because it consists of $3000$ data points. The $z$-dimension contains no additional information as it is a random value for all $x$ and $y$ combinations. This becomes even more apparent by taking a look at the covariance matrix $C_X$, calculated as in equation \ref{eq:CX}. 
+\begin{align*}
+C_X &=
+\begin{bmatrix}
+82.939 &  14.075 & -0.096 \cr
+14.075 &  104.300 & 0.253 \cr
+-0.096 & 0.253 & 0.752
+\end{bmatrix}
+\end{align*}
+\begin{figure}[H]
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[height=5.9cm]{../img/PCA_Example_SwissRoll_3D}
+\caption{Original Swiss roll data with three features.}\label{fig:PCA_Example_SwissRoll_3D}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[height=5.9cm]{../img/PCA_Example_SwissRole_2D}
+\caption{Swiss roll data transformed by PCA with its dimensionality reduced to two.}\label{fig:PCA_Example_SwissRoll_2D}
+\end{subfigure}
+\caption{Data points from a toy data set that forms a noisy Swiss roll in three dimensional space before and after transformation with PCA. The point colors indicate the distance to the origin.}
+\end{figure}
+\noindent Applying PCA to the data using the \textit{Scikit-learn} library \cite{scikit-learn} in Python yields the explained variance ratio, i.e., the percentage of variance explained by each feature, thus, its importance. In the Swiss roll case PCA returns $[0.592\; 0.404\; 0.004]$ for this. As already expected after the visual inspection most of the signal (about $99.6\:\%$) lies within the first two dimensions. Figure \ref{fig:PCA_Example_SwissRoll_2D} shows the data after applying PCA and discarding the last dimension. Notice how without basically no information is lost. 
+
+\subsection{t-SNE}
+\label{subsec:t-SNE}
+t-SNE, short for \textit{t-Distributed Stochastic Neighbor Embedding}, is an enhanced version of the original SNE by Geoffrey Hinton et al. \cite{SNE} that has been introduced by van der Maaten et al. in 2008 \cite{tSNE}. As for PCA its main target is the dimensionality reduction for the purpose of visualizing high dimensional data. The main advantage over PCA is, however, that t-SNE's reduction is nonlinear, hence it allows for a much more complex unfolding and projection of the high-dimensional space.
+
+\subparagraph{Stochastic Neighbor Embedding:}\mbox{}\\
+The original idea of SNE is to convert the high-dimensional Euclidean distances between data points into conditional probabilities representing similarities. The similarity of the points $x_j$ and $x_i$ is the probability $p_{j|i}$ that $x_i$ would pick $x_j$ as its neighbor if neighbors were picked in proportion to their probability density under a Gaussian centered at $x_i$. Mathematically this probability is defined as in equation \ref{eq:PJI}.
+
+\begin{align}
+\label{eq:PJI}
+p_{j|i}=\frac{exp(-||x_i-x_j||^2/2\sigma_i^2)}{\sum_{k\neq i} exp(-||x_i-x_k||^2/2\sigma_i^2)}
+\end{align}
+\begin{tabular}{lll}
+where:&&\cr
+&$\sigma_i$& variance of the Gaussian that is centered on $x_i$.\cr
+\end{tabular}\\\\\\
+To estimate good variances SNE perfoms a binary search that produces a $P_i$ with a fixed \textit{perplexity} that is specified by the user. The perplexity can be interpreted as a smooth measure of the effective number of neighbors. 
+Similarly, the conditional probability for the low-dimensional counterparts $y_i$ and $y_j$, denoted as $q_{j|i}$, is calculated as seen in equation \ref{eq:QJI}.
+
+\begin{align}
+\label{eq:QJI}
+q_{j|i}=\frac{exp(-||y_i-y_j||^2)}{\sum_{k\neq i} exp(-||y_i-y_k||^2)}
+\end{align}
+Then the \textit{Kullback-Leibler divergence} (\textit{KL divergence}) \cite{Kullback} from equation \ref{eq:KL} is minimized using gradient descent in order to reduce the mismatch between $p$ and $q$ and as a result finds a low-dimensional data representation of the original data.
+\begin{align}
+\label{eq:KL}
+C=\sum_i KL(P_i||Q_i)=\sum_i \sum_j p_{j|i} log\frac{p_{j|i}}{q_{j|i}}
+\end{align}
+Because the KL divergence is not symmetric, different types of errors in the pairwise distances are weighted differently. While the cost for widely separated map points that represent nearby data points is large, nearby map points which represent widely separated data points are insufficiently punished making the KL divergence difficult to optimize.\\
+\\
+Furthermore, SNE suffers an issue known as the \textit{crowding problem}. This problem arises when you try to embed a set of high dimensional data points within a space of much lower dimensionality. The low-dimensional map has not nearly enough space to accommodate the equidistant or nearby data points. To compensate, moderately distant data points will have to be placed very far apart in low-dimensional space exerting an attractive force. This attractive force crushes together the points in the center of the map, which prevents gaps from forming between natural clusters. 
+
+\subparagraph{t-Distributed Stochastic Neighbor Embedding}\mbox{}\\
+t-SNE tackles the problem of the KL divergence being hard to optimize by replacing it with a symmetrized version of the cost function as seen in equation \ref{eq:KL2}.
+\begin{align}
+\label{eq:KL2}
+C=KL(P||Q)=\sum_i \sum_j p_{ij} log\frac{p_{ij}}{q_{ij}}
+\end{align}
+Equation \ref{eq:PJI2} and \ref{eq:QJI2} show the updated similarities for high- and low-dimensional space. Note that $p_{ij}$ is calculated in a rather unintuitive fashion which is necessary though in order to circumvent the problem of very small values for outliers. This implies that the perplexity still has to be chosen by the user beforehand in t-SNE. Also note that the conditional probabilities $q_{ij}$ is now calculated using \textit{Student's t-distribution} rather than a Gaussian. This function has much heavier tails which allow a moderate distance in high-dimensional space to be modeled by a much larger distance in the map without exerting an unwanted attractive force. Hence, this is a natural way of alleviating the crowding problem.  
+\begin{align}
+\label{eq:PJI2}
+p_{ij} &=\frac{p_{j|i}+p_{i|j}}{2n}
+\end{align}
+\begin{align}
+\label{eq:QJI2}
+q_{ij}=\frac{(1+||y_i-y_j||^2)^{-1}}{\sum_{k\neq l} (1+||y_k-y_l||^2)^{-1}}
+\end{align}
+t-SNE has some nice properties that make it faster to compute and converging to better results:
+\begin{itemize}
+\item The symmetrical SNE's gradient is simpler, thus faster to compute.
+\item The numerator of the t-distributed $q_{ij}$ approaches an inverse square law for large distances making the map's representation almost invariant to changes in the scale. Also, large clusters of points that are far apart interact in the same way as individual points.
+\item The density of points with the Student t-distribution is much faster to evaluate than for a Gaussian because it doesn't involve an exponential. 
+\end{itemize}
+
+\subparagraph{Example}\mbox{}\\
+Applying t-SNE to the Swiss roll example of section \ref{subsec:PCA} we get the result in figure \ref{fig:tSNE_Example_SwissRoll_2D}. Notice how t-SNE is not limited to rotating and scaling data from the original feature space as PCA but is capable of unfolding the Swiss roll. The perplexity has been empirically set to 300 for this example.
+\begin{figure}[H]
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[height=5.9cm]{../img/PCA_Example_SwissRoll_3D}
+\caption{Original Swiss roll data with three features.}\label{fig:tSNE_Example_SwissRoll_3D}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[height=5.9cm]{../img/tSNE_Example_SwissRoll_2D}
+\caption{Swiss roll data transformed by t-SNE with its dimensionality reduced to two ($Perp=300$).}\label{fig:tSNE_Example_SwissRoll_2D}
+\end{subfigure}
+\caption{Data points from a toy data set that forms a noisy Swiss roll in three dimensional space before and after transformation with t-SNE. The point colors indicate the distance to the origin.}
+\end{figure}
+\noindent Though t-SNE has some significant advantages over PCA and often yields superior visualization for high dimensional data it also has its downsides and weaknesses which will be discussed in the next section (see Section \ref{subsec:ComparingPCAandtSNE}).
+
+\subsection{Comparing PCA and t-SNE} 
+\label{subsec:ComparingPCAandtSNE}
+In almost every research paper that deals with latent representations of deep neural networks, e.g., Deep One-Class Classification \cite{DOC} \cite{IntraClass} or Deep Embedded Clustering \cite{DEC} \cite{CDEC},  t-SNE is deployed for visualization purposes. PCA, in contrast, can't match up with this due to its linear nature. However, there are several cases in which PCA should be preferred over t-SNE for the following reasons \cite{PCAtSNE}:
+\begin{enumerate}
+\item \textbf{Stochasticity of the solution:} PCA is deterministic, whereas t-SNE is not. You can get different visualizations for the same data due to its stochastic nature which might lead t-SNE into different local minima on each run.
+\item \textbf{Interpretability of the mapping:} t-SNE tries to map neighbors of points correctly which engenders that global trends are not accurately represented. 
+\item \textbf{Application to new data:} t-SNE is not learning a function from original space to the new dimensional one. The embedding is directly learned by moving the points across the low dimensional space. Hence, there is no way of projecting new data to the low dimensional space without restarting the whole training process, which is quite time consuming.
+\item \textbf{Higher dimensions than three:} Because of the nature of t-SNE it only serves visualization purposes. While PCA can be used to get rid of redundant features, t-SNE's representation has no value in higher dimensions than three.
+\end{enumerate}
+
+
+\section{Clustering}
+\label{sec:Clustering}
+Many unsupervised and semi-supervised anomaly detection methods make use of clustering algorithms, which is due to the unavailability of labeled data. The underlying assumption is that the location of normal data points in latent space follows some probability distribution, e.g., Gaussian distribution or Student's t-distribution. According to this hypothesis most of the normal data lies close together while outliers or novelties are located far from the cluster's center. In fact, one-class classifiers such as SVDD \cite{SVDD} also rely on this assumption and make their decisions based on the distance of points to a cluster center in hyperspace. \\
+\\
+This section illustrates the most important clustering algorithms relevant to anomaly detection, namely \textit{Probabilistic Clustering} (Section \ref{subsec:ProbabilisticModelsforClustering}), \textit{Partitional Clustering} (Section \ref{subsec:PartitionalClustering}) and \textit{Density-Based Clustering} (Section \ref{subsec:Density-BasedClustering}), briefly describing their strengths and weaknesses. Furthermore ways of incorporating user supervision are explored in Section \ref{subsec:Semi-SupervisedClustering}. For more detailed explanations and algorithms refer to \cite{DataClustering}.
+
+\subsection{Probabilistic Models for Clustering}
+\label{subsec:ProbabilisticModelsforClustering}
+Model-based clustering approaches attempt to optimize the fit between the observed data and some mathematical model using a probabilistic approach. It is assumed that the data points are generated by a mixture of underlying probability distributions where each cluster can be represented by a parametric distribution, which is why these models are called \textit{mixture models}. Thus, the clustering problem is transformed into a parameter estimation problem.\\
+\\
+Suppose a set of data points $X=\{x_1, ..., x_N\}$ consisting of $N$ observations of a $D$-dimensional random variable $x$. $x_n$ is assumed to be distributed according to a mixture of $K$ components. The \textit{mixture distribution}, also called \textit{probability density function} can be written as follows:
+\begin{align}
+\label{eq:ProbabilityDensityFunction}
+p(x_n)=\sum_{k=1}^K \pi_kp(x_n|\theta_k)
+\end{align}
+\begin{tabular}{lll}
+where:&&\cr
+&$\pi_k$& mixing probabilities which satisfy $\sum_{k=1}^K\pi_k = 1$\cr
+&$\theta_k$& set of parameters specifying the $k^{th}$ component\cr
+&$p$& component distribution
+\end{tabular}\\\\\\
+A cluster label $z_n$, encoded by a $K$-dimensional binary vector, is introduced. $z_n$ is a categorical random variable taking values $1 ... K$ with probability $\pi_k$. The conditional probability of a point $x_n$ belonging to a mixing component $z_{nk}$ can be obtained with equation \ref{eq:responsibility}. This probability is called \textit{responsibility} $\gamma(z_{nk})$ that component $k$ takes for explaining observation $x_n$.
+\begin{align}
+\label{eq:responsibility}
+\gamma(z_{nk})=(z_{nk}=1|x_n)=\frac{\pi_kp(x_n|\theta_k)}{\sum_{j=1}^K\pi_jp(x_n|\theta_j)}
+\end{align}
+To evaluate a mixture model's performance on a data set the probability of generating all observed points with the current mixture of distributions $p(X|\Theta)$ can be calculated as follows:
+\begin{align}
+\label{eq:GenerationProbability}
+p(X|\Theta) &= \prod_{n=1}^N\sum_{k=1}^K\pi_kp(x_n|\theta_k) \\ 
+log(p(X|\Theta))&=\sum_{n=1}^Nlog\sum_{k=1}^K\pi_kp(x_n|\theta_k)
+\end{align}
+The statistical objective of mixture models is the so called \textit{maximum likelihood estimation} (\textit{MLE}) from equation \ref{eq:MLE}.
+\begin{align}
+\label{eq:MLE}
+\Theta_{ML} = \argmax\limits_{\Theta}(log\: p(X|\Theta))
+\end{align}
+The most commonly used variant of mixture models is the \textit{Gaussian Mixture Model} (\textit{GMM}), where each component is a Gaussian distribution defined by a mean $\mu$ and variance $\sigma^2$. The multivariate Gaussian distribution takes the form in equation \ref{eq:MultivariateGaussian}.
+\begin{align}
+\label{eq:MultivariateGaussian}
+N(x|\mu,\Sigma) = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}}exp\left \{ -\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) \right \}
+\end{align}
+\begin{tabular}{lll}
+where:&&\cr
+&$\mu$& $D$-dimensional mean vector\cr
+&$\Sigma$& $D \times D$ covariance matrix\cr
+&$|\Sigma|$& determinant of $\Sigma$
+\end{tabular}\\\\\\
+To find the maximum likelihood solutions, the derivatives with respect to $\pi$, $\mu$ and $\Sigma$ have to be calculated respectively. The maximization process of the log likelihood function turns out to be very complex. An elegant way of doing so iteratively is the \textit{Expectation-Maximization} algorithm (\textit{EM}). In this approach means, covariances and mixing probabilities are intialized randomly at first. After that the algorithm alternates between two updating steps:
+\begin{itemize}
+\item \textbf{Expectation step:} Use the current parameters to calculate the responsibilities $\gamma$.
+\item \textbf{Maximization step:} Maximize the log-likelihood with the updated responsibilities and re-estimate the means, covariances and mixing coefficients.
+\end{itemize}
+The EM algorithms is converged when the change in the log-likelihood falls below some threshold.\\
+\\
+Probabilistic clustering models, particularly GMM, are very popular due to its simple implementation utilizing EM together with the monotone increase of the likelihood during optimization. However, some of the main drawbacks of these models are the following:
+\begin{itemize}
+\item EM is not guaranteed to find the global maximum. Thus, it's highly dependent on the initialization and might have to be restarted several times to avoid local maxima.
+\item It is assumed that the number of components is known beforehand.
+\item EM converges slowly in some situations compared to partitional clustering algorithms (see Section \ref{subsec:PartitionalClustering}).
+\end{itemize}
+
+\subsection{Partitional Clustering}
+\label{subsec:PartitionalClustering}
+Partitional clustering methods, such as \textit{K-means}, belong the the most widely studied clustering algorithms along with hierarchical clustering. This is because of its simplicity in terms implementation and comprehensibility. Partitional clustering algorithms aim to discover the groupings present in the data by optimizing a specific objective function and iteratively improving the quality of the partitions. For this purpose it needs to be provided with a set of initial seeds which are then improved.\\
+\\
+K-means is by far the most popular clustering algorithm. It starts by choosing $K$ representative points as initial centroids. Each data point is then assigned to the closest centroid based on a particular proximity measure chosen, e.g. Manhatten distance or Euclidean distance. Once formed, the centroids for each cluster are updated to reduce an objective function. The algorithm then iteratively repeats these two steps until convergence. K-means is a greedy algorithm which is guaranteed to converge to a local minimum.\\
+\\
+The objective function deployed is called \textit{Sum of Squared Errors} (\textit{SSE}): 
+\begin{align}
+\label{eq:SSE}
+SSE(C) = \sum_{k=1}^K\sum_{x_i\in C_k} ||x_i-c_k||^2 \text { with } c_k=\frac{\sum_{x_i \in C_k}x_i}{|C_k|}
+\end{align}
+\begin{tabular}{lll}
+where:&&\cr
+&$x$& data points\cr
+&$C$& clusters\cr
+&$c_k$& mean of the $k^{th}$ cluster
+\end{tabular}\\\\\\
+Though converging faster than probabilistic clustering algorithms (see Section \ref{subsec:ProbabilisticModelsforClustering}), the performance of K-means is equally dependent on the choice of initial centroids and the estimation of the cluster number $K$. Several methods have been developed to address these problems, often based on other clustering procedures or statistical properties. Furthermore a variety of algorithms has evolved from the original K-means. These variations are all roughly based on one or more of the following changes:
+\begin{itemize}
+\item Choosing different representative prototypes for the clusters.
+\item Choosing better initial centroid estimates.
+\item Applying some kind of feature transformation technique. 
+\end{itemize}
+
+\subsection{Density-Based Clustering}
+\label{subsec:Density-BasedClustering}
+One problem with many clustering algorithms, e.g. K-means and EM, is that they, implicitly or explicitly, make the assumption that the data is generated from a probability distribution. Due to this they produce spherical clusters and cannot deal with data sets in which the actual clusters have non-spherical shapes. This was the original motivation for creating density-based clustering methods. The intentions behind density-based clustering methods as well as the assumptions made can be summarized as follows:
+\begin{itemize}
+\item Clusters of arbitrary shape shall be detectable while removing noise.
+\item Clustering should scale well to large databases.
+\item No assumptions about the number of clusters or their distribution has to be made preliminary.
+\item Density-based clusters are connected, dense areas in the data space separated from each other by sparser areas.
+\item The density within the areas of noise is assumed to be lower than the density in any other cluster. 
+\end{itemize}
+
+\subparagraph{DBSCAN:}\mbox{}\\
+DBSCAN is considered the most popular density-based clustering algorithm. It estimates the density by counting the number of points in a fixed-radius neighborhood and considers two points connected if they lie within each others neighborhood. Three different types of points are distinguished which are illustrated in figure \ref{fig:DBSCAN1}:
+\begin{enumerate}
+\item Core points, i.e., points with a dense neighborhood.
+\item Border points, i.e., points which are in the neighborhood of core points, hence they belong to a cluster, but whose neighborhood is not dense.
+\item Noise points, i.e., points which do not belong to any cluster.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{../img/TheoreticalFoundations/DBSCAN1}
+\caption{Example of the different types of points in a DBSCAN application.}
+\label{fig:DBSCAN1}
+\end{figure}
+
+\noindent A point has a dense neighborhood, if the radius $\epsilon$ contains at least $MinPts$ points. The two mentioned properties are the user defined parameters of this algorithm. A point $q$ within the radius of a core point $p$ is \textit{density-reachable} from $p$. Notice that this character is not symmetric. Two points $p$ and $q$ are called \textit{density-connected} if there is a core point $o$ from which both are density-reachable. A cluster is then defined as a set of density-connected points which is maximal with respect to density-reachability. In the example above point $1$ is density-reachable from point $2$, but not the other way round. Point $1$ and $7$ are density-connected.\\
+\\
+The DBSCAN algorithm can broadly be summarized as follows:
+\begin{enumerate}
+\item Start with an arbitrary database point $p$ and retrieve all points density-reachable with respect to $\epsilon$ and $MinPts$.
+\begin{itemize}
+\item If $p$ is a core point, this procedure yields a cluster. Proceed with the density-reachable points of $p$. 
+\item If $p$ is not a core point, no points are density-reachable and $p$ is assigned to the noise.
+\end{itemize}
+\item The same procedure starts for the next point $q$.
+\begin{itemize}
+\item If $p$ is actually a border point of some cluster but has been assigned to noise in the previous steps, it will later be reached when collecting all the points density-reachable from some core point and then will be (re-)assigned to the cluster.
+\end{itemize}
+\item Terminate the algorithm when all points have been assigned to a cluster or to the noise.
+\end{enumerate}
+The following figure show this process step by step by explaining how the assignments in figure \ref{fig:DBSCAN1} have been obtained.
+
+\begin{figure}[H]
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=\textwidth]{../img/TheoreticalFoundations/DBSCAN2}
+\caption{At first, point $6$ is tagged as noise as it has a non dense neighborhood.}\label{fig:DBSCAN2}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=\textwidth]{../img/TheoreticalFoundations/DBSCAN3}
+\caption{Point $2$ is considered a core point because it has three or more neighbors in a radius of $\epsilon$.}\label{fig:DBSCAN3}
+\end{subfigure}\\
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=\textwidth]{../img/TheoreticalFoundations/DBSCAN4}
+\caption{Next all neighbors of point $2$ are assigned. Points $3$ and $4$ also have a dense neighborhood and are thus core points of the same cluster. Due to the connection to core point $2$ point $6$ is reassigned as border point.}\label{fig:DBSCAN4}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=\textwidth]{../img/TheoreticalFoundations/DBSCAN5}
+\caption{Finally, the remaining points are evaluated. While point $7$ is density-reachable from a core point, point $5$ is only connected to a border point and thus considered noise.}\label{fig:DBSCAN5}
+\end{subfigure}\\
+\caption{Tangible example of the DBSCAN clustering algorithm for a toy dataset consisting of $8$ points in a two-dimensional space.}
+\end{figure}
+
+
+\subparagraph{OPTICS:}\mbox{}\\
+To address the problem of choosing from an infinite number of possible parameters in DBSCAN and the fact that often intrinsic cluster structures cannot be characterized by global density parameters, a more sophisticated density-based clustering algorithm, namely OPTICS, has been proposed. The difference to the original DBSCAN algorithm is that OPTICS doens't assign cluster memberships but stores the three following information:
+\begin{itemize}
+\item The \textit{clustering order} in which the points are processed.
+\item The \textit{core-distance} of each point which is the smallest distance between a point $p$ and a point in its neighborhood such that $p$ would be a core point.
+\item The \textit{reachability-distance} of each point which is the smallest distance of a point $p$ with respect to another point $o$ such that $p$ is directly density-reachable from $o$ if $o$ is a core point. 
+\end{itemize}  
+The clustering structure of a data set can be visualized by a \textit{reachability plot} that shows the reachability-distance values for all points according to the clustering order. Valleys in the reachability plot correspont to clusters, which can be hierarchically nested. This supports an interactive analysis. 
+\subsection{Semi-Supervised Clustering}
+\label{subsec:Semi-SupervisedClustering}
+-- TO DO --
+\section{One-Class Classifiers}
+\label{sec:One-ClassClassifiers}
+After finding distinct features for different classes in latent space, anomaly detection algorithms need to able to make decisions on test data assigning samples to normal or abnormal data. Though a recent approach proposed \textit{One-Class Neural Networks} (\textit{OC-NNs}) \cite{OCNN}, most methods utilize classical machine learning one-class classifiers for this purpose \cite{DOC} \cite{DeepSVDD} \cite{IntraClass}. These are preferred because it is hard to train a neural network having no discriminating classes   without it yielding a trivial solution, i.e., the points in latent space collapse. Classical one-class classifiers on the other hand are trained on splitting the data without explicit labels in a very computational efficient way. This section briefly describes the two most popular algorithms of this category, namely \textit{Support Vector Machines} (\textit{SVMs}) \cite{SVM} and \textit{Support Vector Data Description} (\textit{SVDD}) \cite{SVDD}. 
+
+\subsection{Support Vector Machines}
+\label{subsec:SVM}
+\textit{Support Vector Machines} (\textit{SVMs}), originally called \textit{Support Vector Networks} have been introduced by Corinna Cortes et al. in 1995 \cite{SVM}. The idea behind SVMs is to find a hyperplane in $N$-dimensional space that distinctly separates the data points. The target for such an hyperplane is to find the maximum margin, i.e. the maximum distance between data points of both classes. However, one disadvantage of SVMs remains which is the need of labeled data for training. One-class SVMs, proposed by Sch\"lkopf et al. in 2000 \cite{OCSVM}, solve this problem by redefining the original objective function of SVMs.\\
+\\
+Support vectors in the original paper are data points that are closer to the hyperplane and thus influence its position and orientation to a greater extend than other points. The hyperplane is represented with the equation $w^Tx+b=0$. To prevent the SVM classifier from over-fitting with noisy data, slack variables $\xi_i$ are introduced to allow some data points to lie within the margin. The constant $C>0$ determines the trade-off between maximizing the margin and the number of training data points within that margin and thus training errors. The original objective function of SVMs is the minimization formulation in equation \ref{eq:SVMLoss}
+\begin{align}
+\label{eq:SVMLoss}
+\min_{w, b, \xi_i}\frac{||w||^2}{2}+C\sum_{i=1}^n\xi_i
+\end{align}
+Note that original SVMs are limited to linearly separable patterns. That's why the idea has been extended using various \textit{Kernel functions} which enables handling nonlinear problems. The basic approach is to transform the data in a higher dimensional space, which is known as \textit{kernel trick}. Figure \ref{fig:KernelTrick} shows how a problem that is not linearly solvable is transformed to be easily separable with a hyperplane. Popular choices for the kernel function are polynomial, sigmoidal and Gaussian Radial Base functions.\\
+\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{../img/TheoreticalFoundations/KernelTrick}
+\caption{Making data linearly separable by applying the so called kernel trick.}
+\label{fig:DBSCAN1}
+\end{figure}
+
+\noindent To extend this principle to anomaly or novelty detection, Sch\"olkopf proposed to basically separate all the data points from the origin proposing One-class SVMs. The resulting minimization function in equation \ref{eq:OCSVMLoss} slightly differs from the original one above, but the similarity is still clear.
+\begin{align}
+\label{eq:OCSVMLoss}
+\min_{w, \xi_i, \rho}\frac{||w||^2}{2}+\frac{1}{\nu n}\sum_{i=1}^n\xi_i-\rho
+\end{align}
+In the previous formulation the parameter $C$ defined the smoothness. In this formular it is the parameter $\nu$ that characterizes the solution by setting an upper bound on the fraction of outliers and also serving as lower bound on the number of training examples used as support vectors. \\
+\\
+This method thus creates a hyperplane characterized by $w$ and $\rho$ which has the maximal distance from the origin in feature space and separates all the data points from the origin. 
+
+% http://rvlasveld.github.io/blog/2013/07/12/introduction-to-one-class-support-vector-machines/
+% http://svm.michalhaltuf.cz/support-vector-machines/
+% https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
+\subsection{Support Vector Data Description}
+\label{subsec:SVDD}
+\textit{Support Vector Data Description} (\textit{SVDD}), introduced in 2004 by Tax and Duin \cite{SVDD}, seizes the idea of one-class SVMs but uses a spherical, rather than a planar, approach. The resulting hypersphere is characterized by a center $a$ and a radius $R>0$ as distance from the center to the boundary, of which the volume $R^2$ will be minimized. The center is a linear combination of the support vectors. Just as before, slack variables $\xi_i$ with penalty parameter $C$ are used to create a soft margin. The minimization problem can be stated as follows:
+\begin{align}
+\label{eq:SVDD}
+\min_{R, a}R^2+C\sum_{i=1}^n\xi_i
+\end{align}
+A sample is considered in-class when the distance to the center is smaller than or equal to the radius. Note, that a SVM with an RBF-Kernel is equivalent to the SVDD.  
+
+\subsection{Local Outlier Factor}
+\label{subsec:LocalOutlierFactor}
+TODO: DESCRIBE IN MORE DETAIL.
+The \textit{Local Outlier Factor} (\textit{LOF}) is a a score that tells how likely a data point can be considered an outlier or novelty. Based upon this metric which has been introduced by Breunig et al. in 2000 \cite{LOF} scikit-learn \cite{scikit-learn} contains an outlier detection algorithm. \\
+\\
+The LOF considers $k$ neighbors for each point in order to calculate the density of a region where the parameter $k$ has to be chosen manually. While a small $k$ has more local focus, it yields more error-prone results if the data is noisy. A large $k$, however, might miss local outliers. Based on the parameter choice the \textit{k-distance} for each point is calculated which is the distance to the $k^{th}$ nearest neighbor. To smooth the results the \textit{reachability distance} is utilized, which can be calculated as seen in equation \ref{eq:reachability}. Basically, if a point $a$ is within the $k$ neighbors of point b, the $d_{reach}$ will be the $k_{dist}$ of $b$. Otherwise, it will be the real distance between $a$ and $b$. Thus, this calculation has to be performed for each pair of points in the dataset.
+
+\begin{align}
+\label{eq:reachability}
+d_{reach}(a,b)=max\left\lbrace k_{dist}(b), dist(a,b)\right\rbrace
+\end{align}
+After that yet another metric the \textit{local reachability density} (\textit{lrd}) is calculated as shown in equation \ref{eq:lrd}. The \textit{lrd} for each point simply is the inverse of the average of the respective point's reachability distances to it's $k$ nearest neighbors. As we want to obtain the density the longer the distance to the next neighbors, the sparser the area the respective point is located in. 
+
+\begin{align}
+\label{eq:lrd}
+lrd(a)=\frac{1}{\frac{1}{k}\sum_{i=1}^k d_{reach}(a,i)}
+\end{align}
+By intuition the local reachbility density tells how far we have to travel from one point to reach the next point or cluster of points.\\
+\\
+Finally, the $lrd$ of each point will be compared to the $lrd$ of their $k$ neighbors. The $LOF$ is basically the average ratio of the $lrd$ of a point $a$ to the $lrds$ of its neighboring points. If the ratio is greater than $1$, the $lrd$ is greater than the $lrd$ of its neighbors. Thus, $a$ is likely to be an outlier. 
+
+\subsection{Isolation Forest}
+\label{subsec:IsolationForest}
+The Isolation Forest algorithm, which has been introduced by Lui et al. in 2008 \cite{IsolationForest}, differs from other outlier detection methods inasmuch as that it explicitly identifies anomalies instead of profiling normal data points. Like any tree esemble method, it is built on the basis of decision trees where partitions are created by first randomly selecting a feature and then selecting a random split value between the minimum and maximum value of the selected feature. In principle, outliers are less frequent than regular observations and are different from them in terms of values. That is why by using such random partitioning they should be identified closer to the root of the three, with fewer split necessary.\\
+\\
+An anomaly score is defined as stated in equation \ref{eq:IsolationForest}, where $h(x)$ is the path length of the observation $x$, $c(n)$ is the average path length of unsuccessful search in a binary search tree and $n$ is the number of external nodes.
+\begin{align}
+\label{eq:Isolation Forest}
+s(x,n)=2^{-\frac{E(h(x))}{c(n)}}
+\end{align}
+Scores close to $1$ indicate anomalies, while scores much smaller than $0.5$ indicate normal observations.
+\section{Mobile Network Architectures}
+\label{sec:MobileNetworkArchitectures}
+Neural networks besides their wide field of application, their flexibility and their accuracy in machine learning tasks have one big disadvantage. They usually need a lot of computing power to run, which is true for real time applications especially. Therefore, deep learning based services for mobile devices are calculated on cloud servers in most cases.\\
+\\
+To seize the potential of rising computational capabilities in mobile devices \textit{Google} researched on new CNN architecture designs. In 2017 they published a paper with the title \glqq MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications\grqq\cite{mobilenet}. The proposed network architecture is based on a modification of the standard convolutional layer. So called \textit{depthwise convolutional layers} apply one filter on each of their input layers (usually with a kernel size of $3 \times 3$). To combine the results of this operation a standard convolutional with a kernel size of $1 \times 1$ is applied on all output layers. This proceeding splits the normal convolution into two steps. While this might not seem like a vital change to the network architecture it actually causes a major reduction of parameters per layer resulting to greatly accelerated inference times. A standard convolutional layer with input dimensions $W_I \times W_I \times C_I$ has a kernel with dimensions $K \times K \times C_I \times C_O$, where $C$ is the number of input or output channels, $K$ is the number of kernels and $W_I$ is the spatial input dimensionality. Assuming a stride of one and zero-padding the computational cost for such a layer is calculated as follows:
+\begin{align}
+W_I^2\cdot C_I \cdot C_O \cdot K^2
+\end{align}
+A depthwise convolution only one filter is applied per input channel resulting in the following cost:
+\begin{align}
+W_I^2\cdot C_I \cdot K^2
+\end{align}
+Note however, that these layers only filter their respective input without generating new features. By applying an additional $1 \times 1$ convolution the output of the depthwise convolution is linearly combined which is equivalent to the standard convolution process. The computational cost of those two joined steps which is referred to as \textit{Depthwise Separable Convolution} can be calculated as shown in equation \ref{eq:CostDepthwiseSeparableConvolution}. Figure \ref{fig:MobileNet} compares the two different types of convolutions.
+\begin{align}
+W_I^2 \cdot C_I K^2 + C_I \cdot C_O \cdot W_I^2
+\label{eq:CostDepthwiseSeparableConvolution}
+\end{align}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{../img/TheoreticalFoundations/MobileNet}
+\caption{Schematic representation of (a) standard convolutional filters, (b) depthwise convolutional filters and (c) pointwise convolutional filters. In the MobileNet architecture standard convolutional filters are replaced by a combination of the other two filters to reduce the amount of parameters. \cite{MobileNet}}
+\label{fig:MobileNet}
+\end{figure}
+
+\noindent This means a reduction of calculation time by the factor $\frac{1}{C_O}+\frac{1}{K^2}$ per depthwise separable convolution. The proposed \textit{MobileNet}-Architecture is build upon normal convolutions followed by depthwise separable convolutions. Despite the enormous parameter reduction (Fully Convolutional MobileNet: $29.3\text{m}$ vs. MobileNet: $4.2\text{m}$) these architecture changes only lead to small classification performance decrease (Fully Convolutional MobileNet: $71.7\:\%$ vs. MobileNet: $70.6\:\%$). In addition to the depthwise separable convolutions Google introduced two parameters in their paper to further accelerate the proposed architecture. The \textit{width multiplier} $\alpha$ reduces the number of channels per layer and thus decreases the computational cost for $\alpha < 1$. The \textit{resolution multiplier} $\rho$ is set implicitly by choosing a smaller or larger input image size which also reduces or increases the internal network representation dimensions. Both parameters represent a trade-off between computational cost and accuracy.  
+
+
+\section{Anomaly Detection Performance Measures}
+\label{sec:AnomalyDetectionPerformanceMeasures}
+To achieve comparable results for different approaches and training parameters some anomaly detection performance measures will be introduced in this section.
+
+\subparagraph{Precision}\mbox{}\\
+The precision is defined as $\frac{tp}{tp+fp}$ where \textit{tp} is the number of true positives, i.e. normal samples that have been recognized as such, and \textit{fp} is the number of false positives, i.e. abnormal samples classified as normal. Intuitively, the precision is the ability of a classifier not to label negative samples as positive.
+
+\subparagraph{Recall}\mbox{}\\
+The recall (also called \textit{True Positive Rate}) is defined as $\frac{tp}{tp+fn}$ where \textit{tp} is the number of true positives, i.e. normal samples that have been recognized as such, and \textit{fn} is the number of false negatives, i.e. normal samples classified as abnormal. Intuitively, the recall is the ability of a classifier to find all positive samples.
+
+
+\subparagraph{Balanced Accuracy}\mbox{}\\
+Because most of the utilized datasets (see chapter \ref{sec:DatasetsApplications}) have very imbalanced numbers of class instances, assessing the anomaly detection performance with the normal accuracy is not sufficient. In fact, it might distort the actual quality of an outlier detection algorithm. Imagine for example, a dataset consists of $250$ normal samples and $50$ abnormal samples. An algorithm classifying all samples as normal would achieve an accuracy of $83.3\:\%$ without actually being able to distinct between different classes. The balanced accuracy (\textit{bacc}) is defined as the average recall obtained on each class. Intuitively it weights the prediction quality per class by the inverse of the class samples. In the previously described example this would yield a balanced accuracy of $50\:\%$ as all normal samples are classified correctly while all anomalies are classified falsely.
+
+\subparagraph{Area Under the Curve}\mbox{}\\
+As we will see in chapter \ref{ch:RelatedWork}, the \textit{Area Under the Curve} (\textit{AUC})\cite{https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5} also is a frequently used anomaly detection performance measure. As its name implies it calculates the area under the graph of the so called \textit{Receiver Operating Characteristics} (\textit{ROC}). This curve typically features the true positive rate (\textit{TPR}), i.e. the recall, on the y-axis and the false positive rate (\textit{FPR}), which is defined as $\frac{fp}{tn+fp}$,  on the x-axis. This means that the top left corner of the plot is the ideal point with a false positive rate of zero, and a true positive rate of one. In cases close to this ideal result the curve has got to be very steep indicating a high AUC. To achieve this type of curve the described characteristics (TPR and FPR) need to be calculated at various classification thresholds of the respective one-class classifier. The area under the plot is then calculated using the trapezoidal rule. What is beneficial in this measure is that it is not dependent on the choice of a classificatipon threshold making the results easier to compare for different approaches and parameters. \cite{https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5}\\
+\\
+In this work, the balanced accuracy will mainly be used to evaluate the different approaches as it is very easy to understand and directly quantifies the outlier detection performance of an algorithm. 
+

@@ -102,22 +102,22 @@ public class Handagent : Agent
                 discreteActionsOut[0] = 1 ;
             }
             else if (Input.GetKey(KeyCode.W)){
-                discreteActionsOut[0] = 2 ;
+                discreteActionsOut[0] = 7 ;
             }
             else if (Input.GetKey(KeyCode.E)){
                 discreteActionsOut[0] = 3 ;
             }
             else if (Input.GetKey(KeyCode.A)){
-                discreteActionsOut[0] = 4 ;
+                discreteActionsOut[0] = 5 ;
             } 
             else if (Input.GetKey(KeyCode.D)){
-                discreteActionsOut[0] = 5 ;
+                discreteActionsOut[0] = 4 ;
             }
             else if (Input.GetKey(KeyCode.Y)){
                 discreteActionsOut[0] = 6 ;
             }
             else if (Input.GetKey(KeyCode.X)){
-                discreteActionsOut[0] = 7 ;
+                discreteActionsOut[0] = 2 ;
             }
             else if (Input.GetKey(KeyCode.C)){
                 discreteActionsOut[0] = 8 ;

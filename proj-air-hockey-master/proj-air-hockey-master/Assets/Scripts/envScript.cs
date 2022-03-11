@@ -46,33 +46,33 @@ public enum HumanResetState
     [System.NonSerialized]
     public float currContactReward;
     [System.NonSerialized]
-    public float V_max_puck = 15;
+    public float V_max_puck = 25;
     [System.NonSerialized]
-    public float V_max_robo = 3f;
+    public float V_max_robo = 6f;
     [System.NonSerialized]
     public float V_max_human = 3f;
     [System.NonSerialized]
-    public float neghumanGoalReward = -5f;
+    public float neghumanGoalReward = -1f;
     [System.NonSerialized]
-    public float agentGoalReward = 10f;
+    public float agentGoalReward = 2f;
     [System.NonSerialized]
     public float avoidBoundaries = 0f;
     [System.NonSerialized]
-    public float avoidDirectionChanges = 0f;
+    public float avoidDirectionChanges = 0.003f;
     [System.NonSerialized]
     public float stayCenteredReward = 0f;
     [System.NonSerialized]
-    public float negoffCenterReward = 0f;
+    public float negoffCenterReward = 0.2f;
     [System.NonSerialized]
-    public float encouragePuckMovement = 0f;
+    public float encouragePuckMovement = 0.01f;
     [System.NonSerialized]
     public float encouragePuckContact = 0.5f;
     [System.NonSerialized]
     public bool contacthalf = false;
     [System.NonSerialized]
-    public float playForwardReward = 0f;
+    public float playForwardReward = 0.2f;
     [System.NonSerialized]
-    public float negplaybackReward = 0f;
+    public float negplaybackReward = -0.1f;
     [System.NonSerialized]
     public float negStepReward = -0.01f;
     [System.NonSerialized]

@@ -1,0 +1,47 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 101386,
+                "file_path": "results\\10_03_ppo_reaching\\FullGame\\FullGame-101386.onnx",
+                "reward": 1.0,
+                "creation_time": 1646898704.292991,
+                "auxillary_file_paths": [
+                    "results\\10_03_ppo_reaching\\FullGame\\FullGame-101386.pt"
+                ]
+            },
+            {
+                "steps": 499998,
+                "file_path": "results\\10_03_ppo_reaching\\FullGame\\FullGame-499998.onnx",
+                "reward": 1.0,
+                "creation_time": 1646902409.7501929,
+                "auxillary_file_paths": [
+                    "results\\10_03_ppo_reaching\\FullGame\\FullGame-499998.pt"
+                ]
+            },
+            {
+                "steps": 500007,
+                "file_path": "results\\10_03_ppo_reaching\\FullGame\\FullGame-500007.onnx",
+                "reward": 1.0,
+                "creation_time": 1646902409.8243694,
+                "auxillary_file_paths": [
+                    "results\\10_03_ppo_reaching\\FullGame\\FullGame-500007.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500007,
+            "file_path": "results\\10_03_ppo_reaching\\FullGame.onnx",
+            "reward": 1.0,
+            "creation_time": 1646902409.8243694,
+            "auxillary_file_paths": [
+                "results\\10_03_ppo_reaching\\FullGame\\FullGame-500007.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

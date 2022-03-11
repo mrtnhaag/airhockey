@@ -1,0 +1,38 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 499995,
+                "file_path": "results\\09_03_sac_defending\\FullGame\\FullGame-499995.onnx",
+                "reward": null,
+                "creation_time": 1646841839.15823,
+                "auxillary_file_paths": [
+                    "results\\09_03_sac_defending\\FullGame\\FullGame-499995.pt"
+                ]
+            },
+            {
+                "steps": 500005,
+                "file_path": "results\\09_03_sac_defending\\FullGame\\FullGame-500005.onnx",
+                "reward": 1.0,
+                "creation_time": 1646841839.208096,
+                "auxillary_file_paths": [
+                    "results\\09_03_sac_defending\\FullGame\\FullGame-500005.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500005,
+            "file_path": "results\\09_03_sac_defending\\FullGame.onnx",
+            "reward": 1.0,
+            "creation_time": 1646841839.208096,
+            "auxillary_file_paths": [
+                "results\\09_03_sac_defending\\FullGame\\FullGame-500005.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

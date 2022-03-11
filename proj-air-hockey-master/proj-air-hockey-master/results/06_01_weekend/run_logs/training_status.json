@@ -1,0 +1,65 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 43499942,
+                "file_path": "results\\06_01_weekend\\FullGame\\FullGame-43499942.onnx",
+                "reward": null,
+                "creation_time": 1641817552.2253706,
+                "auxillary_file_paths": [
+                    "results\\06_01_weekend\\FullGame\\FullGame-43499942.pt"
+                ]
+            },
+            {
+                "steps": 43999989,
+                "file_path": "results\\06_01_weekend\\FullGame\\FullGame-43999989.onnx",
+                "reward": null,
+                "creation_time": 1641825868.8768182,
+                "auxillary_file_paths": [
+                    "results\\06_01_weekend\\FullGame\\FullGame-43999989.pt"
+                ]
+            },
+            {
+                "steps": 44499886,
+                "file_path": "results\\06_01_weekend\\FullGame\\FullGame-44499886.onnx",
+                "reward": null,
+                "creation_time": 1641834287.440024,
+                "auxillary_file_paths": [
+                    "results\\06_01_weekend\\FullGame\\FullGame-44499886.pt"
+                ]
+            },
+            {
+                "steps": 44999929,
+                "file_path": "results\\06_01_weekend\\FullGame\\FullGame-44999929.onnx",
+                "reward": -55.468475341796875,
+                "creation_time": 1641842811.8234613,
+                "auxillary_file_paths": [
+                    "results\\06_01_weekend\\FullGame\\FullGame-44999929.pt"
+                ]
+            },
+            {
+                "steps": 45349954,
+                "file_path": "results\\06_01_weekend\\FullGame\\FullGame-45349954.onnx",
+                "reward": -1.9397706985473633,
+                "creation_time": 1641848840.2802784,
+                "auxillary_file_paths": [
+                    "results\\06_01_weekend\\FullGame\\FullGame-45349954.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 45349954,
+            "file_path": "results\\06_01_weekend\\FullGame.onnx",
+            "reward": -1.9397706985473633,
+            "creation_time": 1641848840.2802784,
+            "auxillary_file_paths": [
+                "results\\06_01_weekend\\FullGame\\FullGame-45349954.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

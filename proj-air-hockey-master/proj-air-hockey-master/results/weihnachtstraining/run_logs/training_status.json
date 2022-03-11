@@ -1,0 +1,65 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 69499973,
+                "file_path": "results\\weihnachtstraining\\FullGame\\FullGame-69499973.onnx",
+                "reward": null,
+                "creation_time": 1641139766.4326122,
+                "auxillary_file_paths": [
+                    "results\\weihnachtstraining\\FullGame\\FullGame-69499973.pt"
+                ]
+            },
+            {
+                "steps": 69999911,
+                "file_path": "results\\weihnachtstraining\\FullGame\\FullGame-69999911.onnx",
+                "reward": 98.83773183822632,
+                "creation_time": 1641153810.6879134,
+                "auxillary_file_paths": [
+                    "results\\weihnachtstraining\\FullGame\\FullGame-69999911.pt"
+                ]
+            },
+            {
+                "steps": 70499953,
+                "file_path": "results\\weihnachtstraining\\FullGame\\FullGame-70499953.onnx",
+                "reward": 38.16303730010986,
+                "creation_time": 1641167951.6986253,
+                "auxillary_file_paths": [
+                    "results\\weihnachtstraining\\FullGame\\FullGame-70499953.pt"
+                ]
+            },
+            {
+                "steps": 70999948,
+                "file_path": "results\\weihnachtstraining\\FullGame\\FullGame-70999948.onnx",
+                "reward": null,
+                "creation_time": 1641182187.0134938,
+                "auxillary_file_paths": [
+                    "results\\weihnachtstraining\\FullGame\\FullGame-70999948.pt"
+                ]
+            },
+            {
+                "steps": 71468441,
+                "file_path": "results\\weihnachtstraining\\FullGame\\FullGame-71468441.onnx",
+                "reward": null,
+                "creation_time": 1641195612.5083423,
+                "auxillary_file_paths": [
+                    "results\\weihnachtstraining\\FullGame\\FullGame-71468441.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 71468441,
+            "file_path": "results\\weihnachtstraining\\FullGame.onnx",
+            "reward": null,
+            "creation_time": 1641195612.5083423,
+            "auxillary_file_paths": [
+                "results\\weihnachtstraining\\FullGame\\FullGame-71468441.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

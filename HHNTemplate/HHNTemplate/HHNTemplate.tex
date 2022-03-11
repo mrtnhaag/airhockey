@@ -1,0 +1,124 @@
+% ------------------------------------------------------ %
+% Unofficial Heilbronn University (HHN) LaTeX Template   %
+% By Pascal Graf                                         %
+% Last Changed: 30.10.2020                               %
+% ------------------------------------------------------ %
+
+% Choose paper size, font size and type of the work:
+	% usually "report" for long documentations 
+	% otherwise "article" for shorter documents (has no \chapter)
+\documentclass[a4paper, 11pt]{report} 
+% Language Selection, Quotes
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc} % Deutsche Umlaute
+\usepackage[babel]{csquotes}
+
+
+% Header and Footer Control
+\usepackage{fancyhdr}
+\usepackage[left=4cm,right=4cm,top=3cm,bottom=3cm,includeheadfoot]{geometry}
+
+% Mathematical Symbols
+\usepackage{amsmath}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{here}
+\usepackage{subcaption}
+
+% Hyperlinks
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[colorlinks, urlcolor = blue, linkcolor = black, citecolor = black]{hyperref}
+
+% Color
+\usepackage{color}
+
+% Blankpage and Blindtext
+\usepackage{blindtext} % Enables you to enter some dummy text in sections not written yet
+\usepackage{afterpage} 
+\newcommand\blankpage{ % Creates a new command for blank pages without header/footer
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage}
+    
+% Titlepage
+\usepackage{titling}
+
+% Chapter Style
+\usepackage{titlesec}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{15pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{\textbar}\hsp}{0px}{\Huge\bfseries}
+
+% Pagination Depth
+\setcounter{tocdepth}{3} % Depth of the Table of Contents (e.g. (3) means 1.1.1.1 is the maximum depth)
+\setcounter{secnumdepth}{4} % Maximum section depth of numbering in the actual document
+
+% BibliographyStyle
+\usepackage[numbers]{natbib}
+\bibliographystyle{plainnat} 
+
+
+% ------------------ Begin of the Header and Footer Design --------------------
+
+\fancypagestyle{title_page} % Title Page Header and Footer
+{
+   	\fancyhf{} % Clear all fields
+   	\renewcommand{\headrulewidth}{0pt}
+   
+   	\fancyhead[R]{}%\includegraphics[height=70px]{images/HHNLogo}}  
+  	\renewcommand{\footrulewidth}{1pt}
+	\fancyfoot[C]{\thepage}
+}
+
+\fancypagestyle{text_pages} % Normal text Pages Header and Footer
+{   
+	\fancyhf{} % Clear all fields
+	\renewcommand{\headrulewidth}{1pt}
+	\fancyhead[L]{\leftmark}
+	\fancyhead[R]{}%\rightmark
+
+    \renewcommand{\footrulewidth}{1pt}
+	\fancyfoot[L]{}
+	\fancyfoot[C]{\thepage}
+	\fancyfoot[R]{}     
+}
+
+\fancypagestyle{plain} % First Chapter Pages Header and Footer
+{   
+	\fancyhf{} % Clear all fields
+	\renewcommand{\headrulewidth}{1pt}
+  	\fancyhead[L]{Thesis Title \\ Denise Baumann\\ Martin Haag}
+  	\fancyhead[R]{Heilbronn University \\ Automotive Systems Engineering\\ Mechatronics and Robotice}
+  	
+  	\renewcommand{\footrulewidth}{1pt}
+  	\fancyfoot[L]{Master Project}
+  	\fancyfoot[C]{\thepage}
+  	\fancyfoot[R]{Winter Semester 2021/22}     
+}
+
+% --- Begin of the Actual Document ---
+\begin{document}
+\pagenumbering{roman}
+
+% --- Title Page Design ---
+\input{chapters/00_TitlePage.tex}
+\pagestyle{text_pages}
+
+% --- Abstract ---
+\input{chapters/01_Abstract.tex}
+
+% --- Table of Contents ---
+\tableofcontents
+\pagenumbering{arabic}
+
+% --- Introduction ---
+\input{chapters/02_Introduction.tex}
+
+% --- Bibliography ---
+\bibliography{bibfile} 
+\bibliographystyle{ieeetr}
+
+
+\end{document}

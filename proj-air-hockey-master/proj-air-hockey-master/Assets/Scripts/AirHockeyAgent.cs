@@ -353,7 +353,7 @@ public class AirHockeyAgent : Agent
         
         if(env.avoidDirectionChanges > 0f) // Punish changing direction too much.
         {
-            AddReward(-((lastDirection - direction).magnitude) * env.avoidDirectionChanges);
+            AddReward(((lastDirection - direction).magnitude) * env.avoidDirectionChanges);
 
         }
         lastDirection = direction;
@@ -362,7 +362,7 @@ public class AirHockeyAgent : Agent
         {
             if (agentRB.position.x < agentBoundary.Left || agentRB.position.x > agentBoundary.Right || agentRB.position.y > agentBoundary.Up || agentRB.position.y < agentBoundary.Down)
             {
-                AddReward(-1f*env.avoidBoundaries);
+                AddReward(env.avoidBoundaries);
 
             }
         }
