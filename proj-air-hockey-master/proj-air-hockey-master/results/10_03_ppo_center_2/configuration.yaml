@@ -32,7 +32,7 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 3000000
+    max_steps: 4000000
     time_horizon: 128
     summary_freq: 10000
     threaded: false
@@ -54,7 +54,7 @@ engine_settings:
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: 10_03_ppo_center
+  run_id: 10_03_ppo_center_2
   initialize_from: null
   load_model: false
   resume: true

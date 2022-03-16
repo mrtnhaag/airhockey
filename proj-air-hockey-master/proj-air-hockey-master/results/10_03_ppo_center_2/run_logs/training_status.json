@@ -2,33 +2,6 @@
     "FullGame": {
         "checkpoints": [
             {
-                "steps": 2000001,
-                "file_path": "results\\10_03_ppo_full\\FullGame\\FullGame-2000001.onnx",
-                "reward": null,
-                "creation_time": 1646927881.568017,
-                "auxillary_file_paths": [
-                    "results\\10_03_ppo_full\\FullGame\\FullGame-2000001.pt"
-                ]
-            },
-            {
-                "steps": 2000001,
-                "file_path": "results\\10_03_ppo_center\\FullGame\\FullGame-2000001.onnx",
-                "reward": null,
-                "creation_time": 1646932660.835257,
-                "auxillary_file_paths": [
-                    "results\\10_03_ppo_center\\FullGame\\FullGame-2000001.pt"
-                ]
-            },
-            {
-                "steps": 2499918,
-                "file_path": "results\\10_03_ppo_center\\FullGame\\FullGame-2499918.onnx",
-                "reward": 191.13677978515625,
-                "creation_time": 1646937353.2985659,
-                "auxillary_file_paths": [
-                    "results\\10_03_ppo_center\\FullGame\\FullGame-2499918.pt"
-                ]
-            },
-            {
                 "steps": 2999957,
                 "file_path": "results\\10_03_ppo_center\\FullGame\\FullGame-2999957.onnx",
                 "reward": null,
@@ -45,15 +18,42 @@
                 "auxillary_file_paths": [
                     "results\\10_03_ppo_center\\FullGame\\FullGame-3000085.pt"
                 ]
+            },
+            {
+                "steps": 3499896,
+                "file_path": "results\\10_03_ppo_center_2\\FullGame\\FullGame-3499896.onnx",
+                "reward": 15.089523315429688,
+                "creation_time": 1646983434.241906,
+                "auxillary_file_paths": [
+                    "results\\10_03_ppo_center_2\\FullGame\\FullGame-3499896.pt"
+                ]
+            },
+            {
+                "steps": 3999874,
+                "file_path": "results\\10_03_ppo_center_2\\FullGame\\FullGame-3999874.onnx",
+                "reward": 340.6504669189453,
+                "creation_time": 1646988939.2088954,
+                "auxillary_file_paths": [
+                    "results\\10_03_ppo_center_2\\FullGame\\FullGame-3999874.pt"
+                ]
+            },
+            {
+                "steps": 4000002,
+                "file_path": "results\\10_03_ppo_center_2\\FullGame\\FullGame-4000002.onnx",
+                "reward": 340.6504669189453,
+                "creation_time": 1646988939.274173,
+                "auxillary_file_paths": [
+                    "results\\10_03_ppo_center_2\\FullGame\\FullGame-4000002.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 3000085,
-            "file_path": "results\\10_03_ppo_center\\FullGame.onnx",
-            "reward": null,
-            "creation_time": 1646942940.8315377,
+            "steps": 4000002,
+            "file_path": "results\\10_03_ppo_center_2\\FullGame.onnx",
+            "reward": 340.6504669189453,
+            "creation_time": 1646988939.274173,
             "auxillary_file_paths": [
-                "results\\10_03_ppo_center\\FullGame\\FullGame-3000085.pt"
+                "results\\10_03_ppo_center_2\\FullGame\\FullGame-4000002.pt"
             ]
         }
     },
