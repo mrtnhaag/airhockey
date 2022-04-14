@@ -1,0 +1,65 @@
+{
+    "FullGame": {
+        "checkpoints": [
+            {
+                "steps": 28499994,
+                "file_path": "results\\26_11_small_reaching_full\\FullGame\\FullGame-28499994.onnx",
+                "reward": null,
+                "creation_time": 1638170178.611202,
+                "auxillary_file_paths": [
+                    "results\\26_11_small_reaching_full\\FullGame\\FullGame-28499994.pt"
+                ]
+            },
+            {
+                "steps": 28999926,
+                "file_path": "results\\26_11_small_reaching_full\\FullGame\\FullGame-28999926.onnx",
+                "reward": null,
+                "creation_time": 1638177627.6891,
+                "auxillary_file_paths": [
+                    "results\\26_11_small_reaching_full\\FullGame\\FullGame-28999926.pt"
+                ]
+            },
+            {
+                "steps": 29499934,
+                "file_path": "results\\26_11_small_reaching_full\\FullGame\\FullGame-29499934.onnx",
+                "reward": null,
+                "creation_time": 1638185175.4636018,
+                "auxillary_file_paths": [
+                    "results\\26_11_small_reaching_full\\FullGame\\FullGame-29499934.pt"
+                ]
+            },
+            {
+                "steps": 29999909,
+                "file_path": "results\\26_11_small_reaching_full\\FullGame\\FullGame-29999909.onnx",
+                "reward": null,
+                "creation_time": 1638192847.607091,
+                "auxillary_file_paths": [
+                    "results\\26_11_small_reaching_full\\FullGame\\FullGame-29999909.pt"
+                ]
+            },
+            {
+                "steps": 30238131,
+                "file_path": "results\\26_11_small_reaching_full\\FullGame\\FullGame-30238131.onnx",
+                "reward": null,
+                "creation_time": 1638196533.251723,
+                "auxillary_file_paths": [
+                    "results\\26_11_small_reaching_full\\FullGame\\FullGame-30238131.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 30238131,
+            "file_path": "results\\26_11_small_reaching_full\\FullGame.onnx",
+            "reward": null,
+            "creation_time": 1638196533.251723,
+            "auxillary_file_paths": [
+                "results\\26_11_small_reaching_full\\FullGame\\FullGame-30238131.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}
