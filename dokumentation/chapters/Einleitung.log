@@ -1,0 +1,2376 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  1 APR 2022 12:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Einleitung.tex
+(Einleitung.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2021-11-22>
+! Undefined control sequence.
+l.1 \chapter
+            {Einleitung}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{E
+              inleitung}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no E in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 I
+     n Einleitungskapitel werden die Rahmenbedingungen des Projekts erl√§utert.
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no l in font nullfont!
+LaTeX Font Info:    Trying to load font information for +cmr on input line 4.
+LaTeX Font Info:    No file cmr.fd. on input line 4.
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 4.
+
+! Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.4 ...en die Rahmenbedingungen des Projekts erl√§
+                                                  utert.
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 4.
+
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+l.6 \section
+            {Ausgangssituation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--8
+[]
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 4--8
+\/cmr/m/n/10 a
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 A
+     m Zentrum f√ºr maschinelles Lernen (ZML) wurde bereits in einer vorange...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{jjrob}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.9 ... der des Roboters von jjRobots \cite{jjrob}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `jjrob' on page  undefined on input line 9.
+
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
+[]
+ []
+
+
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 9--10
+\/cmr/m/n/10 u
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--10
+\/cmr/m/n/10 o
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 9--10
+[] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 D
+      as Zentrum f√ºr maschinelles Lernen (ZML) m\"√∂chte einen selbstlernen...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no m in font nullfont!
+
+! LaTeX Error: Invalid UTF-8 byte sequence (√\global).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...entrum f√ºr maschinelles Lernen (ZML) m\"√
+                                                  ∂chte einen selbstlernende...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (√\egroup).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...entrum f√ºr maschinelles Lernen (ZML) m\"√
+                                                  ∂chte einen selbstlernende...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "B6.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ntrum f√ºr maschinelles Lernen (ZML) m\"√∂
+                                                  chte einen selbstlernenden...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Unicode character  (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ..."√∂chte einen selbstlernenden und spielen
+                                                  den Air-Hockey-Roboter ent...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (√\global).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...den Air-Hockey-Roboter entwickeln. Daf\"√
+                                                  ºr statteten Maschinenbaus...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (√\egroup).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...den Air-Hockey-Roboter entwickeln. Daf\"√
+                                                  ºr statteten Maschinenbaus...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "BC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...den Air-Hockey-Roboter entwickeln. Daf\"√º
+                                                  r statteten Maschinenbaust...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Unicode character  (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...statteten Maschinenbaustudenten einen Air
+                                                  Hockey-Tisch mit einem Kam...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...chkeitsspiel, bei dem zwei Personen gegen
+                                                  einander spielen. Hierf√ºr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...m√∂chte einen selbstlernenden und spielen
+                                                  den Air-Hockey-Roboter ent...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (√\global).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...den Air-Hockey-Roboter entwickeln. Daf\"√
+                                                  ºr statteten Maschinenbaus...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (√\egroup).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...den Air-Hockey-Roboter entwickeln. Daf\"√
+                                                  ºr statteten Maschinenbaus...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "BC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...den Air-Hockey-Roboter entwickeln. Daf\"√º
+                                                  r statteten Maschinenbaust...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Unicode character  (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...statteten Maschinenbaustudenten einen Air
+                                                  Hockey-Tisch mit einem Kam...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...chkeitsspiel, bei dem zwei Personen gegen
+                                                  einander spielen. Hierf√ºr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 11--22
+[]
+ []
+
+
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 u
+ []
+
+
+Overfull \hbox (22.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 chte
+ []
+
+
+Overfull \hbox (22.77782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einen
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 selb-
+ []
+
+
+Overfull \hbox (22.30557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 stler-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 und
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 spie-
+ []
+
+
+Overfull \hbox (16.11113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 len-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (17.5278pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Air-
+ []
+
+
+Overfull \hbox (35.00006pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Hockey-
+ []
+
+
+Overfull \hbox (35.44452pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Roboter
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (26.38892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 twick-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 eln.
+ []
+
+
+Overfull \hbox (24.61118pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Dafr
+ []
+
+
+Overfull \hbox (20.05559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 stat-
+ []
+
+
+Overfull \hbox (22.22226pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 teten
+ []
+
+
+Overfull \hbox (33.94449pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Maschi-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen-
+ []
+
+
+Overfull \hbox (23.38893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 baus-
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tu-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den-
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ten
+ []
+
+
+Overfull \hbox (22.77782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einen
+ []
+
+
+Overfull \hbox (49.19453pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 AirHockey-
+ []
+
+
+Overfull \hbox (23.66669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Tisch
+ []
+
+
+Overfull \hbox (15.00005pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 mit
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (24.4445pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Kam-
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 er-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 a-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 hal-
+ []
+
+
+Overfull \hbox (12.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ter
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 und
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (35.44452pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Roboter
+ []
+
+
+Overfull \hbox (17.27782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 aus,
+ []
+
+
+Overfull \hbox (32.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 welcher
+ []
+
+
+Overfull \hbox (13.61116pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 auf
+ []
+
+
+Overfull \hbox (18.33337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 dem
+ []
+
+
+Overfull \hbox (36.66675pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Konzept
+ []
+
+
+Overfull \hbox (13.91669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 der
+ []
+
+
+Overfull \hbox (26.55563pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Firma
+ []
+
+
+Overfull \hbox (37.13899pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 jjRobots
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 [1]
+ []
+
+
+Overfull \hbox (32.30562pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 basiert.
+ []
+
+
+Overfull \hbox (17.5278pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Air-
+ []
+
+
+Overfull \hbox (31.66673pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Hockey
+ []
+
+
+Overfull \hbox (10.61113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ist
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ein
+ []
+
+
+Overfull \hbox (23.88893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 hoch-
+ []
+
+
+Overfull \hbox (14.1667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 dy-
+ []
+
+
+Overfull \hbox (28.9445pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 namis-
+ []
+
+
+Overfull \hbox (18.11111pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ches
+ []
+
+
+Overfull \hbox (41.51392pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Geschick-
+ []
+
+
+Overfull \hbox (57.6112pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 lichkeitsspiel,
+ []
+
+
+Overfull \hbox (13.05559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 bei
+ []
+
+
+Overfull \hbox (18.33337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 dem
+ []
+
+
+Overfull \hbox (18.61111pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 zwei
+ []
+
+
+Overfull \hbox (18.22223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Per-
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 so-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen
+ []
+
+
+Overfull \hbox (51.1112pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 gegeneinan-
+ []
+
+
+Overfull \hbox (13.91669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 der
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 spie-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 len.
+ []
+
+
+Overfull \hbox (13.61113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Hi-
+ []
+
+
+Overfull \hbox (20.88893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 erfur
+ []
+
+
+Overfull \hbox (17.83337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 sind
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (29.47227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Spieler
+ []
+
+
+Overfull \hbox (15.00005pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 mit
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (30.22227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Pusher
+ []
+
+
+Overfull \hbox (17.83336pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 aus-
+ []
+
+
+Overfull \hbox (16.72223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ges-
+ []
+
+
+Overfull \hbox (16.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tat-
+ []
+
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tet.
+ []
+
+
+Overfull \hbox (16.11113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Ziel
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 des
+ []
+
+
+Overfull \hbox (25.0556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Spiels
+ []
+
+
+Overfull \hbox (10.61113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ist
+ []
+
+
+Overfull \hbox (11.16667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 es,
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (13.61116pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 auf
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (22.08339pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Luft-
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 film
+ []
+
+
+Overfull \hbox (18.33336pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 glei-
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 t-
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (21.8056pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Puck
+ []
+
+
+Overfull \hbox (11.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 im
+ []
+
+
+Overfull \hbox (17.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 geg-
+ []
+
+
+Overfull \hbox (17.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ner-
+ []
+
+
+Overfull \hbox (26.44447pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ischen
+ []
+
+
+Overfull \hbox (15.30557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Tor
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 zu
+ []
+
+
+Overfull \hbox (45.0834pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 versenken.
+ []
+
+
+Overfull \hbox (26.83337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Durch
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ho-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 hen
+ []
+
+
+Overfull \hbox (83.45847pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Geschwindigkeiten,
+ []
+
+
+Overfull \hbox (28.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 welche
+ []
+
+
+Overfull \hbox (28.94449pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 sowohl
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (24.58339pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Puck,
+ []
+
+
+Overfull \hbox (11.72224pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 als
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 auch
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (30.22227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Pusher
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 er-
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 re-
+ []
+
+
+Overfull \hbox (25.27782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ichen,
+ []
+
+
+Overfull \hbox (31.72227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 besteht
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ein
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 im-
+ []
+
+
+Overfull \hbox (30.63893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 menser
+ []
+
+
+Overfull \hbox (41.75008pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Anspruch
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 an
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (44.72232pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Mechanik,
+ []
+
+
+Overfull \hbox (23.11113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 sowie
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 an
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (11.66669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 in-
+ []
+
+
+Overfull \hbox (15.30559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 for-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ma-
+ []
+
+
+Overfull \hbox (37.86118pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tionsver-
+ []
+
+
+Overfull \hbox (12.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ar-
+ []
+
+
+Overfull \hbox (16.38892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 bei-
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 t-
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (18.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Sys-
+ []
+
+
+Overfull \hbox (21.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 teme
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 des
+ []
+
+
+Overfull \hbox (40.3334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 gesamten
+ []
+
+
+Overfull \hbox (30.41673pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Robot-
+ []
+
+
+Overfull \hbox (31.6667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ers.Das
+ []
+
+
+Overfull \hbox (19.44446pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Zen-
+ []
+
+
+Overfull \hbox (21.6945pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 trum
+ []
+
+
+Overfull \hbox (12.52782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 fur
+ []
+
+
+Overfull \hbox (53.7223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 maschinelles
+ []
+
+
+Overfull \hbox (17.94446pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Ler-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen
+ []
+
+
+Overfull \hbox (29.30562pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 (ZML)
+ []
+
+
+Overfull \hbox (31.11116pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 mochte
+ []
+
+
+Overfull \hbox (22.77782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einen
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 selb-
+ []
+
+
+Overfull \hbox (22.30557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 stler-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 und
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 spie-
+ []
+
+
+Overfull \hbox (16.11113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 len-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (17.5278pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Air-
+ []
+
+
+Overfull \hbox (35.00006pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Hockey-
+ []
+
+
+Overfull \hbox (35.44452pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Roboter
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (26.38892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 twick-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 eln.
+ []
+
+
+Overfull \hbox (24.61118pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Dafr
+ []
+
+
+Overfull \hbox (20.05559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 stat-
+ []
+
+
+Overfull \hbox (22.22226pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 teten
+ []
+
+
+Overfull \hbox (33.94449pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Maschi-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen-
+ []
+
+
+Overfull \hbox (23.38893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 baus-
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tu-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den-
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ten
+ []
+
+
+Overfull \hbox (22.77782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einen
+ []
+
+
+Overfull \hbox (49.19453pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 AirHockey-
+ []
+
+
+Overfull \hbox (23.66669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Tisch
+ []
+
+
+Overfull \hbox (15.00005pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 mit
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (24.4445pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Kam-
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 er-
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 a-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 hal-
+ []
+
+
+Overfull \hbox (12.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ter
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 und
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (35.44452pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Roboter
+ []
+
+
+Overfull \hbox (17.27782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 aus,
+ []
+
+
+Overfull \hbox (32.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 welcher
+ []
+
+
+Overfull \hbox (13.61116pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 auf
+ []
+
+
+Overfull \hbox (18.33337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 dem
+ []
+
+
+Overfull \hbox (36.66675pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Konzept
+ []
+
+
+Overfull \hbox (13.91669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 der
+ []
+
+
+Overfull \hbox (26.55563pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Firma
+ []
+
+
+Overfull \hbox (37.13899pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 jjRobots
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 [1]
+ []
+
+
+Overfull \hbox (32.30562pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 basiert.
+ []
+
+
+Overfull \hbox (17.5278pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Air-
+ []
+
+
+Overfull \hbox (31.66673pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Hockey
+ []
+
+
+Overfull \hbox (10.61113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ist
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ein
+ []
+
+
+Overfull \hbox (23.88893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 hoch-
+ []
+
+
+Overfull \hbox (14.1667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 dy-
+ []
+
+
+Overfull \hbox (28.9445pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 namis-
+ []
+
+
+Overfull \hbox (18.11111pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ches
+ []
+
+
+Overfull \hbox (41.51392pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Geschick-
+ []
+
+
+Overfull \hbox (57.6112pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 lichkeitsspiel,
+ []
+
+
+Overfull \hbox (13.05559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 bei
+ []
+
+
+Overfull \hbox (18.33337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 dem
+ []
+
+
+Overfull \hbox (18.61111pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 zwei
+ []
+
+
+Overfull \hbox (18.22223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Per-
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 so-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 nen
+ []
+
+
+Overfull \hbox (51.1112pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 gegeneinan-
+ []
+
+
+Overfull \hbox (13.91669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 der
+ []
+
+
+Overfull \hbox (20.05557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 spie-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 len.
+ []
+
+
+Overfull \hbox (13.61113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Hi-
+ []
+
+
+Overfull \hbox (20.88893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 erfur
+ []
+
+
+Overfull \hbox (17.83337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 sind
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (29.47227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Spieler
+ []
+
+
+Overfull \hbox (15.00005pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 mit
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (30.22227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Pusher
+ []
+
+
+Overfull \hbox (17.83336pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 aus-
+ []
+
+
+Overfull \hbox (16.72223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ges-
+ []
+
+
+Overfull \hbox (16.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tat-
+ []
+
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tet.
+ []
+
+
+Overfull \hbox (16.11113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Ziel
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 des
+ []
+
+
+Overfull \hbox (25.0556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Spiels
+ []
+
+
+Overfull \hbox (10.61113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ist
+ []
+
+
+Overfull \hbox (11.16667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 es,
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (13.61116pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 auf
+ []
+
+
+Overfull \hbox (25.5556pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 einem
+ []
+
+
+Overfull \hbox (22.08339pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Luft-
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 film
+ []
+
+
+Overfull \hbox (18.33336pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 glei-
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 t-
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (21.8056pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Puck
+ []
+
+
+Overfull \hbox (11.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 im
+ []
+
+
+Overfull \hbox (17.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 geg-
+ []
+
+
+Overfull \hbox (17.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ner-
+ []
+
+
+Overfull \hbox (26.44447pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ischen
+ []
+
+
+Overfull \hbox (15.30557pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Tor
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 zu
+ []
+
+
+Overfull \hbox (45.0834pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 versenken.
+ []
+
+
+Overfull \hbox (26.83337pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Durch
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ho-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 hen
+ []
+
+
+Overfull \hbox (83.45847pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Geschwindigkeiten,
+ []
+
+
+Overfull \hbox (28.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 welche
+ []
+
+
+Overfull \hbox (28.94449pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 sowohl
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (24.58339pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Puck,
+ []
+
+
+Overfull \hbox (11.72224pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 als
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 auch
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (30.22227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Pusher
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 er-
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 re-
+ []
+
+
+Overfull \hbox (25.27782pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ichen,
+ []
+
+
+Overfull \hbox (31.72227pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 besteht
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ein
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 im-
+ []
+
+
+Overfull \hbox (30.63893pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 menser
+ []
+
+
+Overfull \hbox (41.75008pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Anspruch
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 an
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (44.72232pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Mechanik,
+ []
+
+
+Overfull \hbox (23.11113pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 sowie
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 an
+ []
+
+
+Overfull \hbox (12.7778pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 die
+ []
+
+
+Overfull \hbox (11.66669pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 in-
+ []
+
+
+Overfull \hbox (15.30559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 for-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ma-
+ []
+
+
+Overfull \hbox (37.86118pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 tionsver-
+ []
+
+
+Overfull \hbox (12.25002pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ar-
+ []
+
+
+Overfull \hbox (16.38892pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 bei-
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 t-
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 den
+ []
+
+
+Overfull \hbox (18.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Sys-
+ []
+
+
+Overfull \hbox (21.11115pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 teme
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 des
+ []
+
+
+Overfull \hbox (40.3334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 gesamten
+ []
+
+
+Overfull \hbox (30.41673pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 Robot-
+ []
+
+
+Overfull \hbox (15.08334pt too wide) in paragraph at lines 11--22
+\/cmr/m/n/10 ers. 
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+! Undefined control sequence.
+<write> \newlabel{ch:Einleitung}{{}{\thepage 
+                                             }}
+l.22 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{ch:Einleitung}{{}{}}
+{C:/Users/mhaag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+! Undefined control sequence.
+<write> ...el{sect:Ausgangssituation}{{}{\thepage 
+                                                  }}
+l.22 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sect:Ausgangssituation}{{}{}}
+]
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \newpage
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2])
+! Emergency stop.
+<*> ./Einleitung.tex
+                    
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 38 strings out of 478659
+ 682 string characters out of 2845920
+ 306672 words of memory out of 3000000
+ 18241 multiletter control sequences out of 15000+600000
+ 403738 words of font info for 28 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 24i,5n,32p,355b,129s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

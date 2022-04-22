@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  11 MAR 2022 07:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  22 APR 2022 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,31 +207,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks27
 \@floatcapt=\box53
 )
-(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
-Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-
-(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2022/02/28 v3.6a Customizing captions (AR)
-
-(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2022/02/28 v2.3a caption3 kernel (AR)
-\caption@tempdima=\dimen159
-\captionmargin=\dimen160
-\caption@leftmargin=\dimen161
-\caption@rightmargin=\dimen162
-\caption@width=\dimen163
-\caption@indent=\dimen164
-\caption@parindent=\dimen165
-\caption@hangindent=\dimen166
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count283
-\c@continuedfloat=\count284
-Package caption Info: float package is loaded.
-)
-\c@subfigure=\count285
-\c@subtable=\count286
-) (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -278,9 +254,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen167
-\Hy@linkcounter=\count287
-\Hy@pagecounter=\count288
+\@linkdim=\dimen159
+\Hy@linkcounter=\count283
+\Hy@pagecounter=\count284
  (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -297,7 +273,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count289
+\Hy@SavedSpaceFactor=\count285
  (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -311,9 +287,9 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count290
+\c@Hy@tempcnt=\count286
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen168
+\XeTeXLinkMargin=\dimen160
 
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -323,9 +299,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count291
-\Field@Width=\dimen169
-\Fld@charsize=\dimen170
+\Fld@menulength=\count287
+\Field@Width=\dimen161
+\Fld@charsize=\dimen162
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -340,9 +316,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count292
-\c@Item=\count293
-\c@Hfootnote=\count294
+\Hy@abspage=\count288
+\c@Item=\count289
+\c@Hfootnote=\count290
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -353,8 +329,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count295
-\c@bookmark@seq@number=\count296
+\Fld@listcount=\count291
+\c@bookmark@seq@number=\count292
 
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -382,24 +358,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count297
-\c@Blindtext=\count298
-\c@blind@countparstart=\count299
-\blind@countxx=\count300
-\blindtext@numBlindtext=\count301
-\blind@countyy=\count302
-\c@blindlist=\count303
-\c@blindlistlevel=\count304
-\c@blindlist@level=\count305
-\blind@listitem=\count306
-\c@blind@listcount=\count307
-\c@blind@levelcount=\count308
-\blind@mathformula=\count309
-\blind@Mathformula=\count310
-\c@blind@randomcount=\count311
-\c@blind@randommax=\count312
-\c@blind@pangramcount=\count313
-\c@blind@pangrammax=\count314
+\c@blindtext=\count293
+\c@Blindtext=\count294
+\c@blind@countparstart=\count295
+\blind@countxx=\count296
+\blindtext@numBlindtext=\count297
+\blind@countyy=\count298
+\c@blindlist=\count299
+\c@blindlistlevel=\count300
+\c@blindlist@level=\count301
+\blind@listitem=\count302
+\c@blind@listcount=\count303
+\c@blind@levelcount=\count304
+\blind@mathformula=\count305
+\blind@Mathformula=\count306
+\c@blind@randomcount=\count307
+\c@blind@randommax=\count308
+\c@blind@pangramcount=\count309
+\c@blind@pangrammax=\count310
 )
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
@@ -418,19 +394,19 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box56
 \beforetitleunit=\skip65
 \aftertitleunit=\skip66
-\ttl@plus=\dimen171
-\ttl@minus=\dimen172
+\ttl@plus=\dimen163
+\ttl@minus=\dimen164
 \ttl@toksa=\toks29
-\titlewidth=\dimen173
-\titlewidthlast=\dimen174
-\titlewidthfirst=\dimen175
+\titlewidth=\dimen165
+\titlewidthlast=\dimen166
+\titlewidthfirst=\dimen167
 )
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip67
 \bibsep=\skip68
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count315
+\c@NAT@ctr=\count311
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -438,29 +414,29 @@ Package csquotes Info: ... found 'babel' package.
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count316
+\l__color_backend_stack_int=\count312
 \l__pdf_internal_box=\box57
 ) (HHNTemplate.aux)
 \openout1 = `HHNTemplate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -500,16 +476,16 @@ LaTeX Font Info:    ... okay on input line 102.
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
-\scratchdimen=\dimen176
+\scratchcounter=\count313
+\scratchdimen=\dimen168
 \scratchbox=\box58
-\nofMPsegments=\count318
-\nofMParguments=\count319
+\nofMPsegments=\count314
+\nofMParguments=\count315
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count320
-\MPscratchDim=\dimen177
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen169
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
 \everyMPtoPDFconversion=\toks31
 )
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -530,10 +506,7 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 102.
+Package hyperref Info: Link coloring ON on input line 103.
 
 (C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -545,17 +518,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count323
+\c@section@level=\count319
 )
-LaTeX Info: Redefining \ref on input line 102.
-LaTeX Info: Redefining \pageref on input line 102.
-LaTeX Info: Redefining \nameref on input line 102.
+LaTeX Info: Redefining \ref on input line 103.
+LaTeX Info: Redefining \pageref on input line 103.
+LaTeX Info: Redefining \nameref on input line 103.
  (HHNTemplate.out) (HHNTemplate.out)
 \@outlinefile=\write3
 \openout3 = `HHNTemplate.out'.
 
  (chapters/00_TitlePage.tex
-<images/PLACEHOLDER.png, id=27, 770.88pt x 429.85594pt>
+<images/PLACEHOLDER.png, id=31, 770.88pt x 429.85594pt>
 File: images/PLACEHOLDER.png Graphic file (type png)
 <use images/PLACEHOLDER.png>
 Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
@@ -565,46 +538,23 @@ Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
 
 {C:/Users/mhaag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/PLA
 CEHOLDER.png>]
-<images/HHNLogo.png, id=39, 149.358pt x 85.5195pt>
+<images/HHNLogo.png, id=43, 149.358pt x 85.5195pt>
 File: images/HHNLogo.png Graphic file (type png)
 <use images/HHNLogo.png>
 Package pdftex.def Info: images/HHNLogo.png  used on input line 33.
 (pdftex.def)             Requested size: 221.93375pt x 127.0862pt.
-) (chapters/01_Abstract.tex
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Abstract} [1 <./images/HHNLogo.png>]
-Chapter 1.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-.
-(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <24.88> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1.
-
-
-Package natbib Warning: Citation `sutton2018reinforcement' on page ii undefined
- on input line 4.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 38.8842pt, for example:
-(fancyhdr)                \setlength{\headheight}{38.8842pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
-
-[2
-
-]) (HHNTemplate.toc)
+l.115 \tableofcontents
+                       [1 <./images/HHNLogo.png>] (HHNTemplate.toc)
 \tf@toc=\write4
 \openout4 = `HHNTemplate.toc'.
 
- (chapters/02_Introduction.tex
+
+(chapters/02_Introduction.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -616,17 +566,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
-Chapter 2.
+Chapter 1.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+.
+(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <24.88> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
- []
+Package natbib Warning: Citation `jjrob' on page 2 undefined on input line 13.
 
-<images/Placeholder.png, id=62, 770.88pt x 429.85594pt>
-File: images/Placeholder.png Graphic file (type png)
-<use images/Placeholder.png>
-Package pdftex.def Info: images/Placeholder.png  used on input line 12.
-(pdftex.def)             Requested size: 369.88583pt x 206.24979pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -637,8 +588,93 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
- <./images/Placeholder.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+]) (chapters/04_Unity.tex
+Chapter 2.
+
+Overfull \hbox (3.54007pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/n/10.95 Ohne eine angemessene Sim-u-la-tion-sumge-bung ist das ganze
+ Pro-jekt un-denkbar.
+ []
+
+
+Overfull \hbox (15.49368pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/n/10.95 Nicht nur, dass das Train-ing am realen Demon-stra-tor schon
+ we-gen des Zeitaufwan-
+ []
+
+
+LaTeX Warning: Reference `untiy_interface' on page 3 undefined on input line 21
+.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 38.8842pt, for example:
+(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+
+[3
+
+]
+<images/unity_interface_marked.png, id=71, 1332.47812pt x 819.06pt>
+File: images/unity_interface_marked.png Graphic file (type png)
+<use images/unity_interface_marked.png>
+Package pdftex.def Info: images/unity_interface_marked.png  used on input line 
+24.
+(pdftex.def)             Requested size: 399.74652pt x 245.7199pt.
+
+Overfull \hbox (29.86069pt too wide) in paragraph at lines 24--26
+[][]
+ []
+
+
+Overfull \hbox (11.2507pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10.95 tion-alitaten eines GameOb-jects wer-den durch die Com-po-n
+ents hinzugefugt.
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4 <./images/unity_interface_marked.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+<images/agent_unity.png, id=79, 53.44969pt x 60.225pt>
+File: images/agent_unity.png Graphic file (type png)
+<use images/agent_unity.png>
+Package pdftex.def Info: images/agent_unity.png  used on input line 65.
+(pdftex.def)             Requested size: 73.97603pt x 83.3596pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]\OT1/cmr/m/n/10.95 Figure 2.2:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]\OT1/cmr/m/n/10.95 Ansicht des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\OT1/cmr/m/n/10.95 Agen-ten in
+ []
+
+
+Overfull \hbox (0.65039pt too wide) in paragraph at lines 71--74
+\OT1/cmr/m/n/10.95 ior Pa-ram-e-ter Com-po-nente ist, neben De-ci-son Re-queste
+r, zur Parametrisierung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
 
@@ -650,22 +686,106 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[3] (HHNTemplate.bbl
+[5 <./images/agent_unity.png>]
+<images/pusher_unity.png, id=87, 88.83188pt x 79.79813pt>
+File: images/pusher_unity.png Graphic file (type png)
+<use images/pusher_unity.png>
+Package pdftex.def Info: images/pusher_unity.png  used on input line 87.
+(pdftex.def)             Requested size: 73.97603pt x 66.45523pt.
 
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]\OT1/cmr/m/n/10.95 Figure 2.3:
+ []
 
-)) (HHNTemplate.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]\OT1/cmr/m/n/10.95 Ansicht des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\OT1/cmr/m/n/10.95 Push-ers in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+ []
+
+<images/puck_unity.png, id=88, 68.50594pt x 63.23625pt>
+File: images/puck_unity.png Graphic file (type png)
+<use images/puck_unity.png>
+Package pdftex.def Info: images/puck_unity.png  used on input line 107.
+(pdftex.def)             Requested size: 73.97603pt x 68.29121pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]\OT1/cmr/m/n/10.95 Figure 2.4:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]\OT1/cmr/m/n/10.95 Ansicht des
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 38.8842pt, for example:
-(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4
+[6 <./images/pusher_unity.png>]
+Underfull \hbox (badness 2088) in paragraph at lines 120--121
+\OT1/cmr/m/n/10.95 eine Sprite Ren-derer Com-po-nent, die ein
+ []
 
-]
+<images/matchfield.png, id=95, 202.50656pt x 404.26031pt>
+File: images/matchfield.png Graphic file (type png)
+<use images/matchfield.png>
+Package pdftex.def Info: images/matchfield.png  used on input line 125.
+(pdftex.def)             Requested size: 73.97603pt x 147.68024pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+[]\OT1/cmr/m/n/10.95 Figure 2.5:
+ []
+
+
+Overfull \hbox (31.90453pt too wide) in paragraph at lines 126--126
+[]\OT1/cmr/m/n/10.95 Spielfeldbegrenzungen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7 <./images/puck_unity.png> <./images/matchfield.png>]) (HHNTemplate.bbl
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
@@ -681,39 +801,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[5
+[9
 
 ] (HHNTemplate.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `HHNTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 37D7D6BB28557817147735244EE145DC;624.
+(rerunfilecheck)             Checksum: 80725230B79C95A74081B9EF0CB01530;905.
  ) 
 Here is how much of TeX's memory you used:
- 13999 strings out of 478659
- 230382 string characters out of 2845920
- 564074 words of memory out of 3000000
- 31873 multiletter control sequences out of 15000+600000
- 411078 words of font info for 53 fonts, out of 8000000 for 9000
+ 12679 strings out of 478659
+ 204430 string characters out of 2845920
+ 548005 words of memory out of 3000000
+ 30553 multiletter control sequences out of 15000+600000
+ 411419 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,14n,77p,378b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbsy10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mhaag/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mhaag/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mhaag/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/mha
-ag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/U
-sers/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr8.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on HHNTemplate.pdf (8 pages, 210760 bytes).
+ 60i,11n,63p,714b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\mhaag\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1095.pk><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbsy10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mhaag/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mhaag/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mhaag/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on HHNTemplate.pdf (11 pages, 833101 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 64 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 92 words of extra memory for PDF output out of 10000 (max. 10000000)
 
