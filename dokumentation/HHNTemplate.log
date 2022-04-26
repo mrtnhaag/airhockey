@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  22 APR 2022 14:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  26 APR 2022 20:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,7 +528,7 @@ LaTeX Info: Redefining \nameref on input line 103.
 \openout3 = `HHNTemplate.out'.
 
  (chapters/00_TitlePage.tex
-<images/PLACEHOLDER.png, id=31, 770.88pt x 429.85594pt>
+<images/PLACEHOLDER.png, id=51, 770.88pt x 429.85594pt>
 File: images/PLACEHOLDER.png Graphic file (type png)
 <use images/PLACEHOLDER.png>
 Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
@@ -538,7 +538,7 @@ Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
 
 {C:/Users/mhaag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/PLA
 CEHOLDER.png>]
-<images/HHNLogo.png, id=43, 149.358pt x 85.5195pt>
+<images/HHNLogo.png, id=63, 149.358pt x 85.5195pt>
 File: images/HHNLogo.png Graphic file (type png)
 <use images/HHNLogo.png>
 Package pdftex.def Info: images/HHNLogo.png  used on input line 33.
@@ -617,7 +617,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3
 
 ]
-<images/unity_interface_marked.png, id=71, 1332.47812pt x 819.06pt>
+<images/unity_interface_marked.png, id=96, 1332.47812pt x 819.06pt>
 File: images/unity_interface_marked.png Graphic file (type png)
 <use images/unity_interface_marked.png>
 Package pdftex.def Info: images/unity_interface_marked.png  used on input line 
@@ -647,7 +647,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<images/agent_unity.png, id=79, 53.44969pt x 60.225pt>
+<images/agent_unity.png, id=104, 53.44969pt x 60.225pt>
 File: images/agent_unity.png Graphic file (type png)
 <use images/agent_unity.png>
 Package pdftex.def Info: images/agent_unity.png  used on input line 65.
@@ -687,7 +687,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5 <./images/agent_unity.png>]
-<images/pusher_unity.png, id=87, 88.83188pt x 79.79813pt>
+<images/pusher_unity.png, id=112, 88.83188pt x 79.79813pt>
 File: images/pusher_unity.png Graphic file (type png)
 <use images/pusher_unity.png>
 Package pdftex.def Info: images/pusher_unity.png  used on input line 87.
@@ -712,7 +712,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
-<images/puck_unity.png, id=88, 68.50594pt x 63.23625pt>
+<images/puck_unity.png, id=113, 68.50594pt x 63.23625pt>
 File: images/puck_unity.png Graphic file (type png)
 <use images/puck_unity.png>
 Package pdftex.def Info: images/puck_unity.png  used on input line 107.
@@ -748,7 +748,7 @@ Underfull \hbox (badness 2088) in paragraph at lines 120--121
 \OT1/cmr/m/n/10.95 eine Sprite Ren-derer Com-po-nent, die ein
  []
 
-<images/matchfield.png, id=95, 202.50656pt x 404.26031pt>
+<images/matchfield.png, id=120, 202.50656pt x 404.26031pt>
 File: images/matchfield.png Graphic file (type png)
 <use images/matchfield.png>
 Package pdftex.def Info: images/matchfield.png  used on input line 125.
@@ -776,7 +776,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7 <./images/puck_unity.png> <./images/matchfield.png>]) (HHNTemplate.bbl
+[7 <./images/puck_unity.png> <./images/matchfield.png>])
+(chapters/05_rewards_training.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -786,6 +787,58 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
+Chapter 3.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 38.8842pt, for example:
+(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+
+[9
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]) (chapters/06_real_dem.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+Chapter 4.
+) (HHNTemplate.bbl
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 38.8842pt, for example:
+(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+
+[13
+
+]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
@@ -801,23 +854,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[9
+[14
 
 ] (HHNTemplate.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `HHNTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 80725230B79C95A74081B9EF0CB01530;905.
+(rerunfilecheck)             Checksum: 80D0959FEA1036445C38DA6096B76EF5;1686.
  ) 
 Here is how much of TeX's memory you used:
- 12679 strings out of 478659
- 204430 string characters out of 2845920
- 548005 words of memory out of 3000000
- 30553 multiletter control sequences out of 15000+600000
+ 12709 strings out of 478659
+ 205121 string characters out of 2845920
+ 548240 words of memory out of 3000000
+ 30567 multiletter control sequences out of 15000+600000
  411419 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,63p,714b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,63p,976b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\mhaag\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbsy10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/pub
@@ -827,9 +880,9 @@ eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mhaag/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mhaag/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mhaag/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on HHNTemplate.pdf (11 pages, 833101 bytes).
+Output written on HHNTemplate.pdf (16 pages, 850787 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

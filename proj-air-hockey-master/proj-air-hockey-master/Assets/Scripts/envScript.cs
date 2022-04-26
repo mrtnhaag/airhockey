@@ -42,7 +42,7 @@ public enum HumanResetState
     [System.NonSerialized]
     public HumanResetState humanResetState;
     [System.NonSerialized]
-    public TaskType taskType = TaskType.FullGame;
+    public TaskType taskType = TaskType.Defending;
     [System.NonSerialized]
     public float currContactReward;
     [System.NonSerialized]
@@ -81,12 +81,6 @@ public enum HumanResetState
     public float behindPuckReward = 0.05f;
     [System.NonSerialized]
     public float defenceReward = 0f;
-    [System.NonSerialized]
-    public float backwallReward = 0f;
-    [System.NonSerialized]
-    public bool puckStopPenalty;
-    [System.NonSerialized]
-    public bool backWallReward;
     [System.NonSerialized]
     public bool deflectOnly;
     public GameObject puckGameObject;
@@ -132,7 +126,7 @@ public enum HumanResetState
                 resetPuckState = ResetPuckState.randomPositionRoboSide;
                 V_max_human = 0f;
                 roboResetState = RoboResetState.random;
-                humanResetState = HumanResetState.random;
+                humanResetState = HumanResetState.shotOnGoal;
                 break;
             }
 

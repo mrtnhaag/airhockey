@@ -6,3 +6,8 @@
 \contentsline {section}{\numberline {2.2}Unity}{3}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Kurze Einführung}{4}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Airhockey Projekt}{5}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}Rewards und Training}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rewards und Umgebungsparameter}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Spielmodi}{11}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Realer Demonstrator}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Geschwindigkeitsmessungen}{13}{section.4.1}%

@@ -239,6 +239,12 @@ public class AirHockeyAgent : Agent
                 EndEpisode();
                 return;
             }
+            else if (agentRB.position.x < agentBoundary.Left || agentRB.position.x > agentBoundary.Right || agentRB.position.y > agentBoundary.Up || agentRB.position.y < agentBoundary.Down)
+            {
+                EndEpisode();
+                return;
+
+            }
             else if (StepCount == MaxStep)
             {
                 EndEpisode();
@@ -285,7 +291,7 @@ public class AirHockeyAgent : Agent
                 AddReward(env.behindPuckReward);                
             }
 
-            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+1.8f))))*env.stayCenteredReward*0.5f);
+            AddReward((2f-(Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*env.stayCenteredReward*0.5f);
             AddReward(((Mathf.Abs(agentRB.position.x-(agentBoundary.Left+2f))))*env.negoffCenterReward*0.5f);
 
         }
