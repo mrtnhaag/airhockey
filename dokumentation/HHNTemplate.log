@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  26 APR 2022 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  28 APR 2022 01:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,7 +416,23 @@ tex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
 \l__pdf_internal_box=\box57
-) (HHNTemplate.aux)
+) (HHNTemplate.aux
+
+LaTeX Warning: Label `unity_agent' multiply defined.
+
+
+LaTeX Warning: Label `unity_agent' multiply defined.
+
+
+LaTeX Warning: Label `unity_agent' multiply defined.
+
+
+LaTeX Warning: Label `unity_agent' multiply defined.
+
+
+LaTeX Warning: Label `unity_agent' multiply defined.
+
+)
 \openout1 = `HHNTemplate.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
@@ -528,7 +544,7 @@ LaTeX Info: Redefining \nameref on input line 103.
 \openout3 = `HHNTemplate.out'.
 
  (chapters/00_TitlePage.tex
-<images/PLACEHOLDER.png, id=51, 770.88pt x 429.85594pt>
+<images/PLACEHOLDER.png, id=63, 770.88pt x 429.85594pt>
 File: images/PLACEHOLDER.png Graphic file (type png)
 <use images/PLACEHOLDER.png>
 Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
@@ -538,7 +554,7 @@ Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
 
 {C:/Users/mhaag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/PLA
 CEHOLDER.png>]
-<images/HHNLogo.png, id=63, 149.358pt x 85.5195pt>
+<images/HHNLogo.png, id=75, 149.358pt x 85.5195pt>
 File: images/HHNLogo.png Graphic file (type png)
 <use images/HHNLogo.png>
 Package pdftex.def Info: images/HHNLogo.png  used on input line 33.
@@ -617,7 +633,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3
 
 ]
-<images/unity_interface_marked.png, id=96, 1332.47812pt x 819.06pt>
+<images/unity_interface_marked.png, id=111, 1332.47812pt x 819.06pt>
 File: images/unity_interface_marked.png Graphic file (type png)
 <use images/unity_interface_marked.png>
 Package pdftex.def Info: images/unity_interface_marked.png  used on input line 
@@ -647,7 +663,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<images/agent_unity.png, id=104, 53.44969pt x 60.225pt>
+<images/agent_unity.png, id=119, 53.44969pt x 60.225pt>
 File: images/agent_unity.png Graphic file (type png)
 <use images/agent_unity.png>
 Package pdftex.def Info: images/agent_unity.png  used on input line 65.
@@ -687,7 +703,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5 <./images/agent_unity.png>]
-<images/pusher_unity.png, id=112, 88.83188pt x 79.79813pt>
+<images/pusher_unity.png, id=127, 88.83188pt x 79.79813pt>
 File: images/pusher_unity.png Graphic file (type png)
 <use images/pusher_unity.png>
 Package pdftex.def Info: images/pusher_unity.png  used on input line 87.
@@ -712,7 +728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
-<images/puck_unity.png, id=113, 68.50594pt x 63.23625pt>
+<images/puck_unity.png, id=128, 68.50594pt x 63.23625pt>
 File: images/puck_unity.png Graphic file (type png)
 <use images/puck_unity.png>
 Package pdftex.def Info: images/puck_unity.png  used on input line 107.
@@ -748,7 +764,7 @@ Underfull \hbox (badness 2088) in paragraph at lines 120--121
 \OT1/cmr/m/n/10.95 eine Sprite Ren-derer Com-po-nent, die ein
  []
 
-<images/matchfield.png, id=120, 202.50656pt x 404.26031pt>
+<images/matchfield.png, id=135, 202.50656pt x 404.26031pt>
 File: images/matchfield.png Graphic file (type png)
 <use images/matchfield.png>
 Package pdftex.def Info: images/matchfield.png  used on input line 125.
@@ -816,7 +832,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11]) (chapters/06_real_dem.tex
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -826,6 +846,117 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
+<images/training_strats.png, id=171, 609.02531pt x 281.55188pt>
+File: images/training_strats.png Graphic file (type png)
+<use images/training_strats.png>
+Package pdftex.def Info: images/training_strats.png  used on input line 114.
+(pdftex.def)             Requested size: 365.418pt x 168.93242pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13 <./images/training_strats.png>]
+Overfull \hbox (5.5146pt too wide) in paragraph at lines 134--136
+\OT1/cmr/m/n/10.95 Das ML-Agents Toolkit stellt sowohl PPO als auch SAC Agen-te
+n zur Verfugung.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14]
+<images/reaching_erg.png, id=182, 886.06032pt x 277.035pt>
+File: images/reaching_erg.png Graphic file (type png)
+<use images/reaching_erg.png>
+Package pdftex.def Info: images/reaching_erg.png  used on input line 155.
+(pdftex.def)             Requested size: 369.88583pt x 115.64795pt.
+<images/rea2_erg.png, id=183, 554.07pt x 173.14688pt>
+File: images/rea2_erg.png Graphic file (type png)
+<use images/rea2_erg.png>
+Package pdftex.def Info: images/rea2_erg.png  used on input line 165.
+(pdftex.def)             Requested size: 369.88583pt x 115.59036pt.
+<images/fullgame_erg.png, id=184, 561.59813pt x 176.15813pt>
+File: images/fullgame_erg.png Graphic file (type png)
+<use images/fullgame_erg.png>
+Package pdftex.def Info: images/fullgame_erg.png  used on input line 175.
+(pdftex.def)             Requested size: 369.88583pt x 116.0228pt.
+<images/centered_erg.png, id=185, 559.33969pt x 173.89969pt>
+File: images/centered_erg.png Graphic file (type png)
+<use images/centered_erg.png>
+Package pdftex.def Info: images/centered_erg.png  used on input line 185.
+(pdftex.def)             Requested size: 369.88583pt x 115.00233pt.
+<images/centered2_erg.png, id=186, 758.08218pt x 235.63031pt>
+File: images/centered2_erg.png Graphic file (type png)
+<use images/centered2_erg.png>
+Package pdftex.def Info: images/centered2_erg.png  used on input line 195.
+(pdftex.def)             Requested size: 369.88583pt x 114.97087pt.
+) (chapters/06_real_dem.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16 <./images/reaching_erg.png> <./images/rea2_erg.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[17 <./images/fullgame_erg.png> <./images/centered_erg.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18 <./images/centered2_erg.png>]
 Chapter 4.
 ) (HHNTemplate.bbl
 
@@ -836,7 +967,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[13
+[19
 
 ]
 
@@ -854,23 +985,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[14
+[20
 
 ] (HHNTemplate.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `HHNTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 80D0959FEA1036445C38DA6096B76EF5;1686.
+(rerunfilecheck)             Checksum: 016F81F7B4CBA46B3FD4CCD7C448EF7F;2322.
  ) 
 Here is how much of TeX's memory you used:
- 12709 strings out of 478659
- 205121 string characters out of 2845920
- 548240 words of memory out of 3000000
- 30567 multiletter control sequences out of 15000+600000
+ 12799 strings out of 478659
+ 207181 string characters out of 2845920
+ 550584 words of memory out of 3000000
+ 30635 multiletter control sequences out of 15000+600000
  411419 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,63p,976b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,63p,1113b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\mhaag\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbsy10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/pub
@@ -880,9 +1014,9 @@ eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mhaag/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mhaag/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mhaag/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on HHNTemplate.pdf (16 pages, 850787 bytes).
+Output written on HHNTemplate.pdf (22 pages, 1128438 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

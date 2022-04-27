@@ -42,7 +42,7 @@ public enum HumanResetState
     [System.NonSerialized]
     public HumanResetState humanResetState;
     [System.NonSerialized]
-    public TaskType taskType = TaskType.Defending;
+    public TaskType taskType = TaskType.Reaching;
     [System.NonSerialized]
     public float currContactReward;
     [System.NonSerialized]
@@ -50,7 +50,7 @@ public enum HumanResetState
     [System.NonSerialized]
     public float V_max_robo = 6f;
     [System.NonSerialized]
-    public float V_max_human = 3f;
+    public float V_max_human = 6f;
     [System.NonSerialized]
     public float neghumanGoalReward = -1f;
     [System.NonSerialized]
@@ -62,7 +62,7 @@ public enum HumanResetState
     [System.NonSerialized]
     public float stayCenteredReward = 0f;
     [System.NonSerialized]
-    public float negoffCenterReward = 0.2f;
+    public float negoffCenterReward = 0.1f;
     [System.NonSerialized]
     public float encouragePuckMovement = 0.01f;
     [System.NonSerialized]
@@ -74,7 +74,7 @@ public enum HumanResetState
     [System.NonSerialized]
     public float negplaybackReward = -0.1f;
     [System.NonSerialized]
-    public float negStepReward = -0.01f;
+    public float negStepReward = -0.001f;
     [System.NonSerialized]
     public float negMaxStepReward = 0f;
     [System.NonSerialized]

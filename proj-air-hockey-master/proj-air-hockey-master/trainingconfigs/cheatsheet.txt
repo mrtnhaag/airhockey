@@ -10,3 +10,5 @@ mlagents-learn  trainingconfigs\sac_basic.yaml --run-id="datum_info"
 mlagents-learn  trainingconfigs\ppo_basic.yaml --run-id="17_11_noon" --resume
 
 tensorboard --logdir results --port 6006
+
+--reload_multifile True
