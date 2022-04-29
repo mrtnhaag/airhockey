@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="157172A459F0735F">
+  <PROJECT FORMAT="1.00" NAME="Ablaufplan Interface" AUTHOR="mhaag" CREATED="2022.04.28 22:02:17" MODIFIED="2022.04.29 03:56:40">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="GUI Ablaufplan" CREATED="2022.04.28 22:02:34" MODIFIED="2022.04.29 00:25:00">
+        <LAYOUT FORMAT="1.00" COLUMNS="7" ROWS="19">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Kalibrierung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[erfolgreich?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="89">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="76">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="72">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[GUI Ablaufplan]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Initialisierung des Interfaces, anlegen der Variablen, Start des Parallelprozesses]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="3">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="40" ASSOCIATE="41">
+                <TEXT><![CDATA[Schleife läuft solange Anwendung ausgeführt wird]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Videoquelle gewählt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="139">
+                <TEXT><![CDATA[Bild einlesen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Kalibrierung gewählt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="74">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[schon kalibriert?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="9">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="30">
+                <TEXT><![CDATA[Bildverarbeitung- Roboter und Puck finden]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="26">
+                <TEXT><![CDATA[Puck und Roboter gefunden?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="11">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="94">
+                <TEXT><![CDATA[nur den Puck zu lange nicht gefunden?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="28">
+                <TEXT><![CDATA[schon lange nicht mehr entdeckt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="32">
+                <TEXT><![CDATA[aus Sicherheitsgründen Bewegung stopen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="68">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="92">
+                <TEXT><![CDATA[Update des Bildes im Interface]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="16">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="131">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="17">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="41" ASSOCIATE="40">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="18">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="10">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="38">
+                <TEXT><![CDATA[Spielen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="96">
+                <TEXT><![CDATA[Pusher da, in Ausgangspositon fahren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[letzte Bewegung wiederholen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="58">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="56">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="98">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="62">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="67">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="4">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="101">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="16">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="133">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="47" FROM="6" TO="101" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="45" FROM="4" TO="40" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="139" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="12" FROM="8" TO="10" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="74" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="73" FROM="15" TO="72" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="75" FROM="74" TO="22" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="71" FROM="10" TO="15" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="30" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="22" TO="30" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="26" TO="94" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="28" TO="32" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="32" TO="68" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="28" TO="36" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="26" TO="38" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="40" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="140" FROM="139" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="59" FROM="58" TO="56" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="60" FROM="22" TO="58" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="61" FROM="38" TO="56" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="99" FROM="98" TO="62" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="64" FROM="36" TO="62" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="66" FROM="62" TO="67" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="69" FROM="68" TO="92" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="67" TO="68" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="77" FROM="72" TO="76" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="78" FROM="76" TO="74" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="91" FROM="89" TO="68" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="82" FROM="15" TO="89" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="135" FROM="133" TO="131" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="95" FROM="94" TO="28" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="97" FROM="94" TO="96" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="63" FROM="56" TO="98" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="100" FROM="96" TO="98" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="92" TO="131" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="132" FROM="131" TO="41" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="136" FROM="101" TO="133" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="1" NAME="Kalibrierung" CREATED="2022.04.29 02:36:34" MODIFIED="2022.04.29 02:53:01">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="12">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Kalibrierung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Überführung des Originalbildes in den HSV Farbraum]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Extraktion des roten Farbbereiches]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Ermittlung der Kreise mit der HoughCircles Methode]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Zuordnung der Kreise in die Bereiche in denen sie erwartet werden]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[mindestens drei Übereinstimmungen?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[Berechnung von Feldmittelpunkt, Ausrichtung und Skalierung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Parameter für die Funktionen zur Koordinatentransformation übertragen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="29">
+                <TEXT><![CDATA[Entfernung es Hakens aus dem Interface damit im nächsten Schleifendurchgang nicht direkt wieder kalibriert wird]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="24">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="26">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="14" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="29" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="12" TO="18" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="24" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="26" TO="24" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="18" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="29" TO="24" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="2" NAME="Puck- und Robotererkennung" CREATED="2022.04.29 03:17:38" MODIFIED="2022.04.29 03:56:40">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="13">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Puck- und Robotererkennung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[Puck oder Robotererkennung?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Übergang in den HSV Farbraum]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Errosion des Binärbildes zur Reduktion der Konturen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Erstellung einer Konturliste]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Auswahl der größten Kontur]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Kontur im der richtigen Größe?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[Position ermitteln und mit der kalibrierten Funktion ins Unity Koordnatensystem umrechnen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[Puck oder Robotererkennung?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="23">
+                <TEXT><![CDATA[Geschwindigkeit berechnen und Zeitpunkt für den nächsten Durchgang festhalten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="33">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Ausschneiden des interessanten Bereiches]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="25">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="38">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="31">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="21" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="4" TEXT="Puck" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="14" TO="16" TEXT="Roboter" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="16" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="20" FROM="18" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="22" FROM="21" TO="36" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="33" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="10" TO="25" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="38" TO="31" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="23" TO="33" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="31" TO="33" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="36" TO="23" TEXT="Puck" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="25" TO="38" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="36" TO="38" TEXT="Roboter" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>

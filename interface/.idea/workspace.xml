@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f75bb48-570c-433e-b4f0-f0c0756929db" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_training_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/ML-Agents/Timers/AirHockey_training_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/AirHockeyAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/AirHockeyAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/envScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/Assets/Scripts/envScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/09_12_21_03.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-5999998.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-5999998.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6499980.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6499980.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6999989.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-6999989.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7499911.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7499911.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7991477.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/FullGame-7991477.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/FullGame/events.out.tfevents.1639043929.DESKTOP-TRB0I2O.7972.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj-air-hockey-master/proj-air-hockey-master/results/13_12_only_goal/run_logs/training_status.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.log" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.out" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/HHNTemplate.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/HHNTemplate.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/bibfile.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/bibfile.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/bibfile.bib.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/bibfile.bib.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/chapters/05_rewards_training.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/chapters/05_rewards_training.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dokumentation/chapters/06_real_dem.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../dokumentation/chapters/06_real_dem.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -149,53 +149,61 @@ Das Einstiegstraining erfolgte für beide Agenten mit genau den gleichen Rewards
 \end{itemize}
 
 Die Ergebnisse dieser Trainings sind im folgenden Dargestellt. Im den Abbildungen sind jeweils die Graphen des PPO-Agenten und des SAC-Agenten übereinander gelegt. Der linke Graph zeigt dabei die Entwicklung des komulativen Rewards über die Anzahl der verstrichenen Trainingsepisoden, der rechte die Entwicklung der Episodenlänge. Da die Trainings aufeinander aufbauen sind in den Graphen der fortgeschrittenen Trainings die ver vorrangegangenen auch enthalten.\\
+\newpage
 \begin{figure} [h]
-\underline{1. Trainig bis 500k} 
+\underline{1. Trainig bis 500k} \\
 
 \includegraphics[width=\textwidth]{images/reaching_erg}
-\label{unity_agent}
 \caption{Orange: PPO-Agent, Blau: SAC-Agent}
-
-
 Der maximal erreichbare kumulative Reward ist in dieser Trainingsphase 1. Am Graph ist zwar zu erkennen, dass der PPO-Agent dieses Ergebnis schneller und ohne Ausreißer erreicht, aber der SAC-Agent erreicht das Ziel auch. Beobachtet man die beiden Agenten in der Unityumgebung bei der Aufgabe sind sie vom Verhalten her praktisch nicht zu unterscheiden. Beide bewegen sich auf sehr kurzem Weg auf den Puck zu.
 \end{figure}
+
 \begin{figure} [h]
-\underline{2. Trainig bis 1M} 
-
+\underline{2. Trainig bis 1M} \\
 \includegraphics[width=\textwidth]{images/rea2_erg}
-\label{unity_agent}
 \caption{Grau: PPO-Agent, Orange: SAC-Agent}
-
 
 In diesem Trainingsabschnitt hat der PPO-Agent nach Reward klar den Vorteil. Jedoch kann man an der Episodenlänge sehen, dass die Aufgabe nicht zufriedenstellent erlernt wurde. Da die Episode beim Puckkontakt beendet wird sollten sie sehr kurz ausfallen. Beim Beobachten des Spielverhalten ist dieses Verhalten auch festzustellen. Der PPO-Agent neigt dazu in der Nähe des Pucks in einen Zitterzustand überzugehen. Geht er nicht in diesen Zustand trifft er den Puck aber öfter von der richtigen Seite als von der falschen. Auch der SAC-Agent trifft den Puck öfter von der richtigen Seite als von der falschen. Er zeigt  aber die Verhaltensauffälligkeit mit dem Zittern nur äußerst selte und ist damit insgesamt besser als der PPO-Agent nach diesem Training in der zugehörigen Aufgabe.
 \end{figure}
+
 \begin{figure} [h]
-\underline{3. Trainig bis 2M} 
-
+\underline{3. Trainig bis 2M} \\
 \includegraphics[width=\textwidth]{images/fullgame_erg}
-\label{unity_agent}
 \caption{Grün: PPO-Agent, Grau: SAC-Agent}
-
-
 Der SAC-Agent hat in dieser Trainingsperiode seinen Rückstand in der Kategorie kumulativer Reward nicht nur verkürzt, sondern hat PPO sogar überholt. Die Episodenlänge hat sich dabei erhöht. Da das Trainig im FullGame Modus erfolgte und diese Agenten jetzt dafür geeignet sein sollten ist eine gute Möglichkeit sie zu vergleichen das direkte Spiel gegeineinander. Hier hat der PPO-Agent eindeutig die Nase vorne. Er schlägt den SAC-Agenten mit 10:5. Außerdem ist sein Spielverhalten deutlich besser. Währen der SAC-Agent sich oft unkontrolliert bewegt ohne den Puck zu spielen (höhere Episodenlänge) lässt sich bei seinem PPO-Kontrahenten deutlich erkennen, dass er nicht nur zielstrebig auf den Puck zufährt, sondern ihn meist auch in die richtige Richtung spielt. 
 \end{figure}
+
 \begin{figure} [h]
-\underline{4. Trainig bis 3M} 
-
+\underline{4. Trainig bis 3M} \\
 \includegraphics[width=\textwidth]{images/centered_erg}
-\label{unity_agent}
 \caption{Blau: PPO-Agent, Orange: SAC-Agent}
-
-
 Bei diesem Training überholt der PPO-Agenten den SAC- Agenten in Sachen kumulativer Reward wieder. Auch beim Spielverhalten ist er ihm noch überleben und schlägt ihn mit 10:4. Das Verhalten des SAC-Agenten hat sich selbst nach dem Training noch nicht deutlich verbessert. Er ist immer noch sehr passiv, wenn er einen Kontakt macht ist dieser jedoch meist nicht schlecht. Insgesamt ist der SAC-Agent aber immer noch weit von einem Sieg entfernt.
 \end{figure}
+
 \begin{figure} [h]
-\underline{5. Trainig bis 4M} 
-
+\underline{5. Trainig bis 4M} \\
 \includegraphics[width=\textwidth]{images/centered2_erg}
-\label{unity_agent}
 \caption{Rosa: PPO-Agent, Grün: SAC-Agent}
-
- 
-In der letzten Trainingsetappe stagnieren nicht nur die kumulativen Rewards weitgehend, sondern auch das Spielverhalten ist weitgehend unverändert. Der PPO-Agent ist dem SAC-Agenten immer noch vorraus. 
+In der letzten Trainingsetappe stagnieren nicht nur die kumulativen Rewards weitgehend, sondern auch das Spielverhalten ist weitgehend unverändert. Der PPO-Agent ist dem SAC-Agenten immer noch vorraus. \\
+Insgesamt haben unsere Erfahrungen gezeigt, dass der PPO-Agent gegenüber dem SAC-Agnenten in unserem Fall im Vorteil ist. Bei genau gleichem Training hat er ein weit besseres, aktiveres, inteligent werkenderes Spielverhalten entwickelt. Zusätzlich hat es den Anschein, als ob sich die Verhaltensentwicklung beim PPO-Agenten besser abschätzen lässt. Die erwünschten Verhaltensmuster sind dadurch einfacher zu erreichen. Aus diesen Gründen haben wir für den größten Teil unserer Trainingsbemühungen mit einem PPO-Agenten der Parametrisierung des hier verwendeten Netzwerkes gearbeitet.
 \end{figure}
+\begin{figure}[h]
+\section{Trainingsverlauf und Ergebnis}
+\label{sect:training_erg}
+
+Der vorhergegangene Abschnitt \ref{subsect:netzwahl_ergs} hat bereits einen guten Einblick über das vorgehen beim Training gegeben. Dieser soll noch einige Informationen zur Gegenerwahl, zum Fortschritt, zu den Kriterien eines guten Agenten und zu den besten bereits erzielten Ergebnissen geben.
+
+\subsection{Gegnerwahl}
+\label{subsect:gegner}
+
+Im letzten Abschnitt war zu erkennen, dass die ersten Trainings im Reaching Modus absolviert werden und deshalb dabei kein Gegenspieler benötigt wird. Diese Trainings sind jedoch ziemlich simpel und können schnell erfolgreich abgeschlossen werden. Der größte Teil des Trainings wird also mit Gegenspieler durchgeführt. Um zu verhindern, dass der Agent entweder nichts lernt (Gegner zu schwach) oder sich weigert den Puck rüber zu spielen weil er einen gefährlichen Schuss befürchtet (Gegner zu stark) muss ein ade	quater HumanPlayer als Trainingspartner genutzt werden. Im Verlauf des Trainings bietet es sich an, die Methode des Selfplay zu nutzen. Hierbei bespielt sich der Agent selbst, beziehungsweise eine Version von sich selbt. Dabei ist darauf zu achten, dass man das Netzwerk des Agente nicht zu oft oder zu selten auf den HumanPlayer überträgt. Tut man es zu oft läuft man Gefahr, dass die Gegenspieler "zusammen spielen" und so mit zum Beispiel einem Kontaktreward schnell einen Torreward obsolet machen. Um einen solchen Effekt zu erzielen muss das Netzwerk aber sehr oft übertragen oder gar für beide Spieler gleichermaßen trainiert werden. Tut man es zu selten kann ein Training ohne vernünftige Herrausforderung an Effizienz verlieren. Ein weiteres Problem des Selfplay ist, dass man zu Beginn gar kein Ergebins hat, dass als Gegner verwendet werden kann. Deshalb ist in unserem Projekt auch ein festprogrammierter Spieler implementiert. Dieser bewegt sich stets hinter den Puck wenn auf seine Seite gespielt wird und spielt zurück. Da die Richtung des Rückspiels aber nicht beachtet wird, ist die Gefahr eines Gegentores nicht so besonders groß. Besonders bei gedrosselter Geschwindigkeit ist er also ein idealer Einstiegsgegner.
+\end{figure}
+\begin{figure}[h]
+\subsection{Qualitätskriterien}
+\label{subsect:kriterien}
+ 
+Um einen guten Agenten traininieren zu können muss man zuerst wissen, was ein guter Agent ist. Im Gegensatz zu einem Läufer, denn man nur nach einem Kriterium bewertet (seiner benötigten Zeit um eine Strecke zurück zu legen) kann ein Agent so einfach objektiv bewertet werden. \\
+Eine erstrebenswerte Eigenschaft ist, dass gegen möglichst viele unterschiedliche Gegner aus möglichst vielen Spielsituationen ein Tor erzielt wird. Analog dazu ist es auch erstrebenswert gegen möglichst viele unterschiedliche Gegner aus möglichst vielen Spielsituationen kein Gegentor zu kassieren. Auch wenn viele Spielentscheidungen beide genannten Eigenschaften gleichzeitig begünstigen kann doch eine besonders riskante Spielweise sowohl die Wahrscheinlichkeit ein Tor zu machen als auch die Warscheinlicheit eines Gegentores erhöhen. Ist demnach ein besonders defensives oder ein offensiveres Vorgehen besser? Da der Grad der Offensivneigung jedoch schwer zu messen ist und nicht mal klar ist, ob sie erwünscht ist, haben wir uns darauf beschränkt die Tordifferenz der Agenten zu bewerten. Das haben wir hauptsächlich durch das Spiel gegen einen älteren Agenten durchgeführt. Um zu verhindern, dass der Agent anfällig für einen menschlichen Spieler wird, wurde seine Spielfähigkeit von Zeit zu Zeit auch von einer Person per Tastatur oder Controller validiert. Logischerweise ist es jedoch nicht möglich gegen einen menschlichen Spieler zu traininieren. Bei diesen Testspielen hat sich herrausgestellt, dass bei den fortgeschrittneren Agenten einige dabei, die wir manuell nicht mehr besiegen können und teilweise hoch gegen uns gewonnen haben. Selten hat sich eine Niederlage so gut angefühlt. \\
+Neben der Fähigkeit viele Tore zu schießen ohne viel zu kassieren ist auch die Ästethik der Bewegung nicht unwichtig. Da das Ziel des Projekts ein Demostrator ist, ist ein nachvollziehbares Spielverhalten sinnvoll. Ein weiterer Punkt ist die Lärmbelastung. Auch wenn in Unity zittern keinen Nachteil mit sich bringen kommt es dadurch am realen Tisch durch die Motoren zu schrillen, unangenehmen Geräuschen. Das sollte beim Training beachtet werden.
+\end{figure}
+

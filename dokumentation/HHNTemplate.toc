@@ -12,5 +12,13 @@
 \contentsline {section}{\numberline {3.3}Trainingsstrategie und Zwischenergebnisse}{12}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Stufenplan}{13}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Netzwerkauswahl und Zwischenergebnisse}{14}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Realer Demonstrator}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Geschwindigkeitsmessungen}{19}{section.4.1}%
+\contentsline {section}{\numberline {3.4}Trainingsverlauf und Ergebnis}{20}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Gegnerwahl}{20}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Qualitätskriterien}{21}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Realer Demonstrator}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Geschwindigkeitsmessungen}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Benutzeroberfläche}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Ansicht der Oberfläche}{25}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Programmablauf der GUI-Anwendung}{27}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Kalibrierung}{30}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Puck und Robotererkennung}{32}{section.4.4}%

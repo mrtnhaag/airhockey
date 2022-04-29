@@ -5,4 +5,23 @@
   publisher={MIT press}
 }
 
+@book{lapan2020deep,
+  title={Deep reinforcement learning hands-on},
+  author={Lapan, Maxim},
+  year={2020},
+  publisher={Packt publishing}
+}
+
+@Misc{jjrob,
+  author       = {jjRobots Ltd.},
+  howpublished = {https://www.jjrobots.com/the-open-source-air-hockey-robot/, letzter Aufruf: 24.03.2020},
+  title        = {AIR HOCKEY ROBOT EVO.},
+}
+
+@Misc{tracker,
+  author       = {Open Source Physics},
+  howpublished = {https://physlets.org/tracker/},
+  title        = {Tracker},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
