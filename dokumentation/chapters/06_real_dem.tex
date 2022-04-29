@@ -136,6 +136,7 @@ Die Mittelpunkte werden danach mit vorher festgelegten Berichen abgeglichen. Da 
 \end{minipage}
  \caption{Zwischenergebnisse der Kalibrierung}
  \label{kalib_process}
+\vspace{5pt}
 
 Das linke Bild das Binärbild, das entsteht wenn nur ein bestimmter Farbbereich gewählt wird. Neben den Kreisen wird auch ein Teil der Schrift und der Arm des menschlichen Spielers mit binarisiert. Nach der HoughCircles Methode und der Zuordnung kann der Mittelpunkt des Spielfelds, wie man auf der rechten Seite erkennen kann ziemlich gut ermittelt werden.
 \end{figure}
@@ -181,6 +182,14 @@ Der Vorgang ist bei Puck und Roboter vergleichbar. Die Hauptunterschiede sind di
 
  \caption{Zwischenergebnisse der Puck- und Robotererkennung}
  \label{bv_process}
-
-In der Abbildung \ref{bv} ist dreimal der gleiche Feldabschnitt zu sehen. Links ist das errodierte Binärbild aus der Puckerkennung. Hier ist die Kontur des Pucks eindeutig zu erkennen. In der Mitte ist das errodierte Binärbild aus der Robotererkennung zu sehen. Durch schlechte Lichtverhältnisse und eine schlechte Farbwahl für den Roboter ist das Binärbild nicht besonders gut. Da jedoch der Bereich in dem sich der Roboter befinden kann bekannt ist kann die größte Kontur am oberen Bildrand ausgeschlossen werden. Der rechte Teil der Abbildung zeigt, dass Puck und Roboter richtig erkannt wurden.
+\vspace{5pt}
+In der Abbildung \ref{bv_process} ist dreimal der gleiche Feldabschnitt zu sehen. Links ist das errodierte Binärbild aus der Puckerkennung. Hier ist die Kontur des Pucks eindeutig zu erkennen. In der Mitte ist das errodierte Binärbild aus der Robotererkennung zu sehen. Durch schlechte Lichtverhältnisse und eine schlechte Farbwahl für den Roboter ist das Binärbild nicht besonders gut. Da jedoch der Bereich in dem sich der Roboter befinden kann bekannt ist kann die größte Kontur am oberen Bildrand ausgeschlossen werden. Der rechte Teil der Abbildung zeigt, dass Puck und Roboter richtig erkannt wurden.
 \end{figure}
+
+\clearpage
+\section{Spielverhalten}
+\label{sect:verh}
+Dieser Abschnitt soll kurz darstellen wie sich der reale Demonstrator im Vergleich zu seinem digtalen Zwilling verhalten hat.\\
+Ein großes Problem ist durch die Plattenbeschaffenheit aufgetretten. Die Platte ist nicht ganz eben. Dadurch fängt der Puck an manchen Stellen ohne Kontakt an zu gleiten. Solange der Puck schnell unterwegs ist, ist die Ablenkung durch die Unebenheit vernachlässigbar. Ein weiteres Problem das von der Plattenkrümmung her rührt, ist das der Roboter sich an manchen Stellen einklemmen kann. Da die Linerfühungen den Roboter auf einer Ebene führen ändert sich also der Abstand zwischen Tischplatte und Führung. Besonders am Rand und in den Ecken kann es deshalb zum stecken bleiben führen. Manchmal kann sich der Roboter unter Quietschen, Rattern und Schrittverlust an den Motoren wieder befreien aber selbst dieser Fall ist höchst unerfreulich. An besonders niedrigen Stellen kann es dagegen dazu kommen, dass sich der Puck zwischen Tischplatte und Roboter klemmt auch hier ist ein Spielabbruch meist die einzige vernünftige Lösung.\\
+Neben den Defiziten, die durch die Hardware auftretten kommen noch andere dazu. Der Roboter kann bei weitem nicht die Bildwiederholungsrate, die im Interface angezeigt wird auf den Tisch bringen. Ein Teil des Zeitverlustes kommt von der Puck- und Robotererkennung. Ein weiterer Teil tritt bei der Kommunikation mit dem Arduino auf. Dadurch ist die Bewegung deutlich ruckeliger als es zu erwarten war. Das es einen kontinuierlichen Actionspace gibt, in dem alle möglichen Aktionen, mit Außnahme von Stehenbleiben, Vollgas sind verbesset die Situation nicht besonders.\\
+Insgesamt ist die Leistung am Tisch unbrauchbar. Verglichen mit dem Spiel in Unity, dass fast nicht zu gewinnen ist, ist dieses Ergebnis noch nicht für eine Demonstration geeignet.

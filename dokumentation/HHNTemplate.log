@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  29 APR 2022 04:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  29 APR 2022 07:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,9 +576,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <24.88> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1.
 
 
-Package natbib Warning: Citation `jjrob' on page 2 undefined on input line 13.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
 (fancyhdr)                \setlength{\headheight}{38.8842pt}.
@@ -617,7 +614,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3
 
 ]
-<images/unity_interface_marked.png, id=151, 1332.47812pt x 819.06pt>
+<images/unity_interface_marked.png, id=153, 1332.47812pt x 819.06pt>
 File: images/unity_interface_marked.png Graphic file (type png)
 <use images/unity_interface_marked.png>
 Package pdftex.def Info: images/unity_interface_marked.png  used on input line 
@@ -647,7 +644,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<images/agent_unity.png, id=159, 53.44969pt x 60.225pt>
+<images/agent_unity.png, id=161, 53.44969pt x 60.225pt>
 File: images/agent_unity.png Graphic file (type png)
 <use images/agent_unity.png>
 Package pdftex.def Info: images/agent_unity.png  used on input line 65.
@@ -687,7 +684,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5 <./images/agent_unity.png>]
-<images/pusher_unity.png, id=167, 88.83188pt x 79.79813pt>
+<images/pusher_unity.png, id=169, 88.83188pt x 79.79813pt>
 File: images/pusher_unity.png Graphic file (type png)
 <use images/pusher_unity.png>
 Package pdftex.def Info: images/pusher_unity.png  used on input line 87.
@@ -712,7 +709,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
-<images/puck_unity.png, id=168, 68.50594pt x 63.23625pt>
+<images/puck_unity.png, id=170, 68.50594pt x 63.23625pt>
 File: images/puck_unity.png Graphic file (type png)
 <use images/puck_unity.png>
 Package pdftex.def Info: images/puck_unity.png  used on input line 107.
@@ -748,7 +745,7 @@ Underfull \hbox (badness 2088) in paragraph at lines 120--121
 \OT1/cmr/m/n/10.95 eine Sprite Ren-derer Com-po-nent, die ein
  []
 
-<images/matchfield.png, id=175, 202.50656pt x 404.26031pt>
+<images/matchfield.png, id=177, 202.50656pt x 404.26031pt>
 File: images/matchfield.png Graphic file (type png)
 <use images/matchfield.png>
 Package pdftex.def Info: images/matchfield.png  used on input line 125.
@@ -830,7 +827,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
-<images/training_strats.png, id=211, 609.02531pt x 281.55188pt>
+<images/training_strats.png, id=213, 609.02531pt x 281.55188pt>
 File: images/training_strats.png Graphic file (type png)
 <use images/training_strats.png>
 Package pdftex.def Info: images/training_strats.png  used on input line 114.
@@ -881,12 +878,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-<images/reaching_erg.png, id=226, 886.06032pt x 277.035pt>
+<images/reaching_erg.png, id=228, 886.06032pt x 277.035pt>
 File: images/reaching_erg.png Graphic file (type png)
 <use images/reaching_erg.png>
 Package pdftex.def Info: images/reaching_erg.png  used on input line 156.
 (pdftex.def)             Requested size: 369.88583pt x 115.64795pt.
-<images/rea2_erg.png, id=227, 554.07pt x 173.14688pt>
+<images/rea2_erg.png, id=229, 554.07pt x 173.14688pt>
 File: images/rea2_erg.png Graphic file (type png)
 <use images/rea2_erg.png>
 Package pdftex.def Info: images/rea2_erg.png  used on input line 163.
@@ -894,7 +891,7 @@ Package pdftex.def Info: images/rea2_erg.png  used on input line 163.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/fullgame_erg.png, id=228, 561.59813pt x 176.15813pt>
+<images/fullgame_erg.png, id=230, 561.59813pt x 176.15813pt>
 File: images/fullgame_erg.png Graphic file (type png)
 <use images/fullgame_erg.png>
 Package pdftex.def Info: images/fullgame_erg.png  used on input line 171.
@@ -902,7 +899,7 @@ Package pdftex.def Info: images/fullgame_erg.png  used on input line 171.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/centered_erg.png, id=229, 559.33969pt x 173.89969pt>
+<images/centered_erg.png, id=231, 559.33969pt x 173.89969pt>
 File: images/centered_erg.png Graphic file (type png)
 <use images/centered_erg.png>
 Package pdftex.def Info: images/centered_erg.png  used on input line 178.
@@ -910,7 +907,7 @@ Package pdftex.def Info: images/centered_erg.png  used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/centered2_erg.png, id=230, 758.08218pt x 235.63031pt>
+<images/centered2_erg.png, id=232, 758.08218pt x 235.63031pt>
 File: images/centered2_erg.png Graphic file (type png)
 <use images/centered2_erg.png>
 Package pdftex.def Info: images/centered2_erg.png  used on input line 185.
@@ -986,16 +983,12 @@ Overfull \hbox (23.87865pt too wide) in paragraph at lines 3--4
 x-i-malgeschwindigkeiten,
  []
 
-
-Package natbib Warning: Citation `tracker' on page 22 undefined on input line 8
-.
-
-<images/messung_robo_x.png, id=267, 590.95781pt x 173.14688pt>
+<images/messung_robo_x.png, id=270, 590.95781pt x 173.14688pt>
 File: images/messung_robo_x.png Graphic file (type png)
 <use images/messung_robo_x.png>
 Package pdftex.def Info: images/messung_robo_x.png  used on input line 10.
 (pdftex.def)             Requested size: 369.88583pt x 108.37505pt.
-<images/messung_robo_v.png, id=268, 782.17218pt x 234.1247pt>
+<images/messung_robo_v.png, id=271, 782.17218pt x 234.1247pt>
 File: images/messung_robo_v.png Graphic file (type png)
 <use images/messung_robo_v.png>
 Package pdftex.def Info: images/messung_robo_v.png  used on input line 11.
@@ -1006,12 +999,12 @@ Overfull \hbox (2.46529pt too wide) in paragraph at lines 8--17
 keit des Robot-
  []
 
-<images/messung_bolzen_x.png, id=270, 595.47469pt x 192.72pt>
+<images/messung_bolzen_x.png, id=273, 595.47469pt x 192.72pt>
 File: images/messung_bolzen_x.png Graphic file (type png)
 <use images/messung_bolzen_x.png>
 Package pdftex.def Info: images/messung_bolzen_x.png  used on input line 19.
 (pdftex.def)             Requested size: 369.88583pt x 119.70863pt.
-<images/messung_bolzen_v.png, id=271, 587.94656pt x 191.9672pt>
+<images/messung_bolzen_v.png, id=274, 587.94656pt x 191.9672pt>
 File: images/messung_bolzen_v.png Graphic file (type png)
 <use images/messung_bolzen_v.png>
 Package pdftex.def Info: images/messung_bolzen_v.png  used on input line 20.
@@ -1049,7 +1042,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-<images/gui_pic_marked.png, id=291, 691.83469pt x 572.89032pt>
+<images/gui_pic_marked.png, id=295, 691.83469pt x 572.89032pt>
 File: images/gui_pic_marked.png Graphic file (type png)
 <use images/gui_pic_marked.png>
 Package pdftex.def Info: images/gui_pic_marked.png  used on input line 37.
@@ -1109,7 +1102,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-<images/gui_pap.png, id=307, 1107.38719pt x 1902.3572pt>
+<images/gui_pap.png, id=311, 1107.38719pt x 1902.3572pt>
 File: images/gui_pap.png Graphic file (type png)
 <use images/gui_pap.png>
 Package pdftex.def Info: images/gui_pap.png  used on input line 92.
@@ -1147,10 +1140,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--106
  []
 
 
-Package natbib Warning: Citation `rhody2005lecture' on page 30 undefined on inp
-ut line 111.
-
-
 Underfull \hbox (badness 1286) in paragraph at lines 111--114
 \OT1/cmr/m/n/10.95 im-ple-men-tierten Hough-Cir-cles Funk-
  []
@@ -1185,7 +1174,7 @@ Underfull \hbox (badness 2662) in paragraph at lines 111--114
 \OT1/cmr/m/n/10.95 mungen kann der Mit-telpunkt des
  []
 
-<images/kalibrierung_pap.png, id=320, 487.8225pt x 1195.46625pt>
+<images/kalibrierung_pap.png, id=325, 487.8225pt x 1195.46625pt>
 File: images/kalibrierung_pap.png Graphic file (type png)
 <use images/kalibrierung_pap.png>
 Package pdftex.def Info: images/kalibrierung_pap.png  used on input line 118.
@@ -1208,7 +1197,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--119
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kalib_bin.png, id=321, 516.42938pt x 308.65312pt>
+<images/kalib_bin.png, id=326, 516.42938pt x 308.65312pt>
 File: images/kalib_bin.png Graphic file (type png)
 <use images/kalib_bin.png>
 Package pdftex.def Info: images/kalib_bin.png  used on input line 127.
@@ -1218,7 +1207,7 @@ Overfull \hbox (6.97794pt too wide) in paragraph at lines 127--128
 [][] 
  []
 
-<images/kalib_circ.png, id=322, 506.6428pt x 268.75406pt>
+<images/kalib_circ.png, id=327, 506.6428pt x 268.75406pt>
 File: images/kalib_circ.png Graphic file (type png)
 <use images/kalib_circ.png>
 Package pdftex.def Info: images/kalib_circ.png  used on input line 134.
@@ -1252,126 +1241,122 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [31 <./images/kalibrierung_pap.png> <./images/kalib_bin.png> <./images/kalib_ci
 rc.png>]
-Overfull \hbox (29.1255pt too wide) in paragraph at lines 146--147
+Overfull \hbox (29.1255pt too wide) in paragraph at lines 147--148
 \OT1/cmr/m/n/10.95 abildern zu beziehen. Die benotigten Daten sind Po-si-tion 
 des Pucks, Geschwindigkeit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 []\OT1/cmr/m/n/10.95 Grundlage der Bild-ver-
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 152--153
+Underfull \hbox (badness 5203) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 ar-beitung ist auch hier
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 152--153
+Underfull \hbox (badness 4291) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 Raum uberge-gan-gen um
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 Binarbild ubersichtlicher
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 152--153
+Underfull \hbox (badness 2126) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 weie Flecken auer der
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 152--153
+Underfull \hbox (badness 1412) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 die grote her-aus-ge-sucht.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 gesuchte Ob-jekts (Puck
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 152--153
+Underfull \hbox (badness 1983) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 oder Roboter) wird ihre
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 Funk-tio-nen ver-wen-det.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 Im Unity Ko-or-di-naten-
  []
 
 
-Underfull \hbox (badness 8094) in paragraph at lines 152--153
+Underfull \hbox (badness 8094) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 sys-tem sind die Werte
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 dann geeignet fur den
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 152--153
+Underfull \hbox (badness 2293) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 Agen-ten. Aus der ak-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 Po-si-tion und der ver-
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 152--153
+Underfull \hbox (badness 1158) in paragraph at lines 153--154
 \OT1/cmr/m/n/10.95 noch die Geschwindigkeit
  []
 
-<images/bv_pap.png, id=336, 722.7pt x 1364.84906pt>
+<images/bv_pap.png, id=342, 722.7pt x 1364.84906pt>
 File: images/bv_pap.png Graphic file (type png)
 <use images/bv_pap.png>
-Package pdftex.def Info: images/bv_pap.png  used on input line 158.
+Package pdftex.def Info: images/bv_pap.png  used on input line 159.
 (pdftex.def)             Requested size: 216.81166pt x 409.45787pt.
 
-Overfull \hbox (50.36417pt too wide) in paragraph at lines 158--159
+Overfull \hbox (50.36417pt too wide) in paragraph at lines 159--160
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/bin_puck.png, id=337, 194.22563pt x 405.76593pt>
+<images/bin_puck.png, id=343, 194.22563pt x 405.76593pt>
 File: images/bin_puck.png Graphic file (type png)
 <use images/bin_puck.png>
-Package pdftex.def Info: images/bin_puck.png  used on input line 169.
+Package pdftex.def Info: images/bin_puck.png  used on input line 170.
 (pdftex.def)             Requested size: 87.40071pt x 182.59297pt.
-<images/bin_robo.png, id=338, 204.01219pt x 402.00188pt>
+<images/bin_robo.png, id=344, 204.01219pt x 402.00188pt>
 File: images/bin_robo.png Graphic file (type png)
 <use images/bin_robo.png>
-Package pdftex.def Info: images/bin_robo.png  used on input line 174.
+Package pdftex.def Info: images/bin_robo.png  used on input line 175.
 (pdftex.def)             Requested size: 91.80463pt x 180.89917pt.
-<images/detect.png, id=339, 203.25937pt x 408.02437pt>
+<images/detect.png, id=345, 203.25937pt x 408.02437pt>
 File: images/detect.png Graphic file (type png)
 <use images/detect.png>
-Package pdftex.def Info: images/detect.png  used on input line 179.
+Package pdftex.def Info: images/detect.png  used on input line 180.
 (pdftex.def)             Requested size: 91.46587pt x 183.60927pt.
-
-LaTeX Warning: Reference `bv' on page 32 undefined on input line 185.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (HHNTemplate.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1400,14 +1385,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34 <./images/bin_puck.png> <./images/bin_robo.png> <./images/detect.png>]
+[34 <./images/bin_puck.png> <./images/bin_robo.png> <./images/detect.png>])
+(HHNTemplate.bbl
 
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-)
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-Package natbib Warning: There were undefined citations.
+[35
 
+])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -1416,21 +1406,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[35
+[36
 
 ] (HHNTemplate.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `HHNTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 5482FBDA7443C09FD8F71779DB0CAEA5;3653.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `HHNTemplate.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `HHNTemplate.out':
+(rerunfilecheck)             Before: 5482FBDA7443C09FD8F71779DB0CAEA5;3653
+(rerunfilecheck)             After:  F2CD10AE260E2756B51C76FF89FC4D07;3778.
  ) 
 Here is how much of TeX's memory you used:
- 12998 strings out of 478659
- 211491 string characters out of 2845920
- 555442 words of memory out of 3000000
- 30790 multiletter control sequences out of 15000+600000
- 411419 words of font info for 54 fonts, out of 8000000 for 9000
+ 13018 strings out of 478659
+ 211785 string characters out of 2845920
+ 555516 words of memory out of 3000000
+ 30804 multiletter control sequences out of 15000+600000
+ 411765 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,63p,1843b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\mhaag\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -1441,10 +1440,12 @@ type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mhaag/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mhaag/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mhaag/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on HHNTemplate.pdf (37 pages, 2907553 bytes).
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
+s/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb
+>
+Output written on HHNTemplate.pdf (38 pages, 2926204 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 

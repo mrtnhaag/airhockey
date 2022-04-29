@@ -1,8 +1,25 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[jjRobots Ltd.()]{jjrob}
+jjRobots Ltd.
+\newblock Air hockey robot evo.
+\newblock https://www.jjrobots.com/the-open-source-air-hockey-robot/, letzter
+  Aufruf: 24.03.2020.
+
+\bibitem[Physics()]{tracker}
+Open~Source Physics.
+\newblock Tracker.
+\newblock https://physlets.org/tracker/.
+
+\bibitem[Rhody(2005)]{rhody2005lecture}
+Harvey Rhody.
+\newblock Lecture 10: Hough circle transform.
+\newblock \emph{Chester F. Carlson Center for Imaging Science, Rochester
+  Institute of Technology}, 2005.
 
 \end{thebibliography}
