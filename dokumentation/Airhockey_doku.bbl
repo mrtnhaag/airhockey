@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ppo()]{ppo_git}
+Ml-agents toolkit overview.
+\newblock
+  https://github.com/Unity-Technologies/ml-agents/blob/main/docs/ML-Agents-Overview.md,
+  letzter Aufruf: 30.04.2022.
+
+\bibitem[Education({\natexlab{a}})]{IBM}
+IBM~Cloud Education.
+\newblock Unsupervised learning.
+\newblock https://www.ibm.com/cloud/learn/unsupervised-learning, letzter
+  Aufruf: 25.04.2022, {\natexlab{a}}.
+
+\bibitem[Education({\natexlab{b}})]{IBM2}
+IBM~Cloud Education.
+\newblock Machine learning.
+\newblock https://www.ibm.com/cloud/learn/machine-learning, letzter Aufruf:
+  25.04.2022, {\natexlab{b}}.
+
+\bibitem[jjRobots Ltd.()]{jjrob}
+jjRobots Ltd.
+\newblock Air hockey robot evo.
+\newblock https://www.jjrobots.com/the-open-source-air-hockey-robot/, letzter
+  Aufruf: 24.03.2020.
+
+\bibitem[John~Schulman()]{ppo}
+Filip Wolski Prafulla Dhariwal Alec~Radford John~Schulman, Oleg~Klimov.
+\newblock Proximal policy optimization.
+\newblock https://openai.com/blog/openai-baselines-ppo/, letzter Aufruf:
+  30.04.2022.
+
+\bibitem[Kolter()]{CarnegieMellonUniversity}
+J.~Zico Kolter.
+\newblock Introduction to reinforcement learning.
+\newblock
+  https://icaps18.icaps-conference.org/fileadmin/alg/conferences/icaps18/summerschool/lectures/Lecture5-rl-intro.pdf,
+  letzter Aufruf: 27.04.2022.
+
+\bibitem[Physics()]{tracker}
+Open~Source Physics.
+\newblock Tracker.
+\newblock https://physlets.org/tracker/.
+
+\bibitem[Rhody(2005)]{rhody2005lecture}
+Harvey Rhody.
+\newblock Lecture 10: Hough circle transform.
+\newblock \emph{Chester F. Carlson Center for Imaging Science, Rochester
+  Institute of Technology}, 2005.
+
+\bibitem[Rieger()]{aracom}
+Julia Rieger.
+\newblock Reinforcement learning.
+\newblock https://aracom.de/reinforcement-learning/, letzter Aufruf:
+  27.04.2022.
+
+\bibitem[Sutton and Barto(2018)]{sutton2018reinforcement}
+Richard~S Sutton and Andrew~G Barto.
+\newblock \emph{Reinforcement learning: An introduction}.
+\newblock MIT press, 2018.
+
+\end{thebibliography}
