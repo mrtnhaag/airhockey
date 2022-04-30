@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -58,6 +58,10 @@ Julia Rieger.
 \newblock Reinforcement learning.
 \newblock https://aracom.de/reinforcement-learning/, letzter Aufruf:
   27.04.2022.
+
+\bibitem[Stache()]{rl_pic}
+Nicolaj~C. Stache.
+\newblock Vorlesungsskript deep learning.
 
 \bibitem[Sutton and Barto(2018)]{sutton2018reinforcement}
 Richard~S Sutton and Andrew~G Barto.

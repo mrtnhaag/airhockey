@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  30 APR 2022 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  30 APR 2022 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,9 +594,6 @@ trum fur maschinelles
  []
 
 
-Package natbib Warning: Citation `jjrob' on page 1 undefined on input line 17.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
 (fancyhdr)                \setlength{\headheight}{38.8842pt}.
@@ -619,23 +616,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [2]) (chapters/09_Reinforcement.tex
 Chapter 2.
 
-Package natbib Warning: Citation `IBM' on page 3 undefined on input line 8.
-
-
-Package natbib Warning: Citation `sutton2018reinforcement' on page 3 undefined 
-on input line 13.
-
-
-Package natbib Warning: Citation `sutton2018reinforcement' on page 3 undefined 
-on input line 13.
+Overfull \hbox (6.14566pt too wide) in paragraph at lines 8--10
+\OT1/cmr/m/n/10.95 men-schliche Ver-hal-ten zu im-i-tieren und zu verbessern [[
+]]. Ein typ-is-ches Beispiel,
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
-
-
-Package natbib Warning: Citation `IBM2' on page 3 undefined on input line 17.
 
 
 Overfull \hbox (4.90874pt too wide) in paragraph at lines 16--18
@@ -664,7 +653,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3
 
 ]
-<images/RL_Grundlagen.png, id=227, 455.45157pt x 217.5628pt>
+<images/RL_Grundlagen.png, id=236, 455.45157pt x 217.5628pt>
 File: images/RL_Grundlagen.png Graphic file (type png)
 <use images/RL_Grundlagen.png>
 Package pdftex.def Info: images/RL_Grundlagen.png  used on input line 29.
@@ -693,33 +682,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-
-Package natbib Warning: Citation `CarnegieMellonUniversity' on page 6 undefined
- on input line 68.
-
-
-Package natbib Warning: Citation `aracom' on page 6 undefined on input line 75.
-
-
-
-Package natbib Warning: Citation `ppo_git' on page 6 undefined on input line 75
-.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
-
-
-Package natbib Warning: Citation `ppo' on page 6 undefined on input line 81.
-
-
-Package natbib Warning: Citation `ppo_git' on page 6 undefined on input line 82
-.
-
-
-Package natbib Warning: Citation `ppo_git' on page 6 undefined on input line 86
-.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -776,12 +741,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-<images/HW_Aufbau.png, id=259, 232.797pt x 165.564pt>
+<images/HW_Aufbau.png, id=280, 232.797pt x 165.564pt>
 File: images/HW_Aufbau.png Graphic file (type png)
 <use images/HW_Aufbau.png>
 Package pdftex.def Info: images/HW_Aufbau.png  used on input line 14.
 (pdftex.def)             Requested size: 369.88583pt x 263.0762pt.
-<images/HW_Kamerahalterung.png, id=260, 174.324pt x 107.748pt>
+<images/HW_Kamerahalterung.png, id=281, 174.324pt x 107.748pt>
 File: images/HW_Kamerahalterung.png Graphic file (type png)
 <use images/HW_Kamerahalterung.png>
 Package pdftex.def Info: images/HW_Kamerahalterung.png  used on input line 27.
@@ -805,7 +770,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-<images/HW_Motorgehaeuse.png, id=271, 227.322pt x 211.554pt>
+<images/HW_Motorgehaeuse.png, id=292, 227.322pt x 211.554pt>
 File: images/HW_Motorgehaeuse.png Graphic file (type png)
 <use images/HW_Motorgehaeuse.png>
 Package pdftex.def Info: images/HW_Motorgehaeuse.png  used on input line 49.
@@ -851,7 +816,7 @@ Underfull \hbox (badness 1953) in paragraph at lines 64--65
 \OT1/cmr/m/n/10.95 Ab-bil-dung [][]3.4[][] ist diese hin-tere
  []
 
-<images/HW_Hintere_Halterung_Keil.png, id=279, 125.487pt x 152.205pt>
+<images/HW_Hintere_Halterung_Keil.png, id=300, 125.487pt x 152.205pt>
 File: images/HW_Hintere_Halterung_Keil.png Graphic file (type png)
 <use images/HW_Hintere_Halterung_Keil.png>
 Package pdftex.def Info: images/HW_Hintere_Halterung_Keil.png  used on input li
@@ -912,12 +877,12 @@ Underfull \hbox (badness 5954) in paragraph at lines 80--81
 \OT1/cmr/m/n/10.95 Span-nvor-rich-tung aus dem 3D
  []
 
-<images/HW_Umlenkrolle.png, id=281, 188.34pt x 150.453pt>
+<images/HW_Umlenkrolle.png, id=302, 188.34pt x 150.453pt>
 File: images/HW_Umlenkrolle.png Graphic file (type png)
 <use images/HW_Umlenkrolle.png>
 Package pdftex.def Info: images/HW_Umlenkrolle.png  used on input line 85.
 (pdftex.def)             Requested size: 147.95207pt x 118.1954pt.
-<images/HW_VerdrehungQuerstrebe.jpg, id=283, 2997.1975pt x 5023.76875pt>
+<images/HW_VerdrehungQuerstrebe.jpg, id=304, 2997.1975pt x 5023.76875pt>
 File: images/HW_VerdrehungQuerstrebe.jpg Graphic file (type jpg)
 <use images/HW_VerdrehungQuerstrebe.jpg>
 Package pdftex.def Info: images/HW_VerdrehungQuerstrebe.jpg  used on input line
@@ -951,7 +916,7 @@ Underfull \hbox (badness 7851) in paragraph at lines 113--115
 \OT1/cmr/m/n/10.95 Bei an-schlieen-den Tests kon-
  []
 
-<images/HW_Halterung_FQ.png, id=285, 455.301pt x 385.44pt>
+<images/HW_Halterung_FQ.png, id=306, 455.301pt x 385.44pt>
 File: images/HW_Halterung_FQ.png Graphic file (type png)
 <use images/HW_Halterung_FQ.png>
 Package pdftex.def Info: images/HW_Halterung_FQ.png  used on input line 119.
@@ -988,7 +953,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-<images/HW_Kamera_gebrochen.png, id=302, 190.092pt x 87.381pt>
+<images/HW_Kamera_gebrochen.png, id=323, 190.092pt x 87.381pt>
 File: images/HW_Kamera_gebrochen.png Graphic file (type png)
 <use images/HW_Kamera_gebrochen.png>
 Package pdftex.def Info: images/HW_Kamera_gebrochen.png  used on input line 142
@@ -1015,7 +980,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13
 
  <./images/HW_Kamera_gebrochen.png>]
-<images/HW_Pusher.png, id=310, 455.301pt x 534.141pt>
+<images/HW_Pusher.png, id=331, 455.301pt x 534.141pt>
 File: images/HW_Pusher.png Graphic file (type png)
 <use images/HW_Pusher.png>
 Package pdftex.def Info: images/HW_Pusher.png  used on input line 160.
@@ -1090,7 +1055,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [16
 
 ]
-<images/unity_interface_marked.png, id=326, 1332.47812pt x 819.06pt>
+<images/unity_interface_marked.png, id=347, 1332.47812pt x 819.06pt>
 File: images/unity_interface_marked.png Graphic file (type png)
 <use images/unity_interface_marked.png>
 Package pdftex.def Info: images/unity_interface_marked.png  used on input line 
@@ -1126,7 +1091,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<images/agent_unity.png, id=333, 53.44969pt x 60.225pt>
+<images/agent_unity.png, id=354, 53.44969pt x 60.225pt>
 File: images/agent_unity.png Graphic file (type png)
 <use images/agent_unity.png>
 Package pdftex.def Info: images/agent_unity.png  used on input line 65.
@@ -1166,7 +1131,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18 <./images/agent_unity.png>]
-<images/pusher_unity.png, id=340, 88.83188pt x 79.79813pt>
+<images/pusher_unity.png, id=361, 88.83188pt x 79.79813pt>
 File: images/pusher_unity.png Graphic file (type png)
 <use images/pusher_unity.png>
 Package pdftex.def Info: images/pusher_unity.png  used on input line 87.
@@ -1191,7 +1156,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
-<images/puck_unity.png, id=341, 68.50594pt x 63.23625pt>
+<images/puck_unity.png, id=362, 68.50594pt x 63.23625pt>
 File: images/puck_unity.png Graphic file (type png)
 <use images/puck_unity.png>
 Package pdftex.def Info: images/puck_unity.png  used on input line 107.
@@ -1227,7 +1192,7 @@ Underfull \hbox (badness 1888) in paragraph at lines 120--121
 \OT1/cmr/m/n/10.95 Ob-jekt hi-er-ar-chisch Weit-ere un-ter-ge-ord-net.
  []
 
-<images/matchfield.png, id=348, 202.50656pt x 404.26031pt>
+<images/matchfield.png, id=369, 202.50656pt x 404.26031pt>
 File: images/matchfield.png Graphic file (type png)
 <use images/matchfield.png>
 Package pdftex.def Info: images/matchfield.png  used on input line 125.
@@ -1320,7 +1285,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [25]
-<images/training_strats.png, id=385, 609.02531pt x 281.55188pt>
+<images/training_strats.png, id=406, 609.02531pt x 281.55188pt>
 File: images/training_strats.png Graphic file (type png)
 <use images/training_strats.png>
 Package pdftex.def Info: images/training_strats.png  used on input line 114.
@@ -1377,12 +1342,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-<images/reaching_erg.png, id=401, 886.06032pt x 277.035pt>
+<images/reaching_erg.png, id=422, 886.06032pt x 277.035pt>
 File: images/reaching_erg.png Graphic file (type png)
 <use images/reaching_erg.png>
 Package pdftex.def Info: images/reaching_erg.png  used on input line 156.
 (pdftex.def)             Requested size: 369.88583pt x 115.64795pt.
-<images/rea2_erg.png, id=402, 554.07pt x 173.14688pt>
+<images/rea2_erg.png, id=423, 554.07pt x 173.14688pt>
 File: images/rea2_erg.png Graphic file (type png)
 <use images/rea2_erg.png>
 Package pdftex.def Info: images/rea2_erg.png  used on input line 163.
@@ -1390,7 +1355,7 @@ Package pdftex.def Info: images/rea2_erg.png  used on input line 163.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/fullgame_erg.png, id=403, 561.59813pt x 176.15813pt>
+<images/fullgame_erg.png, id=424, 561.59813pt x 176.15813pt>
 File: images/fullgame_erg.png Graphic file (type png)
 <use images/fullgame_erg.png>
 Package pdftex.def Info: images/fullgame_erg.png  used on input line 171.
@@ -1398,7 +1363,7 @@ Package pdftex.def Info: images/fullgame_erg.png  used on input line 171.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/centered_erg.png, id=404, 559.33969pt x 173.89969pt>
+<images/centered_erg.png, id=425, 559.33969pt x 173.89969pt>
 File: images/centered_erg.png Graphic file (type png)
 <use images/centered_erg.png>
 Package pdftex.def Info: images/centered_erg.png  used on input line 178.
@@ -1406,7 +1371,7 @@ Package pdftex.def Info: images/centered_erg.png  used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/centered2_erg.png, id=405, 758.08218pt x 235.63031pt>
+<images/centered2_erg.png, id=426, 758.08218pt x 235.63031pt>
 File: images/centered2_erg.png Graphic file (type png)
 <use images/centered2_erg.png>
 Package pdftex.def Info: images/centered2_erg.png  used on input line 185.
@@ -1482,16 +1447,12 @@ Overfull \hbox (23.87865pt too wide) in paragraph at lines 3--4
 x-i-malgeschwindigkeiten,
  []
 
-
-Package natbib Warning: Citation `tracker' on page 35 undefined on input line 8
-.
-
-<images/messung_robo_x.png, id=442, 590.95781pt x 173.14688pt>
+<images/messung_robo_x.png, id=464, 590.95781pt x 173.14688pt>
 File: images/messung_robo_x.png Graphic file (type png)
 <use images/messung_robo_x.png>
 Package pdftex.def Info: images/messung_robo_x.png  used on input line 10.
 (pdftex.def)             Requested size: 369.88583pt x 108.37505pt.
-<images/messung_robo_v.png, id=443, 782.17218pt x 234.1247pt>
+<images/messung_robo_v.png, id=465, 782.17218pt x 234.1247pt>
 File: images/messung_robo_v.png Graphic file (type png)
 <use images/messung_robo_v.png>
 Package pdftex.def Info: images/messung_robo_v.png  used on input line 11.
@@ -1502,12 +1463,12 @@ Overfull \hbox (47.5834pt too wide) in paragraph at lines 8--17
 iese Max-i-malgeschwindigkeit
  []
 
-<images/messung_bolzen_x.png, id=445, 595.47469pt x 192.72pt>
+<images/messung_bolzen_x.png, id=467, 595.47469pt x 192.72pt>
 File: images/messung_bolzen_x.png Graphic file (type png)
 <use images/messung_bolzen_x.png>
 Package pdftex.def Info: images/messung_bolzen_x.png  used on input line 19.
 (pdftex.def)             Requested size: 369.88583pt x 119.70863pt.
-<images/messung_bolzen_v.png, id=446, 587.94656pt x 191.9672pt>
+<images/messung_bolzen_v.png, id=468, 587.94656pt x 191.9672pt>
 File: images/messung_bolzen_v.png Graphic file (type png)
 <use images/messung_bolzen_v.png>
 Package pdftex.def Info: images/messung_bolzen_v.png  used on input line 20.
@@ -1545,7 +1506,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-<images/gui_pic_marked.png, id=465, 691.83469pt x 572.89032pt>
+<images/gui_pic_marked.png, id=488, 691.83469pt x 572.89032pt>
 File: images/gui_pic_marked.png Graphic file (type png)
 <use images/gui_pic_marked.png>
 Package pdftex.def Info: images/gui_pic_marked.png  used on input line 37.
@@ -1610,7 +1571,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-<images/gui_pap.png, id=482, 1107.38719pt x 1902.3572pt>
+<images/gui_pap.png, id=505, 1107.38719pt x 1902.3572pt>
 File: images/gui_pap.png Graphic file (type png)
 <use images/gui_pap.png>
 Package pdftex.def Info: images/gui_pap.png  used on input line 90.
@@ -1629,7 +1590,7 @@ Underfull \hbox (badness 1048) in paragraph at lines 100--101
 \OT1/cmr/m/n/10.95 Be-we-gung er-rech-net. Danach wird
  []
 
-<images/spielen_pap.png, id=485, 571.38469pt x 1052.43187pt>
+<images/spielen_pap.png, id=508, 571.38469pt x 1052.43187pt>
 File: images/spielen_pap.png Graphic file (type png)
 <use images/spielen_pap.png>
 Package pdftex.def Info: images/spielen_pap.png  used on input line 105.
@@ -1690,10 +1651,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--119
  []
 
 
-Package natbib Warning: Citation `rhody2005lecture' on page 44 undefined on inp
-ut line 124.
-
-
 Underfull \hbox (badness 1286) in paragraph at lines 124--127
 \OT1/cmr/m/n/10.95 im-ple-men-tierten Hough-Cir-cles Funk-
  []
@@ -1718,7 +1675,7 @@ Underfull \hbox (badness 2452) in paragraph at lines 124--127
 \OT1/cmr/m/n/10.95 zweier Funk-tio-nen die Um-rech-nung
  []
 
-<images/kalibrierung_pap.png, id=503, 487.8225pt x 1195.46625pt>
+<images/kalibrierung_pap.png, id=527, 487.8225pt x 1195.46625pt>
 File: images/kalibrierung_pap.png Graphic file (type png)
 <use images/kalibrierung_pap.png>
 Package pdftex.def Info: images/kalibrierung_pap.png  used on input line 131.
@@ -1741,7 +1698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kalib_bin.png, id=504, 516.42938pt x 308.65312pt>
+<images/kalib_bin.png, id=528, 516.42938pt x 308.65312pt>
 File: images/kalib_bin.png Graphic file (type png)
 <use images/kalib_bin.png>
 Package pdftex.def Info: images/kalib_bin.png  used on input line 140.
@@ -1751,7 +1708,7 @@ Overfull \hbox (6.97794pt too wide) in paragraph at lines 140--141
 [][] 
  []
 
-<images/kalib_circ.png, id=505, 506.6428pt x 268.75406pt>
+<images/kalib_circ.png, id=529, 506.6428pt x 268.75406pt>
 File: images/kalib_circ.png Graphic file (type png)
 <use images/kalib_circ.png>
 Package pdftex.def Info: images/kalib_circ.png  used on input line 147.
@@ -1870,7 +1827,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--167
 \OT1/cmr/m/n/10.95 und der ver-strich-enen
  []
 
-<images/bv_pap.png, id=520, 722.7pt x 1364.84906pt>
+<images/bv_pap.png, id=545, 722.7pt x 1364.84906pt>
 File: images/bv_pap.png Graphic file (type png)
 <use images/bv_pap.png>
 Package pdftex.def Info: images/bv_pap.png  used on input line 171.
@@ -1883,17 +1840,17 @@ Overfull \hbox (50.36417pt too wide) in paragraph at lines 171--172
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/bin_puck.png, id=521, 194.22563pt x 405.76593pt>
+<images/bin_puck.png, id=546, 194.22563pt x 405.76593pt>
 File: images/bin_puck.png Graphic file (type png)
 <use images/bin_puck.png>
 Package pdftex.def Info: images/bin_puck.png  used on input line 182.
 (pdftex.def)             Requested size: 87.40071pt x 182.59297pt.
-<images/bin_robo.png, id=522, 204.01219pt x 402.00188pt>
+<images/bin_robo.png, id=547, 204.01219pt x 402.00188pt>
 File: images/bin_robo.png Graphic file (type png)
 <use images/bin_robo.png>
 Package pdftex.def Info: images/bin_robo.png  used on input line 187.
 (pdftex.def)             Requested size: 91.80463pt x 180.89917pt.
-<images/detect.png, id=523, 203.25937pt x 408.02437pt>
+<images/detect.png, id=548, 203.25937pt x 408.02437pt>
 File: images/detect.png Graphic file (type png)
 <use images/detect.png>
 Package pdftex.def Info: images/detect.png  used on input line 192.
@@ -1964,12 +1921,12 @@ Overfull \hbox (17.8358pt too wide) in paragraph at lines 10--14
 n oder nicht veroffentlichten
  []
 
-<images/sign_haag.png, id=552, 383.18156pt x 234.1247pt>
+<images/sign_haag.png, id=577, 383.18156pt x 234.1247pt>
 File: images/sign_haag.png Graphic file (type png)
 <use images/sign_haag.png>
 Package pdftex.def Info: images/sign_haag.png  used on input line 18.
 (pdftex.def)             Requested size: 114.95535pt x 70.23795pt.
-<images/DB.png, id=553, 118.19156pt x 68.50594pt>
+<images/DB.png, id=578, 118.19156pt x 68.50594pt>
 File: images/DB.png Graphic file (type png)
 <use images/DB.png>
 Package pdftex.def Info: images/DB.png  used on input line 24.
@@ -2046,9 +2003,6 @@ l/lectures/Lecture5-
 
 )
 
-Package natbib Warning: There were undefined citations.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
 (fancyhdr)                \setlength{\headheight}{38.8842pt}.
@@ -2058,12 +2012,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [52
 
-] (Airhockey_doku.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+] (Airhockey_doku.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2071,10 +2020,10 @@ Package rerunfilecheck Info: File `Airhockey_doku.out' has not changed.
 (rerunfilecheck)             Checksum: 763629BA04D94231982FC082CA66C3D9;5546.
  ) 
 Here is how much of TeX's memory you used:
- 13285 strings out of 478659
- 217995 string characters out of 2845920
- 557457 words of memory out of 3000000
- 31000 multiletter control sequences out of 15000+600000
+ 13289 strings out of 478659
+ 218048 string characters out of 2845920
+ 557735 words of memory out of 3000000
+ 31003 multiletter control sequences out of 15000+600000
  411765 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,63p,1899b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2093,9 +2042,9 @@ y10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on Airhockey_doku.pdf (56 pages, 18800915 bytes).
+Output written on Airhockey_doku.pdf (56 pages, 18803423 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 135 named destinations out of 1000 (max. 500000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
  484 words of extra memory for PDF output out of 10000 (max. 10000000)
 
