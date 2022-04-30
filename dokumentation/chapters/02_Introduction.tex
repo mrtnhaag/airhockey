@@ -4,15 +4,28 @@
 
 In Einleitungskapitel werden die Rahmenbedingungen des Projekts erläutert.
 In diesem Zuge sollen die Ausgangssituation und das Ziel genauer behandelt werden.
-\section{Ausgangssituation}
-\label{sect:Ausgangssituation}
-Airhockey ist ein hochdynamisches Geschicklichkeitsspiel, bei dem zwei Personen gegen einander spielen. Hierfür sind die Spieler mit einem Pusher ausgestattet. Ziel des Spiels
-ist es, den auf einem Luftfilm gleitenden Puck im gegnerischen Tor zu versenken. Durch
-die hohen Geschwindigkeiten, welche sowohl den Puck, als auch die Pusher erreichen, besteht ein immenser Anspruch an die Mechanik, sowie an die informationsverarbeitenden
+
+\section{Vorstellung des Projekts}
+\label{sect:Projektvorstellung}
+Airhockey ist ein hochdynamisches Geschicklichkeitsspiel, bei dem zwei Personen gegeneinander antreten. Hierfür sind die Spieler mit jeweils einem Pusher ausgestattet. Ziel des Spiels ist es, den auf einem Luftfilm gleitenden Puck im gegnerischen Tor zu versenken. Durch die hohen Geschwindigkeiten, welche sowohl der Puck als auch die Pusher erreichen, besteht ein immenser Anspruch an die Mechanik sowie an die informationsverarbeitenden
 Systeme des gesamten Roboters.
-Am Zentrum für maschinelles Lernen (ZML) wurde bereits in einer vorangegangenen Arbeit an einem selbst spielenden Airhockeytisch gearbeitet. Dazu wurde bereits ein Airhockeytisch mit der benötigten Hardware ausgestattet. Die Kinematik basiert dabei auf der des Roboters von jjRobots \cite{jjrob}
-Das Zentrum für maschinelles Lernen (ZML) möchte einen selbstlernenden und spielenden AirHockeyRoboter entwickeln. Dafür statteten Maschinenbaustudenten einen Airhockeytisch mit einem Kamerahalter und einem Roboter aus, welcher auf dem Konzept
-der Firma jjRobots basiert.
+Um das Potenzial künstlicher Intelligenz anhand eines anschaulichen Demonstrators aufzuzeigen, möchte das Zentrum für maschinelles Lernen (ZML) in Heilbronn einen autonomen Air-Hockey-Roboter entwickeln. Dieser soll mithilfe eines Reinforcement Learning Algorithmus selbstständig das Air-Hockeyspiel erlernen und im Spiel gegen einen Menschen gewinnen.
+Bei dieser Form des Machine Learning muss ein Agent mit einer unbekannten Umgebung interagieren und daraus Erkenntnisse erzielen, also lernen. Das Lernen erfolgt auf der Basis von Belohnungen und Bestrafungen. Jede Aktion, die der Agent ausführt, wird dahingehend bewertet, ob sie im weiteren Verlauf zum Ziel (hier: ein Tor zu erzielen) oder im Gegensatz dazu zu einem Rückschlag (hier: ein Gegentor) führt.
+
+\section{Aufgabenstellung}
+\label{sect:Aufgabenstellung}
+Am Zentrum für maschinelles Lernen (ZML) wurde bereits in einer vorangegangenen Arbeit an einem selbst spielenden Airhockeytisch gearbeitet. Dazu wurde bereits ein Airhockeytisch mit der benötigten Hardware ausgestattet. Die Kinematik basiert dabei auf der des Roboters von jjRobots \cite{jjrob}. Des Weiteren wurde darin schon, in der Simulationsumgebung Unity, der Grundstein für das Training eines Reinforcement Learning Algorithmus gelegt. Eine Teilaufgabe ist nun, das Training des Agenten weiter voranzutreiben.\\ Zusätzlich zum Softwarebereich soll auch die vorhandene Hardware gründlich überprüft werden und bei Bedarf die Komponenten ausgetauscht werden.\\
+Für das abschließende Testspiel am realen Aufbau muss außerdem noch eine Bildverarbeitung implementiert werden.
+
+\section{Zielsetzung}
+\label{sect:Zielsetzung}
+Ein Ziel dieses Masterprojekts ist das erfolgreiche Training eines Agenten, sodass dieser in der Lage ist, gegen einen menschlichen Spieler anzutreten und diesen auch zu besiegen. Ein weiteres Ziel ist die Übertragung der aus der Simulation gewonnenen Ergebnisse auf den realen Airhockeytisch.
+
+\section{Vorgehensweise}
+\label{sect:Vorgehensweise}
+Zuerst werden die Grundlagen für das Reinforcement Learning gelegt. Anschließend wird auf die genaueren Gegebenheiten vor Ort eingegangen und eine umfangreiche Hardwareanalyse durchgeführt.
+Anschließend wird die Simulationsumgebung erläutert, in der die Umsetzung von diesem Projekt realisiert wird. Bevor aber ein Spiel am realen Demonstrator möglich ist, muss der Software Agent erst in dieser Simulationsumgebung trainiert werden. Bevor ein Überblick über den aktuellen Stand des Hardwareaufbaus erarbeitet werden kann, werden zunächst projektspezifische Grundlagen geklärt. 
+Abschließend erfolgt eine Evaluation der Ergebnisse.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  29 APR 2022 12:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.10)  30 APR 2022 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,53 +528,33 @@ LaTeX Info: Redefining \nameref on input line 103.
 \openout3 = `HHNTemplate.out'.
 
  (chapters/00_TitlePage.tex
-<images/PLACEHOLDER.png, id=103, 770.88pt x 429.85594pt>
-File: images/PLACEHOLDER.png Graphic file (type png)
-<use images/PLACEHOLDER.png>
-Package pdftex.def Info: images/PLACEHOLDER.png  used on input line 4.
-(pdftex.def)             Requested size: 369.88583pt x 206.24979pt.
+<images/zml_logo.png, id=147, 1062.21844pt x 213.04594pt>
+File: images/zml_logo.png Graphic file (type png)
+<use images/zml_logo.png>
+Package pdftex.def Info: images/zml_logo.png  used on input line 4.
+(pdftex.def)             Requested size: 369.88583pt x 74.18684pt.
 
 [1
 
-{C:/Users/mhaag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/PLA
-CEHOLDER.png>]
-<images/HHNLogo.png, id=115, 149.358pt x 85.5195pt>
+{C:/Users/mhaag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/zml
+_logo.png>]
+<images/HHNLogo.png, id=160, 149.358pt x 85.5195pt>
 File: images/HHNLogo.png Graphic file (type png)
 <use images/HHNLogo.png>
 Package pdftex.def Info: images/HHNLogo.png  used on input line 33.
 (pdftex.def)             Requested size: 221.93375pt x 127.0862pt.
+
+Overfull \hbox (4.95554pt too wide) in paragraph at lines 37--44
+[] 
+ []
+
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.115 \tableofcontents
-                       [1 <./images/HHNLogo.png>] (HHNTemplate.toc)
-\tf@toc=\write4
-\openout4 = `HHNTemplate.toc'.
-
-
-(chapters/02_Introduction.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 38.8842pt, for example:
-(fancyhdr)                \setlength{\headheight}{38.8842pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
-
-[1
-
-]
-Chapter 1.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-.
-(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <24.88> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1.
-
+                       [1 <./images/HHNLogo.png>] (HHNTemplate.toc
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -585,8 +565,469 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-]) (chapters/04_Unity.tex
+])
+\tf@toc=\write4
+\openout4 = `HHNTemplate.toc'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3] (chapters/02_Introduction.tex
+Chapter 1.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+.
+(C:\Users\mhaag\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <24.88> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1.
+
+Overfull \hbox (5.4258pt too wide) in paragraph at lines 10--14
+\OT1/cmr/m/n/10.95 an-schaulichen Demon-stra-tors aufzuzeigen, mochte das Zen-
+trum fur maschinelles
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 38.8842pt, for example:
+(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+
+[1
+
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2]) (chapters/09_Reinforcement.tex
 Chapter 2.
+
+Overfull \hbox (6.14566pt too wide) in paragraph at lines 8--10
+\OT1/cmr/m/n/10.95 men-schliche Ver-hal-ten zu im-i-tieren und zu verbessern [[
+]]. Ein typ-is-ches Beispiel,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+
+Overfull \hbox (4.90874pt too wide) in paragraph at lines 16--18
+\OT1/cmr/m/n/10.95 ohne ein men-schliches Ein-greifen ver-steckte Muster ent-de
+cken oder Daten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 38.8842pt, for example:
+(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+
+[3
+
+]
+<images/RL_Grundlagen.png, id=236, 455.45157pt x 217.5628pt>
+File: images/RL_Grundlagen.png Graphic file (type png)
+<use images/RL_Grundlagen.png>
+Package pdftex.def Info: images/RL_Grundlagen.png  used on input line 29.
+(pdftex.def)             Requested size: 369.88583pt x 176.69298pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4 <./images/RL_Grundlagen.png>]
+Overfull \hbox (9.07585pt too wide) in paragraph at lines 49--51
+\OT1/cmr/m/n/10.95 en-tweder nach einer bes-timmten Zeit ter-miniert wer-den od
+er aber abhangig
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6
+
+]) (chapters/08_Hardware.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+Chapter 3.
+
+Overfull \hbox (14.35826pt too wide) in paragraph at lines 3--5
+\OT1/cmr/m/n/10.95 Diese Pro-jek-tar-beit baut auf mehreren Vorganger-pro-jek-
+ten auf. Bei der []Ubergabe
+ []
+
+
+Overfull \hbox (11.90466pt too wide) in paragraph at lines 3--5
+\OT1/cmr/m/n/10.95 stra-tor besteht ak-tuell aus einem Airhock-eytisch, einer K
+am-era und der Mechanik
+ []
+
+
+Overfull \hbox (6.67285pt too wide) in paragraph at lines 3--5
+\OT1/cmr/m/n/10.95 zwei Lin-ear-ach-sen, die eine Be-we-gung des \Push-ers" in 
+einer Ebene ermoglichen.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 38.8842pt, for example:
+(fancyhdr)                \setlength{\headheight}{38.8842pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
+
+[8
+
+]
+<images/HW_Aufbau.png, id=278, 232.797pt x 165.564pt>
+File: images/HW_Aufbau.png Graphic file (type png)
+<use images/HW_Aufbau.png>
+Package pdftex.def Info: images/HW_Aufbau.png  used on input line 14.
+(pdftex.def)             Requested size: 369.88583pt x 263.0762pt.
+<images/HW_Kamerahalterung.png, id=279, 174.324pt x 107.748pt>
+File: images/HW_Kamerahalterung.png Graphic file (type png)
+<use images/HW_Kamerahalterung.png>
+Package pdftex.def Info: images/HW_Kamerahalterung.png  used on input line 27.
+(pdftex.def)             Requested size: 369.88583pt x 228.63673pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9 <./images/HW_Aufbau.png> <./images/HW_Kamerahalterung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+<images/HW_Motorgehaeuse.png, id=290, 227.322pt x 211.554pt>
+File: images/HW_Motorgehaeuse.png Graphic file (type png)
+<use images/HW_Motorgehaeuse.png>
+Package pdftex.def Info: images/HW_Motorgehaeuse.png  used on input line 49.
+(pdftex.def)             Requested size: 221.93375pt x 206.54677pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10
+
+
+ <./images/HW_Motorgehaeuse.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[]\OT1/cmr/m/n/10.95 Zur Losung dieses Prob-lems
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+\OT1/cmr/m/n/10.95 (1) ohne Auss-parun-gen und
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 64--65
+\OT1/cmr/m/n/10.95 mit verstark-ter Wand-dicke 3D
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 64--65
+\OT1/cmr/m/n/10.95 Fuhrungswelle in Langsrich-tung
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 64--65
+\OT1/cmr/m/n/10.95 Ab-bil-dung [][]3.4[][] ist diese hin-tere
+ []
+
+<images/HW_Hintere_Halterung_Keil.png, id=298, 125.487pt x 152.205pt>
+File: images/HW_Hintere_Halterung_Keil.png Graphic file (type png)
+<use images/HW_Hintere_Halterung_Keil.png>
+Package pdftex.def Info: images/HW_Hintere_Halterung_Keil.png  used on input li
+ne 69.
+(pdftex.def)             Requested size: 147.95207pt x 179.45634pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]\OT1/cmr/m/n/10.95 Figure 3.4: []Hintere Hal-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\OT1/cmr/m/n/10.95 terung der Fuhrungswelle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\OT1/cmr/m/n/10.95 in Langsrich-tung mit rot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\OT1/cmr/m/n/10.95 gekennze-ich-netem Keil zur
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 80--81
+[]\OT1/cmr/m/n/10.95 Im Zuge der gesamten Sta-bil-
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 80--81
+\OT1/cmr/m/n/10.95 isierung des Zah-n-riemenantriebs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OT1/cmr/m/n/10.95 aus dem 3D Drucker durch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OT1/cmr/m/n/10.95 in-dus-triell hergestellte Alu-
+ []
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 80--81
+\OT1/cmr/m/n/10.95 mini-umzahnrader er-setzt. Des
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 80--81
+\OT1/cmr/m/n/10.95 Weit-eren wur-den auch die 3D
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 80--81
+\OT1/cmr/m/n/10.95 Span-nvor-rich-tung aus dem 3D
+ []
+
+<images/HW_Umlenkrolle.png, id=300, 188.34pt x 150.453pt>
+File: images/HW_Umlenkrolle.png Graphic file (type png)
+<use images/HW_Umlenkrolle.png>
+Package pdftex.def Info: images/HW_Umlenkrolle.png  used on input line 85.
+(pdftex.def)             Requested size: 147.95207pt x 118.1954pt.
+<images/HW_VerdrehungQuerstrebe.jpg, id=302, 2997.1975pt x 5023.76875pt>
+File: images/HW_VerdrehungQuerstrebe.jpg Graphic file (type jpg)
+<use images/HW_VerdrehungQuerstrebe.jpg>
+Package pdftex.def Info: images/HW_VerdrehungQuerstrebe.jpg  used on input line
+ 101.
+(pdftex.def)             Requested size: 147.95207pt x 247.98358pt.
+
+Underfull \hbox (badness 1371) in paragraph at lines 102--102
+[]\OT1/cmr/m/n/10.95 Figure 3.6: []Verdrehung der
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 102--102
+\OT1/cmr/m/n/10.95 Fuhrungswellen in Quer-rich-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 113--115
+\OT1/cmr/m/n/10.95 Langsrich-tung. Ab-bil-dung [][]3.7[][]
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 113--115
+\OT1/cmr/m/n/10.95 al-ten, darunter auf dem Tisch
+ []
+
+
+Underfull \hbox (badness 7851) in paragraph at lines 113--115
+\OT1/cmr/m/n/10.95 Bei an-schlieen-den Tests kon-
+ []
+
+<images/HW_Halterung_FQ.png, id=304, 455.301pt x 385.44pt>
+File: images/HW_Halterung_FQ.png Graphic file (type png)
+<use images/HW_Halterung_FQ.png>
+Package pdftex.def Info: images/HW_Halterung_FQ.png  used on input line 119.
+(pdftex.def)             Requested size: 147.95207pt x 125.24887pt.
+
+Underfull \hbox (badness 6316) in paragraph at lines 120--120
+[]\OT1/cmr/m/n/10.95 Figure 3.7: []Vergleich der
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11
+
+ <./images/HW_Hintere_Halterung_Keil.png> <./images/HW_Umlenkrolle.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12 <./images/HW_VerdrehungQuerstrebe.jpg> <./images/HW_Halterung_FQ.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+<images/HW_Kamera_gebrochen.png, id=321, 190.092pt x 87.381pt>
+File: images/HW_Kamera_gebrochen.png Graphic file (type png)
+<use images/HW_Kamera_gebrochen.png>
+Package pdftex.def Info: images/HW_Kamera_gebrochen.png  used on input line 142
+.
+(pdftex.def)             Requested size: 369.88583pt x 170.05356pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13
+
+ <./images/HW_Kamera_gebrochen.png>]
+<images/HW_Pusher.png, id=329, 455.301pt x 534.141pt>
+File: images/HW_Pusher.png Graphic file (type png)
+<use images/HW_Pusher.png>
+Package pdftex.def Info: images/HW_Pusher.png  used on input line 160.
+(pdftex.def)             Requested size: 221.93375pt x 260.36212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--166
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14
+
+ <./images/HW_Pusher.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+) (chapters/04_Unity.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15
+
+]
+Chapter 4.
 
 Overfull \hbox (3.54007pt too wide) in paragraph at lines 3--6
 \OT1/cmr/m/n/10.95 Ohne eine angemessene Sim-u-la-tion-sumge-bung ist das ganze
@@ -600,8 +1041,8 @@ Overfull \hbox (15.49368pt too wide) in paragraph at lines 3--6
  []
 
 
-LaTeX Warning: Reference `untiy_interface' on page 3 undefined on input line 21
-.
+LaTeX Warning: Reference `untiy_interface' on page 16 undefined on input line 2
+1.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -611,10 +1052,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[3
+[16
 
 ]
-<images/unity_interface_marked.png, id=163, 1332.47812pt x 819.06pt>
+<images/unity_interface_marked.png, id=345, 1332.47812pt x 819.06pt>
 File: images/unity_interface_marked.png Graphic file (type png)
 <use images/unity_interface_marked.png>
 Package pdftex.def Info: images/unity_interface_marked.png  used on input line 
@@ -639,19 +1080,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4 <./images/unity_interface_marked.png>]
+[17 <./images/unity_interface_marked.png>]
+Overfull \hbox (1.09145pt too wide) in paragraph at lines 45--47
+\OT1/cmr/m/n/10.95 sicht im Spiel beobachtet wer-den als auch eine Darstel-lung
+ aller GameOb-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-<images/agent_unity.png, id=171, 53.44969pt x 60.225pt>
+<images/agent_unity.png, id=352, 53.44969pt x 60.225pt>
 File: images/agent_unity.png Graphic file (type png)
 <use images/agent_unity.png>
 Package pdftex.def Info: images/agent_unity.png  used on input line 65.
 (pdftex.def)             Requested size: 73.97603pt x 83.3596pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--66
-[]\OT1/cmr/m/n/10.95 Figure 2.2:
+[]\OT1/cmr/m/n/10.95 Figure 4.2:
  []
 
 
@@ -665,9 +1112,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--66
  []
 
 
-Overfull \hbox (0.65039pt too wide) in paragraph at lines 71--74
-\OT1/cmr/m/n/10.95 ior Pa-ram-e-ter Com-po-nente ist, neben De-ci-son Re-queste
-r, zur Parametrisierung
+Overfull \hbox (4.59444pt too wide) in paragraph at lines 71--74
+\OT1/cmr/m/n/10.95 des Ac-tion-spaces als auch die der Ob-ser-va-tion fest-gele
+gt wer-den. Auch Angaben
  []
 
 
@@ -683,15 +1130,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5 <./images/agent_unity.png>]
-<images/pusher_unity.png, id=179, 88.83188pt x 79.79813pt>
+[18 <./images/agent_unity.png>]
+<images/pusher_unity.png, id=359, 88.83188pt x 79.79813pt>
 File: images/pusher_unity.png Graphic file (type png)
 <use images/pusher_unity.png>
 Package pdftex.def Info: images/pusher_unity.png  used on input line 87.
 (pdftex.def)             Requested size: 73.97603pt x 66.45523pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 88--88
-[]\OT1/cmr/m/n/10.95 Figure 2.3:
+[]\OT1/cmr/m/n/10.95 Figure 4.3:
  []
 
 
@@ -709,14 +1156,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
-<images/puck_unity.png, id=180, 68.50594pt x 63.23625pt>
+<images/puck_unity.png, id=360, 68.50594pt x 63.23625pt>
 File: images/puck_unity.png Graphic file (type png)
 <use images/puck_unity.png>
 Package pdftex.def Info: images/puck_unity.png  used on input line 107.
 (pdftex.def)             Requested size: 73.97603pt x 68.29121pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--108
-[]\OT1/cmr/m/n/10.95 Figure 2.4:
+[]\OT1/cmr/m/n/10.95 Figure 4.4:
  []
 
 
@@ -740,19 +1187,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6 <./images/pusher_unity.png>]
-Underfull \hbox (badness 2088) in paragraph at lines 120--121
-\OT1/cmr/m/n/10.95 eine Sprite Ren-derer Com-po-nent, die ein
+[19 <./images/pusher_unity.png>]
+Underfull \hbox (badness 1888) in paragraph at lines 120--121
+\OT1/cmr/m/n/10.95 Ob-jekt hi-er-ar-chisch Weit-ere un-ter-ge-ord-net.
  []
 
-<images/matchfield.png, id=187, 202.50656pt x 404.26031pt>
+<images/matchfield.png, id=367, 202.50656pt x 404.26031pt>
 File: images/matchfield.png Graphic file (type png)
 <use images/matchfield.png>
 Package pdftex.def Info: images/matchfield.png  used on input line 125.
 (pdftex.def)             Requested size: 73.97603pt x 147.68024pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 126--126
-[]\OT1/cmr/m/n/10.95 Figure 2.5:
+[]\OT1/cmr/m/n/10.95 Figure 4.5:
  []
 
 
@@ -773,7 +1220,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7 <./images/puck_unity.png> <./images/matchfield.png>])
+[20 <./images/puck_unity.png> <./images/matchfield.png>])
 (chapters/05_rewards_training.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -783,8 +1230,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8]
-Chapter 3.
+[21]
+Chapter 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -793,7 +1240,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[9
+[22
 
 ]
 
@@ -804,7 +1251,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10]
+[23]
+Overfull \hbox (22.32744pt too wide) in paragraph at lines 80--82
+\OT1/cmr/m/n/10.95 Seite des Agen-ten geschossen. Auch die Start-po-si-tion var
+i-iert zufallig.Beendet
+ []
+
+
+Overfull \hbox (35.17842pt too wide) in paragraph at lines 80--82
+\OT1/cmr/m/n/10.95 abgewehrt wurde. Das ist der Fall, wenn die X-Komponente der
+ Geschwindigkeit
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -813,7 +1271,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
@@ -826,8 +1284,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12]
-<images/training_strats.png, id=223, 609.02531pt x 281.55188pt>
+[25]
+<images/training_strats.png, id=404, 609.02531pt x 281.55188pt>
 File: images/training_strats.png Graphic file (type png)
 <use images/training_strats.png>
 Package pdftex.def Info: images/training_strats.png  used on input line 114.
@@ -841,10 +1299,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13 <./images/training_strats.png>]
+[26 <./images/training_strats.png>]
 Overfull \hbox (5.5146pt too wide) in paragraph at lines 134--136
 \OT1/cmr/m/n/10.95 Das ML-Agents Toolkit stellt sowohl PPO als auch SAC Agen-te
 n zur Verfugung.
+ []
+
+
+Overfull \hbox (10.19873pt too wide) in paragraph at lines 134--136
+\OT1/cmr/m/n/10.95 sowohl einen PPO als auch einen SAC Agen-ten, jew-eils das g
+le-iche Ein-stiegstrain-
  []
 
 
@@ -860,7 +1324,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[14]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
@@ -873,17 +1337,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-<images/reaching_erg.png, id=238, 886.06032pt x 277.035pt>
+<images/reaching_erg.png, id=420, 886.06032pt x 277.035pt>
 File: images/reaching_erg.png Graphic file (type png)
 <use images/reaching_erg.png>
 Package pdftex.def Info: images/reaching_erg.png  used on input line 156.
 (pdftex.def)             Requested size: 369.88583pt x 115.64795pt.
-<images/rea2_erg.png, id=239, 554.07pt x 173.14688pt>
+<images/rea2_erg.png, id=421, 554.07pt x 173.14688pt>
 File: images/rea2_erg.png Graphic file (type png)
 <use images/rea2_erg.png>
 Package pdftex.def Info: images/rea2_erg.png  used on input line 163.
@@ -891,7 +1355,7 @@ Package pdftex.def Info: images/rea2_erg.png  used on input line 163.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/fullgame_erg.png, id=240, 561.59813pt x 176.15813pt>
+<images/fullgame_erg.png, id=422, 561.59813pt x 176.15813pt>
 File: images/fullgame_erg.png Graphic file (type png)
 <use images/fullgame_erg.png>
 Package pdftex.def Info: images/fullgame_erg.png  used on input line 171.
@@ -899,7 +1363,7 @@ Package pdftex.def Info: images/fullgame_erg.png  used on input line 171.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/centered_erg.png, id=241, 559.33969pt x 173.89969pt>
+<images/centered_erg.png, id=423, 559.33969pt x 173.89969pt>
 File: images/centered_erg.png Graphic file (type png)
 <use images/centered_erg.png>
 Package pdftex.def Info: images/centered_erg.png  used on input line 178.
@@ -907,7 +1371,7 @@ Package pdftex.def Info: images/centered_erg.png  used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/centered2_erg.png, id=242, 758.08218pt x 235.63031pt>
+<images/centered2_erg.png, id=424, 758.08218pt x 235.63031pt>
 File: images/centered2_erg.png Graphic file (type png)
 <use images/centered2_erg.png>
 Package pdftex.def Info: images/centered2_erg.png  used on input line 185.
@@ -930,7 +1394,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16 <./images/reaching_erg.png>]
+[29 <./images/reaching_erg.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -939,7 +1403,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17 <./images/rea2_erg.png>]
+[30 <./images/rea2_erg.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -948,7 +1412,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[18 <./images/fullgame_erg.png> <./images/centered_erg.png>]
+[31 <./images/fullgame_erg.png> <./images/centered_erg.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -957,7 +1421,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19 <./images/centered2_erg.png>]
+[32 <./images/centered2_erg.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -966,7 +1430,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20]
+[33]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -975,36 +1439,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]
-Chapter 4.
+[34]
+Chapter 6.
 
 Overfull \hbox (23.87865pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/10.95 stra-tor ange-sprochen. Dazu gehoren die Mes-sun-gen von Ma
 x-i-malgeschwindigkeiten,
  []
 
-<images/messung_robo_x.png, id=280, 590.95781pt x 173.14688pt>
+<images/messung_robo_x.png, id=462, 590.95781pt x 173.14688pt>
 File: images/messung_robo_x.png Graphic file (type png)
 <use images/messung_robo_x.png>
 Package pdftex.def Info: images/messung_robo_x.png  used on input line 10.
 (pdftex.def)             Requested size: 369.88583pt x 108.37505pt.
-<images/messung_robo_v.png, id=281, 782.17218pt x 234.1247pt>
+<images/messung_robo_v.png, id=463, 782.17218pt x 234.1247pt>
 File: images/messung_robo_v.png Graphic file (type png)
 <use images/messung_robo_v.png>
 Package pdftex.def Info: images/messung_robo_v.png  used on input line 11.
 (pdftex.def)             Requested size: 369.88583pt x 110.71738pt.
 
-Overfull \hbox (2.46529pt too wide) in paragraph at lines 8--17
-\OT1/cmr/m/n/10.95 Roboter und Puck gemessen. Wahrend die Max-i-malgeschwindig
-keit des Robot-
+Overfull \hbox (47.5834pt too wide) in paragraph at lines 8--17
+\OT1/cmr/m/n/10.95 Da diese Mes-sung vom men-schlichen Konnen abhangt, gilt d
+iese Max-i-malgeschwindigkeit
  []
 
-<images/messung_bolzen_x.png, id=283, 595.47469pt x 192.72pt>
+<images/messung_bolzen_x.png, id=465, 595.47469pt x 192.72pt>
 File: images/messung_bolzen_x.png Graphic file (type png)
 <use images/messung_bolzen_x.png>
 Package pdftex.def Info: images/messung_bolzen_x.png  used on input line 19.
 (pdftex.def)             Requested size: 369.88583pt x 119.70863pt.
-<images/messung_bolzen_v.png, id=284, 587.94656pt x 191.9672pt>
+<images/messung_bolzen_v.png, id=466, 587.94656pt x 191.9672pt>
 File: images/messung_bolzen_v.png Graphic file (type png)
 <use images/messung_bolzen_v.png>
 Package pdftex.def Info: images/messung_bolzen_v.png  used on input line 20.
@@ -1017,7 +1481,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[22
+[35
 
 ]
 
@@ -1028,7 +1492,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23 <./images/messung_robo_x.png> <./images/messung_robo_v.png>]
+[36 <./images/messung_robo_x.png> <./images/messung_robo_v.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1037,25 +1501,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24 <./images/messung_bolzen_x.png> <./images/messung_bolzen_v.png>]
+[37 <./images/messung_bolzen_x.png> <./images/messung_bolzen_v.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-<images/gui_pic_marked.png, id=305, 691.83469pt x 572.89032pt>
+<images/gui_pic_marked.png, id=486, 691.83469pt x 572.89032pt>
 File: images/gui_pic_marked.png Graphic file (type png)
 <use images/gui_pic_marked.png>
 Package pdftex.def Info: images/gui_pic_marked.png  used on input line 37.
 (pdftex.def)             Requested size: 369.88583pt x 306.2966pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
 
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+ []
 
-[25 <./images/gui_pic_marked.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1064,29 +1524,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]
-Overfull \hbox (4.3004pt too wide) in paragraph at lines 66--69
+[38 <./images/gui_pic_marked.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39]
+Overfull \hbox (10.38374pt too wide) in paragraph at lines 67--70
 \OT1/cmr/m/n/10.95 In diesem Ab-schnitt wird der Ablauf der einzel-nen pro-gram
-mtechis-chen Schritte
+mtech-nis-chen Schritte
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--87
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--88
 
  []
 
@@ -1098,122 +1567,154 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27
+[40
 
 
 ]
-<images/gui_pap.png, id=321, 1107.38719pt x 1902.3572pt>
+<images/gui_pap.png, id=503, 1107.38719pt x 1902.3572pt>
 File: images/gui_pap.png Graphic file (type png)
 <use images/gui_pap.png>
-Package pdftex.def Info: images/gui_pap.png  used on input line 92.
+Package pdftex.def Info: images/gui_pap.png  used on input line 90.
 (pdftex.def)             Requested size: 332.21872pt x 570.71156pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[28]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[29 <./images/gui_pap.png>]
-Overfull \hbox (0.40718pt too wide) in paragraph at lines 103--106
-\OT1/cmr/m/n/10.95 Als markante Punkte haben wir die vier roten Kreise auf dem 
-Spielfeld gewahlt.
+Underfull \hbox (badness 1009) in paragraph at lines 100--101
+\OT1/cmr/m/n/10.95 wird als er-stes aus den er-mit-tel-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
-
+Underfull \hbox (badness 1048) in paragraph at lines 100--101
+\OT1/cmr/m/n/10.95 Be-we-gung er-rech-net. Danach wird
  []
 
+<images/spielen_pap.png, id=506, 571.38469pt x 1052.43187pt>
+File: images/spielen_pap.png Graphic file (type png)
+<use images/spielen_pap.png>
+Package pdftex.def Info: images/spielen_pap.png  used on input line 105.
+(pdftex.def)             Requested size: 171.41672pt x 315.732pt.
 
-Underfull \hbox (badness 1286) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 im-ple-men-tierten Hough-Cir-cles Funk-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 Die Mit-telpunkte wer-den danach
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 mit vorher fest-gelegten Berichen
- []
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 abgeglichen. Da die Kam-era fest
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 ein Kreis links oben, rechts oben,
- []
-
-
-Underfull \hbox (badness 2452) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 links un-ten oder rechts un-ten ist.
- []
-
-
-Underfull \hbox (badness 2662) in paragraph at lines 111--114
-\OT1/cmr/m/n/10.95 mungen kann der Mit-telpunkt des
- []
-
-<images/kalibrierung_pap.png, id=335, 487.8225pt x 1195.46625pt>
-File: images/kalibrierung_pap.png Graphic file (type png)
-<use images/kalibrierung_pap.png>
-Package pdftex.def Info: images/kalibrierung_pap.png  used on input line 118.
-(pdftex.def)             Requested size: 146.34787pt x 358.64264pt.
-
-Overfull \hbox (35.381pt too wide) in paragraph at lines 118--119
+Overfull \hbox (60.44984pt too wide) in paragraph at lines 105--106
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-[]\OT1/cmr/m/n/10.95 Figure 4.5:
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]\OT1/cmr/m/n/10.95 Figure 6.5:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []\OT1/cmr/m/n/10.95 Programmablaufplan
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kalib_bin.png, id=336, 516.42938pt x 308.65312pt>
-File: images/kalib_bin.png Graphic file (type png)
-<use images/kalib_bin.png>
-Package pdftex.def Info: images/kalib_bin.png  used on input line 127.
-(pdftex.def)             Requested size: 154.93001pt x 92.59665pt.
 
-Overfull \hbox (6.97794pt too wide) in paragraph at lines 127--128
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[42 <./images/gui_pap.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43 <./images/spielen_pap.png>]
+Overfull \hbox (13.25815pt too wide) in paragraph at lines 116--119
+\OT1/cmr/m/n/10.95 mentsprechend auch Groen in Unity Langenein-heiten angege
+ben wer-den mussen.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--119
+
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 124--127
+\OT1/cmr/m/n/10.95 im-ple-men-tierten Hough-Cir-cles Funk-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+\OT1/cmr/m/n/10.95 Die Mit-telpunkte wer-den danach
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+\OT1/cmr/m/n/10.95 mit vorher fest-gelegten Bere-ichen
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 124--127
+\OT1/cmr/m/n/10.95 abgeglichen. Da die Kam-era fest
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 124--127
+\OT1/cmr/m/n/10.95 zweier Funk-tio-nen die Um-rech-nung
+ []
+
+<images/kalibrierung_pap.png, id=525, 487.8225pt x 1195.46625pt>
+File: images/kalibrierung_pap.png Graphic file (type png)
+<use images/kalibrierung_pap.png>
+Package pdftex.def Info: images/kalibrierung_pap.png  used on input line 131.
+(pdftex.def)             Requested size: 146.34787pt x 358.64264pt.
+
+Overfull \hbox (35.381pt too wide) in paragraph at lines 131--132
 [][] 
  []
 
-<images/kalib_circ.png, id=337, 506.6428pt x 268.75406pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]\OT1/cmr/m/n/10.95 Figure 6.6:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]\OT1/cmr/m/n/10.95 Programmablaufplan
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/kalib_bin.png, id=526, 516.42938pt x 308.65312pt>
+File: images/kalib_bin.png Graphic file (type png)
+<use images/kalib_bin.png>
+Package pdftex.def Info: images/kalib_bin.png  used on input line 140.
+(pdftex.def)             Requested size: 154.93001pt x 92.59665pt.
+
+Overfull \hbox (6.97794pt too wide) in paragraph at lines 140--141
+[][] 
+ []
+
+<images/kalib_circ.png, id=527, 506.6428pt x 268.75406pt>
 File: images/kalib_circ.png Graphic file (type png)
 <use images/kalib_circ.png>
-Package pdftex.def Info: images/kalib_circ.png  used on input line 134.
+Package pdftex.def Info: images/kalib_circ.png  used on input line 147.
 (pdftex.def)             Requested size: 151.994pt x 80.62683pt.
 
-Overfull \hbox (4.04193pt too wide) in paragraph at lines 134--135
+Overfull \hbox (4.04193pt too wide) in paragraph at lines 147--148
 [][] 
  []
 
@@ -1228,7 +1729,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30
+[44
 
 ]
 
@@ -1239,120 +1740,120 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31 <./images/kalibrierung_pap.png> <./images/kalib_bin.png> <./images/kalib_ci
+[45 <./images/kalibrierung_pap.png> <./images/kalib_bin.png> <./images/kalib_ci
 rc.png>]
-Overfull \hbox (29.1255pt too wide) in paragraph at lines 147--148
-\OT1/cmr/m/n/10.95 abildern zu beziehen. Die benotigten Daten sind Po-si-tion 
-des Pucks, Geschwindigkeit
+Overfull \hbox (3.11421pt too wide) in paragraph at lines 160--161
+\OT1/cmr/m/n/10.95 Um am realen Demon-stra-tor den Agen-ten aus der Sim-u-la-ti
+on nutzen zu konnen,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-[]\OT1/cmr/m/n/10.95 Grundlage der Bild-ver-
+Underfull \hbox (badness 1472) in paragraph at lines 166--167
+[]\OT1/cmr/m/n/10.95 Die Grund-lage der Bild-
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 ar-beitung ist auch hier
+Underfull \hbox (badness 1331) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 Raum uberge-gan-gen, um
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 Raum uberge-gan-gen um
+Underfull \hbox (badness 4492) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 dann ein Binarbild mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 den erwunschten Bere-
+ []
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 Da hier nicht mit der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 Hough-Cir-cles Funk-tion
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 schn Da hier nicht mit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 durchgefuhrt, um das
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 \OT1/cmr/m/n/10.95 Binarbild ubersichtlicher
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 153--154
+Underfull \hbox (badness 2126) in paragraph at lines 166--167
 \OT1/cmr/m/n/10.95 weie Flecken auer der
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 die grote her-aus-ge-sucht.
+Underfull \hbox (badness 2027) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 gesuchten Ob-jekts (Puck
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 gesuchte Ob-jekts (Puck
- []
-
-
-Underfull \hbox (badness 1983) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 oder Roboter) wird ihre
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 \OT1/cmr/m/n/10.95 Funk-tio-nen ver-wen-det.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 Im Unity Ko-or-di-naten-
+Underfull \hbox (badness 3271) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 Aus der ak-tuellen Po-si-
  []
 
 
-Underfull \hbox (badness 8094) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 sys-tem sind die Werte
+Underfull \hbox (badness 1442) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 tion der let-zten Po-si-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 dann geeignet fur den
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+\OT1/cmr/m/n/10.95 und der ver-strich-enen
  []
 
-
-Underfull \hbox (badness 2293) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 Agen-ten. Aus der ak-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 Po-si-tion und der ver-
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 153--154
-\OT1/cmr/m/n/10.95 noch die Geschwindigkeit
- []
-
-<images/bv_pap.png, id=352, 722.7pt x 1364.84906pt>
+<images/bv_pap.png, id=543, 722.7pt x 1364.84906pt>
 File: images/bv_pap.png Graphic file (type png)
 <use images/bv_pap.png>
-Package pdftex.def Info: images/bv_pap.png  used on input line 159.
+Package pdftex.def Info: images/bv_pap.png  used on input line 171.
 (pdftex.def)             Requested size: 216.81166pt x 409.45787pt.
 
-Overfull \hbox (50.36417pt too wide) in paragraph at lines 159--160
+Overfull \hbox (50.36417pt too wide) in paragraph at lines 171--172
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/bin_puck.png, id=353, 194.22563pt x 405.76593pt>
+<images/bin_puck.png, id=544, 194.22563pt x 405.76593pt>
 File: images/bin_puck.png Graphic file (type png)
 <use images/bin_puck.png>
-Package pdftex.def Info: images/bin_puck.png  used on input line 170.
+Package pdftex.def Info: images/bin_puck.png  used on input line 182.
 (pdftex.def)             Requested size: 87.40071pt x 182.59297pt.
-<images/bin_robo.png, id=354, 204.01219pt x 402.00188pt>
+<images/bin_robo.png, id=545, 204.01219pt x 402.00188pt>
 File: images/bin_robo.png Graphic file (type png)
 <use images/bin_robo.png>
-Package pdftex.def Info: images/bin_robo.png  used on input line 175.
+Package pdftex.def Info: images/bin_robo.png  used on input line 187.
 (pdftex.def)             Requested size: 91.80463pt x 180.89917pt.
-<images/detect.png, id=355, 203.25937pt x 408.02437pt>
+<images/detect.png, id=546, 203.25937pt x 408.02437pt>
 File: images/detect.png Graphic file (type png)
 <use images/detect.png>
-Package pdftex.def Info: images/detect.png  used on input line 180.
+Package pdftex.def Info: images/detect.png  used on input line 192.
 (pdftex.def)             Requested size: 91.46587pt x 183.60927pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1365,7 +1866,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32
+[46
 
 ]
 
@@ -1376,7 +1877,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[33 <./images/bv_pap.png>]
+[47 <./images/bv_pap.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1385,7 +1886,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34 <./images/bin_puck.png> <./images/bin_robo.png> <./images/detect.png>])
+[48 <./images/bin_puck.png> <./images/bin_robo.png> <./images/detect.png>])
 (chapters/07_fazit.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1395,10 +1896,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[35
+[49
 
 ]
-Chapter 5.
+Chapter 7.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -1407,28 +1908,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[36
+[50
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
 
  []
 
 
-Overfull \hbox (17.8358pt too wide) in paragraph at lines 11--15
+Overfull \hbox (17.8358pt too wide) in paragraph at lines 10--14
 \OT1/cmr/m/n/10.95 Stellen, die wortlich oder sin-ngema aus veroffentlichte
 n oder nicht veroffentlichten
  []
 
-<images/sign_haag.png, id=385, 383.18156pt x 234.1247pt>
+<images/sign_haag.png, id=575, 383.18156pt x 234.1247pt>
 File: images/sign_haag.png Graphic file (type png)
 <use images/sign_haag.png>
-Package pdftex.def Info: images/sign_haag.png  used on input line 19.
+Package pdftex.def Info: images/sign_haag.png  used on input line 18.
 (pdftex.def)             Requested size: 114.95535pt x 70.23795pt.
-File: images/sign_haag.png Graphic file (type png)
-<use images/sign_haag.png>
-Package pdftex.def Info: images/sign_haag.png  used on input line 25.
-(pdftex.def)             Requested size: 114.95535pt x 70.23795pt.
+<images/DB.png, id=576, 118.19156pt x 68.50594pt>
+File: images/DB.png Graphic file (type png)
+<use images/DB.png>
+Package pdftex.def Info: images/DB.png  used on input line 24.
+(pdftex.def)             Requested size: 118.19127pt x 68.50577pt.
 ) (HHNTemplate.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1438,7 +1940,68 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[37 <./images/sign_haag.png>])
+[51 <./images/sign_haag.png> <./images/DB.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+\OT1/cmr/m/n/10.95 agents/blob/main/docs/ML-Agents-Overview.md, let-zter Aufruf
+:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+[]\OT1/cmr/m/n/10.95 IBM Cloud Ed-u-ca-tion.  Un-su-per-vised learn-ing.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+\OT1/cmr/m/n/10.95 https://www.ibm.com/cloud/learn/unsupervised-learning, let-z
+ter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+[]\OT1/cmr/m/n/10.95 IBM Cloud Ed-u-ca-tion.  Ma-chine learn-ing.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+\OT1/cmr/m/n/10.95 https://www.ibm.com/cloud/learn/machine-learning, let-zter A
+ufruf:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+[]\OT1/cmr/m/n/10.95 Filip Wol-ski Pra-fulla Dhari-wal Alec Rad-ford John Schul
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+\OT1/cmr/m/n/10.95 man, Oleg Klimov.  Prox-i-mal pol-icy op-ti-miza-tion.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+\OT1/cmr/m/n/10.95 https://openai.com/blog/openai-baselines-ppo/, let-zter Aufr
+uf:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+[]\OT1/cmr/m/n/10.95 J. Zico Kolter.  In-tro-duc-tion to re-in-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+\OT1/cmr/m/n/10.95 force-ment learn-ing.  https://icaps18.icaps-
+ []
+
+
+Overfull \hbox (54.1534pt too wide) in paragraph at lines 39--44
+\OT1/cmr/m/n/10.95 conference.org/fileadmin/alg/conferences/icaps18/summerschoo
+l/lectures/Lecture5-
+ []
+
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 38.8842pt, for example:
@@ -1447,37 +2010,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-26.8842pt}.
 
-[38
+[52
 
 ] (HHNTemplate.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `HHNTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 48D239D3E616204B538DD4C69E105EEF;3847.
+(rerunfilecheck)             Checksum: 763629BA04D94231982FC082CA66C3D9;5546.
  ) 
 Here is how much of TeX's memory you used:
- 13040 strings out of 478659
- 212282 string characters out of 2845920
- 555585 words of memory out of 3000000
- 30819 multiletter control sequences out of 15000+600000
+ 13285 strings out of 478659
+ 217560 string characters out of 2845920
+ 557688 words of memory out of 3000000
+ 31000 multiletter control sequences out of 15000+600000
  411765 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,63p,1843b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,1896b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\mhaag\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbsy10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mhaag/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mhaag/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mhaag/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
-s/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb
->
-Output written on HHNTemplate.pdf (40 pages, 2947422 bytes).
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mhaag/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mhaag/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
+s/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb><C:/Users/mhaag/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb>
+Output written on HHNTemplate.pdf (56 pages, 18803095 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 676 PDF objects out of 1000 (max. 8388607)
+ 135 named destinations out of 1000 (max. 500000)
+ 484 words of extra memory for PDF output out of 10000 (max. 10000000)
 

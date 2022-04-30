@@ -1,10 +1,10 @@
 \chapter{Rewards und Training}  
 \label{ch:rewards_training}
-In diesem Kapitel wird auf das Training eingegangen. Hierbei werden die unterschiedlichen Rewards erklärt, die genutzten Netzwerke, die Hyperparameter und die einzelnen Schritte im Training. Dazu wird auch das envScript aus Unterkapitel \ref{subsect:Airhockey Projekt} nochmal genauer beleuchtet.
+In diesem Kapitel wird auf das Training eingegangen. Hierbei werden die unterschiedlichen Rewards erklärt, die genutzten Netzwerke, die Hyperparameter und die einzelnen Schritte im Training. Dazu wird auch das envScript aus Unterkapitel \ref{subsect:Airhockey Projekt} noch mal genauer beleuchtet.
 
 \section{Rewards und Umgebungsparameter}
 \label{sect:rewards_params}
-Hier sollen als erstes alle implementierten Rewards vorgestellt werden, damit in den folgenden Teilen der Beschreibung des Trianings klar ist, welche Effekte sie bedingen.
+Hier sollen als erstes alle implementierten Rewards vorgestellt werden, damit in den folgenden Teilen der Beschreibungen des Trainings klar ist, welche Effekte sie bedingen.
 
 \begin{itemize}
 \item \underline{taskType} \\
@@ -20,68 +20,68 @@ Legt die Maximalgeschwindigkeit des Roboters fest. Messungen erfolgten analog zu
 Legt die Maximalgeschwindigkeit des HumanPlayer fest. Messungen erfolgten analog zu denen der Maximalgeschwindigkeit des Pucks.
 
 \item \underline{neghumanGoalReward} \\
-Dieser Reward wird gegeben, wenn der Puck in das Tor des Agenten trifft. Da es ein Gegentor ist sollte der Reward negativ gewählt werden.
+Dieser Reward wird vergeben, wenn der Puck in das Tor des Agenten trifft. Da es ein Gegentor ist, sollte der Reward negativ gewählt werden.
 
 \item \underline{agentGoalReward} \\
-Dieser Reward wird gegeben, wenn der Puck in das Tor des HumanPlayer trifft. 
+Dieser Reward wird vergeben, wenn der Puck in das Tor des HumanPlayer trifft. 
 
 \item \underline{avoidBoundaries} \\
-Dieser Reward wird gegeben, wenn der Roboter die Bande berührt. Er sollte negativ sein. 
+Dieser Reward wird vergeben, wenn der Roboter die Bande berührt. Er sollte negativ sein. 
 
 \item \underline{avoidDirectonChanges} \\
-Dieser Reward wird gegeben, wenn der Roboter die Bewegungsrichtung ändert. Er sollte negativ sein. Der Betrag wird mit dem Betrag der Bewegungsänderung im letzten Zeitschritt multpliziert. Da dieser Reward in jedem Zeitschritt gegeben werden kann sollte dieser Reward betragsmäßig sehr klein gewählt werden.
+Dieser Reward wird vergeben, wenn der Roboter die Bewegungsrichtung ändert. Er sollte negativ sein. Der Betrag wird mit dem Betrag der Bewegungsänderung im letzten Zeitschritt multipliziert. Da dieser Reward in jedem Zeitschritt vergeben werden kann, sollte dieser Reward betragsmäßig sehr klein gewählt werden.
 
 \item \underline{stayCenteredReward} \\
-Dieser Reward belohnt es weder links noch rechts am Spielfeldrand zu sein. Damit kann das Verteidigungsverhalten verbessert werden. Der Reward wird zu jedem Zeitschritt gegeben und sollte deshalb sehr niedig gewählt werden. Der Reward sinkt proportional mit der Distanz vom Rand.
+Dieser Reward belohnt den Agenten, wenn er weder links noch rechts am Spielfeldrand platziert ist. Damit kann das Verteidigungsverhalten verbessert werden. Der Reward wird zu jedem Zeitschritt vergeben und sollte deshalb sehr niedrig gewählt werden. Der Reward sinkt proportional mit der Distanz des Pushers vom Rand.
 
 \item \underline{negoffCentereReward} \\
-Dieser Reward ist vergleichbar mit dem stayCenteredReward. Jedoch ist dieser negativ zu wählen, denn er fällt betragsmäßig am hochsten aus, wenn der Agent an der Bande steht(links oder rechts).
+Dieser Reward ist vergleichbar mit dem stayCenteredReward. Jedoch ist dieser negativ zu wählen, denn er fällt betragsmäßig am höchsten aus, wenn der Agent an der Bande steht (links oder rechts).
 
 \item \underline{encouragePuckMovement} \\
-Dieser Reward belohnt Puckbewegungsgeschwindigkeit. Er wird zu jedem Zeitschritt gegeben und sollte deshalb klein sein. 
+Dieser Reward belohnt die Puckbewegungsgeschwindigkeit. Er wird zu jedem Zeitschritt vergeben und sollte deshalb klein sein. 
 
 \item \underline{encouragePuckContact} \\
 Dieser Reward belohnt Kontakte mit dem Puck. 
 
 \item \underline{contacthalf} \\
-Dieser Parameter ist kein Reward sondern eine Booleanvariable. Wird sie zu True gesetzt hat das zur Folge, das der Reward encouragePuckContact jedes mal wenn er gegeben wird halbiert wird. Damit wird verhindert, dass der Roboter alleine spielt oder den Puck einklemmt um den encouragePuckContact Reward auszunutzen.
+Dieser Parameter ist kein Reward sondern eine Booleanvariable. Wird sie zu True gesetzt hat das zur Folge, dass der Reward encouragePuckContact jedes mal, wenn er vergeben wird, halbiert wird. Damit wird verhindert, dass der Roboter alleine spielt oder den Puck einklemmt um den encouragePuckContact Reward auszunutzen.
 
 \item \underline{playForwardReward} \\
-Dieser Reward wird gegeben, wenn der Puck von hinten getroffen wird, also in die richtige Richtung geschossen wird.
+Dieser Reward wird vergeben, wenn der Puck von hinten getroffen wird, also in Richtung gegnerisches Hälfte geschossen wird.
 
 \item \underline{negplaybackReward} \\
-Dieser Reward wird gegeben, wenn der Puck von vorne getroffen wird, also in die falsche Richtung geschossen wird. Er sollte negativ gewählt werden.
+Dieser Reward wird vergeben, wenn der Puck von vorne getroffen wird, also in die falsche Richtung geschossen wird. Er sollte negativ gewählt werden.
 
 \item \underline{negStepReward} \\
-Dieser Reward wird in jedem Fall zu jedem Zeitschritt gegeben. Er soll langweiliges Zeitspiel verhindern. Dazu muss er negativ sein. 
+Dieser Reward wird in jedem Fall zu jedem Zeitschritt vergeben. Er soll ein mögliches Zeitspiel des Agenten verhindern. Dazu muss er negativ sein. 
 
 \item \underline{negMaxStepReward} \\
-Dieser Reward wird gegeben, wenn die Maximallänge einer Episode erreicht wird und das Spiel deshalb abgebrochen wird(wird nur im Training abgebrochen, nicht im Spiel).  Er sollte negativ sein.
+Dieser Reward wird vergeben, wenn die Maximallänge einer Episode erreicht wird und das Spiel deshalb abgebrochen werden muss (wird nur im Training abgebrochen, nicht im Spiel). Er sollte negativ sein.
 
 \item \underline{behindPuckReward} \\
-Dieser Reward wird zu jedem Zeitschritt, zu dem sich der Agent näher am eigenen Tor befindet als der Puck gegeben. Er sollte niedrig gewählt werden, da er in jedem Zeitschritt geholt werden kann.
+Dieser Reward wird zu jedem Zeitschritt, zu dem sich der Agent näher am eigenen Tor befindet als der Puck gegeben. Er sollte niedrig gewählt werden, da diese Rewardvergabe in jedem Zeitschritt möglich ist.
 
 \item \underline{behindPuckReward} \\
-Dieser Reward ist exklusiv für das Training des Spielmoduses Defending. Er wird jedes mal gegeben, wenn ein Schuss erfolgreich verteidigt wurde.
+Dieser Reward ist exklusiv für das Training des Spielmodus Defending. Er wird jedes Mal vergeben, wenn ein Schuss erfolgreich verteidigt wurde.
 
 \end{itemize}
 
 \section{Spielmodi}
 \label{sect:spielmodi}
-In diesem Abschnitt werden die implementierten Spielmodi beschrieben. Mit ihrer Hilfe kann die Eignung eines Netzwerk oft schneller festgestellt werden, als mit einem ganzen Spiel, da die anderen Spielsituationen nicht so komplex sind. Ein weiterer Vorteil von einfacheren Spielszenarien ist, dass damit der Agent Stufe für Stufe traininiert werden kann.
+In diesem Abschnitt werden die implementierten Spielmodi beschrieben. Mit ihrer Hilfe kann die Eignung eines Netzwerk oft schneller festgestellt werden, als mit einem ganzen Spiel, da die anderen Spielsituationen nicht so komplex sind. Ein weiterer Vorteil von einfacheren Spielszenarien ist, dass damit der Agent Stufe für Stufe trainiert werden kann.
 
 \begin{itemize}
 \item \underline{Reaching} \\
-In diesem Spielmodus ist es das Ziel den Puck zu erreichen. Dazu wird der Puck zu Beginn der Episode an einem zufälligen Ort auf der Spielfeldseite des Agenten platziert. Da HumanPlayer bei diesem Szenario keine Rolle spielt wird seine Bewegung gestopt. Die Episode endet mit der Kollision von Agent und Puck oder beim Erreichen der maximalen Simulationsschritten. Damit ist dieser Modus von sehr niedriger Komplexität und auch für einen untrainierten Agenten schnell erlernbar.
+Das Ziel in diesem Spielmodus ist es, den Puck zu erreichen. Dazu wird der Puck zu Beginn der Episode an einem zufälligen Ort auf der Spielfeldseite des Agenten platziert. Da HumanPlayer bei diesem Szenario keine Rolle spielt wird seine Bewegung gestoppt. Die Episode endet mit der Kollision von Agent und Puck oder beim Erreichen der maximalen Simulationsschritten. Damit ist dieser Modus von sehr niedriger Komplexität und auch für einen untrainierten Agenten schnell erlernbar.
 
 \item \underline{Scoring} \\
-Im Scoring Modus geht es nur ums Zielen und Tor treffen. Hier wird die Episode nicht beendet wenn der Puck getroffen wurde, sondern wenn der Puck entweder ein Tor erreicht oder die Bande trifft. Wie beim Reaching steht der HumanPlayer unbeweglich neben seinem Tor. Da mit einem diskreten Actionspace gearbeitet wird ist dieser Modus nicht viel verwendet worden. Wegen des diskreten Actionspace kann der Agent sich nicht präzise genug platzieren um zu zielen. Sollte in einem Folgeprojekt jedoch mit einem kontinuierlichen Actionspace gearbeitet werden kann dieser Modus wiede interessant werden.
+Im Scoring Modus geht es nur ums Zielen und darum, das Tor zu treffen. Hier wird die Episode nicht beendet, wenn der Puck getroffen wurde, sondern wenn der Puck entweder ein Tor erreicht oder die Bande trifft. Wie beim Reaching steht der HumanPlayer unbeweglich neben seinem Tor. Da mit einem diskreten Actionspace gearbeitet wird, ist dieser Modus nicht viel verwendet worden. Wegen des diskreten Actionspace kann der Agent sich nicht präzise genug platzieren, um zu zielen. Sollte in einem Folgeprojekt jedoch mit einem kontinuierlichen Actionspace gearbeitet werden, kann dieser Modus wieder interessant werden.
 
 \item \underline{Defending} \\
-Hier hat der Agent das Ziel sein Tor zu verteidigen. Auch in diesem Modus spielt der HumanPlayer keine Rolle. Er steht dabei unbeweglich neben seinem Tor. Der Agent wird zu Beginn der Episode an eine zufällige Position auf seiner Spielfeldseite platziert. Defending ist der einzige Modus, bei dem der Puck nicht ohne Geschwindgkeit auf das Feld gesetzt wird. Der Puck wird hier von der Seite des HumanPlayer aus mit einem zufälligen Bewegungswinkel zwischen 70 und -70 auf die Seite des Agenten geschossen. Auch die Startposition wird variiert. Beendet wird die Episode wenn entweder ein Tor kassiert wurde oder der Ball abgewehrt wurde. Das ist der Fall wenn die X-Komponente der Geschwindigkeit des Pucks negativ wird, sich der Puck also auf die Hälfte des HumanPlayer zurück bewegt. In diesem Modus ist ein schneller Lernfortschritt nur mit dem defenceReward zu erwarten (bei fast allen Netzwerken).
+Hier hat der Agent das Ziel, sein Tor zu verteidigen. Auch in diesem Modus spielt der HumanPlayer keine Rolle. Er steht dabei unbeweglich neben seinem Tor. Der Agent wird zu Beginn der Episode an eine zufällige Position auf seiner Spielfeldseite platziert. Defending ist der einzige Modus, bei dem der Puck nicht ohne Geschwindigkeit auf das Feld gesetzt wird. Der Puck wird hier von der Seite des HumanPlayer aus mit einem zufälligen Bewegungswinkel zwischen $70^\circ$ und $-70^\circ$ auf die Seite des Agenten geschossen. Auch die Startposition variiert zufällig.Beendet wird die Episode, wenn entweder ein Tor kassiert wurde oder der Ball abgewehrt wurde. Das ist der Fall, wenn die X-Komponente der Geschwindigkeit des Pucks negativ wird, sich der Puck also auf die Hälfte des HumanPlayer zurückbewegt. In diesem Modus ist ein schneller Lernfortschritt nur mit dem defenceReward zu erwarten (bei fast allen Netzwerken).
 
 \item \underline{FullGame} \\
-FullGame ist selbsterklärend. Der Puck wird an einer zufälligen Position auf dem ganzen Spielfeld ins Spiel gebracht. Die Kontrahenten Agent und HumanPlayer werden auf ihre jeweilige Seite gesetzt und beiden ist die Bewegung im Rahmen der Parameter in envScript erlaubt. Beendet wird die Episode nur wenn ein Tor erzielt wird oder die maximale Anzahl an Simulationsschritten erreicht wird. Diesen Modus zu meistern ist das Ziel der Trainings und eine Teilaufgabe unseres Masterprojekts. Er ist zu komplex um einen untrainierten Agenten ohne das stufenweise Ändern von Rewards zu trainieren.
+FullGame ist selbsterklärend. Der Puck wird an einer zufälligen Position auf dem ganzen Spielfeld ins Spiel gebracht. Die Kontrahenten Agent und HumanPlayer werden auf ihre jeweilige Seite gesetzt und beiden ist die Bewegung im Rahmen der Parameter in envScript erlaubt. Beendet wird die Episode nur, wenn ein Tor erzielt wird oder die maximale Anzahl an Simulationsschritten erreicht wird. Diesen Modus zu meistern ist das Ziel der Trainings und eine Teilaufgabe des Projekts. Er ist zu komplex, um einen untrainierten Agenten ohne das stufenweise Ändern von Rewards zu trainieren
 \end{itemize}
 
 \begin{figure} [h]
@@ -104,11 +104,11 @@ Episodenende  & Puckkontakt & Tor, Bande & Tor verteidigt & Tor \\
 \section{Trainingsstrategie und Zwischenergebnisse}
 \label{sect:trainings_strats}
 
-In diesem Abschnitt wird das Vorgehen beim Training beschrieben und die Ergebnisse des Trainigs in der Unity Umgebung gezeigt. Um die Ergebnisse einordnen zu können werden sowohl mit Graphen der kumulativen Rewards über eine Episode als auch mit dem Ergebnissen aus Spielen von Agenten untereinander gearbeitet. Zusätzlich wird eine Einschätzung der Ästethik des Spiels betrachtet.\\
+In diesem Abschnitt wird das Vorgehen beim Training beschrieben und die Ergebnisse des Trainings in der Unity Umgebung gezeigt. Um die Ergebnisse einordnen zu können, werden sowohl mit Graphen der kumulativen Rewards über eine Episode als auch mit den Ergebnissen aus Spielen von Agenten untereinander gearbeitet. Zusätzlich wird eine Einschätzung der Ästethik des Spiels betrachtet.\\
 
 \subsection{Stufenplan}
 \label{subsect:stufenplan}
-Da das Spiel im FullGame Modus sehr komplex ist und viele Sachen zu beachten sind, was sich auch an der Vielzahl an sinnvollen Rewards wiederspiegelt, muss der Agent einige Vortrainings abschließen um so Eigenschaften nacheinander zu erlernen. Dazu haben wir uns einen Stufenplan der in der Abbildung \ref{training_plan} zu sehen ist, erarbeitet.
+Da das Spiel im FullGame Modus sehr komplex ist und viele Sachen zu beachten sind, was sich auch an der Vielzahl an sinnvollen Rewards widerspiegelt, muss der Agent einige Vortrainings abschließen, um so Eigenschaften nacheinander zu erlernen. Dazu haben wir uns einen Stufenplan, der in der Abbildung \ref{training_plan} zu sehen ist, erarbeitet.
 
 \begin{figure} [h]
 \includegraphics[scale=0.6]{images/training_strats}
@@ -118,92 +118,92 @@ Da das Spiel im FullGame Modus sehr komplex ist und viele Sachen zu beachten sin
 
 \begin{itemize}
 \item \underline{1. Puck erreichen} \\
-Der erste Lernschritt des Agenten ist es den Puck zu erreichen. Diese Fähigkeit kann im Reaching Modus schnell mit effektiv nur einem Reward (encouragePuckContact) erlernt werden. Ein Nachteil beim Üben im Reaching Modus ist, dass bewegte Ziele nicht vorkommen und so noch nicht trainiert werden.
+Der erste Lernschritt des Agenten ist es, den Puck zu erreichen. Diese Fähigkeit kann im Reaching Modus schnell mit effektiv nur einem Reward (encouragePuckContact) erlernt werden. Ein Nachteil beim Üben im Reaching Modus ist, dass bewegte Ziele nicht vorkommen und somit diese auch noch nicht trainiert werden können.
 
 \item \underline{2. Puck richtung Tor spielen} \\
-Bei diesem Schritt wird auf dem vortraininierten Agenten aufgebaut. Das Ziel ist es hier den Puck in Richtung des gegnerischen Tors zu spielen. Es macht Sinn diese Fähigkeit zuerst im Reaching Modus zu üben und erst danach in den FullGame Modus zu wechseln. Dadurch ist der Anstieg an Komplexität geringer. Hier werden die Rewards playForwardReward und negplaybackReward als Hautrewards genutzt. Es hat sich jedoch gezeigt, das die Rewards encouragePuckContact und behindPuckReward hier auch nützlich sind. Dadurch wird verhindert, dass der Agent, falls er vor dem Puck erscheint, die ganze Episode abwartet um den negplaybackReward zu verhindern. Mit einem ähnlichen Satz an Rewards kann dann auch im FullGame Modus das Training fortgesetzt werden. Die Stärke des Gegners spielt dabei keine große Rolle da keine negativen Rewards für Gegentore gegebe werden.  
+Bei diesem Schritt wird auf dem vortrainierten Agenten aufgebaut. Das Ziel ist es hier den Puck in Richtung des gegnerischen Tors zu spielen. Es macht Sinn, diese Fähigkeit zuerst im Reaching Modus zu üben und erst danach in den FullGame Modus zu wechseln. Dadurch ist der Anstieg an Komplexität geringer. Hier werden die Rewards playForwardReward und negplaybackReward als Hauptrewards genutzt. Es hat sich jedoch gezeigt, dass die Rewards encouragePuckContact und behindPuckReward hier auch nützlich sind. Dadurch wird verhindert, dass der Agent, falls er vor dem Puck erscheint, die ganze Episode abwartet, um den negplaybackReward zu verhindern. Mit einem ähnlichen Satz an Rewards kann dann auch im FullGame Modus das Training fortgesetzt werden. Die Stärke des Gegners spielt dabei keine große Rolle, da keine negativen Rewards für Gegentore gegeben werden.
 
 \item \underline{3. Ganzes Spiel} \\
-Diese Stufe im Plan ist mit Abstand die zeitintensivste. Da hier das erste mal Rewards und Bestrafungen für  Tore genutzt werden ist die Wahl des Gegners nun ein sehr wichtiges Thema. Ist der Gegner zu schwach kann nicht viel gelernt werden. Ist der Gegner zu stark wird der Agent schnell passiv und versucht das Spiel auszubremsen um ein Gegentor zu verhindern. Bei diesem Schritt ist also die Balance zwischen der Anregung zum Spiel durch Rewards wie negStepReward und encouragePuckMovement und der Herrausfordernung durch den Gegner nicht einfach zu schaffen. Hinzu kommt, dass einige Reward Konstellationen zu unerwünschtem verhalten führen. Ist beispielsweise der behindPuckReward hoch, der Gegner stark in Vergleich zum Agenten und der neghumanGoalReward hoch neigt der Agent schnell dazu sich nahe ans eigene Tor zu stellen und das Ende der Episode abzuwarten. Ist der Reward avoidDirectionChanges hoch kann es passieren, dass der Roboter dazu neigt oft bis an den Rand zu fahren. Der stayCenteredReward kann hier entgegen wirken. \\ 
-Dadurch das oft unvorhergesehenes schlechtes Verhalten erlernt wird ist es nach unserer Erfahrung wichtig den vorherigen Stand des Agenten zu sichern und gegebenenfalls den Vortschritt zu verwerfen weil es ehr ein Rückschritt ist. Dann kann mit einem neuen Reward- oder Parametersatz oder mit einem anderen Gegner ein weiterer Versuch vom gesicherten Stand aus probiert werden. 
+Diese Stufe im Plan ist mit Abstand die Zeit intensivste. Da hier das erste mal Rewards und Bestrafungen für  Tore genutzt werden, ist die Wahl des Gegners nun ein sehr wichtiges Thema. Ist der Gegner zu schwach, kann nicht viel gelernt werden. Ist der Gegner zu stark, wird der Agent schnell passiv und versucht das Spiel auszubremsen um ein Gegentor zu verhindern. Bei diesem Schritt ist also die Balance zwischen der Anregung zum Spiel durch Rewards, wie negStepReward und encouragePuckMovement, und der Herausforderung durch den Gegner nicht einfach zu schaffen. Hinzu kommt, dass einige Reward Konstellationen zu unerwünschtem Verhalten führen. Ist beispielsweise der behindPuckReward hoch, der Gegner stark (in Vergleich zum Agenten) und der neghumanGoalReward hoch, neigt der Agent schnell dazu, sich nahe ans eigene Tor zu stellen und das Ende der Episode abzuwarten. Ist der Reward avoidDirectionChanges hoch, kann es passieren, dass der Roboter dazu neigt, oft bis an den Rand zu fahren. Der stayCenteredReward kann hier entgegenwirken. \\ 
+Dadurch, dass oft unvorhergesehenes schlechtes Verhalten erlernt wird, ist es wichtig, den vorherigen Stand des Agenten zu sichern und gegebenenfalls den Fortschritt zu verwerfen, weil dieser eher einem Rückschritt gleicht. Dann kann mit einem neuen Reward- oder Parametersatz oder mit einem anderen Gegner ein weiterer Versuch vom gesicherten Stand aus probiert werden. 
 \end{itemize}
 
 \subsection{Netzwerkauswahl und Zwischenergebnisse}
 \label{subsect:netzwahl_ergs}
 
-In diesem Abschnitt sollen die Ergebnisse von zwei Netzwerken und ihren Hyperparametern verglichen werden. In diesem Stil wurden noch andere Konstellationen von Hyperparemetern verglichen. Nach Abwägung der Trainingsgeschindigkeit gegen die Komplexität wurde sich dann für die Parametersätze, die die in den Konfigurationsdateien zu finden sind, entschieden. \\
-Das ML-Agents Toolkit stellt sowohl PPO als auch SAC Agenten zur Verfügung. Um nicht unnötig Ressourcen zu verschwenden macht es jedoch keine Sinn zwei unterschiedliche Agenten zu trainieren. Deshalb haben wir um uns entscheiden sowohl einen PPO als auch einen SAC Agenten jeweils das gleiche Einstiegstraining durchlaufen zu lassen. Anhand der Leistung dabei haben wir dann entschieden mit welchem Netzwerk wir weiter trainieren. \\
+In diesem Abschnitt sollen die Ergebnisse von zwei Netzwerken und ihren Hyperparametern verglichen werden. In diesem Stil wurden noch andere Konstellationen von Hyperparemetern verglichen. Nach Abwägung der Trainingsgeschwindigkeit gegen die Komplexität, wurde sich dann für die Parametersätze, welche in den Konfigurationsdateien zu finden sind, entschieden. \\
+Das ML-Agents Toolkit stellt sowohl PPO als auch SAC Agenten zur Verfügung. Um nicht unnötige Ressourcen zu verschwenden, macht es jedoch keinen Sinn, zwei unterschiedliche Agenten zu trainieren. Deshalb wurde hier entschieden, sowohl einen PPO als auch einen SAC Agenten, jeweils das gleiche Einstiegstraining durchlaufen zu lassen. Anhand der Leistung dabei wurde dann die Wahl entschieden, mit welchem Netzwerk das weitere Training stattfinden soll. \\
 
-Das Einstiegstraining erfolgte für beide Agenten mit genau den gleichen Rewards in der gleichen Umgebung und mit den gleichen Parametern. Es beinhaltet insgesamt fünf Einzeltrainings nach denen Rewards oder Parameter angepasst wurden. 
+Das Einstiegstraining erfolgte für beide Agenten mit genau den gleichen Rewards, in der gleichen Umgebung und mit den gleichen Parametern. Es beinhaltet insgesamt fünf Einzeltrainings, nach denen Rewards oder Parameter angepasst wurden. 
 
 \begin{itemize}
-\item 1: Im Reaching Modus wir nur mit dem encoragePuckContact Reward das Netzwerk für 500k (500 000) Episoden trainiert. 
+\item 1: Im Reaching Modus wird nur mit dem encoragePuckContact Reward das Netzwerk für 500k (500 000) Episoden trainiert. 
 
-\item 2: Das zweite Training erfolgt immer noch im Reaching Modus, jedoch wird der encouragePuckContact Reward reduziert und der playForwardReward dazugenommen. Auch ein kleiner negStepReward wird genutzt. Das Training endet nach 1M (1 000 000) Episoden
+\item 2: Das zweite Training erfolgt immer noch im Reaching Modus, jedoch wird der encouragePuckContact Reward reduziert und der playForwardReward dazugenommen. Auch ein kleiner negStepReward wird genutzt. Das Training endet nach 1M (1 000 000) Episoden.
 
-\item 3: Dieses Training erfolgt nun im FullGame Modus. Neben den Rewards für Tore werden hier einige andere Rewards hinzu genommen um das Spielverhalten zu formen. Als Gegner wird ein anderer PPO Agent verwendet, der vorher schon etwas besser traininert wurde. Dessen Geschwindigkeit wird aber stark limitiert um das Spiel fair zu halten. Es wird so für weitere 1M Episoden trainiert.
+\item 3: Dieses Training erfolgt nun im FullGame Modus. Neben den Rewards für Tore werden hier einige andere Rewards hinzu genommen um das Spielverhalten zu formen. Als Gegner wird ein anderer PPO Agent verwendet, der vorher schon etwas besser trainiert wurde. Dessen Geschwindigkeit wird aber stark limitiert um das Spiel fair zu halten. Es wird so für weitere 1M Episoden trainiert.
 
-\item 4: Nach dem letzten genannten Trainingsschritt ist aufgefallen, dass sich der Agent oft weit am Spielfeldrand befindet und so die Verteidigung vernachlässigt. Deshalb wurden für dieses Training die Rewards angepasst. Auch die Geschwindigkeit des HumanPlayer wurde erhöht um dem Agenten besser gewachsen zu sein. So wurde dann bis insgesamt 3M Episoden trainiert.
+\item 4: Nach dem letzten genannten Trainingsschritt ist aufgefallen, dass sich der Agent oft weit am Spielfeldrand befindet und so die Verteidigung vernachlässigt. Deshalb wurden für dieses Training die Rewards angepasst. Auch die Geschwindigkeit des HumanPlayers wurde erhöht, um dem Agenten besser gewachsen zu sein. So wurde dann bis insgesamt 3M Episoden trainiert.
 
-\item 5: Dieses Training unterscheidet sich nicht vom vierten. Mit den gleichen Vorraussetzungen wurde das Training bis 4M fortgesetzt
+\item 5: Dieses Training unterscheidet sich nicht vom Vierten. Mit den gleichen Voraussetzungen wurde das Training bis 4M fortgesetzt
 \end{itemize}
 
-Die Ergebnisse dieser Trainings sind im folgenden Dargestellt. Im den Abbildungen sind jeweils die Graphen des PPO-Agenten und des SAC-Agenten übereinander gelegt. Der linke Graph zeigt dabei die Entwicklung des komulativen Rewards über die Anzahl der verstrichenen Trainingsepisoden, der rechte die Entwicklung der Episodenlänge. Da die Trainings aufeinander aufbauen sind in den Graphen der fortgeschrittenen Trainings die ver vorrangegangenen auch enthalten.\\
+Die Ergebnisse dieser Trainings sind im Folgenden dargestellt. In den Abbildungen sind jeweils die Graphen des PPO-Agenten und des SAC-Agenten übereinandergelegt. Der linke Graph zeigt dabei die Entwicklung des kumulativen Rewards über die Anzahl der verstrichenen Trainingsepisoden, der rechte die Entwicklung der Episodenlänge. Da die Trainings aufeinander aufbauen, sind in den Graphen der fortgeschrittenen Trainings die  Vorangegangenen auch enthalten.\\
 \newpage
 \begin{figure} [h]
-\underline{1. Trainig bis 500k} \\
+\underline{1. Training bis 500k} \\
 
 \includegraphics[width=\textwidth]{images/reaching_erg}
 \caption{Orange: PPO-Agent, Blau: SAC-Agent}
-Der maximal erreichbare kumulative Reward ist in dieser Trainingsphase 1. Am Graph ist zwar zu erkennen, dass der PPO-Agent dieses Ergebnis schneller und ohne Ausreißer erreicht, aber der SAC-Agent erreicht das Ziel auch. Beobachtet man die beiden Agenten in der Unityumgebung bei der Aufgabe sind sie vom Verhalten her praktisch nicht zu unterscheiden. Beide bewegen sich auf sehr kurzem Weg auf den Puck zu.
+Der maximal erreichbare kumulative Reward ist in dieser Trainingsphase 1. Am Graph ist zwar zu erkennen, dass der PPO-Agent dieses Ergebnis schneller und ohne Ausreißer erreicht, aber der SAC-Agent erreicht das Ziel auch. Beobachtet man die beiden Agenten in der Unity-Umgebung bei der Aufgabe, sind sie vom Verhalten her praktisch nicht zu unterscheiden. Beide bewegen sich auf sehr kurzem Weg auf den Puck zu.
 \end{figure}
 
 \begin{figure} [h]
-\underline{2. Trainig bis 1M} \\
+\underline{2. Training bis 1M} \\
 \includegraphics[width=\textwidth]{images/rea2_erg}
 \caption{Grau: PPO-Agent, Orange: SAC-Agent}
 
-In diesem Trainingsabschnitt hat der PPO-Agent nach Reward klar den Vorteil. Jedoch kann man an der Episodenlänge sehen, dass die Aufgabe nicht zufriedenstellent erlernt wurde. Da die Episode beim Puckkontakt beendet wird sollten sie sehr kurz ausfallen. Beim Beobachten des Spielverhalten ist dieses Verhalten auch festzustellen. Der PPO-Agent neigt dazu in der Nähe des Pucks in einen Zitterzustand überzugehen. Geht er nicht in diesen Zustand trifft er den Puck aber öfter von der richtigen Seite als von der falschen. Auch der SAC-Agent trifft den Puck öfter von der richtigen Seite als von der falschen. Er zeigt  aber die Verhaltensauffälligkeit mit dem Zittern nur äußerst selte und ist damit insgesamt besser als der PPO-Agent nach diesem Training in der zugehörigen Aufgabe.
+In diesem Trainingsabschnitt hat der PPO-Agent nach den Rewards klar den Vorteil. Jedoch kann man an der Episodenlänge sehen, dass die Aufgabe nicht zufriedenstellend erlernt wurde. Da die Episode beim Puckkontakt beendet wird, sollten sie sehr kurz ausfallen. Beim Beobachten des Spielverhaltens ist dies auch festzustellen. Der PPO-Agent neigt dazu, in der Nähe des Pucks in einen "Zitterzustand" überzugehen, welchen schnelle Richtungsänderungen charakterisieren. Geht er nicht in diesen Zustand, trifft er den Puck aber öfter von der richtigen Seite, als von der Falschen. Auch der SAC-Agent trifft den Puck öfter von der richtigen Seite, als von der Falschen. Er zeigt aber die Verhaltensauffälligkeit mit dem Zittern nur äußerst selten und ist damit insgesamt besser, als der PPO-Agent nach diesem Training in der zugehörigen Aufgabe.
 \end{figure}
 
 \begin{figure} [h]
-\underline{3. Trainig bis 2M} \\
+\underline{3. Training bis 2M} \\
 \includegraphics[width=\textwidth]{images/fullgame_erg}
 \caption{Grün: PPO-Agent, Grau: SAC-Agent}
-Der SAC-Agent hat in dieser Trainingsperiode seinen Rückstand in der Kategorie kumulativer Reward nicht nur verkürzt, sondern hat PPO sogar überholt. Die Episodenlänge hat sich dabei erhöht. Da das Trainig im FullGame Modus erfolgte und diese Agenten jetzt dafür geeignet sein sollten ist eine gute Möglichkeit sie zu vergleichen das direkte Spiel gegeineinander. Hier hat der PPO-Agent eindeutig die Nase vorne. Er schlägt den SAC-Agenten mit 10:5. Außerdem ist sein Spielverhalten deutlich besser. Währen der SAC-Agent sich oft unkontrolliert bewegt ohne den Puck zu spielen (höhere Episodenlänge) lässt sich bei seinem PPO-Kontrahenten deutlich erkennen, dass er nicht nur zielstrebig auf den Puck zufährt, sondern ihn meist auch in die richtige Richtung spielt. 
+Der SAC-Agent hat in dieser Trainingsperiode seinen Rückstand in der Kategorie kumulativer Reward nicht nur verkürzt, sondern hat den PPO-Agent sogar überholt. Die Episodenlänge hat sich dabei erhöht. Da das Training im FullGame Modus erfolgte und diese Agenten jetzt dafür geeignet sein sollten, ist eine gute Möglichkeit sie zu vergleichen, das direkte Spiel gegeneinander. Hier schneidet der PPO-Agent eindeutig besser ab als der SAC-Agent. Er schlägt diesen mit 10:5. Außerdem ist sein Spielverhalten deutlich besser. Währen der SAC-Agent sich oft unkontrolliert bewegt, ohne den Puck zu spielen (höhere Episodenlänge), lässt sich bei seinem PPO-Kontrahenten deutlich erkennen, dass er nicht nur zielstrebig auf den Puck zufährt, sondern ihn meist auch in die richtige Richtung spielt.
 \end{figure}
 
 \begin{figure} [h]
-\underline{4. Trainig bis 3M} \\
+\underline{4. Training bis 3M} \\
 \includegraphics[width=\textwidth]{images/centered_erg}
 \caption{Blau: PPO-Agent, Orange: SAC-Agent}
-Bei diesem Training überholt der PPO-Agenten den SAC- Agenten in Sachen kumulativer Reward wieder. Auch beim Spielverhalten ist er ihm noch überleben und schlägt ihn mit 10:4. Das Verhalten des SAC-Agenten hat sich selbst nach dem Training noch nicht deutlich verbessert. Er ist immer noch sehr passiv, wenn er einen Kontakt macht ist dieser jedoch meist nicht schlecht. Insgesamt ist der SAC-Agent aber immer noch weit von einem Sieg entfernt.
+Bei diesem Training überholt der PPO-Agenten den SAC- Agenten in Sachen kumulativer Reward wieder. Auch beim Spielverhalten ist er ihm noch überlegen und schlägt ihn mit 10:4. Das Verhalten des SAC-Agenten hat sich selbst nach dem Training noch nicht deutlich verbessert. Er ist immer noch sehr passiv, wenn er einen Kontakt macht, ist dieser jedoch meist nicht schlecht. Insgesamt ist der SAC-Agent aber immer noch weit von einem Sieg entfernt.
 \end{figure}
 
 \begin{figure} [h]
-\underline{5. Trainig bis 4M} \\
+\underline{5. Training bis 4M} \\
 \includegraphics[width=\textwidth]{images/centered2_erg}
 \caption{Rosa: PPO-Agent, Grün: SAC-Agent}
-In der letzten Trainingsetappe stagnieren nicht nur die kumulativen Rewards weitgehend, sondern auch das Spielverhalten ist weitgehend unverändert. Der PPO-Agent ist dem SAC-Agenten immer noch vorraus. \\
-Insgesamt haben unsere Erfahrungen gezeigt, dass der PPO-Agent gegenüber dem SAC-Agnenten in unserem Fall im Vorteil ist. Bei genau gleichem Training hat er ein weit besseres, aktiveres, inteligent werkenderes Spielverhalten entwickelt. Zusätzlich hat es den Anschein, als ob sich die Verhaltensentwicklung beim PPO-Agenten besser abschätzen lässt. Die erwünschten Verhaltensmuster sind dadurch einfacher zu erreichen. Aus diesen Gründen haben wir für den größten Teil unserer Trainingsbemühungen mit einem PPO-Agenten der Parametrisierung des hier verwendeten Netzwerkes gearbeitet.
+In der letzten Trainingsetappe stagnieren nicht nur die kumulativen Rewards weitgehend, sondern auch das Spielverhalten ist weitgehend unverändert. Der PPO-Agent ist dem SAC-Agenten immer noch voraus. \\
+Insgesamt haben die Erfahrungen im gesamten Training gezeigt, dass der PPO-Agent gegenüber dem SAC-Agenten für diese Anwendung im Vorteil ist. Bei genau gleichem Training hat er ein weit besseres, aktiveres, intelligenter wirkendes Spielverhalten entwickelt. Zusätzlich hat es den Anschein, dass sich die Verhaltensentwicklung beim PPO-Agenten besser abschätzen lässt. Die erwünschten Verhaltensmuster sind dadurch einfacher zu erreichen. Aus diesen Gründen wurde für den größten Teil der Trainingsbemühungen mit einem PPO-Agenten, der Parametrisierung des hier verwendeten Netzwerkes gearbeitet.
 \end{figure}
 \begin{figure}[h]
 \section{Trainingsverlauf und Ergebnis}
 \label{sect:training_erg}
 
-Der vorhergegangene Abschnitt \ref{subsect:netzwahl_ergs} hat bereits einen guten Einblick über das vorgehen beim Training gegeben. Dieser soll noch einige Informationen zur Gegenerwahl, zum Fortschritt, zu den Kriterien eines guten Agenten und zu den besten bereits erzielten Ergebnissen geben.
+Der vorhergegangene Abschnitt \ref{subsect:netzwahl_ergs} hat bereits einen guten Einblick über das Vorgehen beim Training gegeben. Dieser soll noch einige Informationen zur Gegnerauswahl, zum Fortschritt, zu den Kriterien eines guten Agenten und zu den besten bereits erzielten Ergebnissen geben.
 
 \subsection{Gegnerwahl}
 \label{subsect:gegner}
 
-Im letzten Abschnitt war zu erkennen, dass die ersten Trainings im Reaching Modus absolviert werden und deshalb dabei kein Gegenspieler benötigt wird. Diese Trainings sind jedoch ziemlich simpel und können schnell erfolgreich abgeschlossen werden. Der größte Teil des Trainings wird also mit Gegenspieler durchgeführt. Um zu verhindern, dass der Agent entweder nichts lernt (Gegner zu schwach) oder sich weigert den Puck rüber zu spielen weil er einen gefährlichen Schuss befürchtet (Gegner zu stark) muss ein ade	quater HumanPlayer als Trainingspartner genutzt werden. Im Verlauf des Trainings bietet es sich an, die Methode des Selfplay zu nutzen. Hierbei bespielt sich der Agent selbst, beziehungsweise eine Version von sich selbt. Dabei ist darauf zu achten, dass man das Netzwerk des Agente nicht zu oft oder zu selten auf den HumanPlayer überträgt. Tut man es zu oft läuft man Gefahr, dass die Gegenspieler "zusammen spielen" und so mit zum Beispiel einem Kontaktreward schnell einen Torreward obsolet machen. Um einen solchen Effekt zu erzielen muss das Netzwerk aber sehr oft übertragen oder gar für beide Spieler gleichermaßen trainiert werden. Tut man es zu selten kann ein Training ohne vernünftige Herrausforderung an Effizienz verlieren. Ein weiteres Problem des Selfplay ist, dass man zu Beginn gar kein Ergebins hat, dass als Gegner verwendet werden kann. Deshalb ist in unserem Projekt auch ein festprogrammierter Spieler implementiert. Dieser bewegt sich stets hinter den Puck wenn auf seine Seite gespielt wird und spielt zurück. Da die Richtung des Rückspiels aber nicht beachtet wird, ist die Gefahr eines Gegentores nicht so besonders groß. Besonders bei gedrosselter Geschwindigkeit ist er also ein idealer Einstiegsgegner.
+Im letzten Abschnitt war zu erkennen, dass die ersten Trainings im Reaching Modus absolviert werden und deshalb dabei kein Gegenspieler benötigt wird. Diese Trainings sind jedoch ziemlich simpel und können schnell erfolgreich abgeschlossen werden. Der größte Teil des Trainings wird also mit einem Gegenspieler durchgeführt. Um zu verhindern, dass der Agent entweder nichts lernt (Gegner zu schwach) oder sich weigert, den Puck zur gegnerischen Hälfte zu spielen, weil er einen gefährlichen Schuss befürchtet (Gegner zu stark), muss ein adäquater HumanPlayer als Trainingspartner genutzt werden. Im Verlauf des Trainings bietet es sich an, die Methode des Selfplay zu nutzen. Hierbei bespielt sich der Agent selbst beziehungsweise eine Version von sich selbst. Dabei ist darauf zu achten, dass man das Netzwerk des Agenten nicht zu oft oder zu selten auf den HumanPlayer überträgt. Bei zu häufigen Transfers besteht die Gefahr, dass die Gegenspieler "zusammen spielen" und somit zum Beispiel einem Kontaktreward schnell einen Torreward obsolet machen. Um einen solchen Effekt zu erzielen, muss das Netzwerk aber oft übertragen oder gar für beide Spieler gleichermaßen trainiert werden. Bei zu geringen Transfers kann ein Training ohne vernünftige Herausforderung an Effizienz verlieren. Ein weiteres Problem des Selfplay ist, dass man zu Beginn gar keine Ergebnisse hat, welche als Gegner verwendet werden können. Deshalb ist in diesem Projekt auch ein festprogrammierter Spieler implementiert. Dieser bewegt sich stets hinter den Puck, wenn auf seine Seite gespielt wird, und spielt diesen zurück. Da die Richtung des Rückspiels aber nicht beachtet wird, ist die Gefahr eines Gegentores nicht so besonders groß. Besonders bei gedrosselter Geschwindigkeit ist er also ein idealer Einstiegsgegner.
 \end{figure}
 \begin{figure}[h]
 \subsection{Qualitätskriterien}
 \label{subsect:kriterien}
  
-Um einen guten Agenten traininieren zu können muss man zuerst wissen, was ein guter Agent ist. Im Gegensatz zu einem Läufer, denn man nur nach einem Kriterium bewertet (seiner benötigten Zeit um eine Strecke zurück zu legen) kann ein Agent so einfach objektiv bewertet werden. \\
-Eine erstrebenswerte Eigenschaft ist, dass gegen möglichst viele unterschiedliche Gegner aus möglichst vielen Spielsituationen ein Tor erzielt wird. Analog dazu ist es auch erstrebenswert gegen möglichst viele unterschiedliche Gegner aus möglichst vielen Spielsituationen kein Gegentor zu kassieren. Auch wenn viele Spielentscheidungen beide genannten Eigenschaften gleichzeitig begünstigen kann doch eine besonders riskante Spielweise sowohl die Wahrscheinlichkeit ein Tor zu machen als auch die Warscheinlicheit eines Gegentores erhöhen. Ist demnach ein besonders defensives oder ein offensiveres Vorgehen besser? Da der Grad der Offensivneigung jedoch schwer zu messen ist und nicht mal klar ist, ob sie erwünscht ist, haben wir uns darauf beschränkt die Tordifferenz der Agenten zu bewerten. Das haben wir hauptsächlich durch das Spiel gegen einen älteren Agenten durchgeführt. Um zu verhindern, dass der Agent anfällig für einen menschlichen Spieler wird, wurde seine Spielfähigkeit von Zeit zu Zeit auch von einer Person per Tastatur oder Controller validiert. Logischerweise ist es jedoch nicht möglich gegen einen menschlichen Spieler zu traininieren. Bei diesen Testspielen hat sich herrausgestellt, dass bei den fortgeschrittneren Agenten einige dabei, die wir manuell nicht mehr besiegen können und teilweise hoch gegen uns gewonnen haben. Selten hat sich eine Niederlage so gut angefühlt. \\
-Neben der Fähigkeit viele Tore zu schießen ohne viel zu kassieren ist auch die Ästethik der Bewegung nicht unwichtig. Da das Ziel des Projekts ein Demostrator ist, ist ein nachvollziehbares Spielverhalten sinnvoll. Ein weiterer Punkt ist die Lärmbelastung. Auch wenn in Unity zittern keinen Nachteil mit sich bringen kommt es dadurch am realen Tisch durch die Motoren zu schrillen, unangenehmen Geräuschen. Das sollte beim Training beachtet werden.
+Um einen guten Agenten trainieren zu können, muss zunächst geklärt werden, was ein guter Agent ist. Im Gegensatz zu einem Läufer, den man nur nach einem Kriterium bewertet (seiner benötigten Zeit um eine Strecke zurückzulegen), kann ein Agent nicht so einfach objektiv bewertet werden. \\
+Eine erstrebenswerte Eigenschaft ist es, dass gegen möglichst viele unterschiedliche Gegner aus möglichst vielen Spielsituationen ein Tor erzielt wird. Analog dazu ist es auch erstrebenswert, gegen möglichst viele unterschiedliche Gegner aus möglichst vielen Spielsituationen kein Gegentor zu kassieren. Auch wenn viele Spielentscheidungen beide genannten Eigenschaften gleichzeitig begünstigen, kann doch eine besonders riskante Spielweise sowohl die Wahrscheinlichkeit, ein Tor zu machen als auch die Wahrscheinlichkeit eines Gegentores erhöhen. Ist demnach ein besonders defensives oder ein offensiveres Vorgehen besser? Da der Grad der Offensivneigung jedoch schwer zu messen ist und nicht mal klar ist, ob sie erwünscht ist, wird in dieser Arbeit hauptsächlich auf die Tordifferenz der Agenten geachtet. Diese Bewertung wurde dann im Spiel gegen einen älteren Agenten durchgeführt. Um zu verhindern, dass der Agent anfällig für einen menschlichen Spieler wird, wurde seine Spielfähigkeit von Zeit zu Zeit auch von einer Person per Tastatur oder Controller validiert. Logischerweise ist es jedoch nicht möglich, gegen einen menschlichen Spieler zu trainieren. Bei diesen Testspielen hat sich herausgestellt, dass bei den fortgeschritteneren Agenten einige dabei sind, die manuell nicht mehr besiegt werden können und teilweise sehr hoch in diesen Tests gewonnen haben. Diese Niederlage der menschlichen Testspieler ist jedoch ein Zeichen für ein gutes Trainingsergebnis.\\
+Neben der Fähigkeit, viele Tore zu schießen, ohne im Gegenzug viele zu kassieren, ist auch die Ästhetik der Bewegungen nicht unwichtig. Da das Ziel des Projekts ein Demonstrator ist, ist ein nachvollziehbares Spielverhalten sinnvoll. Ein weiterer Punkt ist die Lärmbelastung. Auch wenn in Unity das Zittern keinen Nachteil mit sich bringt, kommt es dadurch am realen Tisch durch die Motoren zu schrillen, unangenehmen Geräuschen. Das sollte beim Training beachtet werden.
 \end{figure}
 
